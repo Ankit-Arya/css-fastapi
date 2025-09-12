@@ -6,13 +6,15 @@ A simple FastAPI project with a clean structure for scalability and maintainabil
 
 ## 📂 Project Structure
 
-├── main.py # Entry point of the application
-├── services/ # Business logic and reusable functions
-│ └── example_service.py
-├── models/ # Pydantic request/response models
-│ └── request_models.py
-├── env/ # Virtual environment (ignored in git)
-└── pycache/ # Python cache (ignored in git)
+```bash
+├── main.py              # Entry point of the application
+├── services/            # Business logic and reusable functions
+│   └── example_service.py
+├── models/              # Pydantic request/response models
+│   └── request_models.py
+├── env/                 # Virtual environment (ignored in git)
+└── __pycache__/         # Python cache (ignored in git)
+
 
 
 ### 🔹 `main.py`
@@ -72,10 +74,8 @@ A simple FastAPI project with a clean structure for scalability and maintainabil
   👉 http://127.0.0.1:8000
 
 5. Interactive API Docs
-
-Swagger UI: http://127.0.0.1:8000/docs
-
-ReDoc: http://127.0.0.1:8000/redoc
+   Swagger UI: http://127.0.0.1:8000/docs
+   ReDoc: http://127.0.0.1:8000/redoc
 
 
    
