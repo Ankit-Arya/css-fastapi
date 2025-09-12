@@ -1,0 +1,18 @@
+# Ignore virtual environment
+env/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore distribution / packaging
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Ignore IDE settings (optional, can remove if not needed)
+.vscode/
+.idea/
