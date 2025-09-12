@@ -30,8 +30,8 @@ Ideal for quick REST API prototypes and extensible, real-world apps.
 
 1. **Clone the repository**
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-name>
+    git clone <repo-url>
+    cd <repo-name>
     ```
 2. **Create and activate virtual environment**
     ```bash
@@ -75,12 +75,6 @@ Ideal for quick REST API prototypes and extensible, real-world apps.
 - Grow your data models in `models/`.
 - Add database integrations or authentication as needed.
 
-***
-
-## 📄 License
-
-This template is MIT licensed.  
-See [LICENSE](LICENSE) for more details.
 
 ***
 
