@@ -14,8 +14,7 @@ A simple FastAPI project with a clean structure for scalability and maintainabil
 │   └── request_models.py
 ├── env/                 # Virtual environment (ignored in git)
 └── __pycache__/         # Python cache (ignored in git)
-
-```bash
+'''
 
 ### 🔹 `main.py`
 - The application entry point.  
