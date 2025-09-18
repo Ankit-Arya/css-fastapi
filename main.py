@@ -1,3 +1,4 @@
+import json
 from typing import Optional
 from fastapi import FastAPI, File, Form, HTTPException, Depends, UploadFile
 from models.request_models import UserSignUp, UserLogin, TokenResponse
@@ -83,12 +84,20 @@ async def simulate(
     print(f"file name={file.filename}")
     print(f"stepping_back={stepping_back}")
 
+    # ✅ Parse stepping_back JSON if provided
+    parsed_stepping_back = []
+    if stepping_back:
+        try:
+            parsed_stepping_back = json.loads(stepping_back)
+        except Exception as e:
+            print("Failed to parse stepping_back JSON:", e)
+            
     # Save uploaded file
     saved_path = await save_file_locally(execution_id, file)
 
     # Start background processing
     background_tasks.add_task(
-        process_file, execution_id, saved_path, user_id, user_name, stepping_back
+        process_file, execution_id, saved_path, user_id, user_name, parsed_stepping_back
     )
 
     return {"message": "File received. Processing started.", "execution_id": execution_id}
@@ -96,3 +105,10 @@ async def simulate(
 @app.get("/status/{execution_id}")
 def check_status(execution_id: str):
     return get_status(execution_id)
+
+@app.get("/download/{execution_id}")
+def download_file(execution_id: str):
+    file_path = f"temp_files/trip_chart_{execution_id}.csv"
+    if os.path.exists(file_path):
+        return FileResponse(file_path, filename=f"trip_chart_{execution_id}.csv")
+    return {"error": "File not ready"}

@@ -34,5 +34,145 @@
       "status": "error",
       "message": "'utf-8' codec can't decode byte 0xf4 in position 10: invalid continuation byte"
     }
+  ],
+  "0e9b8c4a-1bb1-4c89-a18b-73ef0d474c73": [
+    {
+      "name": "Reading File",
+      "status": "running",
+      "message": ""
+    },
+    {
+      "name": "All Tasks",
+      "status": "error",
+      "message": "'utf-8' codec can't decode byte 0x9e in position 14: invalid start byte"
+    }
+  ],
+  "526bffab-9dad-4c90-9911-61e3a1e242bf": [
+    {
+      "name": "Reading File",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Reference File 1",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Reference File 2",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Reference File 3",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Generating Final Output CSV",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "All Tasks",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "f5fe79ee-f369-4337-bbe3-265fcba3cb6f": [
+    {
+      "name": "Reading File",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Reference File 1",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Reference File 2",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Reference File 3",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Generating Final Output CSV",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "All Tasks",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "25848aba-95b6-4035-9111-20af9a90aad6": [
+    {
+      "name": "Reading File",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Reference File 1",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Reference File 2",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Reference File 3",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Generating Final Output CSV",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "All Tasks",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "1d0812b4-54a8-4a47-a9c8-5d5931930285": [
+    {
+      "name": "Reading File",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Reference File 1",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Reference File 2",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Reference File 3",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Generating Final Output CSV",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "All Tasks",
+      "status": "completed",
+      "message": ""
+    }
   ]
 }
