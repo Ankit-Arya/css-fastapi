@@ -1,0 +1,38 @@
+{
+  "d1d76050-b915-447e-b427-b1db759723d4": [
+    {
+      "name": "Reading File",
+      "status": "running",
+      "message": ""
+    },
+    {
+      "name": "All Tasks",
+      "status": "error",
+      "message": "'utf-8' codec can't decode byte 0xf4 in position 10: invalid continuation byte"
+    }
+  ],
+  "e085d8e6-a138-462f-afe9-2b8eb97ad66c": [
+    {
+      "name": "Reading File",
+      "status": "running",
+      "message": ""
+    },
+    {
+      "name": "All Tasks",
+      "status": "error",
+      "message": "'utf-8' codec can't decode byte 0xf4 in position 10: invalid continuation byte"
+    }
+  ],
+  "dccd6e52-30bd-4253-bd1f-f6d040cf375b": [
+    {
+      "name": "Reading File",
+      "status": "running",
+      "message": ""
+    },
+    {
+      "name": "All Tasks",
+      "status": "error",
+      "message": "'utf-8' codec can't decode byte 0xf4 in position 10: invalid continuation byte"
+    }
+  ]
+}
