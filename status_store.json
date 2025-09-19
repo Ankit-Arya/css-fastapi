@@ -174,5 +174,310 @@
       "status": "completed",
       "message": ""
     }
+  ],
+  "3620185e-337d-498b-be64-6d5f6c45212c": [
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "update_status() missing 1 required positional argument: 'status'"
+    }
+  ],
+  "d47aec47-3ba7-425b-8a3f-6dddde9d045a": [
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "update_status() missing 1 required positional argument: 'status'"
+    }
+  ],
+  "9ee69274-d1bf-4583-b551-f34bd3ed2a19": [
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "update_status() missing 1 required positional argument: 'status'"
+    }
+  ],
+  "cf3fa7c6-2e68-42a0-882d-901d7dca7d5e": [
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "No module named 'matplotlib'"
+    }
+  ],
+  "4d1ca59b-3081-4696-b378-9497331316bf": [
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['201']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Issue in Train 201",
+      "status": "error",
+      "message": "Location: CCDN, Time: 08:00:00"
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "[Errno 2] No such file or directory: 'generated_duties_graph.csv'"
+    }
+  ],
+  "43a88708-623c-4951-9a7f-89769e112cd9": [
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['201']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "[Errno 2] No such file or directory: 'temp_files/43a88708-623c-4951-9a7f-89769e112cd9generated_duties_graph.csv'"
+    }
+  ],
+  "f2fd7751-ca98-43d9-a637-f965a0030709": [
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['201']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 124971 records",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "Attempting to use an unavailable solver.\n\nThe SolverFactory was unable to create the solver \"mbnb\"\nand returned an UnknownSolver object.  This error is raised at the point\nwhere the UnknownSolver object was used as if it were valid (by calling\nmethod \"solve\").\n\nThe original solver was created with the following parameters:\n\texecutable: C:\\Users\\ankit\\LINE-3_4\\minotaur-0.4.1-win64\\bin\\mbnb.exe\n\ttype: mbnb\n\t_args: ()\n\toptions: {'--branch_dir': 1, '--brancher': 'maxvio', '--set_lp_method': 0, '--sppheur': 1, '--log_level': 3, '--obj_gap_percent': 5, '--time_limit': 3600}"
+    }
+  ],
+  "78d6a81e-b611-41bf-9f7a-181e2e53e075": [
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['201']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 124971 records",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "No engine for filetype: 'csv'"
+    }
+  ],
+  "95fec458-302d-4ec3-b970-1523bd4ca5a1": [
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['201']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Issue in Train 201",
+      "status": "error",
+      "message": "Location: CCDN, Time: 08:00:00"
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 36287 records",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "Solver (asl) did not exit normally"
+    }
+  ],
+  "0f7c2322-ae5a-48b7-8807-cbb9f15f38f9": [
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['201']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 124971 records",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "Solver (asl) did not exit normally"
+    }
   ]
 }

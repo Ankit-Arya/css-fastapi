@@ -1,0 +1,28 @@
+index,Rake Num,Start Station,Start Time,End Station,End Time,Direction,Service time,Same Jurisdiction,Step Back Rake,Step Back Location,ROUTE-VIA
+0,201,DEPOT,06:45,CCDN,07:35,DN,50,yes,No StepBack,No StepBack,
+1,201,CCDN,07:35,CCDN,08:00,DN,25,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/07:35 -- SHD-UP/08:09 -- 
+2,201,CCDN,08:00,CCDN,08:45,DN,45,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/08:00 -- SHD-UP/08:39 -- 
+3,201,CCDN,08:45,CCDN,09:15,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/08:45 -- SHD-UP/09:09 -- 
+4,201,CCDN,09:15,CCDN,09:45,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/09:15 -- SHD-UP/09:39 -- 
+5,201,CCDN,09:45,CCDN,10:15,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/09:45 -- SHD-UP/10:09 -- 
+6,201,CCDN,10:15,CCDN,10:45,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/10:15 -- SHD-UP/10:39 -- 
+7,201,CCDN,10:45,CCDN,11:15,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/10:45 -- SHD-UP/11:09 -- 
+8,201,CCDN,11:15,CCDN,11:45,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/11:15 -- SHD-UP/11:39 -- 
+9,201,CCDN,11:45,CCDN,12:15,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/11:45 -- SHD-UP/12:09 -- 
+10,201,CCDN,12:15,CCDN,12:45,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/12:15 -- SHD-UP/12:39 -- 
+11,201,CCDN,12:45,CCDN,13:15,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/12:45 -- SHD-UP/13:09 -- 
+12,201,CCDN,13:15,CCDN,13:45,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/13:15 -- SHD-UP/13:39 -- 
+13,201,CCDN,13:45,CCDN,14:15,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/13:45 -- SHD-UP/14:09 -- 
+14,201,CCDN,14:15,CCDN,14:45,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/14:15 -- SHD-UP/14:39 -- 
+15,201,CCDN,14:45,CCDN,15:15,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/14:45 -- SHD-UP/15:09 -- 
+16,201,CCDN,15:15,CCDN,15:45,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/15:15 -- SHD-UP/15:39 -- 
+17,201,CCDN,15:45,CCDN,16:15,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/15:45 -- SHD-UP/16:09 -- 
+18,201,CCDN,16:15,CCDN,16:45,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/16:15 -- SHD-UP/16:39 -- 
+19,201,CCDN,16:45,CCDN,17:15,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/16:45 -- SHD-UP/17:09 -- 
+20,201,CCDN,17:15,CCDN,17:45,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/17:15 -- SHD-UP/17:39 -- 
+21,201,CCDN,17:45,CCDN,18:15,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/17:45 -- SHD-UP/18:09 -- 
+22,201,CCDN,18:15,CCDN,18:45,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/18:15 -- SHD-UP/18:39 -- 
+23,201,CCDN,18:45,CCDN,19:15,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/18:45 -- SHD-UP/19:09 -- 
+24,201,CCDN,19:15,CCDN,19:45,DN,30,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/19:15 -- SHD-UP/19:39 -- 
+25,201,CCDN,19:45,CCUP,20:09,DN,25,yes,No StepBack,No StepBack,Train_No/201 -- SHD-DN/19:45 -- SHD-UP/20:09 -- 
+26,201,CCUP,20:09,DEPOT,21:00,UP,50,yes,No StepBack,No StepBack,
