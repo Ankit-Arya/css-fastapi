@@ -479,5 +479,273 @@
       "status": "error",
       "message": "Solver (asl) did not exit normally"
     }
+  ],
+  "9f01e2c8-f339-4233-91ad-c7d8d89b7441": [
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['201']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 124971 records",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "Solver (asl) did not exit normally"
+    }
+  ],
+  "99187dd7-8f42-4c95-9a77-43c25113a3d7": [
+    {
+      "name": "Values you entered -execution_id-99187dd7-8f42-4c95-9a77-43c25113a3d7,file_path-temp_files/99187dd7-8f42-4c95-9a77-43c25113a3d7_PMRC15925.csv,user_id-,user_name-,stepping_back-[{'station': 'SBC1', 'start': '10:10', 'end': '12:12'}, {'station': 'SBC2', 'start': '12:12', 'end': '14:14'}] ",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['201']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 124971 records",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "Solver (asl) did not exit normally"
+    }
+  ],
+  "01846ebd-da94-4b12-919c-f68c5282c797": [
+    {
+      "name": "Values you entered -execution_id-01846ebd-da94-4b12-919c-f68c5282c797,file_path-temp_files/01846ebd-da94-4b12-919c-f68c5282c797_PMRC15925.csv,user_id-,user_name-user@example.com,stepping_back-[{'station': 'A', 'start': '10:01', 'end': '10:12'}] ",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['201']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 124971 records",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "Solver (asl) did not exit normally"
+    }
+  ],
+  "551f2743-31af-407d-8c31-8ddae817a355": [
+    {
+      "name": "Values you entered -execution_id-551f2743-31af-407d-8c31-8ddae817a355,file_path-temp_files/551f2743-31af-407d-8c31-8ddae817a355_PMRC15925.csv,user_id-,user_name-user@example.com,stepping_back-[{'station': 'vfdsv', 'start': '10:10', 'end': '11:11'}, {'station': 'rydd', 'start': '11:11', 'end': '12:12'}] ",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "b92e53b8-330d-4ffb-bef7-5ff7fc1f1a65": [
+    {
+      "name": "Values you entered -execution_id-b92e53b8-330d-4ffb-bef7-5ff7fc1f1a65,file_path-temp_files/b92e53b8-330d-4ffb-bef7-5ff7fc1f1a65_PMRC15925.csv,user_id-,user_name-user@example.com,stepping_back-[{'station': 'A', 'start': '10:10', 'end': '11:11'}, {'station': 'B', 'start': '12:12', 'end': '14:14'}] ",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "0d2d50c4-5ed0-49c9-8b2d-bbdee991f548": [
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['101', '106', '102', '103', '108', '111', '104', '114', '105', '107', '117', '115', '118', '110', '109', '113', '119', '112', '116', '120']",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "031f93eb-ad29-4b1a-8e7b-75fe55255476": [
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['DEPOT', 'NBAA-DN', 'DSG-DN', 'DSGDNOUT', 'SHD-DN', 'SHDDNOUT', 'KG-DN', 'RI-DN', 'RI-UP', 'RI-OUT', 'SLAP', 'SHD-UP', 'SHDUPOUT', 'DSG-UP', 'NBAA-UP', 'DEPOT.1']",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "51dd4032-3cd6-464a-a568-3a2df5a9ee2d": [
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['104', '102', '103', '108', '113', '115', '116', '107', '112', '101', '105', '117', '111', '119', '110', '120', '106', '121', '109', '114', '122', '118']",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "84df41dc-dc8e-42be-9366-ef457780eb30": [
+    {
+      "name": "Importing neccessary libraries",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['104', '102', '103', '108', '113', '115', '116', '107', '112', '101', '105', '117', '111', '119', '110', '120', '106', '121', '109', '114', '122', '118']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 1855483 records",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    }
   ]
 }

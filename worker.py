@@ -6,8 +6,45 @@ def process_file(
     file_path: str, 
     user_id: str, 
     user_name: str, 
+    email: str,
     stepping_back: list
 ):
+
+
+    # We'll map them to SBC1, SBC2, SBC3...
+    fixed_station_keys = [f"SBC{i+1}" for i in range(len(stepping_back))]
+
+    # Now convert user input to fixed key mapping
+    stepping_back_saved = []
+
+    for idx, entry in enumerate(stepping_back):
+        fixed_key = fixed_station_keys[idx]
+        stepping_back_saved.append({
+            "station": fixed_key,
+            "start": entry["start"],
+            "end": entry["end"]
+        })
+
+    # Extract and assign to variables
+    for entry in stepping_back_saved:
+        station = entry["station"]
+        start_hour, start_minute = map(int, entry["start"].split(":"))
+        end_hour, end_minute = map(int, entry["end"].split(":"))
+
+        # Use globals() to create actual variables like SBC1startHour
+        globals()[f"{station}startHour"] = start_hour
+        globals()[f"{station}startMinute"] = start_minute
+        globals()[f"{station}endHour"] = end_hour
+        globals()[f"{station}endMinute"] = end_minute
+
+    # ✅ Now you can use these anywhere:
+    # SBC1startHour, SBC1startMinute, SBC1endHour, SBC1endMinute
+    # SBC2startHour, SBC2startMinute, ...
+
+    # 🧪 Test print
+    print("SBC1:", SBC1startHour, SBC1startMinute, SBC1endHour, SBC1endMinute)
+    print("SBC2:", SBC2startHour, SBC2startMinute, SBC2endHour, SBC2endMinute)
+    # exit()
     try:
         update_status(execution_id, "Importing neccessary libraries","WIP")
         import csv
@@ -202,14 +239,14 @@ def process_file(
                                 break
                             j = j + 1
                     route = {}
-                    while ((rail[x].iloc[j, 0] - rail[x].iloc[i, 0]) <= datetime.timedelta(hours=0, minutes=51)) & (
+                    while ((rail[x].iloc[j, 0] - rail[x].iloc[i, 0]) <= datetime.timedelta(hours=2, minutes=50)) & (
                             j < (rail[x].shape[0] - 1)):
                         
                         # SBC1 Timmings
-                        if (rail[x].index[j] == 'SBC1') & (rail[x].index[j + 1] == 'SBC1') & (rail[x].iloc[j, 0].hour >= 7) & (rail[x].iloc[j, 0].hour <= 21) & (
-                            rail[x].iloc[j, 0].minute >= 26 if (rail[x].iloc[j, 0].hour == 7) else True) & (
-                            rail[x].iloc[j, 0].minute <= 15 if (rail[x].iloc[j, 0].hour == 21) else True):
-                            
+                        if (rail[x].index[j] == 'SBC1') & (rail[x].index[j + 1] == 'SBC1') & (rail[x].iloc[j, 0].hour >= SBC1startHour) & (rail[x].iloc[j, 0].hour <= SBC1endHour) & (
+                            rail[x].iloc[j, 0].minute >= SBC1startMinute if (rail[x].iloc[j, 0].hour == SBC1startHour) else True) & (
+                            rail[x].iloc[j, 0].minute <= SBC1endMinute if (rail[x].iloc[j, 0].hour == SBC1endHour) else True):
+              
                             data = {'Train_No': ids[x], 'LocationPick': rail[x].index[i], 'Trip_Start': rail[x].iloc[i, 0],
                                     'LocationRelieve': rail[x].index[j], 'Trip_End': rail[x].iloc[j, 0],
                                     'Trip_Duration': rail[x].iloc[j, 0] - rail[x].iloc[i, 0]}
@@ -224,9 +261,9 @@ def process_file(
                             break
 
                         # SBC2 Timings
-                        if (rail[x].index[j] == 'SBC2') & (rail[x].index[j + 1] == 'SBC2') & (rail[x].iloc[j, 0].hour >= 7) & (rail[x].iloc[j, 0].hour <= 21) & (
-                            rail[x].iloc[j, 0].minute >= 55 if (rail[x].iloc[j, 0].hour == 7) else True) & (
-                            rail[x].iloc[j, 0].minute <= 1 if (rail[x].iloc[j, 0].hour == 21) else True):
+                        if (rail[x].index[j] == 'SBC2') & (rail[x].index[j + 1] == 'SBC2') & (rail[x].iloc[j, 0].hour >= SBC2startHour) & (rail[x].iloc[j, 0].hour <= SBC2endHour) & (
+                            rail[x].iloc[j, 0].minute >= SBC2startMinute if (rail[x].iloc[j, 0].hour == SBC2startHour) else True) & (
+                            rail[x].iloc[j, 0].minute <= SBC2endMinute if (rail[x].iloc[j, 0].hour == SBC2endHour) else True):
                             data = {'Train_No': ids[x], 'LocationPick': rail[x].index[i], 'Trip_Start': rail[x].iloc[i, 0],
                                     'LocationRelieve': rail[x].index[j], 'Trip_End': rail[x].iloc[j, 0],
                                     'Trip_Duration': rail[x].iloc[j, 0] - rail[x].iloc[i, 0]}
@@ -241,21 +278,34 @@ def process_file(
                             break
 
                         
-                        if (rail[x].index[j] == 'CCUP') & (j != i) & (rail[x].index[j + 1] == 'CCDN'):
+                        # if (rail[x].index[j] == 'CCUP') & (j != i) & (rail[x].index[j + 1] == 'CCDN'):
+                        #     data = {'Train_No': ids[x], 'LocationPick': rail[x].index[i], 'Trip_Start': rail[x].iloc[i, 0],
+                        #             'LocationRelieve': rail[x].index[j+1], 'Trip_End': rail[x].iloc[j+1, 0],
+                        #             'Trip_Duration': rail[x].iloc[j+1, 0] - rail[x].iloc[i, 0]}
+                        #     departure()
+                        #     data.update(route)
+                        #     trips = trips.append(data, ignore_index=True)
+                        #     # rail[x].iloc[j+1,0] = rail[x].iloc[j,0] 
+                        #     del data
+                        #     rail[x].reset_index(inplace=True)
+                        #     rail[x].drop(rail[x].index[i:j + 1], inplace=True)
+                        #     rail[x].set_index('CheckPoints', inplace=True)
+                        #     j = 0
+                        #     break
+                        if (rail[x].index[j] == 'CCDN') & (j != i) & (rail[x].index[j + 1] == 'CCUP'):
                             data = {'Train_No': ids[x], 'LocationPick': rail[x].index[i], 'Trip_Start': rail[x].iloc[i, 0],
-                                    'LocationRelieve': rail[x].index[j+1], 'Trip_End': rail[x].iloc[j+1, 0],
+                                    'LocationRelieve': rail[x].index[j], 'Trip_End': rail[x].iloc[j, 0],
                                     'Trip_Duration': rail[x].iloc[j+1, 0] - rail[x].iloc[i, 0]}
                             departure()
                             data.update(route)
                             trips = trips.append(data, ignore_index=True)
-                            # rail[x].iloc[j+1,0] = rail[x].iloc[j,0] 
+                            rail[x].iloc[j+1,0] = rail[x].iloc[j,0] + datetime.timedelta(seconds=1)
                             del data
                             rail[x].reset_index(inplace=True)
                             rail[x].drop(rail[x].index[i:j + 1], inplace=True)
                             rail[x].set_index('CheckPoints', inplace=True)
                             j = 0
                             break
-
                         
                         if ((rail[x].index[j] == 'CCUP') | (rail[x].index[j] == 'CCDN')) & (j != 0):
                             data = {'Train_No': ids[x], 'LocationPick': rail[x].index[i], 'Trip_Start': rail[x].iloc[i, 0],
