@@ -66,6 +66,7 @@ def process_file(
         import warnings
         warnings.filterwarnings('ignore')
         warnings.simplefilter(action='ignore',category=FutureWarning)
+        update_status(execution_id, f"Your UID for future ref - {execution_id}","WIP")
         update_status(execution_id, "Reading Time Table","WIP")
         df1 = pd.read_csv(file_path, index_col=0,header=None)
         df1.columns = df1.iloc[0]
