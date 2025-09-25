@@ -129,16 +129,37 @@ def download_file(execution_id: str):
 def cancel_simulation(execution_id: str):
     job = job_registry.get(execution_id)
     if not job:
-        raise HTTPException(status_code=404, detail="No running job found for this execution ID.")
+        raise HTTPException(
+            status_code=404,
+            detail="No running job found for this execution ID."
+        )
 
     process = job.get("process")
     if process is None:
-        raise HTTPException(status_code=400, detail="Process info missing.")
+        raise HTTPException(
+            status_code=400,
+            detail="Process info missing."
+        )
 
     try:
         os.kill(process.pid, signal.SIGTERM)
-        update_status(execution_id, "cancelled")
+
+        # ✅ Correct update_status usage
+        update_status(
+            execution_id,
+            "Process Cancelled",   # step_name
+            "cancelled",           # status
+            "User requested cancellation"  # message (optional)
+        )
+
         job["status"] = "cancelled"
         return {"status": "cancelled", "message": "Simulation cancelled."}
+
     except Exception as e:
+        update_status(
+            execution_id,
+            "Cancel Failed",
+            "error",
+            str(e)
+        )
         raise HTTPException(status_code=500, detail=f"Failed to cancel process: {e}")

@@ -1504,4 +1504,5 @@ def main():
         update_status(execution_id, "Pipeline Broke--", "error", str(e))
 
 if __name__ == "__main__":
+    print('WE GOT HERE AGAIN')
     main()

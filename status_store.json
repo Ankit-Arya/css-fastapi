@@ -1,826 +1,94 @@
 {
-  "d1d76050-b915-447e-b427-b1db759723d4": [
+  "60991431-9b9c-4293-a084-5cb880554597": [
     {
-      "name": "Reading File",
-      "status": "running",
+      "name": "['104', '102', '103', '106', '109', '111', '112', '116', '117', '108', '101', '119', '114', '121', '105', '122', '118', '123', '125', '126', '115', '127', '128', '107', '129', '110', '130', '113', '131', '132', '133', '120', '124', '135', '136', '137', '138', '134']",
+      "status": "WIP",
       "message": ""
     },
     {
-      "name": "All Tasks",
+      "name": "  File \"C:\\Users\\ankit\\dmrc-fastapi\\css-fastapi\\simulate_runner.py\", line 133, in main",
       "status": "error",
-      "message": "'utf-8' codec can't decode byte 0xf4 in position 10: invalid continuation byte"
-    }
-  ],
-  "e085d8e6-a138-462f-afe9-2b8eb97ad66c": [
-    {
-      "name": "Reading File",
-      "status": "running",
       "message": ""
     },
     {
-      "name": "All Tasks",
+      "name": "    update_status(execution_id, f\"Unique Train IDs: {ids}\", \"WIP\")",
       "status": "error",
-      "message": "'utf-8' codec can't decode byte 0xf4 in position 10: invalid continuation byte"
-    }
-  ],
-  "dccd6e52-30bd-4253-bd1f-f6d040cf375b": [
-    {
-      "name": "Reading File",
-      "status": "running",
       "message": ""
     },
     {
-      "name": "All Tasks",
+      "name": "PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'status_store.json.tmp' -> 'status_store.json'",
       "status": "error",
-      "message": "'utf-8' codec can't decode byte 0xf4 in position 10: invalid continuation byte"
-    }
-  ],
-  "0e9b8c4a-1bb1-4c89-a18b-73ef0d474c73": [
-    {
-      "name": "Reading File",
-      "status": "running",
       "message": ""
     },
     {
-      "name": "All Tasks",
+      "name": "During handling of the above exception, another exception occurred:",
       "status": "error",
-      "message": "'utf-8' codec can't decode byte 0x9e in position 14: invalid start byte"
-    }
-  ],
-  "526bffab-9dad-4c90-9911-61e3a1e242bf": [
-    {
-      "name": "Reading File",
-      "status": "completed",
       "message": ""
     },
     {
-      "name": "Creating Reference File 1",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Creating Reference File 2",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Creating Reference File 3",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Generating Final Output CSV",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "All Tasks",
-      "status": "completed",
-      "message": ""
-    }
-  ],
-  "f5fe79ee-f369-4337-bbe3-265fcba3cb6f": [
-    {
-      "name": "Reading File",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Creating Reference File 1",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Creating Reference File 2",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Creating Reference File 3",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Generating Final Output CSV",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "All Tasks",
-      "status": "completed",
-      "message": ""
-    }
-  ],
-  "25848aba-95b6-4035-9111-20af9a90aad6": [
-    {
-      "name": "Reading File",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Creating Reference File 1",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Creating Reference File 2",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Creating Reference File 3",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Generating Final Output CSV",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "All Tasks",
-      "status": "completed",
-      "message": ""
-    }
-  ],
-  "1d0812b4-54a8-4a47-a9c8-5d5931930285": [
-    {
-      "name": "Reading File",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Creating Reference File 1",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Creating Reference File 2",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Creating Reference File 3",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "Generating Final Output CSV",
-      "status": "completed",
-      "message": ""
-    },
-    {
-      "name": "All Tasks",
-      "status": "completed",
-      "message": ""
-    }
-  ],
-  "3620185e-337d-498b-be64-6d5f6c45212c": [
-    {
-      "name": "Pipeline Broke--",
+      "name": "",
       "status": "error",
-      "message": "update_status() missing 1 required positional argument: 'status'"
-    }
-  ],
-  "d47aec47-3ba7-425b-8a3f-6dddde9d045a": [
+      "message": ""
+    },
     {
-      "name": "Pipeline Broke--",
+      "name": "Traceback (most recent call last):",
       "status": "error",
-      "message": "update_status() missing 1 required positional argument: 'status'"
-    }
-  ],
-  "9ee69274-d1bf-4583-b551-f34bd3ed2a19": [
+      "message": ""
+    },
     {
-      "name": "Pipeline Broke--",
+      "name": "  File \"C:\\Users\\ankit\\dmrc-fastapi\\css-fastapi\\simulate_runner.py\", line 1508, in <module>",
       "status": "error",
-      "message": "update_status() missing 1 required positional argument: 'status'"
-    }
-  ],
-  "cf3fa7c6-2e68-42a0-882d-901d7dca7d5e": [
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
       "message": ""
     },
     {
-      "name": "Pipeline Broke--",
+      "name": "    main()",
       "status": "error",
-      "message": "No module named 'matplotlib'"
-    }
-  ],
-  "4d1ca59b-3081-4696-b378-9497331316bf": [
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
       "message": ""
     },
     {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['201']",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Issue in Train 201",
+      "name": "  File \"C:\\Users\\ankit\\dmrc-fastapi\\css-fastapi\\simulate_runner.py\", line 1504, in main",
       "status": "error",
-      "message": "Location: CCDN, Time: 08:00:00"
+      "message": ""
     },
     {
-      "name": "Pipeline Broke--",
+      "name": "    update_status(execution_id, \"Pipeline Broke--\", \"error\", str(e))",
       "status": "error",
-      "message": "[Errno 2] No such file or directory: 'generated_duties_graph.csv'"
-    }
-  ],
-  "43a88708-623c-4951-9a7f-89769e112cd9": [
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
       "message": ""
     },
     {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['201']",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Trip Analysis Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Saved complete Trip Data",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating duty dataset to be optimized - This might take some time",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Starting Optimization Process - This will take time - Sit tight",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Pipeline Broke--",
+      "name": "  File \"C:\\Users\\ankit\\dmrc-fastapi\\css-fastapi\\helpers.py\", line 95, in update_status",
       "status": "error",
-      "message": "[Errno 2] No such file or directory: 'temp_files/43a88708-623c-4951-9a7f-89769e112cd9generated_duties_graph.csv'"
-    }
-  ],
-  "f2fd7751-ca98-43d9-a637-f965a0030709": [
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
       "message": ""
     },
     {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['201']",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Trip Analysis Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Saved complete Trip Data",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating duty dataset to be optimized - This might take some time",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Dataset Generation successfull with 124971 records",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Starting Optimization Process - This will take time - Sit tight",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Pipeline Broke--",
+      "name": "    os.replace(tmp_file, STATUS_FILE)   # atomic replace",
       "status": "error",
-      "message": "Attempting to use an unavailable solver.\n\nThe SolverFactory was unable to create the solver \"mbnb\"\nand returned an UnknownSolver object.  This error is raised at the point\nwhere the UnknownSolver object was used as if it were valid (by calling\nmethod \"solve\").\n\nThe original solver was created with the following parameters:\n\texecutable: C:\\Users\\ankit\\LINE-3_4\\minotaur-0.4.1-win64\\bin\\mbnb.exe\n\ttype: mbnb\n\t_args: ()\n\toptions: {'--branch_dir': 1, '--brancher': 'maxvio', '--set_lp_method': 0, '--sppheur': 1, '--log_level': 3, '--obj_gap_percent': 5, '--time_limit': 3600}"
-    }
-  ],
-  "78d6a81e-b611-41bf-9f7a-181e2e53e075": [
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
       "message": ""
     },
     {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['201']",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Trip Analysis Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Saved complete Trip Data",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating duty dataset to be optimized - This might take some time",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Dataset Generation successfull with 124971 records",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Starting Optimization Process - This will take time - Sit tight",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Success ! Optimization Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating Trip Chart Format",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Pipeline Broke--",
+      "name": "PermissionError: [WinError 5] Access is denied: 'status_store.json.tmp' -> 'status_store.json'",
       "status": "error",
-      "message": "No engine for filetype: 'csv'"
-    }
-  ],
-  "95fec458-302d-4ec3-b970-1523bd4ca5a1": [
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
       "message": ""
     },
     {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['201']",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Issue in Train 201",
+      "name": "Process exited 1",
       "status": "error",
-      "message": "Location: CCDN, Time: 08:00:00"
-    },
-    {
-      "name": "Trip Analysis Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Saved complete Trip Data",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating duty dataset to be optimized - This might take some time",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Dataset Generation successfull with 36287 records",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Starting Optimization Process - This will take time - Sit tight",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Pipeline Broke--",
-      "status": "error",
-      "message": "Solver (asl) did not exit normally"
-    }
-  ],
-  "0f7c2322-ae5a-48b7-8807-cbb9f15f38f9": [
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['201']",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Trip Analysis Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Saved complete Trip Data",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating duty dataset to be optimized - This might take some time",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Dataset Generation successfull with 124971 records",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Starting Optimization Process - This will take time - Sit tight",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Pipeline Broke--",
-      "status": "error",
-      "message": "Solver (asl) did not exit normally"
-    }
-  ],
-  "9f01e2c8-f339-4233-91ad-c7d8d89b7441": [
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['201']",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Trip Analysis Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Saved complete Trip Data",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating duty dataset to be optimized - This might take some time",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Dataset Generation successfull with 124971 records",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Starting Optimization Process - This will take time - Sit tight",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Pipeline Broke--",
-      "status": "error",
-      "message": "Solver (asl) did not exit normally"
-    }
-  ],
-  "99187dd7-8f42-4c95-9a77-43c25113a3d7": [
-    {
-      "name": "Values you entered -execution_id-99187dd7-8f42-4c95-9a77-43c25113a3d7,file_path-temp_files/99187dd7-8f42-4c95-9a77-43c25113a3d7_PMRC15925.csv,user_id-,user_name-,stepping_back-[{'station': 'SBC1', 'start': '10:10', 'end': '12:12'}, {'station': 'SBC2', 'start': '12:12', 'end': '14:14'}] ",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['201']",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Trip Analysis Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Saved complete Trip Data",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating duty dataset to be optimized - This might take some time",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Dataset Generation successfull with 124971 records",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Starting Optimization Process - This will take time - Sit tight",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Pipeline Broke--",
-      "status": "error",
-      "message": "Solver (asl) did not exit normally"
-    }
-  ],
-  "01846ebd-da94-4b12-919c-f68c5282c797": [
-    {
-      "name": "Values you entered -execution_id-01846ebd-da94-4b12-919c-f68c5282c797,file_path-temp_files/01846ebd-da94-4b12-919c-f68c5282c797_PMRC15925.csv,user_id-,user_name-user@example.com,stepping_back-[{'station': 'A', 'start': '10:01', 'end': '10:12'}] ",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['201']",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Trip Analysis Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Saved complete Trip Data",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating duty dataset to be optimized - This might take some time",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Dataset Generation successfull with 124971 records",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Starting Optimization Process - This will take time - Sit tight",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Pipeline Broke--",
-      "status": "error",
-      "message": "Solver (asl) did not exit normally"
-    }
-  ],
-  "551f2743-31af-407d-8c31-8ddae817a355": [
-    {
-      "name": "Values you entered -execution_id-551f2743-31af-407d-8c31-8ddae817a355,file_path-temp_files/551f2743-31af-407d-8c31-8ddae817a355_PMRC15925.csv,user_id-,user_name-user@example.com,stepping_back-[{'station': 'vfdsv', 'start': '10:10', 'end': '11:11'}, {'station': 'rydd', 'start': '11:11', 'end': '12:12'}] ",
-      "status": "WIP",
       "message": ""
     }
   ],
-  "b92e53b8-330d-4ffb-bef7-5ff7fc1f1a65": [
-    {
-      "name": "Values you entered -execution_id-b92e53b8-330d-4ffb-bef7-5ff7fc1f1a65,file_path-temp_files/b92e53b8-330d-4ffb-bef7-5ff7fc1f1a65_PMRC15925.csv,user_id-,user_name-user@example.com,stepping_back-[{'station': 'A', 'start': '10:10', 'end': '11:11'}, {'station': 'B', 'start': '12:12', 'end': '14:14'}] ",
-      "status": "WIP",
-      "message": ""
-    }
-  ],
-  "0d2d50c4-5ed0-49c9-8b2d-bbdee991f548": [
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['101', '106', '102', '103', '108', '111', '104', '114', '105', '107', '117', '115', '118', '110', '109', '113', '119', '112', '116', '120']",
-      "status": "WIP",
-      "message": ""
-    }
-  ],
-  "031f93eb-ad29-4b1a-8e7b-75fe55255476": [
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['DEPOT', 'NBAA-DN', 'DSG-DN', 'DSGDNOUT', 'SHD-DN', 'SHDDNOUT', 'KG-DN', 'RI-DN', 'RI-UP', 'RI-OUT', 'SLAP', 'SHD-UP', 'SHDUPOUT', 'DSG-UP', 'NBAA-UP', 'DEPOT.1']",
-      "status": "WIP",
-      "message": ""
-    }
-  ],
-  "51dd4032-3cd6-464a-a568-3a2df5a9ee2d": [
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['104', '102', '103', '108', '113', '115', '116', '107', '112', '101', '105', '117', '111', '119', '110', '120', '106', '121', '109', '114', '122', '118']",
-      "status": "WIP",
-      "message": ""
-    }
-  ],
-  "84df41dc-dc8e-42be-9366-ef457780eb30": [
-    {
-      "name": "Importing neccessary libraries",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['104', '102', '103', '108', '113', '115', '116', '107', '112', '101', '105', '117', '111', '119', '110', '120', '106', '121', '109', '114', '122', '118']",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Trip Analysis Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Saved complete Trip Data",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating duty dataset to be optimized - This might take some time",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Dataset Generation successfull with 1855483 records",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Starting Optimization Process - This will take time - Sit tight",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Success ! Optimization Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating Trip Chart Format",
-      "status": "WIP",
-      "message": ""
-    }
-  ],
-  "b1bf97e1-c8c0-41a3-a607-4dabb0bf9016": [
+  "cfc866d9-06c1-4921-a82c-d6105f890519": [
     {
       "name": "Preparing simulation",
       "status": "WIP",
       "message": ""
     },
     {
-      "name": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.\r\n",
-      "status": "error",
-      "message": ""
-    }
-  ],
-  "eaa2ab0e-02a5-4f26-a0bd-90ffe7c7c9e0": [
-    {
-      "name": "Preparing simulation",
+      "name": "Your execution ID is cfc866d9-06c1-4921-a82c-d6105f890519",
       "status": "WIP",
       "message": ""
     },
     {
-      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1449, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 7, in main\r\n    execution_id = sys.argv[1]\r\nUnboundLocalError: local variable 'sys' referenced before assignment\r\n",
-      "status": "error",
-      "message": ""
-    }
-  ],
-  "22aab104-ab5d-43fd-8e40-b18315769663": [
-    {
-      "name": "Preparing simulation",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1449, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 7, in main\r\n    execution_id = sys.argv[1]\r\nUnboundLocalError: local variable 'sys' referenced before assignment\r\n",
-      "status": "error",
-      "message": ""
-    }
-  ],
-  "9dd67f68-9645-48f8-9002-896e8f442777": [
-    {
-      "name": "Preparing simulation",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1450, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 43, in main\r\n    print(\"SBC1:\", SBC1startHour, SBC1startMinute, SBC1endHour, SBC1endMinute)\r\nNameError: name 'SBC1startHour' is not defined\r\n",
-      "status": "error",
-      "message": ""
-    }
-  ],
-  "db379efd-d62b-4b6c-9e65-040dfe63bb34": [
-    {
-      "name": "Preparing simulation",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1514, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 52, in main\r\n    execution_id = sys.argv[1]\r\nUnboundLocalError: local variable 'sys' referenced before assignment\r\n",
-      "status": "error",
-      "message": ""
-    }
-  ],
-  "6ca61e86-56e0-4c5c-b63c-ebb59126716d": [
-    {
-      "name": "Preparing simulation",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Your execution ID is 6ca61e86-56e0-4c5c-b63c-ebb59126716d",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Your UID for future ref - 6ca61e86-56e0-4c5c-b63c-ebb59126716d",
+      "name": "Your UID for future ref - cfc866d9-06c1-4921-a82c-d6105f890519",
       "status": "WIP",
       "message": ""
     },
@@ -830,7 +98,49 @@
       "message": ""
     },
     {
-      "name": "Unique Train IDs: ['104', '105', '101', '110', '109', '106', '102', '103', '108', '111', '114', '107', '117', '115', '118', '113', '119', '112', '116', '120']",
+      "name": "Unique Train IDs: ['104', '102', '103', '106', '109', '111', '112', '116', '117', '108', '101', '119', '114', '121', '105', '122', '118', '123', '125', '126', '115', '127', '128', '107', '129', '110', '130', '113', '131', '132', '133', '120', '124', '135', '136', '137', '138', '134']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "508e3dff-6472-4fd4-8933-96ab6d3c95e1": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Your execution ID is 508e3dff-6472-4fd4-8933-96ab6d3c95e1",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Your UID for future ref - 508e3dff-6472-4fd4-8933-96ab6d3c95e1",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['102', '105', '109', '111', '112', '116', '117', '108', '101', '119', '114', '121', '104', '122', '118', '103', '123', '107', '125', '126', '115', '127', '128', '106', '129', '110', '130', '113', '131', '132', '133', '120', '124', '135', '136', '137', '138', '134']",
       "status": "WIP",
       "message": ""
     },
@@ -850,149 +160,9 @@
       "message": ""
     },
     {
-      "name": "Dataset Generation successfull with 1852000 records",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Starting Optimization Process - This will take time - Sit tight",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "2025-09-25 17:00:19,580 [INFO] Loaded 362 services.\r\n2025-09-25 17:01:26,055 [INFO] Loaded 1852000 valid duty assignments.\r\n2025-09-25 17:01:26,055 [INFO] Number of services: 362\r\n2025-09-25 17:01:26,055 [INFO] Number of drivers (duty options): 1852000\r\n2025-09-25 17:01:26,215 [INFO] All services are included in the duty options.\r\n2025-09-25 17:02:18,514 [INFO] Model written to temp_files/6ca61e86-56e0-4c5c-b63c-ebb59126716dModel.nl\r\n2025-09-25 17:02:18,514 [INFO] Solving model with MBNB solver...\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1504, in <module>\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1047, in main\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\env\\lib\\site-packages\\pyomo\\opt\\base\\solvers.py\", line 609, in solve\r\n    _status = self._apply_solver()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\env\\lib\\site-packages\\pyomo\\opt\\solver\\shellcmd.py\", line 267, in _apply_solver\r\n    self._rc, self._log = self._execute_command(self._command)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\env\\lib\\site-packages\\pyomo\\opt\\solver\\shellcmd.py\", line 335, in _execute_command\r\n    results = subprocess.run(\r\n  File \"C:\\Users\\atanm\\anaconda3\\lib\\subprocess.py\", line 495, in run\r\n    stdout, stderr = process.communicate(input, timeout=timeout)\r\n  File \"C:\\Users\\atanm\\anaconda3\\lib\\subprocess.py\", line 1020, in communicate\r\n    self.wait()\r\n  File \"C:\\Users\\atanm\\anaconda3\\lib\\subprocess.py\", line 1083, in wait\r\n    return self._wait(timeout=timeout)\r\n  File \"C:\\Users\\atanm\\anaconda3\\lib\\subprocess.py\", line 1377, in _wait\r\n    result = _winapi.WaitForSingleObject(self._handle,\r\nKeyboardInterrupt\r\n",
-      "status": "error",
-      "message": ""
-    }
-  ],
-  "f3c4d116-5d23-4419-843b-fa927427f022": [
-    {
-      "name": "Preparing simulation",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1506, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 4, in main\r\n    print(\"\\U0001f680 simulate_runner.py started!\")\r\n  File \"C:\\Users\\atanm\\anaconda3\\lib\\encodings\\cp1252.py\", line 19, in encode\r\n    return codecs.charmap_encode(input,self.errors,encoding_table)[0]\r\nUnicodeEncodeError: 'charmap' codec can't encode character '\\U0001f680' in position 0: character maps to <undefined>\r\n",
-      "status": "error",
-      "message": ""
-    }
-  ],
-  "b0bd91e2-7c77-4736-8a7b-f340ef8ebb15": [
-    {
-      "name": "Preparing simulation",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1506, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 4, in main\r\n    print(f\"\\U0001f680 simulate_runner.py started!\")\r\n  File \"C:\\Users\\atanm\\anaconda3\\lib\\encodings\\cp1252.py\", line 19, in encode\r\n    return codecs.charmap_encode(input,self.errors,encoding_table)[0]\r\nUnicodeEncodeError: 'charmap' codec can't encode character '\\U0001f680' in position 0: character maps to <undefined>\r\n",
-      "status": "error",
-      "message": ""
-    }
-  ],
-  "83a33065-694d-42ac-82d5-162b7961a6e7": [
-    {
-      "name": "Preparing simulation",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1506, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 5, in main\r\n    print(f\"Received args: {sys.argv}\")\r\nUnboundLocalError: local variable 'sys' referenced before assignment\r\n",
-      "status": "error",
-      "message": ""
-    }
-  ],
-  "e75fe451-3796-4fff-bfcb-a7ce71a67ac3": [
-    {
-      "name": "Preparing simulation",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Your execution ID is e75fe451-3796-4fff-bfcb-a7ce71a67ac3",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Your UID for future ref - e75fe451-3796-4fff-bfcb-a7ce71a67ac3",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['104', '102', '103', '108', '113', '115', '116', '107', '112', '101', '105', '117', '111', '119', '110', '120', '106', '121', '109', '114', '122', '118']",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Trip Analysis Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Saved complete Trip Data",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating duty dataset to be optimized - This might take some time",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1507, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 868, in main\r\n    all_duties = generate_all_duties(services)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 828, in generate_all_duties\r\n    duties_from_service = generate_duties_from_service(i, graph, services)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 816, in generate_duties_from_service\r\n    dfs([start_idx])\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 813, in dfs\r\n    dfs(current_path)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 813, in dfs\r\n    dfs(current_path)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 813, in dfs\r\n    dfs(current_path)\r\n  [Previous line repeated 2 more times]\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 810, in dfs\r\n    test_duty_dur = services[test_path[-1]].endTime - services[test_path[0]].startTime\r\nKeyboardInterrupt\r\n",
-      "status": "error",
-      "message": ""
-    }
-  ],
-  "f3c2601f-517a-4834-93f6-d0a3b6821493": [
-    {
-      "name": "Preparing simulation",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Your execution ID is f3c2601f-517a-4834-93f6-d0a3b6821493",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Your UID for future ref - f3c2601f-517a-4834-93f6-d0a3b6821493",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Reading Time Table",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Unique Train IDs: ['104', '102', '103', '108', '113', '115', '116', '107', '112', '101', '105', '117', '111', '119', '110', '120', '106', '121', '109', '114', '122', '118']",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Trip Analysis Complete",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Saved complete Trip Data",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Creating duty dataset to be optimized - This might take some time",
-      "status": "WIP",
-      "message": ""
-    },
-    {
-      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1507, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 868, in main\r\n    all_duties = generate_all_duties(services)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 828, in generate_all_duties\r\n    duties_from_service = generate_duties_from_service(i, graph, services)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 816, in generate_duties_from_service\r\n    dfs([start_idx])\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 813, in dfs\r\n    dfs(current_path)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 813, in dfs\r\n    dfs(current_path)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 813, in dfs\r\n    dfs(current_path)\r\n  [Previous line repeated 1 more time]\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 810, in dfs\r\n    test_duty_dur = services[test_path[-1]].endTime - services[test_path[0]].startTime\r\nKeyboardInterrupt\r\n",
-      "status": "error",
-      "message": ""
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
     }
   ]
 }
