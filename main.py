@@ -1,4 +1,5 @@
 import json
+import signal
 from typing import Optional
 from fastapi import FastAPI, File, Form, HTTPException, Depends, UploadFile
 from models.request_models import UserSignUp, UserLogin, TokenResponse
@@ -10,7 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, UploadFile, Form, BackgroundTasks
 from fastapi.responses import FileResponse
 from helpers import save_file_locally, update_status, get_status
-from worker import process_file
+from worker import process_file, job_registry  
 import os
 
 uri = "mongodb+srv://greenthornarya676_db_user:NRhQ0lSyJBMjyD5I@ankit-css.fz6hv8r.mongodb.net/?retryWrites=true&w=majority&appName=ANKIT-CSS"
@@ -123,3 +124,21 @@ def download_file(execution_id: str):
         )
     
     raise HTTPException(status_code=404, detail="File not ready or corrupted")
+
+@app.delete("/cancel/{execution_id}")
+def cancel_simulation(execution_id: str):
+    job = job_registry.get(execution_id)
+    if not job:
+        raise HTTPException(status_code=404, detail="No running job found for this execution ID.")
+
+    process = job.get("process")
+    if process is None:
+        raise HTTPException(status_code=400, detail="Process info missing.")
+
+    try:
+        os.kill(process.pid, signal.SIGTERM)
+        update_status(execution_id, "cancelled")
+        job["status"] = "cancelled"
+        return {"status": "cancelled", "message": "Simulation cancelled."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to cancel process: {e}")

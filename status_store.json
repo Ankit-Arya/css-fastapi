@@ -747,5 +747,252 @@
       "status": "WIP",
       "message": ""
     }
+  ],
+  "b1bf97e1-c8c0-41a3-a607-4dabb0bf9016": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.\r\n",
+      "status": "error",
+      "message": ""
+    }
+  ],
+  "eaa2ab0e-02a5-4f26-a0bd-90ffe7c7c9e0": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1449, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 7, in main\r\n    execution_id = sys.argv[1]\r\nUnboundLocalError: local variable 'sys' referenced before assignment\r\n",
+      "status": "error",
+      "message": ""
+    }
+  ],
+  "22aab104-ab5d-43fd-8e40-b18315769663": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1449, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 7, in main\r\n    execution_id = sys.argv[1]\r\nUnboundLocalError: local variable 'sys' referenced before assignment\r\n",
+      "status": "error",
+      "message": ""
+    }
+  ],
+  "9dd67f68-9645-48f8-9002-896e8f442777": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1450, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 43, in main\r\n    print(\"SBC1:\", SBC1startHour, SBC1startMinute, SBC1endHour, SBC1endMinute)\r\nNameError: name 'SBC1startHour' is not defined\r\n",
+      "status": "error",
+      "message": ""
+    }
+  ],
+  "db379efd-d62b-4b6c-9e65-040dfe63bb34": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1514, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 52, in main\r\n    execution_id = sys.argv[1]\r\nUnboundLocalError: local variable 'sys' referenced before assignment\r\n",
+      "status": "error",
+      "message": ""
+    }
+  ],
+  "6ca61e86-56e0-4c5c-b63c-ebb59126716d": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Your execution ID is 6ca61e86-56e0-4c5c-b63c-ebb59126716d",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Your UID for future ref - 6ca61e86-56e0-4c5c-b63c-ebb59126716d",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['104', '105', '101', '110', '109', '106', '102', '103', '108', '111', '114', '107', '117', '115', '118', '113', '119', '112', '116', '120']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 1852000 records",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "2025-09-25 17:00:19,580 [INFO] Loaded 362 services.\r\n2025-09-25 17:01:26,055 [INFO] Loaded 1852000 valid duty assignments.\r\n2025-09-25 17:01:26,055 [INFO] Number of services: 362\r\n2025-09-25 17:01:26,055 [INFO] Number of drivers (duty options): 1852000\r\n2025-09-25 17:01:26,215 [INFO] All services are included in the duty options.\r\n2025-09-25 17:02:18,514 [INFO] Model written to temp_files/6ca61e86-56e0-4c5c-b63c-ebb59126716dModel.nl\r\n2025-09-25 17:02:18,514 [INFO] Solving model with MBNB solver...\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1504, in <module>\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1047, in main\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\env\\lib\\site-packages\\pyomo\\opt\\base\\solvers.py\", line 609, in solve\r\n    _status = self._apply_solver()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\env\\lib\\site-packages\\pyomo\\opt\\solver\\shellcmd.py\", line 267, in _apply_solver\r\n    self._rc, self._log = self._execute_command(self._command)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\env\\lib\\site-packages\\pyomo\\opt\\solver\\shellcmd.py\", line 335, in _execute_command\r\n    results = subprocess.run(\r\n  File \"C:\\Users\\atanm\\anaconda3\\lib\\subprocess.py\", line 495, in run\r\n    stdout, stderr = process.communicate(input, timeout=timeout)\r\n  File \"C:\\Users\\atanm\\anaconda3\\lib\\subprocess.py\", line 1020, in communicate\r\n    self.wait()\r\n  File \"C:\\Users\\atanm\\anaconda3\\lib\\subprocess.py\", line 1083, in wait\r\n    return self._wait(timeout=timeout)\r\n  File \"C:\\Users\\atanm\\anaconda3\\lib\\subprocess.py\", line 1377, in _wait\r\n    result = _winapi.WaitForSingleObject(self._handle,\r\nKeyboardInterrupt\r\n",
+      "status": "error",
+      "message": ""
+    }
+  ],
+  "f3c4d116-5d23-4419-843b-fa927427f022": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1506, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 4, in main\r\n    print(\"\\U0001f680 simulate_runner.py started!\")\r\n  File \"C:\\Users\\atanm\\anaconda3\\lib\\encodings\\cp1252.py\", line 19, in encode\r\n    return codecs.charmap_encode(input,self.errors,encoding_table)[0]\r\nUnicodeEncodeError: 'charmap' codec can't encode character '\\U0001f680' in position 0: character maps to <undefined>\r\n",
+      "status": "error",
+      "message": ""
+    }
+  ],
+  "b0bd91e2-7c77-4736-8a7b-f340ef8ebb15": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1506, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 4, in main\r\n    print(f\"\\U0001f680 simulate_runner.py started!\")\r\n  File \"C:\\Users\\atanm\\anaconda3\\lib\\encodings\\cp1252.py\", line 19, in encode\r\n    return codecs.charmap_encode(input,self.errors,encoding_table)[0]\r\nUnicodeEncodeError: 'charmap' codec can't encode character '\\U0001f680' in position 0: character maps to <undefined>\r\n",
+      "status": "error",
+      "message": ""
+    }
+  ],
+  "83a33065-694d-42ac-82d5-162b7961a6e7": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1506, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 5, in main\r\n    print(f\"Received args: {sys.argv}\")\r\nUnboundLocalError: local variable 'sys' referenced before assignment\r\n",
+      "status": "error",
+      "message": ""
+    }
+  ],
+  "e75fe451-3796-4fff-bfcb-a7ce71a67ac3": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Your execution ID is e75fe451-3796-4fff-bfcb-a7ce71a67ac3",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Your UID for future ref - e75fe451-3796-4fff-bfcb-a7ce71a67ac3",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['104', '102', '103', '108', '113', '115', '116', '107', '112', '101', '105', '117', '111', '119', '110', '120', '106', '121', '109', '114', '122', '118']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1507, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 868, in main\r\n    all_duties = generate_all_duties(services)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 828, in generate_all_duties\r\n    duties_from_service = generate_duties_from_service(i, graph, services)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 816, in generate_duties_from_service\r\n    dfs([start_idx])\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 813, in dfs\r\n    dfs(current_path)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 813, in dfs\r\n    dfs(current_path)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 813, in dfs\r\n    dfs(current_path)\r\n  [Previous line repeated 2 more times]\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 810, in dfs\r\n    test_duty_dur = services[test_path[-1]].endTime - services[test_path[0]].startTime\r\nKeyboardInterrupt\r\n",
+      "status": "error",
+      "message": ""
+    }
+  ],
+  "f3c2601f-517a-4834-93f6-d0a3b6821493": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Your execution ID is f3c2601f-517a-4834-93f6-d0a3b6821493",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Your UID for future ref - f3c2601f-517a-4834-93f6-d0a3b6821493",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['104', '102', '103', '108', '113', '115', '116', '107', '112', '101', '105', '117', '111', '119', '110', '120', '106', '121', '109', '114', '122', '118']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Traceback (most recent call last):\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 1507, in <module>\r\n    main()\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 868, in main\r\n    all_duties = generate_all_duties(services)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 828, in generate_all_duties\r\n    duties_from_service = generate_duties_from_service(i, graph, services)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 816, in generate_duties_from_service\r\n    dfs([start_idx])\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 813, in dfs\r\n    dfs(current_path)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 813, in dfs\r\n    dfs(current_path)\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 813, in dfs\r\n    dfs(current_path)\r\n  [Previous line repeated 1 more time]\r\n  File \"C:\\Users\\atanm\\css-fastapi-backend\\simulate_runner.py\", line 810, in dfs\r\n    test_duty_dur = services[test_path[-1]].endTime - services[test_path[0]].startTime\r\nKeyboardInterrupt\r\n",
+      "status": "error",
+      "message": ""
+    }
   ]
 }
