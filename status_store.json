@@ -164,5 +164,264 @@
       "status": "cancelled",
       "message": "User requested cancellation"
     }
+  ],
+  "e3842c36-8258-460b-909a-4ab53e011b32": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Your execution ID is e3842c36-8258-460b-909a-4ab53e011b32",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Your UID for future ref - e3842c36-8258-460b-909a-4ab53e011b32",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['104', '102', '103', '108', '113', '115', '116', '107', '112', '101', '105', '117', '111', '119', '110', '120', '106', '121', '109', '114', '122', '118']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "7e8ed52c-e091-4550-9a3c-590c6a94a08e": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Your execution ID is 7e8ed52c-e091-4550-9a3c-590c6a94a08e",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Your UID for future ref - 7e8ed52c-e091-4550-9a3c-590c6a94a08e",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Reading Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Unique Train IDs: ['104', '102', '103', '108', '113', '115', '116', '107', '112', '101', '105', '117', '111', '119', '110', '120', '106', '121', '109', '114', '122', '118']",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Analysis Complete",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Saved complete Trip Data",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "30e6e792-a3ea-4072-9091-2220adb7de2f": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 30e6e792-a3ea-4072-9091-2220adb7de2f",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "6801db1a-79b3-40ca-b23b-99d669340499": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 6801db1a-79b3-40ca-b23b-99d669340499",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "296b56ac-730b-4225-9b85-183dbf76fc3a": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 296b56ac-730b-4225-9b85-183dbf76fc3a",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "2884ea59-3df6-4431-a643-a53e269516f9": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 2884ea59-3df6-4431-a643-a53e269516f9",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "f2a6ead6-6c5c-4065-8ea7-b5c31479fabb": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - f2a6ead6-6c5c-4065-8ea7-b5c31479fabb",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
   ]
 }

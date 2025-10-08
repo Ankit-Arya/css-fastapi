@@ -101,7 +101,7 @@ def main():
               f"to {globals()[f'{station}endHour']:02}:{globals()[f'{station}endMinute']:02}")
     
     try:
-        update_status(execution_id, f"Your execution ID is {execution_id}","WIP")
+        # update_status(execution_id, f"Your execution ID is {execution_id}","WIP")
         import csv
         import math
         import copy
@@ -121,8 +121,9 @@ def main():
         import warnings
         warnings.filterwarnings('ignore')
         warnings.simplefilter(action='ignore',category=FutureWarning)
-        update_status(execution_id, f"Your UID for future ref - {execution_id}","WIP")
-        update_status(execution_id, "Reading Time Table","WIP")
+        update_status(execution_id, f"Save your UID for future ref - {execution_id}","WIP")
+        time.sleep(2)
+        update_status(execution_id, "Pre-Processing Time Table","WIP")
         df1 = pd.read_csv(file_path, index_col=0,header=None)
         df1.columns = df1.iloc[0]
         ids = df1.loc['TRAIN NO'].unique()
@@ -130,7 +131,7 @@ def main():
         print(f"NO. of Trains: {len(ids)}")
         print(ids)
 
-        update_status(execution_id, f"Unique Train IDs: {ids}", "WIP")
+        # update_status(execution_id, f"Unique Train IDs: {ids}", "WIP")
         df1.drop('TRAIN NO',axis=0,inplace=True)
         rail = {}
         for i in range(len(ids)):
@@ -399,7 +400,7 @@ def main():
                     print('ELSE STATEMENT')
                     break
 
-        update_status(execution_id, "Trip Analysis Complete", "WIP")
+        # update_status(execution_id, "Trip Analysis Complete", "WIP")
 
         skip = 0
         RISBCASSIGNED = trips[trips['LocationPick']=='SBC2']['Trip_Start'].min()
@@ -536,7 +537,7 @@ def main():
         comptrip.reset_index(drop= True, inplace=True)
 
         comptrip.to_excel(f"temp_files/{execution_id}comptrip.xlsx")
-        update_status(execution_id, "Saved complete Trip Data", "WIP")
+        update_status(execution_id, "Pre=Processing and analysis complete", "completed")
         if 'level_0' in comptrip.columns:
             comptrip.drop(columns=['level_0'], inplace=True)
         comptrip.reset_index(inplace=True)
@@ -874,7 +875,7 @@ def main():
         
         # Also store in global variable for compatibility
         final_op = all_duties
-        update_status(execution_id, f"Dataset Generation successfull with {len(all_duties)} records", "WIP")
+        update_status(execution_id, f"Dataset Generation successfull with {len(all_duties)} records", "completed")
         print("Done!")
 
         update_status(execution_id, f"Starting Optimization Process - This will take time - Sit tight", "WIP")
@@ -1070,7 +1071,7 @@ def main():
                 logging.error("Error writing solution file.", exc_info=True)
         else:
             logging.warning("Infeasible solution found.")
-        update_status(execution_id, f"Success ! Optimization Complete", "WIP")
+        update_status(execution_id, f"Success ! Optimization Complete", "completed")
 
         update_status(execution_id, f"Creating Trip Chart Format", "WIP")
         # ------------------------fIll tc
