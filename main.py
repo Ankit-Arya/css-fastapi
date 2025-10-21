@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 import signal
 from typing import Optional
@@ -7,16 +8,33 @@ from services.auth_service import register_user, authenticate_user, create_acces
 from pymongo.mongo_client import MongoClient
 import certifi
 from fastapi.middleware.cors import CORSMiddleware
+import motor.motor_asyncio
+from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorGridFSBucket
 
 from fastapi import FastAPI, UploadFile, Form, BackgroundTasks
 from fastapi.responses import FileResponse
 from helpers import save_file_locally, update_status, get_status
 from worker import process_file, job_registry  
 import os
+from fastapi.responses import StreamingResponse
+from bson import ObjectId
 
 uri = "mongodb+srv://greenthornarya676_db_user:NRhQ0lSyJBMjyD5I@ankit-css.fz6hv8r.mongodb.net/?retryWrites=true&w=majority&appName=ANKIT-CSS"
 
-client = MongoClient(uri, tlsCAFile=certifi.where())
+# client = MongoClient(uri, tlsCAFile=certifi.where())
+# # Send a ping to confirm a successful connection
+# try:
+#     client.admin.command('ping')
+#     print("Pinged your deployment. You successfully connected to MongoDB!")
+# except Exception as e:
+#     print(e)
+# db = client["user_auth_db"]
+# users_collection = db["users"]
+# notices_collection = db["notices"]
+
+
+# ASYNC DB
+client = motor.motor_asyncio.AsyncIOMotorClient(uri)
 # Send a ping to confirm a successful connection
 try:
     client.admin.command('ping')
@@ -24,7 +42,9 @@ try:
 except Exception as e:
     print(e)
 db = client["user_auth_db"]
+fs = motor.motor_asyncio.AsyncIOMotorGridFSBucket(db)
 users_collection = db["users"]
+notices_collection = db["notices"]
 
 app = FastAPI()
 
@@ -39,19 +59,34 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# @app.post("/signup")
+# def signup(user: UserSignUp):
+#     success = register_user(user, users_collection)
+#     if not success:
+#         raise HTTPException(status_code=400, detail="Email already registered.")
+#     return {"message": "Sign up successful."}
+
+# @app.post("/login", response_model=TokenResponse)
+# def login(user: UserLogin):
+#     if not authenticate_user(user.email, user.password, users_collection):
+#         raise HTTPException(status_code=401, detail="Incorrect email or password.")
+#     token = create_access_token(user.email)
+#     return {"access_token": token, "token_type": "bearer"}
 @app.post("/signup")
-def signup(user: UserSignUp):
-    success = register_user(user, users_collection)
+async def signup(user: UserSignUp):
+    success = await register_user(user, users_collection)  # Make register_user async
     if not success:
         raise HTTPException(status_code=400, detail="Email already registered.")
     return {"message": "Sign up successful."}
 
 @app.post("/login", response_model=TokenResponse)
-def login(user: UserLogin):
-    if not authenticate_user(user.email, user.password, users_collection):
+async def login(user: UserLogin):
+    auth_success = await authenticate_user(user.email, user.password, users_collection)  # Make async
+    if not auth_success:
         raise HTTPException(status_code=401, detail="Incorrect email or password.")
-    token = create_access_token(user.email)
+    token = create_access_token(user.email)  # This can stay sync if it doesn't do async work
     return {"access_token": token, "token_type": "bearer"}
+
 
 @app.get("/lines")
 def get_dmrc_lines():
@@ -93,7 +128,26 @@ async def simulate(
             parsed_stepping_back = json.loads(stepping_back)
         except Exception as e:
             print("Failed to parse stepping_back JSON:", e)
-            
+    # Save uploaded file into MongoDB GridFS
+    file_id = await fs.upload_from_stream(
+        filename=file.filename,
+        source=file.file,
+        metadata={
+            "uploaded_by": user_name,
+            "execution_id": execution_id,
+            "content_type": file.content_type
+        }
+    )
+
+    # Save notice entry in MongoDB
+    notice = {
+        "executionId": execution_id,
+        "initiatedBy": user_name,
+        "timestamp": datetime.now(),
+        "file_id": str(file_id),
+        "file_name": file.filename
+    }
+    await notices_collection.insert_one(notice)        
     # Save uploaded file
     saved_path = await save_file_locally(execution_id, file)
 
@@ -103,6 +157,16 @@ async def simulate(
     )
 
     return {"message": "File received. Processing started.", "execution_id": execution_id}
+
+
+@app.get("/notices")
+async def get_notices():
+    notices = await notices_collection.find().sort("timestamp", -1).to_list(50)
+    for n in notices:
+        n["_id"] = str(n["_id"])
+    return notices
+
+
 
 @app.get("/status/{execution_id}")
 def check_status(execution_id: str):
@@ -163,3 +227,15 @@ def cancel_simulation(execution_id: str):
             str(e)
         )
         raise HTTPException(status_code=500, detail=f"Failed to cancel process: {e}")
+    
+@app.get("/files/{file_id}")
+async def get_file(file_id: str):
+    try:
+        grid_out = await fs.open_download_stream(ObjectId(file_id))
+    except Exception:
+        raise HTTPException(status_code=404, detail="File not found")
+    return StreamingResponse(
+        grid_out,
+        media_type=grid_out.metadata.get("content_type", "application/octet-stream"),
+        headers={"Content-Disposition": f"attachment; filename={grid_out.filename}"}
+    )
