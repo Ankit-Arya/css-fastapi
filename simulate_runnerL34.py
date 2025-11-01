@@ -13,6 +13,7 @@ def main():
     # CLI args: python3 simulate_runner.py <execution_id> <file_path> <stepping_back_json>
     execution_id = sys.argv[1]
     file_path = sys.argv[2]
+    print('FILE PATH==',file_path)
     stepping_back_raw = sys.argv[3]  # Passed as JSON string
     # stepping_back = json.loads(stepping_back_raw)
     # # We'll map them to SBC1, SBC2, SBC3...

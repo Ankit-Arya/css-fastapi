@@ -541,5 +541,277 @@
       "status": "error",
       "message": "[WinError 5] Access is denied"
     }
+  ],
+  "b71fb68f-03eb-4c87-9ddb-486710f2fe3f": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - b71fb68f-03eb-4c87-9ddb-486710f2fe3f",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "No columns to parse from file"
+    }
+  ],
+  "749d100a-1942-420b-9380-b2892fccc860": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 749d100a-1942-420b-9380-b2892fccc860",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "No columns to parse from file"
+    }
+  ],
+  "e6acf264-d1e2-44fc-bf75-e3083cf5096d": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - e6acf264-d1e2-44fc-bf75-e3083cf5096d",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "No columns to parse from file"
+    }
+  ],
+  "68c7e800-dbd1-4185-a5c5-49902ccf540c": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 68c7e800-dbd1-4185-a5c5-49902ccf540c",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "No columns to parse from file"
+    }
+  ],
+  "85cfc866-153c-43a2-9bff-69fb0615a88c": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 85cfc866-153c-43a2-9bff-69fb0615a88c",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "No columns to parse from file"
+    }
+  ],
+  "f3e74402-bbbb-4fb7-931f-7fd475de03dc": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - f3e74402-bbbb-4fb7-931f-7fd475de03dc",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "No columns to parse from file"
+    }
+  ],
+  "dfb3f9cb-9652-42cf-ba28-fcee7489fa30": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - dfb3f9cb-9652-42cf-ba28-fcee7489fa30",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "No columns to parse from file"
+    }
+  ],
+  "47245c1e-b2c6-48db-ab1a-15f7af766a82": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 47245c1e-b2c6-48db-ab1a-15f7af766a82",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "No columns to parse from file"
+    }
+  ],
+  "8fdef544-73ec-4d34-b0c9-67fad1e6758f": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 8fdef544-73ec-4d34-b0c9-67fad1e6758f",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "Command '['python', 'multiprocessing_duty_generator.py', '8fdef544-73ec-4d34-b0c9-67fad1e6758f']' returned non-zero exit status 1."
+    }
+  ],
+  "83b996e2-e8e8-4b86-882a-62b4df9c493c": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 83b996e2-e8e8-4b86-882a-62b4df9c493c",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "Command '['python', 'multiprocessing_duty_generator.py', '83b996e2-e8e8-4b86-882a-62b4df9c493c']' returned non-zero exit status 1."
+    }
+  ],
+  "3da63146-4b65-45f3-8760-685d6dac277a": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 3da63146-4b65-45f3-8760-685d6dac277a",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "Command '['python', 'multiprocessing_duty_generator.py', '3da63146-4b65-45f3-8760-685d6dac277a']' returned non-zero exit status 1."
+    }
   ]
 }

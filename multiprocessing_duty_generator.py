@@ -319,7 +319,7 @@ import csv
 from collections import defaultdict
 import os
 import concurrent.futures
-
+import sys
 # ---- Definitions, Classes, Helpers ----
 
 Duty_hours = 440
@@ -327,7 +327,8 @@ Driving_duration = 360
 Continuous_Driving_time = 170
 long_break = 50
 short_break = 30
-
+execution_id = sys.argv[1]
+print('ARGS IN PARALLEL FILE', execution_id)
 YB_Jurisdiction = ['SDG-YB','DYB', 'YBSDG', 'SBC2', 'NESY', 'YBUP', 'YBDN', 'NSST/KSHI', 'SBC3', 'NECCSDG', 'VASIO/S']
 DW_Jurisdiction = ['NFD', 'KNR', 'DWDN', 'DWUP', 'DW3RD', 'JPW', 'DSTOSDG', 'SBC1', 'DWT']
 cc1 = YB_Jurisdiction
@@ -368,8 +369,8 @@ class Services:
         self.breakDur = 0
         self.tripDur = 0
 
-
-def fetchData(csv_path='redefinedinputparameters.csv'):
+def fetchData(csv_path=f"temp_files/{execution_id}redefinedinputparameters.csv"):
+# def fetchData(csv_path='redefinedinputparameters.csv'):
     servicesLst = []
     with open(csv_path) as output:
         reader = csv.reader(output)
@@ -617,11 +618,12 @@ def parallel_generate_duties_and_return(chunk_spans=None):
         for duty_chunk in results:
             all_duties.extend(duty_chunk)
 
-    print(f"\n✅ Total valid duties generated: {len(all_duties)}")
+    print(f"\n Total valid duties generated: {len(all_duties)}")
     return all_duties
 
 
-def save_duties_to_csv(duty_pool, filename='generated_dutiesnewcc.csv', max_depth=None):
+# def save_duties_to_csv(duty_pool, filename='generated_dutiesnewcc.csv', max_depth=None):
+def save_duties_to_csv(duties, filename=f"temp_files/{execution_id}generated_duties_graph.csv"):
     if max_depth is None:
         max_depth = max(len(duty) for duty in duty_pool) if duty_pool else 0
 
@@ -632,7 +634,7 @@ def save_duties_to_csv(duty_pool, filename='generated_dutiesnewcc.csv', max_dept
             row = [idx] + duty[:max_depth] + [''] * (max_depth - len(duty))
             writer.writerow(row)
 
-    print(f"\n✅ Duty pool saved to '{os.path.abspath(filename)}'.")
+    print(f"\n Duty pool saved to '{os.path.abspath(filename)}'.")
 
 
 # =================[ MAIN EXECUTION BLOCK ]=================
@@ -641,7 +643,7 @@ if __name__ == '__main__':
     print("Starting pre-processing...")
 
     print("Loading services...")
-    services = fetchData('redefinedinputparameters.csv')
+    services = fetchData(f'temp_files/{execution_id}redefinedinputparameters.csv')
     print(f"Total services loaded: {len(services)}")
 
     print("Building graph...")
@@ -652,4 +654,4 @@ if __name__ == '__main__':
 
     print("Saving duties to CSV...")
     save_duties_to_csv(duty_pool)
-    print("✅ Done.")
+    print(" Done.")

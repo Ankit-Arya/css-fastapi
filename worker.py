@@ -120,3 +120,30 @@ def process_file(execution_id: str, file_path: str, user_id: str, user_name: str
         print("❌ Error in subprocess launch:", e)
         update_status(execution_id, str(e), "error")
         job_registry[execution_id] = {"process": None, "status": "error"}
+
+def process_fileL34(execution_id: str, file_path: str, user_id: str, user_name: str, email: str, stepping_back: List):
+    try:
+        update_status(execution_id, "Preparing simulation", "WIP")
+        file_path = os.path.abspath(file_path)
+        script_path = os.path.abspath("simulate_runnerL34.py")
+        stepping_back_json = json.dumps(stepping_back)
+
+        # Start subprocess with unbuffered output; text mode for easy line reads
+        process = subprocess.Popen(
+            [sys.executable, "-u", script_path, execution_id, file_path, stepping_back_json],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            bufsize=1,
+            text=True
+        )
+
+        job_registry[execution_id] = {"process": process, "status": "running"}
+
+        # Start monitor thread and return immediately (so FastAPI background task completes)
+        monitor_thread = threading.Thread(target=_monitor_process_lines, args=(execution_id, process), daemon=True)
+        monitor_thread.start()
+
+    except Exception as e:
+        print("❌ Error in subprocess launch:", e)
+        update_status(execution_id, str(e), "error")
+        job_registry[execution_id] = {"process": None, "status": "error"}

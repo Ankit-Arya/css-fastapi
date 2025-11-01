@@ -14,7 +14,7 @@ from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorGridFSBucket
 from fastapi import FastAPI, UploadFile, Form, BackgroundTasks
 from fastapi.responses import FileResponse
 from helpers import save_file_locally, update_status, get_status
-from worker import process_file, job_registry  
+from worker import process_file, job_registry, process_fileL34  
 import os
 from fastapi.responses import StreamingResponse
 from bson import ObjectId
@@ -138,7 +138,8 @@ async def simulate(
             "content_type": file.content_type
         }
     )
-
+    # ✅ Reset file pointer before reusing
+    file.file.seek(0)
     # Save notice entry in MongoDB
     notice = {
         "executionId": execution_id,
@@ -159,7 +160,7 @@ async def simulate(
     return {"message": "File received. Processing started.", "execution_id": execution_id}
 
 @app.post("/simulateL34")
-async def simulate(
+async def simulateL34(
     background_tasks: BackgroundTasks,
     execution_id: str = Form(...),
     file: UploadFile = File(...),
@@ -191,7 +192,8 @@ async def simulate(
             "content_type": file.content_type
         }
     )
-
+    # ✅ Reset file pointer before reusing
+    file.file.seek(0)
     # Save notice entry in MongoDB
     notice = {
         "executionId": execution_id,
@@ -206,7 +208,7 @@ async def simulate(
 
     # Start background processing
     background_tasks.add_task(
-        process_file, execution_id, saved_path, user_id, user_name,email, parsed_stepping_back
+        process_fileL34, execution_id, saved_path, user_id, user_name,email, parsed_stepping_back
     )
 
     return {"message": "File received. Processing started.", "execution_id": execution_id}
