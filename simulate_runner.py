@@ -1038,7 +1038,7 @@ def main():
         # ------------------------- Solve Model -------------------------
         logging.info("Solving model with MBNB solver...")
 
-        solver = SolverFactory('mbnb', executable=r'C:\Users\atanm\minotaur-0.4.1-win64\bin\mbnb.exe')
+        solver = SolverFactory('mbnb', executable=r'/home/ankit_19591/minotaur/build/bin/mbnb')
         solver.options['--branch_dir'] = 1
         solver.options['--brancher'] = 'maxvio'
         solver.options['--set_lp_method'] = 0
