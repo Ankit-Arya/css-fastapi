@@ -622,10 +622,24 @@ def parallel_generate_duties_and_return(chunk_spans=None):
     return all_duties
 
 
-# def save_duties_to_csv(duty_pool, filename='generated_dutiesnewcc.csv', max_depth=None):
-def save_duties_to_csv(duties, filename=f"temp_files/{execution_id}generated_duties_graph.csv"):
+# def save_duties_to_csv(duties, filename=f"temp_files/{execution_id}generated_duties_graph.csv"):
+#     if max_depth is None:
+#         max_depth = max(len(duty) for duty in duty_pool) if duty_pool else 0
+
+#     with open(filename, mode='w', newline='') as file:
+#         writer = csv.writer(file)
+#         writer.writerow([''] + list(range(max_depth)))
+#         for idx, duty in enumerate(duty_pool):
+#             row = [idx] + duty[:max_depth] + [''] * (max_depth - len(duty))
+#             writer.writerow(row)
+
+#     print(f"\n Duty pool saved to '{os.path.abspath(filename)}'.")
+def save_duties_to_csv(duty_pool, filename=None, max_depth=None):
+    if filename is None:
+        filename = f"temp_files/{execution_id}_generated_duties_graph.csv"
+
     if max_depth is None:
-        max_depth = max(len(duty) for duty in duty_pool) if duty_pool else 0
+        max_depth = max((len(duty) for duty in duty_pool), default=0)
 
     with open(filename, mode='w', newline='') as file:
         writer = csv.writer(file)
