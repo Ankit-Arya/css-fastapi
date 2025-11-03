@@ -1239,7 +1239,8 @@ def main():
 
         # ------------------------- Solve Model -------------------------
         logging.info("Solving model with MBNB solver...")
-
+        import os
+        os.environ["LD_LIBRARY_PATH"] = os.path.expanduser("~/minotaur/third-party/lib") + ":" + os.environ.get("LD_LIBRARY_PATH", "")
         solver = SolverFactory('mbnb', executable=r'/home/ankit_19591/minotaur/build/bin/mbnb')
         solver.options['--branch_dir'] = 1
         solver.options['--brancher'] = 'maxvio'
