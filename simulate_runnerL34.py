@@ -1248,7 +1248,7 @@ def main():
         solver.options['--sppheur'] = 1
         solver.options['--log_level'] = 3
         solver.options['--obj_gap_percent'] = 5
-        solver.options['--time_limit'] = 50000
+        solver.options['--time_limit'] = 7200
 
         try:
             result = solver.solve(model, tee=True)
