@@ -633,8 +633,8 @@ def main():
 
         # Parameters
         Duty_hours = 440
-        Driving_duration = 300
-        Continuous_Driving_time = 150
+        Driving_duration = 360
+        Continuous_Driving_time = 170
         long_break = 50
         short_break = 30
 
@@ -776,7 +776,7 @@ def main():
             long_break_exists = any(br >= long_break for br in break_durs)
             
             # Check total break duration constraint
-            total_break_dur_valid = long_break <= total_break_dur <= 150 if break_durs else True
+            total_break_dur_valid = long_break <= total_break_dur <= 120 if break_durs else True
             
             # Check continuous driving time
             continuous_driving = calculate_continuous_driving_time(path, services)

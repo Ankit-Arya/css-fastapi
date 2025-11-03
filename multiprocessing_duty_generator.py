@@ -392,7 +392,7 @@ def canFollow(s1, s2):
         return False
 
     gap = s2.startTime - s1.endTime
-    if short_break <= gap <= 140 and s1.endStn[:4] in crewControlSet:
+    if short_break <= gap <= 120 and s1.endStn[:4] in crewControlSet:
         return s1.endStn[:2] == s2.startStn[:2] and (s2.endTime - s1.startTime) <= Duty_hours
     return False
 
@@ -484,7 +484,7 @@ def generate_duties(start_trip, graph, cc1, cc2, max_depth=10):
 
             break_dur += gap
 
-            if gap > 140:
+            if gap > 150:
                 invalid_break = True
                 break
 
@@ -505,7 +505,8 @@ def generate_duties(start_trip, graph, cc1, cc2, max_depth=10):
         if exceeds_continuous_driving(path):
             continue
 
-        good_duty = break_dur <= 120
+        good_duty = 90 < break_dur < 120
+
         valid_jurisdiction = (
             (path[0].startStn in cc1 and path[-1].endStn in cc1) or
             (path[0].startStn in cc2 and path[-1].endStn in cc2)
