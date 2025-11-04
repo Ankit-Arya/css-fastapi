@@ -1138,11 +1138,12 @@ def main():
         )
 
         # ------------------ TEMP FILE LOCATIONS ------------------
-        TEMP_LOCATION = os.path.join("temp_files", execution_id)
-        INPUT_FILE_LOCATION = os.path.join("temp_files", f"{execution_id}redefinedinputparameters.csv")
-        DUTIES_FILE = os.path.join(TEMP_LOCATION, "generated_duties_graph.csv")
-        SOLUTION_FILE = os.path.join(TEMP_LOCATION, "solution.csv")
-        os.makedirs(TEMP_LOCATION, exist_ok=True)
+        BASE_TEMP_DIR = "temp_files"
+        os.makedirs(BASE_TEMP_DIR, exist_ok=True)
+
+        INPUT_FILE_LOCATION = os.path.join(BASE_TEMP_DIR, f"{execution_id}_redefinedinputparameters.csv")
+        DUTIES_FILE = os.path.join(BASE_TEMP_DIR, f"{execution_id}_generated_duties_graph.csv")
+        SOLUTION_FILE = os.path.join(BASE_TEMP_DIR, f"{execution_id}_solution.csv")
 
         # ------------------ LOAD INPUTS ------------------
         try:
