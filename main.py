@@ -226,41 +226,54 @@ async def get_notices():
 def check_status(execution_id: str):
     return get_status(execution_id)
 
-@app.api_route("/download/{execution_id}", methods=["GET", "HEAD"])
-def download_file(execution_id: str):
-    # Always resolve to absolute path from this script's location
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(base_dir, "temp_files", f"trip_chart_{execution_id}.xlsx")
-
-    print("📁 Trying to serve file at:", file_path)
-
-    if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
-        return FileResponse(
-            path=file_path,
-            filename=f"trip_chart_{execution_id}.xlsx",
-            media_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-        )
-    
-    raise HTTPException(status_code=404, detail="File not ready or corrupted")
 # @app.api_route("/download/{execution_id}", methods=["GET", "HEAD"])
 # def download_file(execution_id: str):
+#     # Always resolve to absolute path from this script's location
 #     base_dir = os.path.dirname(os.path.abspath(__file__))
-
-#     # Use execution_id as-is if it already contains "trip_chart_"
-#     filename = f"{execution_id}.xlsx" if not execution_id.startswith("trip_chart_") else f"{execution_id}.xlsx"
-
-#     file_path = os.path.join(base_dir, "temp_files", filename)
+#     file_path = os.path.join(base_dir, "temp_files", f"trip_chart_{execution_id}.xlsx")
 
 #     print("📁 Trying to serve file at:", file_path)
 
 #     if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
 #         return FileResponse(
 #             path=file_path,
-#             filename=filename,
+#             filename=f"trip_chart_{execution_id}.xlsx",
 #             media_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
 #         )
-
+    
 #     raise HTTPException(status_code=404, detail="File not ready or corrupted")
+@app.api_route("/download/{execution_id}", methods=["GET", "HEAD"])
+def download_file(execution_id: str):
+    """
+    Serve the Excel file corresponding to the execution_id.
+
+    Handles both cases where execution_id may already contain 'trip_chart_' prefix.
+    """
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Ensure no double prefix
+    if not execution_id.startswith("trip_chart_"):
+        execution_id = f"trip_chart_{execution_id}"
+    
+    # Ensure no double .xlsx
+    if execution_id.endswith(".xlsx"):
+        file_name = execution_id
+    else:
+        file_name = f"{execution_id}.xlsx"
+
+    file_path = os.path.join(base_dir, "temp_files", file_name)
+
+    print("📁 Trying to serve file at:", file_path)
+
+    if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+        return FileResponse(
+            path=file_path,
+            filename=file_name,
+            media_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        )
+    
+    # File not found or empty
+    raise HTTPException(status_code=404, detail="File not ready or corrupted")
 
 
 @app.delete("/cancel/{execution_id}")
