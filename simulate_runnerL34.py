@@ -1112,167 +1112,237 @@ def main():
 
         update_status(execution_id, f"Starting Optimization Process - This will take time - Sit tight", "WIP")
 
-        import pyomo.environ as pyo
-        from pyomo.core import ConcreteModel
-        from pyomo.opt import SolverFactory
-        import pandas as pd
-        import csv
-        from datetime import datetime
-        import logging
-        from io import StringIO
+        # import pyomo.environ as pyo
+        # from pyomo.core import ConcreteModel
+        # from pyomo.opt import SolverFactory
+        # import pandas as pd
+        # import csv
+        # from datetime import datetime
+        # import logging
+        # from io import StringIO
 
-        # ------------------------- Configuration -------------------------
-        INPUT_FILE_LOCATION = f"temp_files/{execution_id}redefinedinputparameters.csv"         # Replace with your path
-        TEMP_LOCATION = f"temp_files/{execution_id}"                  
+        # # ------------------------- Configuration -------------------------
+        # INPUT_FILE_LOCATION = f"temp_files/{execution_id}redefinedinputparameters.csv"         # Replace with your path
+        # TEMP_LOCATION = f"temp_files/{execution_id}"                  
 
-        MODEL_FILE = TEMP_LOCATION + "Model.nl"
-        DUTIES_FILE = TEMP_LOCATION + "generated_dutiesnewcc.csv"
-        SOLUTION_FILE = TEMP_LOCATION + "solution.csv"
-        LOG_FILE = TEMP_LOCATION + "model_run.log"
+        # MODEL_FILE = TEMP_LOCATION + "Model.nl"
+        # DUTIES_FILE = TEMP_LOCATION + "generated_dutiesnewcc.csv"
+        # SOLUTION_FILE = TEMP_LOCATION + "solution.csv"
+        # LOG_FILE = TEMP_LOCATION + "model_run.log"
 
-        # ------------------------- Logging Setup -------------------------
-        logging.basicConfig(filename=LOG_FILE,
-                            filemode='w',
-                            format='%(asctime)s [%(levelname)s] %(message)s',
-                            level=logging.INFO)
-        console = logging.StreamHandler()
-        console.setLevel(logging.INFO)
-        formatter = logging.Formatter('%(asctime)s [%(levelname)s] %(message)s')
-        console.setFormatter(formatter)
-        logging.getLogger('').addHandler(console)
+        # # ------------------------- Logging Setup -------------------------
+        # logging.basicConfig(filename=LOG_FILE,
+        #                     filemode='w',
+        #                     format='%(asctime)s [%(levelname)s] %(message)s',
+        #                     level=logging.INFO)
+        # console = logging.StreamHandler()
+        # console.setLevel(logging.INFO)
+        # formatter = logging.Formatter('%(asctime)s [%(levelname)s] %(message)s')
+        # console.setFormatter(formatter)
+        # logging.getLogger('').addHandler(console)
 
-        # ------------------------- Load Services -------------------------
-        try:
-            df = pd.read_csv(INPUT_FILE_LOCATION)
-            services = [df.iloc[i, 0] for i in range(len(df))]
-            logging.info(f"Loaded {len(services)} services.")
-        except Exception as e:
-            logging.error("Failed to load input services file.", exc_info=True)
-            raise e
+        # # ------------------------- Load Services -------------------------
+        # try:
+        #     df = pd.read_csv(INPUT_FILE_LOCATION)
+        #     services = [df.iloc[i, 0] for i in range(len(df))]
+        #     logging.info(f"Loaded {len(services)} services.")
+        # except Exception as e:
+        #     logging.error("Failed to load input services file.", exc_info=True)
+        #     raise e
 
-        # ------------------------- Load Duties -------------------------
-        service_assignments = {}
-        servicesInPath = {key: [] for key in services}
-
-        try:
-            with open(DUTIES_FILE, 'rb') as file:
-                content = file.read().replace(b'\x00', b'').decode('utf-8')
-                reader = csv.reader(StringIO(content))
-
-                service_assignments = {}
-                servicesInPath = {s: [] for s in services}
-
-                for index, row in enumerate(reader):
-                    if index == 0:
-                        # Skip header
-                        continue
-
-                    # Skip first column (index), process only actual service IDs
-                    filtered_row = row[1:]
-
-                    # Clean and convert row entries to integers
-                    filtered = [int(value) for value in filtered_row if value not in ('NULL', '')]
-
-                    # Separate valid and invalid service IDs
-                    valid_services = [s for s in filtered if s in services]
-                    invalid_services = [s for s in filtered if s not in services]
-
-                    # Log and optionally skip if all services are invalid
-                    if not valid_services:
-                        logging.warning(f"Duty {index} skipped - all service IDs are invalid: {invalid_services}")
-                        continue
-
-                    # Log partial issues (some services invalid)
-                    if invalid_services:
-                        logging.warning(f"Duty {index} has some invalid service IDs: {invalid_services}")
-
-                    # Update service_assignments and servicesInPath only with valid services
-                    service_assignments[index - 1] = valid_services  # -1 because we skipped the header, so duty 0 corresponds to data row 1
-                    for service in valid_services:
-                        servicesInPath[service].append(index - 1)
-
-                logging.info(f"Loaded {len(service_assignments)} valid duty assignments.")
-
-        except Exception as e:
-            logging.error("Failed to load setOfDuties file.", exc_info=True)
-            raise e
-
-        # ------------------------- Model Setup -------------------------
-        num_services = len(services)
-        num_drivers = len(service_assignments)
-
-        logging.info(f"Number of services: {num_services}")
-        logging.info(f"Number of drivers (duty options): {num_drivers}")
-
-        # Check if all services are included
-        servicesInDuties = set()
-        for services1 in service_assignments.values():
-            servicesInDuties.update(services1)
-
-        if len(servicesInDuties) != num_services:
-            logging.warning(f"Not all services are covered! Covered: {len(servicesInDuties)} / {num_services}")
-            logging.warning(f"Missing: {set(services) - servicesInDuties}")
-        else:
-            logging.info("All services are included in the duty options.")
-
-        # ------------------------- Build Pyomo Model -------------------------
-        model = ConcreteModel()
-        model.fPath = pyo.Var(service_assignments.keys(), domain=pyo.Binary)
-        model.fServ = pyo.Var(services, domain=pyo.Reals, bounds=(0, 1))
-
-        model.OBJ = pyo.Objective(expr=sum(model.fPath[path] for path in service_assignments), sense=pyo.minimize)
-        model.ConsList = pyo.ConstraintList()
-
-        for ser in services:
-            model.ConsList.add(model.fServ[ser] == 1)
-
-        for service, path_ids in servicesInPath.items():
-            model.ConsList.add(sum(model.fPath[path_id] for path_id in path_ids) == model.fServ[service])
-
-        # ------------------------- Write Model -------------------------
-        try:
-            model.write(MODEL_FILE, format='nl')
-            logging.info(f"Model written to {MODEL_FILE}")
-        except Exception as e:
-            logging.error("Failed to write model file.", exc_info=True)
-            raise e
-
-        # ------------------------- Solve Model -------------------------
-        # logging.info("Solving model with MBNB solver...")
-        # import os
-        # os.environ["LD_LIBRARY_PATH"] = os.path.expanduser("~/minotaur/third-party/lib") + ":" + os.environ.get("LD_LIBRARY_PATH", "")
-        # solver = SolverFactory('mbnb', executable=r'/home/ankit_19591/minotaur/build/bin/mbnb')
-        # solver.options['--branch_dir'] = 1
-        # solver.options['--brancher'] = 'maxvio'
-        # solver.options['--set_lp_method'] = 0
-        # solver.options['--sppheur'] = 1
-        # solver.options['--log_level'] = 3
-        # solver.options['--obj_gap_percent'] = 5
-        # solver.options['--time_limit'] = 7200
+        # # ------------------------- Load Duties -------------------------
+        # service_assignments = {}
+        # servicesInPath = {key: [] for key in services}
 
         # try:
-        #     result = solver.solve(model, tee=True)
-        #     logging.info(f"Solver status: {result.solver.status}")
-        #     logging.info(f"Termination condition: {result.solver.termination_condition}")
+        #     with open(DUTIES_FILE, 'rb') as file:
+        #         content = file.read().replace(b'\x00', b'').decode('utf-8')
+        #         reader = csv.reader(StringIO(content))
+
+        #         service_assignments = {}
+        #         servicesInPath = {s: [] for s in services}
+
+        #         for index, row in enumerate(reader):
+        #             if index == 0:
+        #                 # Skip header
+        #                 continue
+
+        #             # Skip first column (index), process only actual service IDs
+        #             filtered_row = row[1:]
+
+        #             # Clean and convert row entries to integers
+        #             filtered = [int(value) for value in filtered_row if value not in ('NULL', '')]
+
+        #             # Separate valid and invalid service IDs
+        #             valid_services = [s for s in filtered if s in services]
+        #             invalid_services = [s for s in filtered if s not in services]
+
+        #             # Log and optionally skip if all services are invalid
+        #             if not valid_services:
+        #                 logging.warning(f"Duty {index} skipped - all service IDs are invalid: {invalid_services}")
+        #                 continue
+
+        #             # Log partial issues (some services invalid)
+        #             if invalid_services:
+        #                 logging.warning(f"Duty {index} has some invalid service IDs: {invalid_services}")
+
+        #             # Update service_assignments and servicesInPath only with valid services
+        #             service_assignments[index - 1] = valid_services  # -1 because we skipped the header, so duty 0 corresponds to data row 1
+        #             for service in valid_services:
+        #                 servicesInPath[service].append(index - 1)
+
+        #         logging.info(f"Loaded {len(service_assignments)} valid duty assignments.")
+
         # except Exception as e:
-        #     logging.error("Solver execution failed.", exc_info=True)
+        #     logging.error("Failed to load setOfDuties file.", exc_info=True)
         #     raise e
+
+        # # ------------------------- Model Setup -------------------------
+        # num_services = len(services)
+        # num_drivers = len(service_assignments)
+
+        # logging.info(f"Number of services: {num_services}")
+        # logging.info(f"Number of drivers (duty options): {num_drivers}")
+
+        # # Check if all services are included
+        # servicesInDuties = set()
+        # for services1 in service_assignments.values():
+        #     servicesInDuties.update(services1)
+
+        # if len(servicesInDuties) != num_services:
+        #     logging.warning(f"Not all services are covered! Covered: {len(servicesInDuties)} / {num_services}")
+        #     logging.warning(f"Missing: {set(services) - servicesInDuties}")
+        # else:
+        #     logging.info("All services are included in the duty options.")
+
+        # # ------------------------- Build Pyomo Model -------------------------
+        # model = ConcreteModel()
+        # model.fPath = pyo.Var(service_assignments.keys(), domain=pyo.Binary)
+        # model.fServ = pyo.Var(services, domain=pyo.Reals, bounds=(0, 1))
+
+        # model.OBJ = pyo.Objective(expr=sum(model.fPath[path] for path in service_assignments), sense=pyo.minimize)
+        # model.ConsList = pyo.ConstraintList()
+
+        # for ser in services:
+        #     model.ConsList.add(model.fServ[ser] == 1)
+
+        # for service, path_ids in servicesInPath.items():
+        #     model.ConsList.add(sum(model.fPath[path_id] for path_id in path_ids) == model.fServ[service])
+
+        # # ------------------------- Write Model -------------------------
+        # try:
+        #     model.write(MODEL_FILE, format='nl')
+        #     logging.info(f"Model written to {MODEL_FILE}")
+        # except Exception as e:
+        #     logging.error("Failed to write model file.", exc_info=True)
+        #     raise e
+
+        # # ------------------------- Solve Model -------------------------
+        # # logging.info("Solving model with MBNB solver...")
+        # # import os
+        # # os.environ["LD_LIBRARY_PATH"] = os.path.expanduser("~/minotaur/third-party/lib") + ":" + os.environ.get("LD_LIBRARY_PATH", "")
+        # # solver = SolverFactory('mbnb', executable=r'/home/ankit_19591/minotaur/build/bin/mbnb')
+        # # solver.options['--branch_dir'] = 1
+        # # solver.options['--brancher'] = 'maxvio'
+        # # solver.options['--set_lp_method'] = 0
+        # # solver.options['--sppheur'] = 1
+        # # solver.options['--log_level'] = 3
+        # # solver.options['--obj_gap_percent'] = 5
+        # # solver.options['--time_limit'] = 7200
+
+        # # try:
+        # #     result = solver.solve(model, tee=True)
+        # #     logging.info(f"Solver status: {result.solver.status}")
+        # #     logging.info(f"Termination condition: {result.solver.termination_condition}")
+        # # except Exception as e:
+        # #     logging.error("Solver execution failed.", exc_info=True)
+        # #     raise e
+        # # import os
+        # # import logging
+        # # import tempfile
+        # # import subprocess
+        # # from pyomo.opt import SolverFactory
+
+        # # logging.info("Solving model with MBNB solver...")
+
+        # # # === 1️⃣ Ensure Minotaur libraries are in LD_LIBRARY_PATH ===
+        # # lib_path = os.path.expanduser("~/minotaur/third-party/lib")
+        # # os.environ["LD_LIBRARY_PATH"] = lib_path + ":" + os.environ.get("LD_LIBRARY_PATH", "")
+
+        # # # === 2️⃣ Create solver instance ===
+        # # solver = SolverFactory('mbnb', executable=r'/home/ankit_19591/minotaur/build/bin/mbnb')
+
+        # # # === 3️⃣ Set solver options ===
+        # # solver.options['--branch_dir'] = 1
+        # # solver.options['--brancher'] = 'maxvio'
+        # # solver.options['--set_lp_method'] = 0
+        # # solver.options['--sppheur'] = 1
+        # # solver.options['--log_level'] = 3
+        # # solver.options['--obj_gap_percent'] = 5
+        # # solver.options['--time_limit'] = 7200
+
+        # # # === 4️⃣ Ensure solver inherits environment and correct working dir ===
+        # # solver._env = os.environ.copy()
+        # # solver._solver_exec_dir = os.getcwd()
+
+        # # # === 5️⃣ Create a temporary log file for solver output ===
+        # # log_fd, log_path = tempfile.mkstemp(prefix="mbnb_", suffix=".log")
+        # # os.close(log_fd)  # we’ll open it later
+
+        # # try:
+        # #     # Redirect solver output to file (tee=True will also print to stdout)
+        # #     result = solver.solve(model, tee=True, logfile=log_path)
+
+        # #     logging.info(f"Solver status: {result.solver.status}")
+        # #     logging.info(f"Termination condition: {result.solver.termination_condition}")
+        # #     logging.info(f"Solver log saved to: {log_path}")
+
+        # # except Exception as e:
+        # #     logging.error("Solver execution failed!", exc_info=True)
+
+        # #     # Print tail of solver log for debugging
+        # #     if os.path.exists(log_path):
+        # #         logging.error("=== Tail of solver log ===")
+        # #         try:
+        # #             tail_output = subprocess.check_output(["tail", "-n", "50", log_path]).decode()
+        # #             logging.error(tail_output)
+        # #         except Exception as tail_err:
+        # #             logging.error(f"Could not read solver log: {tail_err}")
+
+        # #     raise e
         # import os
         # import logging
         # import tempfile
         # import subprocess
-        # from pyomo.opt import SolverFactory
+        # from pyomo.environ import ConcreteModel, Var, Objective, Constraint, SolverFactory
 
-        # logging.info("Solving model with MBNB solver...")
+        # # Setup logging configuration
+        # logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
 
-        # # === 1️⃣ Ensure Minotaur libraries are in LD_LIBRARY_PATH ===
+        # logging.info("Starting model solve with MBNB solver...")
+
+        # # 1️⃣ Define a minimal Pyomo model (replace with your actual model)
+        # model = ConcreteModel()
+        # model.x = Var(bounds=(0, 10))
+        # model.obj = Objective(expr=model.x**2)
+        # model.con = Constraint(expr=model.x >= 1)
+
+        # # 2️⃣ Prepare environment with proper LD_LIBRARY_PATH
         # lib_path = os.path.expanduser("~/minotaur/third-party/lib")
-        # os.environ["LD_LIBRARY_PATH"] = lib_path + ":" + os.environ.get("LD_LIBRARY_PATH", "")
+        # env = os.environ.copy()
+        # env["LD_LIBRARY_PATH"] = lib_path + ":" + env.get("LD_LIBRARY_PATH", "")
 
-        # # === 2️⃣ Create solver instance ===
-        # solver = SolverFactory('mbnb', executable=r'/home/ankit_19591/minotaur/build/bin/mbnb')
+        # logging.info(f"LD_LIBRARY_PATH set to: {env['LD_LIBRARY_PATH']}")
+        # logging.info(f"Solver executable path: /home/ankit_19591/minotaur/build/bin/mbnb")
+        # logging.info(f"Current working directory: {os.getcwd()}")
+        # logging.info(f"Python executable: {os.sys.executable}")
 
-        # # === 3️⃣ Set solver options ===
+        # # 3️⃣ Create solver instance and pass environment
+        # solver = SolverFactory('mbnb', executable='/home/ankit_19591/minotaur/build/bin/mbnb')
+        # solver._env = env
+        # solver._solver_exec_dir = os.getcwd()
+
+        # # 4️⃣ Set solver options
         # solver.options['--branch_dir'] = 1
         # solver.options['--brancher'] = 'maxvio'
         # solver.options['--set_lp_method'] = 0
@@ -1281,16 +1351,12 @@ def main():
         # solver.options['--obj_gap_percent'] = 5
         # solver.options['--time_limit'] = 7200
 
-        # # === 4️⃣ Ensure solver inherits environment and correct working dir ===
-        # solver._env = os.environ.copy()
-        # solver._solver_exec_dir = os.getcwd()
-
-        # # === 5️⃣ Create a temporary log file for solver output ===
+        # # 5️⃣ Create temporary log file to capture solver output
         # log_fd, log_path = tempfile.mkstemp(prefix="mbnb_", suffix=".log")
-        # os.close(log_fd)  # we’ll open it later
+        # os.close(log_fd)
 
         # try:
-        #     # Redirect solver output to file (tee=True will also print to stdout)
+        #     # 6️⃣ Solve the model with detailed output (tee=True) and log redirection
         #     result = solver.solve(model, tee=True, logfile=log_path)
 
         #     logging.info(f"Solver status: {result.solver.status}")
@@ -1300,7 +1366,7 @@ def main():
         # except Exception as e:
         #     logging.error("Solver execution failed!", exc_info=True)
 
-        #     # Print tail of solver log for debugging
+        #     # 7️⃣ Extract and log last 50 lines of solver log for diagnostic info
         #     if os.path.exists(log_path):
         #         logging.error("=== Tail of solver log ===")
         #         try:
@@ -1309,92 +1375,183 @@ def main():
         #         except Exception as tail_err:
         #             logging.error(f"Could not read solver log: {tail_err}")
 
-        #     raise e
-        import os
+        #     # 8️⃣ Re-raise exception preserving original traceback
+        #     raise
+
+        # # ------------------------- Process Results -------------------------
+        # if result.solver.termination_condition != "infeasible":
+        #     totalDuties = 0
+        #     try:
+        #         with open(SOLUTION_FILE, 'w', newline='') as csvfile:
+        #             writer = csv.writer(csvfile)
+        #             for path_var in model.fPath:
+        #                 if abs(model.fPath[path_var].value - 1) <= 1e-6:
+        #                     writer.writerow(service_assignments[path_var])
+        #                     totalDuties += 1
+        #         logging.info(f"Solution written to {SOLUTION_FILE}")
+        #         logging.info(f"Total duties selected: {totalDuties}")
+        #     except Exception as e:
+        #         logging.error("Error writing solution file.", exc_info=True)
+        # else:
+        #     logging.warning("Infeasible solution found.")
         import logging
-        import tempfile
-        import subprocess
-        from pyomo.environ import ConcreteModel, Var, Objective, Constraint, SolverFactory
+        import pandas as pd
+        import csv
+        from io import StringIO
+        from pyomo.environ import (
+            ConcreteModel, Var, Objective, ConstraintList, SolverFactory,
+            Binary, minimize, value
+        )
+        from pyomo.opt import TerminationCondition
 
-        # Setup logging configuration
-        logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
+        # =========================================================
+        # --------------------- CONFIGURATION ---------------------
+        # =========================================================
+        INPUT_FILE_LOCATION = f"temp_files/{execution_id}redefinedinputparameters.csv"
+        TEMP_LOCATION = f"temp_files/{execution_id}"
+        DUTIES_FILE = TEMP_LOCATION + "generated_duties_graph.csv"
+        SOLUTION_FILE = TEMP_LOCATION + "solution.csv"
 
-        logging.info("Starting model solve with MBNB solver...")
+        # Solver settings
+        PRIMARY_SOLVER = "neos"                                # NEOS Bonmin server first
+        LOCAL_SOLVERS = ["cbc", "glpk"]                        # Local solver fallback
+        SOLVER_TIME_LIMIT = 3600                                # seconds (1 hour)
+        SOLVER_GAP_PERCENT = 5                                  # 5% optimality gap
 
-        # 1️⃣ Define a minimal Pyomo model (replace with your actual model)
-        model = ConcreteModel()
-        model.x = Var(bounds=(0, 10))
-        model.obj = Objective(expr=model.x**2)
-        model.con = Constraint(expr=model.x >= 1)
+        # =========================================================
+        # --------------------- LOGGING SETUP ---------------------
+        # =========================================================
+        logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
-        # 2️⃣ Prepare environment with proper LD_LIBRARY_PATH
-        lib_path = os.path.expanduser("~/minotaur/third-party/lib")
-        env = os.environ.copy()
-        env["LD_LIBRARY_PATH"] = lib_path + ":" + env.get("LD_LIBRARY_PATH", "")
+        # =========================================================
+        # --------------------- LOAD SERVICES ---------------------
+        # =========================================================
+        try:
+            df = pd.read_csv(INPUT_FILE_LOCATION)
+            services = [df.iloc[i, 0] for i in range(len(df))]
+            logging.info(f"Loaded {len(services)} services.")
+        except Exception as e:
+            logging.error("❌ Failed to load input services file.", exc_info=True)
+            raise e
 
-        logging.info(f"LD_LIBRARY_PATH set to: {env['LD_LIBRARY_PATH']}")
-        logging.info(f"Solver executable path: /home/ankit_19591/minotaur/build/bin/mbnb")
-        logging.info(f"Current working directory: {os.getcwd()}")
-        logging.info(f"Python executable: {os.sys.executable}")
-
-        # 3️⃣ Create solver instance and pass environment
-        solver = SolverFactory('mbnb', executable='/home/ankit_19591/minotaur/build/bin/mbnb')
-        solver._env = env
-        solver._solver_exec_dir = os.getcwd()
-
-        # 4️⃣ Set solver options
-        solver.options['--branch_dir'] = 1
-        solver.options['--brancher'] = 'maxvio'
-        solver.options['--set_lp_method'] = 0
-        solver.options['--sppheur'] = 1
-        solver.options['--log_level'] = 3
-        solver.options['--obj_gap_percent'] = 5
-        solver.options['--time_limit'] = 7200
-
-        # 5️⃣ Create temporary log file to capture solver output
-        log_fd, log_path = tempfile.mkstemp(prefix="mbnb_", suffix=".log")
-        os.close(log_fd)
+        # =========================================================
+        # --------------------- LOAD DUTIES -----------------------
+        # =========================================================
+        service_assignments = {}
+        servicesInPath = {key: [] for key in services}
 
         try:
-            # 6️⃣ Solve the model with detailed output (tee=True) and log redirection
-            result = solver.solve(model, tee=True, logfile=log_path)
+            with open(DUTIES_FILE, "rb") as file:
+                content = file.read().replace(b"\x00", b"").decode("utf-8")
+                reader = csv.reader(StringIO(content))
 
-            logging.info(f"Solver status: {result.solver.status}")
-            logging.info(f"Termination condition: {result.solver.termination_condition}")
-            logging.info(f"Solver log saved to: {log_path}")
+                for index, row in enumerate(reader):
+                    if index == 0:
+                        continue  # skip header
+                    filtered_row = row[1:]  # skip duty ID
+                    filtered = [int(value) for value in filtered_row if value not in ("NULL", "")]
+                    valid_services = [s for s in filtered if s in services]
 
+                    if not valid_services:
+                        logging.warning(f"Duty {index} skipped - all service IDs invalid.")
+                        continue
+
+                    duty_id = index - 1
+                    service_assignments[duty_id] = valid_services
+
+                    for service in valid_services:
+                        servicesInPath[service].append(duty_id)
+
+            logging.info(f"Loaded {len(service_assignments)} valid duty assignments.")
         except Exception as e:
-            logging.error("Solver execution failed!", exc_info=True)
+            logging.error("❌ Failed to load duties file.", exc_info=True)
+            raise e
 
-            # 7️⃣ Extract and log last 50 lines of solver log for diagnostic info
-            if os.path.exists(log_path):
-                logging.error("=== Tail of solver log ===")
-                try:
-                    tail_output = subprocess.check_output(["tail", "-n", "50", log_path]).decode()
-                    logging.error(tail_output)
-                except Exception as tail_err:
-                    logging.error(f"Could not read solver log: {tail_err}")
+        # =========================================================
+        # --------------------- BUILD MODEL -----------------------
+        # =========================================================
+        logging.info("Building Pyomo model...")
 
-            # 8️⃣ Re-raise exception preserving original traceback
-            raise
+        model = ConcreteModel()
+        model.fPath = Var(service_assignments.keys(), domain=Binary)
 
-        # ------------------------- Process Results -------------------------
-        if result.solver.termination_condition != "infeasible":
-            totalDuties = 0
+        # Objective: minimize number of selected duties
+        model.OBJ = Objective(expr=sum(model.fPath[path] for path in service_assignments), sense=minimize)
+
+        # Constraints: every service must be covered once
+        model.ConsList = ConstraintList()
+        for service, path_ids in servicesInPath.items():
+            if path_ids:
+                model.ConsList.add(sum(model.fPath[path_id] for path_id in path_ids) == 1)
+            else:
+                logging.warning(f"⚠️ Service {service} not found in any duty — may cause infeasibility.")
+
+        # =========================================================
+        # --------------------- SOLVE MODEL -----------------------
+        # =========================================================
+        def try_solve(solver_name, model, time_limit=SOLVER_TIME_LIMIT, gap_percent=SOLVER_GAP_PERCENT):
+            """Attempt to solve model using given solver name with time/gap limits."""
             try:
-                with open(SOLUTION_FILE, 'w', newline='') as csvfile:
-                    writer = csv.writer(csvfile)
-                    for path_var in model.fPath:
-                        if abs(model.fPath[path_var].value - 1) <= 1e-6:
-                            writer.writerow(service_assignments[path_var])
-                            totalDuties += 1
-                logging.info(f"Solution written to {SOLUTION_FILE}")
-                logging.info(f"Total duties selected: {totalDuties}")
+                if solver_name == "neos":
+                    logging.info("Attempting NEOS Bonmin solver...")
+                    solver = SolverFactory("neos")
+                    return solver.solve(model, opt="bonmin", tee=True)
+                else:
+                    logging.info(f"Attempting local solver: {solver_name.upper()}...")
+                    solver = SolverFactory(solver_name)
+                    if solver_name == "cbc":
+                        solver.options["seconds"] = time_limit
+                        solver.options["ratioGap"] = gap_percent / 100.0
+                    elif solver_name == "glpk":
+                        solver.options["tmlim"] = time_limit
+                        solver.options["mipgap"] = gap_percent / 100.0
+                    return solver.solve(model, tee=True)
             except Exception as e:
-                logging.error("Error writing solution file.", exc_info=True)
-        else:
-            logging.warning("Infeasible solution found.")
+                logging.warning(f"Solver {solver_name.upper()} failed: {e}")
+                return None
 
+        results = try_solve(PRIMARY_SOLVER, model)
+
+        # Fallback to local solvers
+        if results is None or not hasattr(results, "solver") or results.solver.status is None:
+            for local_solver in LOCAL_SOLVERS:
+                results = try_solve(local_solver, model)
+                if results and hasattr(results, "solver") and results.solver.status is not None:
+                    break
+
+        if results is None or not hasattr(results, "solver"):
+            logging.error("❌ All solver attempts failed. Install CBC or GLPK locally and retry.")
+            raise SystemExit(1)
+
+        logging.info(f"Solver status: {results.solver.status}")
+        logging.info(f"Termination condition: {results.solver.termination_condition}")
+
+        # =========================================================
+        # --------------------- PROCESS RESULTS -------------------
+        # =========================================================
+        if results.solver.termination_condition != TerminationCondition.infeasible:
+            total_duties = 0
+            try:
+                with open(SOLUTION_FILE, "w", newline="") as csvfile:
+                    writer = csv.writer(csvfile)
+                    # Write only services per selected duty (no header, no index)
+                    for path_var in model.fPath:
+                        if abs(value(model.fPath[path_var]) - 1) <= 1e-6:
+                            writer.writerow(service_assignments[path_var])
+                            total_duties += 1
+                logging.info(f"✅ Solution written to {SOLUTION_FILE} (no header/index).")
+                logging.info(f"✅ Total duties selected: {total_duties}")
+            except Exception as e:
+                logging.error("❌ Error writing solution file.", exc_info=True)
+        else:
+            logging.warning("⚠️ Infeasible solution found — check that every service appears in at least one duty.")
+
+        logging.info("✅ Done!")
+
+
+        # Status update functions
+        update_status(execution_id, f"Success! Optimization Complete", "completed")
+        update_status(execution_id, f"Creating Trip Chart Format", "WIP")
         update_status(execution_id, f"Success ! Optimization Complete", "completed")
 
         update_status(execution_id, f"Creating Trip Chart Format", "WIP")

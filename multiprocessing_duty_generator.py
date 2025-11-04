@@ -505,7 +505,7 @@ def generate_duties(start_trip, graph, cc1, cc2, max_depth=10):
         if exceeds_continuous_driving(path):
             continue
 
-        good_duty = 90 < break_dur < 120
+        good_duty = 50 < break_dur < 120
 
         valid_jurisdiction = (
             (path[0].startStn in cc1 and path[-1].endStn in cc1) or
