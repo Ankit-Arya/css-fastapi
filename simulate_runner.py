@@ -1251,9 +1251,9 @@ def main():
         BASE_TEMP_DIR = "temp_files"
         os.makedirs(BASE_TEMP_DIR, exist_ok=True)
 
-        INPUT_FILE_LOCATION = os.path.join(BASE_TEMP_DIR, f"{execution_id}_redefinedinputparameters.csv")
-        DUTIES_FILE = os.path.join(BASE_TEMP_DIR, f"{execution_id}_generated_duties_graph.csv")
-        SOLUTION_FILE = os.path.join(BASE_TEMP_DIR, f"{execution_id}_solution.csv")
+        INPUT_FILE_LOCATION = os.path.join(BASE_TEMP_DIR, f"{execution_id}redefinedinputparameters.csv")
+        DUTIES_FILE = os.path.join(BASE_TEMP_DIR, f"{execution_id}generated_duties_graph.csv")
+        SOLUTION_FILE = os.path.join(BASE_TEMP_DIR, f"{execution_id}solution.csv")
 
         # ------------------ LOAD INPUTS ------------------
         try:
