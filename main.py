@@ -226,7 +226,7 @@ async def get_notices():
 def check_status(execution_id: str):
     return get_status(execution_id)
 
-@app.api_route("/download/{execution_id}")
+@app.api_route("/download/{execution_id}", methods=["GET", "HEAD"])
 def download_file(execution_id: str):
     # Always resolve to absolute path from this script's location
     base_dir = os.path.dirname(os.path.abspath(__file__))
