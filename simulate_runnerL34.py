@@ -1314,18 +1314,35 @@ def main():
         import logging
         import tempfile
         import subprocess
-        from pyomo.opt import SolverFactory
+        from pyomo.environ import ConcreteModel, Var, Objective, Constraint, SolverFactory
 
-        logging.info("Solving model with MBNB solver...")
+        # Setup logging configuration
+        logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
 
+        logging.info("Starting model solve with MBNB solver...")
+
+        # 1️⃣ Define a minimal Pyomo model (replace with your actual model)
+        model = ConcreteModel()
+        model.x = Var(bounds=(0, 10))
+        model.obj = Objective(expr=model.x**2)
+        model.con = Constraint(expr=model.x >= 1)
+
+        # 2️⃣ Prepare environment with proper LD_LIBRARY_PATH
         lib_path = os.path.expanduser("~/minotaur/third-party/lib")
         env = os.environ.copy()
         env["LD_LIBRARY_PATH"] = lib_path + ":" + env.get("LD_LIBRARY_PATH", "")
 
-        solver = SolverFactory('mbnb', executable=r'/home/ankit_19591/minotaur/build/bin/mbnb')
+        logging.info(f"LD_LIBRARY_PATH set to: {env['LD_LIBRARY_PATH']}")
+        logging.info(f"Solver executable path: /home/ankit_19591/minotaur/build/bin/mbnb")
+        logging.info(f"Current working directory: {os.getcwd()}")
+        logging.info(f"Python executable: {os.sys.executable}")
+
+        # 3️⃣ Create solver instance and pass environment
+        solver = SolverFactory('mbnb', executable='/home/ankit_19591/minotaur/build/bin/mbnb')
         solver._env = env
         solver._solver_exec_dir = os.getcwd()
 
+        # 4️⃣ Set solver options
         solver.options['--branch_dir'] = 1
         solver.options['--brancher'] = 'maxvio'
         solver.options['--set_lp_method'] = 0
@@ -1334,11 +1351,12 @@ def main():
         solver.options['--obj_gap_percent'] = 5
         solver.options['--time_limit'] = 7200
 
+        # 5️⃣ Create temporary log file to capture solver output
         log_fd, log_path = tempfile.mkstemp(prefix="mbnb_", suffix=".log")
         os.close(log_fd)
 
         try:
-            # Make sure 'model' is defined before this point
+            # 6️⃣ Solve the model with detailed output (tee=True) and log redirection
             result = solver.solve(model, tee=True, logfile=log_path)
 
             logging.info(f"Solver status: {result.solver.status}")
@@ -1348,6 +1366,7 @@ def main():
         except Exception as e:
             logging.error("Solver execution failed!", exc_info=True)
 
+            # 7️⃣ Extract and log last 50 lines of solver log for diagnostic info
             if os.path.exists(log_path):
                 logging.error("=== Tail of solver log ===")
                 try:
@@ -1356,7 +1375,9 @@ def main():
                 except Exception as tail_err:
                     logging.error(f"Could not read solver log: {tail_err}")
 
+            # 8️⃣ Re-raise exception preserving original traceback
             raise
+
         # ------------------------- Process Results -------------------------
         if result.solver.termination_condition != "infeasible":
             totalDuties = 0
