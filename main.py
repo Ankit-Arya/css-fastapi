@@ -242,7 +242,7 @@ def check_status(execution_id: str):
 #         )
     
 #     raise HTTPException(status_code=404, detail="File not ready or corrupted")
-@app.get("/download/{execution_id}", methods=["GET", "HEAD"])
+@app.api_route("/download/{execution_id}", methods=["GET", "HEAD"])
 def download_file(execution_id: str):
     # Resolve absolute path
     base_dir = os.path.dirname(os.path.abspath(__file__))
