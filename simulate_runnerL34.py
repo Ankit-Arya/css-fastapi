@@ -1238,10 +1238,94 @@ def main():
             raise e
 
         # ------------------------- Solve Model -------------------------
-        logging.info("Solving model with MBNB solver...")
+        # logging.info("Solving model with MBNB solver...")
+        # import os
+        # os.environ["LD_LIBRARY_PATH"] = os.path.expanduser("~/minotaur/third-party/lib") + ":" + os.environ.get("LD_LIBRARY_PATH", "")
+        # solver = SolverFactory('mbnb', executable=r'/home/ankit_19591/minotaur/build/bin/mbnb')
+        # solver.options['--branch_dir'] = 1
+        # solver.options['--brancher'] = 'maxvio'
+        # solver.options['--set_lp_method'] = 0
+        # solver.options['--sppheur'] = 1
+        # solver.options['--log_level'] = 3
+        # solver.options['--obj_gap_percent'] = 5
+        # solver.options['--time_limit'] = 7200
+
+        # try:
+        #     result = solver.solve(model, tee=True)
+        #     logging.info(f"Solver status: {result.solver.status}")
+        #     logging.info(f"Termination condition: {result.solver.termination_condition}")
+        # except Exception as e:
+        #     logging.error("Solver execution failed.", exc_info=True)
+        #     raise e
+        # import os
+        # import logging
+        # import tempfile
+        # import subprocess
+        # from pyomo.opt import SolverFactory
+
+        # logging.info("Solving model with MBNB solver...")
+
+        # # === 1️⃣ Ensure Minotaur libraries are in LD_LIBRARY_PATH ===
+        # lib_path = os.path.expanduser("~/minotaur/third-party/lib")
+        # os.environ["LD_LIBRARY_PATH"] = lib_path + ":" + os.environ.get("LD_LIBRARY_PATH", "")
+
+        # # === 2️⃣ Create solver instance ===
+        # solver = SolverFactory('mbnb', executable=r'/home/ankit_19591/minotaur/build/bin/mbnb')
+
+        # # === 3️⃣ Set solver options ===
+        # solver.options['--branch_dir'] = 1
+        # solver.options['--brancher'] = 'maxvio'
+        # solver.options['--set_lp_method'] = 0
+        # solver.options['--sppheur'] = 1
+        # solver.options['--log_level'] = 3
+        # solver.options['--obj_gap_percent'] = 5
+        # solver.options['--time_limit'] = 7200
+
+        # # === 4️⃣ Ensure solver inherits environment and correct working dir ===
+        # solver._env = os.environ.copy()
+        # solver._solver_exec_dir = os.getcwd()
+
+        # # === 5️⃣ Create a temporary log file for solver output ===
+        # log_fd, log_path = tempfile.mkstemp(prefix="mbnb_", suffix=".log")
+        # os.close(log_fd)  # we’ll open it later
+
+        # try:
+        #     # Redirect solver output to file (tee=True will also print to stdout)
+        #     result = solver.solve(model, tee=True, logfile=log_path)
+
+        #     logging.info(f"Solver status: {result.solver.status}")
+        #     logging.info(f"Termination condition: {result.solver.termination_condition}")
+        #     logging.info(f"Solver log saved to: {log_path}")
+
+        # except Exception as e:
+        #     logging.error("Solver execution failed!", exc_info=True)
+
+        #     # Print tail of solver log for debugging
+        #     if os.path.exists(log_path):
+        #         logging.error("=== Tail of solver log ===")
+        #         try:
+        #             tail_output = subprocess.check_output(["tail", "-n", "50", log_path]).decode()
+        #             logging.error(tail_output)
+        #         except Exception as tail_err:
+        #             logging.error(f"Could not read solver log: {tail_err}")
+
+        #     raise e
         import os
-        os.environ["LD_LIBRARY_PATH"] = os.path.expanduser("~/minotaur/third-party/lib") + ":" + os.environ.get("LD_LIBRARY_PATH", "")
+        import logging
+        import tempfile
+        import subprocess
+        from pyomo.opt import SolverFactory
+
+        logging.info("Solving model with MBNB solver...")
+
+        lib_path = os.path.expanduser("~/minotaur/third-party/lib")
+        env = os.environ.copy()
+        env["LD_LIBRARY_PATH"] = lib_path + ":" + env.get("LD_LIBRARY_PATH", "")
+
         solver = SolverFactory('mbnb', executable=r'/home/ankit_19591/minotaur/build/bin/mbnb')
+        solver._env = env
+        solver._solver_exec_dir = os.getcwd()
+
         solver.options['--branch_dir'] = 1
         solver.options['--brancher'] = 'maxvio'
         solver.options['--set_lp_method'] = 0
@@ -1250,14 +1334,29 @@ def main():
         solver.options['--obj_gap_percent'] = 5
         solver.options['--time_limit'] = 7200
 
+        log_fd, log_path = tempfile.mkstemp(prefix="mbnb_", suffix=".log")
+        os.close(log_fd)
+
         try:
-            result = solver.solve(model, tee=True)
+            # Make sure 'model' is defined before this point
+            result = solver.solve(model, tee=True, logfile=log_path)
+
             logging.info(f"Solver status: {result.solver.status}")
             logging.info(f"Termination condition: {result.solver.termination_condition}")
-        except Exception as e:
-            logging.error("Solver execution failed.", exc_info=True)
-            raise e
+            logging.info(f"Solver log saved to: {log_path}")
 
+        except Exception as e:
+            logging.error("Solver execution failed!", exc_info=True)
+
+            if os.path.exists(log_path):
+                logging.error("=== Tail of solver log ===")
+                try:
+                    tail_output = subprocess.check_output(["tail", "-n", "50", log_path]).decode()
+                    logging.error(tail_output)
+                except Exception as tail_err:
+                    logging.error(f"Could not read solver log: {tail_err}")
+
+            raise
         # ------------------------- Process Results -------------------------
         if result.solver.termination_condition != "infeasible":
             totalDuties = 0
