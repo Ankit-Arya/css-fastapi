@@ -637,7 +637,7 @@ def parallel_generate_duties_and_return(chunk_spans=None):
 #     print(f"\n Duty pool saved to '{os.path.abspath(filename)}'.")
 def save_duties_to_csv(duty_pool, filename=None, max_depth=None):
     if filename is None:
-        filename = f"temp_files/{execution_id}generated_dutiesnewcc.csv"
+        filename = f"temp_files/{execution_id}generated_duties_graph.csv"
 
     if max_depth is None:
         max_depth = max((len(duty) for duty in duty_pool), default=0)
