@@ -1120,15 +1120,17 @@ def main():
         from io import StringIO
         from pyomo.environ import (
             ConcreteModel, Var, Objective, ConstraintList,
-            Binary, minimize, value
+            Binary, minimize, value, SolverFactory
         )
         from pyomo.opt import TerminationCondition
+
 
         # ------------------ LOGGING (flush immediately) ------------------
         class FlushHandler(logging.StreamHandler):
             def emit(self, record):
                 super().emit(record)
-                self.flush()  # ensures each log line is sent immediately
+                self.flush()
+
 
         logging.basicConfig(
             level=logging.INFO,
@@ -1137,41 +1139,87 @@ def main():
             force=True
         )
 
-        # ------------------ TEMP FILE LOCATIONS ------------------
-        BASE_TEMP_DIR = "temp_files"
-        os.makedirs(BASE_TEMP_DIR, exist_ok=True)
 
-        INPUT_FILE_LOCATION = os.path.join(BASE_TEMP_DIR, f"{execution_id}redefinedinputparameters.csv")
-        DUTIES_FILE = os.path.join(BASE_TEMP_DIR, f"{execution_id}generated_duties_graph.csv")
-        SOLUTION_FILE = os.path.join(BASE_TEMP_DIR, f"{execution_id}solution.csv")
+        def log_divider(msg):
+            """Print a clear visual divider for major steps."""
+            logging.info("=" * 80)
+            logging.info(msg)
+            logging.info("=" * 80)
+
+
+        # ------------------ FILE LOCATIONS ------------------
+        # execution_id = globals().get("execution_id", "")  # optional prefix
+        BASE_DIR = "temp_files"
+
+        INPUT_FILE_LOCATION = os.path.join(BASE_DIR, f"{execution_id}redefinedinputparameters.csv")
+        DUTIES_FILE = os.path.join(BASE_DIR, f"{execution_id}generated_duties_graph.csv")
+        SOLUTION_FILE = os.path.join(BASE_DIR, f"{execution_id}solution.csv")
+
+        PRIMARY_SOLVER = globals().get("PRIMARY_SOLVER", "cbc")
+        LOCAL_SOLVERS = globals().get("LOCAL_SOLVERS", ["glpk", "cbc"])
+
+
+        # ------------------ HELPER: validate file existence ------------------
+        def check_file_exists(path, description):
+            if not os.path.exists(path):
+                logging.error(f"❌ Missing {description} file: {path}")
+                logging.error("   → Make sure the file exists and is not locked by another process.")
+                raise FileNotFoundError(f"{description} file not found: {path}")
+            else:
+                logging.info(f"✅ Found {description} file: {path}")
+
 
         # ------------------ LOAD INPUTS ------------------
+        log_divider("STEP 1: Loading Input Services")
+
         try:
+            check_file_exists(INPUT_FILE_LOCATION, "input services")
             df = pd.read_csv(INPUT_FILE_LOCATION)
+
+            if df.empty:
+                raise ValueError("Input services file is empty!")
+
             services = [df.iloc[i, 0] for i in range(len(df))]
-            logging.info(f"Loaded {len(services)} services.")
+            logging.info(f"Loaded {len(services)} services from input.")
         except Exception as e:
             logging.error("❌ Failed to load input services file.", exc_info=True)
-            raise e
+            logging.error("   → Check file format, encoding, and content (must have at least one column).")
+            sys.exit(1)
+
 
         # ------------------ LOAD DUTIES ------------------
+        log_divider("STEP 2: Loading Duty Assignments")
+
         service_assignments = {}
         servicesInPath = {key: [] for key in services}
 
         try:
+            check_file_exists(DUTIES_FILE, "duties")
+
             with open(DUTIES_FILE, "rb") as file:
-                content = file.read().replace(b"\x00", b"").decode("utf-8")
+                raw = file.read()
+                content = raw.replace(b"\x00", b"").decode("utf-8", errors="ignore")
                 reader = csv.reader(StringIO(content))
 
+                header_skipped = False
                 for index, row in enumerate(reader):
-                    if index == 0:
+                    if not header_skipped:
+                        header_skipped = True
                         continue
-                    filtered_row = row[1:]
-                    filtered = [int(v) for v in filtered_row if v not in ("NULL", "")]
-                    valid_services = [s for s in filtered if s in services]
 
+                    if not row or len(row) < 2:
+                        logging.warning(f"Duty row {index} skipped (empty or malformed).")
+                        continue
+
+                    try:
+                        filtered = [int(v) for v in row[1:] if v not in ("NULL", "", None)]
+                    except ValueError:
+                        logging.warning(f"⚠️ Non-numeric data found in row {index}: {row}")
+                        continue
+
+                    valid_services = [s for s in filtered if s in services]
                     if not valid_services:
-                        logging.warning(f"Duty {index} skipped - all service IDs invalid.")
+                        logging.warning(f"Duty {index} skipped — no valid service IDs found.")
                         continue
 
                     duty_id = index - 1
@@ -1179,80 +1227,114 @@ def main():
                     for service in valid_services:
                         servicesInPath[service].append(duty_id)
 
-            logging.info(f"Loaded {len(service_assignments)} valid duty assignments.")
+            if not service_assignments:
+                raise ValueError("No valid duties found in file.")
+
+            logging.info(f"✅ Loaded {len(service_assignments)} valid duty assignments.")
         except Exception as e:
             logging.error("❌ Failed to load duties file.", exc_info=True)
-            raise e
+            logging.error("   → Ensure CSV format is valid and IDs match the services list.")
+            sys.exit(1)
+
 
         # ------------------ BUILD MODEL ------------------
-        logging.info("Building Pyomo model...")
-        model = ConcreteModel()
-        model.fPath = Var(service_assignments.keys(), domain=Binary)
-        model.OBJ = Objective(expr=sum(model.fPath[path] for path in service_assignments), sense=minimize)
-        model.ConsList = ConstraintList()
+        log_divider("STEP 3: Building Optimization Model")
 
-        for service, path_ids in servicesInPath.items():
-            if path_ids:
-                model.ConsList.add(sum(model.fPath[path_id] for path_id in path_ids) == 1)
-            else:
-                logging.warning(f"⚠️ Service {service} not found in any duty — may cause infeasibility.")
+        try:
+            model = ConcreteModel()
+            model.fPath = Var(service_assignments.keys(), domain=Binary)
+            model.OBJ = Objective(expr=sum(model.fPath[path] for path in service_assignments), sense=minimize)
+            model.ConsList = ConstraintList()
+
+            for service, path_ids in servicesInPath.items():
+                if path_ids:
+                    model.ConsList.add(sum(model.fPath[path_id] for path_id in path_ids) == 1)
+                else:
+                    logging.warning(f"⚠️ Service {service} not found in any duty — may cause infeasibility.")
+
+            logging.info("✅ Pyomo model successfully built.")
+        except Exception as e:
+            logging.error("❌ Error while building Pyomo model.", exc_info=True)
+            sys.exit(1)
+
 
         # ------------------ SOLVE MODEL ------------------
+        log_divider("STEP 4: Solving Model")
+
         def try_solve(solver_name, model, time_limit=3600, gap_percent=5):
             try:
-                if solver_name == "neos":
-                    logging.info("Attempting NEOS Bonmin solver...")
+                if not solver_name:
+                    return None
+
+                logging.info(f"Attempting solver: {solver_name.upper()}")
+
+                solver = SolverFactory(solver_name)
+                if not solver.available(False):
+                    logging.warning(f"Solver '{solver_name}' is not available on this system.")
+                    return None
+
+                # Apply solver-specific options
+                if solver_name.lower() == "cbc":
+                    solver.options["seconds"] = time_limit
+                    solver.options["ratioGap"] = gap_percent / 100.0
+                elif solver_name.lower() == "glpk":
+                    solver.options["tmlim"] = time_limit
+                elif solver_name.lower() == "neos":
                     solver = SolverFactory("neos")
                     result = solver.solve(model, opt="bonmin", tee=True)
-                else:
-                    logging.info(f"Attempting local solver: {solver_name.upper()}...")
-                    solver = SolverFactory(solver_name)
-                    if solver_name == "cbc":
-                        solver.options["seconds"] = time_limit
-                        solver.options["ratioGap"] = gap_percent / 100.0
-                    elif solver_name == "glpk":
-                        solver.options["tmlim"] = time_limit
-                        solver.options["mipgap"] = gap_percent / 100.0
-                    result = solver.solve(model, tee=True)
-                sys.stdout.flush()  # flush solver output
+                    return result
+
+                result = solver.solve(model, tee=True)
+                sys.stdout.flush()
                 return result
+
             except Exception as e:
-                logging.warning(f"Solver {solver_name.upper()} failed: {e}")
+                logging.warning(f"Solver {solver_name.upper()} failed: {e}", exc_info=True)
                 return None
 
+
         results = try_solve(PRIMARY_SOLVER, model)
-        for local_solver in LOCAL_SOLVERS:
-            if results is None or not hasattr(results, "solver") or results.solver.status is None:
-                results = try_solve(local_solver, model)
+        for solver_name in LOCAL_SOLVERS:
+            if results is None or not hasattr(results, "solver") or getattr(results.solver, "status", None) is None:
+                results = try_solve(solver_name, model)
             else:
                 break
 
         if results is None or not hasattr(results, "solver"):
-            logging.error("❌ All solver attempts failed. Install CBC or GLPK locally and retry.")
-            raise SystemExit(1)
+            logging.critical("❌ All solver attempts failed.")
+            logging.critical("   → Ensure CBC or GLPK is installed and available in system PATH.")
+            sys.exit(1)
 
-        logging.info(f"Solver status: {results.solver.status}")
-        logging.info(f"Termination condition: {results.solver.termination_condition}")
+        logging.info(f"Solver status: {getattr(results.solver, 'status', 'UNKNOWN')}")
+        logging.info(f"Termination condition: {getattr(results.solver, 'termination_condition', 'UNKNOWN')}")
+
 
         # ------------------ PROCESS RESULTS ------------------
-        if results.solver.termination_condition != TerminationCondition.infeasible:
-            total_duties = 0
-            try:
-                with open(SOLUTION_FILE, "w", newline="") as csvfile:
+        log_divider("STEP 5: Writing Solution")
+
+        try:
+            if getattr(results.solver, "termination_condition", None) == TerminationCondition.infeasible:
+                logging.warning("⚠️ Model infeasible — some services not covered by any duty.")
+            else:
+                total_duties = 0
+                with open(SOLUTION_FILE, "w", newline="", encoding="utf-8") as csvfile:
                     writer = csv.writer(csvfile)
                     for path_var in model.fPath:
-                        if abs(value(model.fPath[path_var]) - 1) <= 1e-6:
+                        val = value(model.fPath[path_var])
+                        if abs(val - 1) <= 1e-6:
                             writer.writerow(service_assignments[path_var])
                             total_duties += 1
-                logging.info(f"✅ Solution written to {SOLUTION_FILE} (no header/index).")
+                logging.info(f"✅ Solution written to: {SOLUTION_FILE}")
                 logging.info(f"✅ Total duties selected: {total_duties}")
-            except Exception as e:
-                logging.error("❌ Error writing solution file.", exc_info=True)
-        else:
-            logging.warning("⚠️ Infeasible solution found — check that every service appears in at least one duty.")
+        except Exception as e:
+            logging.error("❌ Error writing solution file.", exc_info=True)
+            logging.error("   → Check write permissions or file locks.")
+            sys.exit(1)
 
-        logging.info("✅ Done!")
 
+        # ------------------ COMPLETION ------------------
+        log_divider("✅ EXECUTION COMPLETE")
+        logging.info("Script finished successfully.")
         update_status(execution_id, f"Success ! Optimization Complete", "completed")
         update_status(execution_id, f"Creating Trip Chart Format", "WIP")
 
