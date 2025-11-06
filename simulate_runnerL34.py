@@ -1185,8 +1185,8 @@ def main():
         import datetime
 
         # ── 1) FILES ────────────────────────────────────────────────────────────────
-        INPUT_FILE  = 'temp_files/trip_chart_{execution_id}.xlsx'   # 🔁 adjust if needed
-        OUTPUT_FILE = 'temp_files/duty_trip_break_summary_{execution_id}.xlsx'
+        INPUT_FILE  = f'temp_files/trip_chart_{execution_id}.xlsx'   # 🔁 adjust if needed
+        OUTPUT_FILE = f'temp_files/duty_trip_break_summary_{execution_id}.xlsx'
 
         # ── 2) JURISDICTION HELPERS ─────────────────────────────────────────────────
         yb_jurisdiction = {

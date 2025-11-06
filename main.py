@@ -246,16 +246,15 @@ def check_status(execution_id: str):
 def download_file(execution_id: str):
     """
     Serve the Excel file corresponding to the execution_id.
-
     Handles both cases where execution_id may already contain 'trip_chart_' prefix.
     """
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    
+
     # Ensure no double prefix
     if not execution_id.startswith("trip_chart_"):
         execution_id = f"trip_chart_{execution_id}"
-    
-    # Ensure no double .xlsx
+
+    # Ensure proper file extension
     if execution_id.endswith(".xlsx"):
         file_name = execution_id
     else:
@@ -263,16 +262,16 @@ def download_file(execution_id: str):
 
     file_path = os.path.join(base_dir, "temp_files", file_name)
 
-    print("📁 Trying to serve file at:", file_path)
-
+    # ✅ Only log when file is found
     if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+        print(f"✅ File ready to serve: {file_name}")
         return FileResponse(
             path=file_path,
             filename=file_name,
             media_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
         )
-    
-    # File not found or empty
+
+    # ❌ Don't print anything for missing/empty files to reduce spam
     raise HTTPException(status_code=404, detail="File not ready or corrupted")
 
 
