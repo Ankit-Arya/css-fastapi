@@ -133,6 +133,12 @@ def main():
         
             
     try:
+        print('-------------INSIDE CODE--------------')
+        print(f"SBC1endHour -- {SBC1endHour}")
+        print(f"SBC1startHour -- {SBC1startHour}")
+        print(f"SBC2endMinute -- {SBC2endMinute}")
+        print(f"SBC1endMinute -- {SBC1endMinute}")
+        print("------------------------------------")         
         import csv
         import math
         import copy
