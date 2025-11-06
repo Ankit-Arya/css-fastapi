@@ -14,35 +14,47 @@ def main():
 
 
     # Try loading the JSON safely
+    default_stepping_back = [
+        {"station": "SBC1", "start": "08:00", "end": "10:00"},
+        {"station": "SBC2", "start": "09:00", "end": "11:00"},
+        {"station": "SBC3", "start": "17:00", "end": "19:00"},
+    ]
+
+    # Parse user input safely
     try:
-        stepping_back = json.loads(stepping_back_raw)
+        user_stepping_back = json.loads(stepping_back_raw)
     except Exception as e:
         print("⚠️ Invalid stepping_back data, defaulting to empty list.")
         print("Error detail:", e)
-        stepping_back = []
+        user_stepping_back = []
 
-    # Default if none provided
-    if not stepping_back:
-        stepping_back = [
-            {"start": "08:00", "end": "10:00"},
-            {"start": "17:00", "end": "19:00"},
-        ]
+    # Merge user input with defaults
+    stepping_back_merged = []
+    for default in default_stepping_back:
+        # Check if user provided this station
+        user_entry = next((u for u in user_stepping_back if u.get("station") == default["station"]), None)
+        if user_entry:
+            # Merge user values with defaults
+            stepping_back_merged.append({
+                "station": default["station"],
+                "start": user_entry.get("start", default["start"]),
+                "end": user_entry.get("end", default["end"]),
+            })
+        else:
+            # Use default if user didn't provide
+            stepping_back_merged.append(default)
 
-    fixed_station_keys = [f"SBC{i+1}" for i in range(len(stepping_back))]
-    stepping_back_saved = []
 
-
+    # Helper function to safely parse time
     def safe_parse_time(time_str, fallback_hour=None, fallback_minute=None):
-        """Safely parse HH:MM time strings into (hour, minute) integers."""
         try:
             parts = str(time_str).strip().split(":")
-            if len(parts) == 1:  # e.g. "10" → interpret as 10:00
+            if len(parts) == 1:
                 hour = int(parts[0])
                 minute = 0
             else:
                 hour = int(parts[0])
                 minute = int(parts[1])
-            # Clamp to valid range
             hour = max(0, min(23, hour))
             minute = max(0, min(59, minute))
             return hour, minute
@@ -53,34 +65,32 @@ def main():
             return hour, minute
 
 
+    # Process merged list and set globals
     stepping_back_saved = []
 
-    for idx, entry in enumerate(stepping_back):
-        # Normalize station name
-        station_name = entry.get("station", f"SBC{idx+1}").strip()
-        
+    for entry in stepping_back_merged:
+        station_name = entry["station"].strip()
+
         start_hour, start_minute = safe_parse_time(entry.get("start", "00:00"))
         end_hour, end_minute = safe_parse_time(entry.get("end", "23:59"))
 
-        # Save normalized version
         stepping_back_saved.append({
             "station": station_name,
             "start": f"{start_hour:02}:{start_minute:02}",
             "end": f"{end_hour:02}:{end_minute:02}",
         })
 
-        # Define globals as integers
+        # Set globals
         globals()[f"{station_name}startHour"] = int(start_hour)
         globals()[f"{station_name}startMinute"] = int(start_minute)
         globals()[f"{station_name}endHour"] = int(end_hour)
         globals()[f"{station_name}endMinute"] = int(end_minute)
 
 
-    # ✅ Focused Debug Output — shows final usable values & types
+    # Debug output
     print("\n=== Stepping Back Configurations ===")
     for entry in stepping_back_saved:
         station = entry["station"]
-
         start_hour = globals()[f"{station}startHour"]
         start_minute = globals()[f"{station}startMinute"]
         end_hour = globals()[f"{station}endHour"]
