@@ -55,55 +55,68 @@ def main():
         stepping_back = json.loads(stepping_back_raw)
     except Exception as e:
         print("⚠️ Invalid stepping_back data, defaulting to empty list.")
+        print("Error detail:", e)
         stepping_back = []
 
-    # Default to 2 steps if none provided
+    # Default if none provided
     if not stepping_back:
         stepping_back = [
             {"start": "08:00", "end": "10:00"},
             {"start": "17:00", "end": "19:00"},
         ]
 
-    # Map user input or default to SBC keys
     fixed_station_keys = [f"SBC{i+1}" for i in range(len(stepping_back))]
     stepping_back_saved = []
+
+    def safe_parse_time(time_str, fallback_hour=None, fallback_minute=None):
+        """Safely parse HH:MM time strings into (hour, minute) integers."""
+        try:
+            parts = str(time_str).strip().split(":")
+            if len(parts) == 1:  # e.g., "10" -> interpret as 10:00
+                hour = int(parts[0])
+                minute = 0
+            else:
+                hour = int(parts[0])
+                minute = int(parts[1])
+            # Clamp values to valid ranges
+            hour = max(0, min(23, hour))
+            minute = max(0, min(59, minute))
+            return hour, minute
+        except Exception as e:
+            print(f"⚠️ Failed to parse time '{time_str}':", e)
+            hour = fallback_hour if fallback_hour is not None else random.randint(0, 23)
+            minute = fallback_minute if fallback_minute is not None else random.randint(0, 59)
+            return hour, minute
 
     for idx, entry in enumerate(stepping_back):
         fixed_key = fixed_station_keys[idx]
 
-        # Parse or fallback to random time
-        try:
-            start_hour, start_minute = map(int, entry["start"].split(":"))
-        except:
-            start_hour = random.randint(0, 23)
-            start_minute = random.randint(0, 59)
+        start_hour, start_minute = safe_parse_time(entry.get("start", ""))
+        end_hour, end_minute = safe_parse_time(entry.get("end", ""))
 
-        try:
-            end_hour, end_minute = map(int, entry["end"].split(":"))
-        except:
-            end_hour = random.randint(0, 23)
-            end_minute = random.randint(0, 59)
-
-        # Save to stepping_back_saved
+        # Save normalized version
         stepping_back_saved.append({
             "station": fixed_key,
             "start": f"{start_hour:02}:{start_minute:02}",
             "end": f"{end_hour:02}:{end_minute:02}",
         })
 
-        # Define dynamic variables
-        globals()[f"{fixed_key}startHour"] = start_hour
-        globals()[f"{fixed_key}startMinute"] = start_minute
-        globals()[f"{fixed_key}endHour"] = end_hour
-        globals()[f"{fixed_key}endMinute"] = end_minute
+        # Define globals as integers
+        globals()[f"{fixed_key}startHour"] = int(start_hour)
+        globals()[f"{fixed_key}startMinute"] = int(start_minute)
+        globals()[f"{fixed_key}endHour"] = int(end_hour)
+        globals()[f"{fixed_key}endMinute"] = int(end_minute)
 
-    # ✅ Now these globals can be used safely even if user input was missing
-    # 🧪 Optional Debug Output
+    # ✅ Debug Output — guaranteed numeric
     for entry in stepping_back_saved:
         station = entry["station"]
-        print(f"{station}: {globals()[f'{station}startHour']:02}:{globals()[f'{station}startMinute']:02} "
-              f"to {globals()[f'{station}endHour']:02}:{globals()[f'{station}endMinute']:02}")
-    
+        print(
+            f"{station}: "
+            f"{globals()[f'{station}startHour']:02}:{globals()[f'{station}startMinute']:02} "
+            f"→ {globals()[f'{station}endHour']:02}:{globals()[f'{station}endMinute']:02}"
+        )   
+        
+            
     try:
         import csv
         import math
