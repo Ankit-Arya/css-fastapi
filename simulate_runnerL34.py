@@ -346,8 +346,8 @@ def main():
                         
                         # StepBack Timimng at DSTO 7:45 to 22:00
                         #SBC1 > SBC1
-                        if (rail[x].index[j] == 'SBC1') & (rail[x].index[j + 1] == 'SBC1') & (rail[x].iloc[j, 0].hour >= 7) & (
-                            rail[x].iloc[j, 0].hour < 22) & ((rail[x].iloc[j, 0].minute >= 45 if (rail[x].iloc[j, 0].hour == 7) else True)) & (
+                        if (rail[x].index[j] == 'SBC1') & (rail[x].index[j + 1] == 'SBC1') & (rail[x].iloc[j, 0].hour >= SBC1startHour) & (
+                            rail[x].iloc[j, 0].hour < SBC1endHour) & ((rail[x].iloc[j, 0].minute >= SBC1startMinute if (rail[x].iloc[j, 0].hour == SBC1startHour) else True)) & (
                             ids[x] not in ['399','398']):
                             data = {'Train_No': ids[x], 'LocationPick': rail[x].index[i], 'Trip_Start': rail[x].iloc[i, 0],
                                     'LocationRelieve': rail[x].index[j], 'Trip_End': rail[x].iloc[j, 0],
@@ -364,9 +364,9 @@ def main():
 
                         # StepBack Timimng at VASI 7:00 to 22:00
                         #SBC2 > SBC2
-                        if (rail[x].index[j] == 'SBC2') & (rail[x].index[j + 1] == 'SBC2') & ((rail[x].iloc[j, 0].hour >= 7)) & (
-                            (rail[x].iloc[j, 0].minute >= 0 if (rail[x].iloc[j, 0].hour == 7) else True)) & (
-                            rail[x].iloc[j, 0].hour < 22) & (ids[x] not in ['399','398']):
+                        if (rail[x].index[j] == 'SBC2') & (rail[x].index[j + 1] == 'SBC2') & ((rail[x].iloc[j, 0].hour >= SBC2startHour)) & (
+                            (rail[x].iloc[j, 0].minute >= SBC2startMinute if (rail[x].iloc[j, 0].hour == SBC2startHour) else True)) & (
+                            rail[x].iloc[j, 0].hour < SBC2endHour) & (ids[x] not in ['399','398']):
                             data = {'Train_No': ids[x], 'LocationPick': rail[x].index[i], 'Trip_Start': rail[x].iloc[i, 0],
                                     'LocationRelieve': rail[x].index[j], 'Trip_End': rail[x].iloc[j, 0],
                                     'Trip_Duration': rail[x].iloc[j, 0] - rail[x].iloc[i, 0]}
@@ -382,9 +382,9 @@ def main():
 
                         # StepBack Timimng at NECC 7:15 to 22:00
                         #SBC3 > SBC3
-                        if (rail[x].index[j] == 'SBC3') & (rail[x].index[j + 1] == 'SBC3') & ((rail[x].iloc[j, 0].hour >= 7)) & (
-                            (rail[x].iloc[j, 0].minute >= 15 if (rail[x].iloc[j, 0].hour == 7) else True)) & (
-                            rail[x].iloc[j, 0].hour < 22) & (ids[x] not in ['399','398']):
+                        if (rail[x].index[j] == 'SBC3') & (rail[x].index[j + 1] == 'SBC3') & ((rail[x].iloc[j, 0].hour >= SBC3startHour)) & (
+                            (rail[x].iloc[j, 0].minute >= SBC3startMinute if (rail[x].iloc[j, 0].hour == SBC3startHour) else True)) & (
+                            rail[x].iloc[j, 0].hour < SBC3endHour) & (ids[x] not in ['399','398']):
                             data = {'Train_No': ids[x], 'LocationPick': rail[x].index[i], 'Trip_Start': rail[x].iloc[i, 0],
                                     'LocationRelieve': rail[x].index[j], 'Trip_End': rail[x].iloc[j, 0],
                                     'Trip_Duration': rail[x].iloc[j, 0] - rail[x].iloc[i, 0]}
@@ -1186,7 +1186,7 @@ def main():
 
         # ── 1) FILES ────────────────────────────────────────────────────────────────
         INPUT_FILE  = 'temp_files/trip_chart_{execution_id}.xlsx'   # 🔁 adjust if needed
-        OUTPUT_FILE = 'duty_trip_break_summary_{execution_id}.xlsx'
+        OUTPUT_FILE = 'temp_files/duty_trip_break_summary_{execution_id}.xlsx'
 
         # ── 2) JURISDICTION HELPERS ─────────────────────────────────────────────────
         yb_jurisdiction = {
