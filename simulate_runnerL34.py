@@ -90,24 +90,29 @@ def main():
             return hour, minute
 
 
-    for idx, entry in enumerate(stepping_back):
-        fixed_key = fixed_station_keys[idx]
+    stepping_back_saved = []
 
-        start_hour, start_minute = safe_parse_time(entry.get("start", ""))
-        end_hour, end_minute = safe_parse_time(entry.get("end", ""))
+    for idx, entry in enumerate(stepping_back):
+        # Normalize station name
+        station_name = entry.get("station", f"SBC{idx+1}").strip()
+        
+        start_hour, start_minute = safe_parse_time(entry.get("start", "00:00"))
+        end_hour, end_minute = safe_parse_time(entry.get("end", "23:59"))
 
         # Save normalized version
         stepping_back_saved.append({
-            "station": fixed_key,
+            "station": station_name,
             "start": f"{start_hour:02}:{start_minute:02}",
             "end": f"{end_hour:02}:{end_minute:02}",
         })
 
         # Define globals as integers
-        globals()[f"{fixed_key}startHour"] = int(start_hour)
-        globals()[f"{fixed_key}startMinute"] = int(start_minute)
-        globals()[f"{fixed_key}endHour"] = int(end_hour)
-        globals()[f"{fixed_key}endMinute"] = int(end_minute)
+        globals()[f"{station_name}startHour"] = int(start_hour)
+        globals()[f"{station_name}startMinute"] = int(start_minute)
+        globals()[f"{station_name}endHour"] = int(end_hour)
+        globals()[f"{station_name}endMinute"] = int(end_minute)
+
+
 
     # ✅ Focused Debug Output — shows final usable values & types
     print("\n=== Stepping Back Configurations ===")
