@@ -15,40 +15,7 @@ def main():
     file_path = sys.argv[2]
     print('FILE PATH==',file_path)
     stepping_back_raw = sys.argv[3]  # Passed as JSON string
-    # stepping_back = json.loads(stepping_back_raw)
-    # # We'll map them to SBC1, SBC2, SBC3...
-    # fixed_station_keys = [f"SBC{i+1}" for i in range(len(stepping_back))]
 
-    # # Now convert user input to fixed key mapping
-    # stepping_back_saved = []
-
-    # for idx, entry in enumerate(stepping_back):
-    #     fixed_key = fixed_station_keys[idx]
-    #     stepping_back_saved.append({
-    #         "station": fixed_key,
-    #         "start": entry["start"],
-    #         "end": entry["end"]
-    #     })
-
-    # # Extract and assign to variables
-    # for entry in stepping_back_saved:
-    #     station = entry["station"]
-    #     start_hour, start_minute = map(int, entry["start"].split(":"))
-    #     end_hour, end_minute = map(int, entry["end"].split(":"))
-
-    #     # Use globals() to create actual variables like SBC1startHour
-    #     globals()[f"{station}startHour"] = start_hour
-    #     globals()[f"{station}startMinute"] = start_minute
-    #     globals()[f"{station}endHour"] = end_hour
-    #     globals()[f"{station}endMinute"] = end_minute
-
-    # # ✅ Now you can use these anywhere:
-    # # SBC1startHour, SBC1startMinute, SBC1endHour, SBC1endMinute
-    # # SBC2startHour, SBC2startMinute, ...
-
-    # # 🧪 Test print
-    # print("SBC1:", SBC1startHour, SBC1startMinute, SBC1endHour, SBC1endMinute)
-    # print("SBC2:", SBC2startHour, SBC2startMinute, SBC2endHour, SBC2endMinute)
 
     # Try loading the JSON safely
     default_stepping_back = [

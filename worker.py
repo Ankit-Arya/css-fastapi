@@ -94,7 +94,7 @@ def _monitor_process_lines(execution_id, process):
         print("Monitor thread error:", e)
         job_registry[execution_id] = {"process": None, "status": "error"}
 
-def process_file(execution_id: str, file_path: str, user_id: str, user_name: str, email: str, stepping_back: List):
+def process_file(execution_id: str, file_path: str, user_id: str, user_name: str, email: str, stepping_back: List, timetable_type: str):
     try:
         update_status(execution_id, "Preparing simulation", "WIP")
         file_path = os.path.abspath(file_path)
@@ -103,7 +103,7 @@ def process_file(execution_id: str, file_path: str, user_id: str, user_name: str
 
         # Start subprocess with unbuffered output; text mode for easy line reads
         process = subprocess.Popen(
-            [sys.executable, "-u", script_path, execution_id, file_path, stepping_back_json],
+            [sys.executable, "-u", script_path, execution_id, file_path, stepping_back_json, timetable_type],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             bufsize=1,
@@ -121,7 +121,7 @@ def process_file(execution_id: str, file_path: str, user_id: str, user_name: str
         update_status(execution_id, str(e), "error")
         job_registry[execution_id] = {"process": None, "status": "error"}
 
-def process_fileL34(execution_id: str, file_path: str, user_id: str, user_name: str, email: str, stepping_back: List):
+def process_fileL34(execution_id: str, file_path: str, user_id: str, user_name: str, email: str, stepping_back: List, timetable_type: str):
     try:
         update_status(execution_id, "Preparing simulation", "WIP")
         file_path = os.path.abspath(file_path)
@@ -130,7 +130,7 @@ def process_fileL34(execution_id: str, file_path: str, user_id: str, user_name: 
 
         # Start subprocess with unbuffered output; text mode for easy line reads
         process = subprocess.Popen(
-            [sys.executable, "-u", script_path, execution_id, file_path, stepping_back_json],
+            [sys.executable, "-u", script_path, execution_id, file_path, stepping_back_json, timetable_type],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             bufsize=1,
