@@ -11,7 +11,7 @@ def main():
     execution_id = sys.argv[1]
     file_path = sys.argv[2]
     stepping_back_raw = sys.argv[3]  # Passed as JSON string
-
+    timetable_type = sys.argv[4]
 
     # Try loading the JSON safely
     default_stepping_back = [
@@ -698,7 +698,7 @@ def main():
             
             # Case 2: Short break at crew control station
             startEndStnTFafterBreak = service1.endStn[:2] == service2.startStn[:2]
-            startEndTimeWithin = short_break <= (service2.startTime - service1.endTime) <= 120
+            startEndTimeWithin = short_break <= (service2.startTime - service1.endTime) <= (120 if timetable_type == 'large' else 150)
             
             # Rake matching logic
             if service1.stepbackTrainNum == "No StepBack":
@@ -780,7 +780,7 @@ def main():
             long_break_exists = any(br >= long_break for br in break_durs)
             
             # Check total break duration constraint
-            total_break_dur_valid = long_break <= total_break_dur <= 120 if break_durs else True
+            total_break_dur_valid = long_break <= total_break_dur <= (120 if timetable_type == 'large' else 150) if break_durs else True
             
             # Check continuous driving time
             continuous_driving = calculate_continuous_driving_time(path, services)

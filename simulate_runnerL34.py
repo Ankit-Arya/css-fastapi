@@ -15,7 +15,7 @@ def main():
     file_path = sys.argv[2]
     print('FILE PATH==',file_path)
     stepping_back_raw = sys.argv[3]  # Passed as JSON string
-
+    timetable_type = sys.argv[4]
 
     # Try loading the JSON safely
     default_stepping_back = [
@@ -767,7 +767,7 @@ def main():
         print("Preprocessing complete. Starting parallel duty generation...")
 
         # Call the multiprocessing script and wait for it to finish
-        subprocess.run(["python", "multiprocessing_duty_generator.py", execution_id], check=True)
+        subprocess.run(["python", "multiprocessing_duty_generator.py", execution_id,timetable_type], check=True)
         update_status(execution_id, f"Dataset Generation successfull", "completed")
 
         print("Parallel duty generation finished. Continue with postprocessing...")

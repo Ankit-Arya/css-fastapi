@@ -328,6 +328,7 @@ Continuous_Driving_time = 170
 long_break = 50
 short_break = 30
 execution_id = sys.argv[1]
+timetable_type = sys.argv[2]
 print('ARGS IN PARALLEL FILE', execution_id)
 YB_Jurisdiction = ['SDG-YB','DYB', 'YBSDG', 'SBC2', 'NESY', 'YBUP', 'YBDN', 'NSST/KSHI', 'SBC3', 'NECCSDG', 'VASIO/S']
 DW_Jurisdiction = ['NFD', 'KNR', 'DWDN', 'DWUP', 'DW3RD', 'JPW', 'DSTOSDG', 'SBC1', 'DWT']
@@ -392,7 +393,7 @@ def canFollow(s1, s2):
         return False
 
     gap = s2.startTime - s1.endTime
-    if short_break <= gap <= 120 and s1.endStn[:4] in crewControlSet:
+    if short_break <= gap <= (120 if timetable_type == 'large' else 150) and s1.endStn[:4] in crewControlSet:
         return s1.endStn[:2] == s2.startStn[:2] and (s2.endTime - s1.startTime) <= Duty_hours
     return False
 
@@ -419,7 +420,7 @@ def build_trip_graph(services):
         s1 = services[i]
         for j in range(i + 1, total):
             s2 = services[j]
-            if s2.startTime - s1.endTime > 120:
+            if s2.startTime - s1.endTime > (120 if timetable_type == 'large' else 150):
                 break
             if canFollow(s1, s2):
                 graph[s1.servNum].append(s2)
@@ -505,7 +506,7 @@ def generate_duties(start_trip, graph, cc1, cc2, max_depth=10):
         if exceeds_continuous_driving(path):
             continue
 
-        good_duty = 50 < break_dur < 120
+        good_duty = 50 < break_dur < (120 if timetable_type == 'large' else 150)
 
         valid_jurisdiction = (
             (path[0].startStn in cc1 and path[-1].endStn in cc1) or
