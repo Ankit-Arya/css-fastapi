@@ -105,6 +105,7 @@ def get_dmrc_lines():
         ]
     }
 
+
 @app.post("/simulate")
 async def simulate(
     background_tasks: BackgroundTasks,
@@ -113,13 +114,16 @@ async def simulate(
     user_id: str = Form(""),
     user_name: str = Form(""),
     email: str = Form(""),
-    stepping_back: Optional[str] = Form(None)
+    stepping_back: Optional[str] = Form(None),
+    timetable_type: str = Form("large")  # 🆕 new field from frontend
+
 ):
     # Just for testing, print the incoming data
     print(f"execution_id={execution_id}")
     print(f"user_id={user_id}, user_name={user_name}, email={email}")
     print(f"file name={file.filename}")
     print(f"stepping_back={stepping_back}")
+    print(f"timetable_type={timetable_type}")  # 🆕 log the new field
 
     # ✅ Parse stepping_back JSON if provided
     parsed_stepping_back = []
@@ -135,7 +139,9 @@ async def simulate(
         metadata={
             "uploaded_by": user_name,
             "execution_id": execution_id,
-            "content_type": file.content_type
+            "content_type": file.content_type,
+            "timetable_type": timetable_type,  # 🆕 Save it as metadata too
+
         }
     )
     # ✅ Reset file pointer before reusing
@@ -146,7 +152,9 @@ async def simulate(
         "initiatedBy": user_name,
         "timestamp": datetime.now(),
         "file_id": str(file_id),
-        "file_name": file.filename
+        "file_name": file.filename,
+        "timetable_type": timetable_type  # 🆕 Store in DB notice as well
+
     }
     await notices_collection.insert_one(notice)        
     # Save uploaded file
@@ -154,7 +162,7 @@ async def simulate(
 
     # Start background processing
     background_tasks.add_task(
-        process_file, execution_id, saved_path, user_id, user_name,email, parsed_stepping_back
+        process_file, execution_id, saved_path, user_id, user_name,email, parsed_stepping_back, timetable_type
     )
 
     return {"message": "File received. Processing started.", "execution_id": execution_id}
@@ -167,13 +175,16 @@ async def simulateL34(
     user_id: str = Form(""),
     user_name: str = Form(""),
     email: str = Form(""),
-    stepping_back: Optional[str] = Form(None)
+    stepping_back: Optional[str] = Form(None),
+    timetable_type: str = Form("large")  # 🆕 new field from frontend
+
 ):
     # Just for testing, print the incoming data
     print(f"execution_id={execution_id}")
     print(f"user_id={user_id}, user_name={user_name}, email={email}")
     print(f"file name={file.filename}")
     print(f"stepping_back={stepping_back}")
+    print(f"timetable_type={timetable_type}")  # 🆕 log the new field
 
     # ✅ Parse stepping_back JSON if provided
     parsed_stepping_back = []
@@ -189,7 +200,9 @@ async def simulateL34(
         metadata={
             "uploaded_by": user_name,
             "execution_id": execution_id,
-            "content_type": file.content_type
+            "content_type": file.content_type,
+            "timetable_type": timetable_type,  # 🆕 Save it as metadata too
+
         }
     )
     # ✅ Reset file pointer before reusing
@@ -200,7 +213,9 @@ async def simulateL34(
         "initiatedBy": user_name,
         "timestamp": datetime.now(),
         "file_id": str(file_id),
-        "file_name": file.filename
+        "file_name": file.filename,
+        "timetable_type": timetable_type  # 🆕 Store in DB notice as well
+
     }
     await notices_collection.insert_one(notice)        
     # Save uploaded file
@@ -208,11 +223,10 @@ async def simulateL34(
 
     # Start background processing
     background_tasks.add_task(
-        process_fileL34, execution_id, saved_path, user_id, user_name,email, parsed_stepping_back
+        process_fileL34, execution_id, saved_path, user_id, user_name,email, parsed_stepping_back,timetable_type  
     )
 
     return {"message": "File received. Processing started.", "execution_id": execution_id}
-
 @app.get("/notices")
 async def get_notices():
     notices = await notices_collection.find().sort("timestamp", -1).to_list(50)
