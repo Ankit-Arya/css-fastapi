@@ -14,7 +14,7 @@ from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorGridFSBucket
 from fastapi import FastAPI, UploadFile, Form, BackgroundTasks
 from fastapi.responses import FileResponse
 from helpers import save_file_locally, update_status, get_status
-from worker import process_file, job_registry, process_fileL34  
+from worker import process_file, job_registry, process_fileL34, process_fileL5  
 import os
 from fastapi.responses import StreamingResponse
 from bson import ObjectId
@@ -227,6 +227,70 @@ async def simulateL34(
     )
 
     return {"message": "File received. Processing started.", "execution_id": execution_id}
+
+
+@app.post("/simulateL5")
+async def simulateL5(
+    background_tasks: BackgroundTasks,
+    execution_id: str = Form(...),
+    file: UploadFile = File(...),
+    user_id: str = Form(""),
+    user_name: str = Form(""),
+    email: str = Form(""),
+    stepping_back: Optional[str] = Form(None),
+    timetable_type: str = Form("large")  # 🆕 new field from frontend
+
+):
+    # Just for testing, print the incoming data
+    print(f"execution_id={execution_id}")
+    print(f"user_id={user_id}, user_name={user_name}, email={email}")
+    print(f"file name={file.filename}")
+    print(f"stepping_back={stepping_back}")
+    print(f"timetable_type={timetable_type}")  # 🆕 log the new field
+
+    # ✅ Parse stepping_back JSON if provided
+    parsed_stepping_back = []
+    if stepping_back:
+        try:
+            parsed_stepping_back = json.loads(stepping_back)
+        except Exception as e:
+            print("Failed to parse stepping_back JSON:", e)
+    # Save uploaded file into MongoDB GridFS
+    file_id = await fs.upload_from_stream(
+        filename=file.filename,
+        source=file.file,
+        metadata={
+            "uploaded_by": user_name,
+            "execution_id": execution_id,
+            "content_type": file.content_type,
+            "timetable_type": timetable_type,  # 🆕 Save it as metadata too
+
+        }
+    )
+    # ✅ Reset file pointer before reusing
+    file.file.seek(0)
+    # Save notice entry in MongoDB
+    notice = {
+        "executionId": execution_id,
+        "initiatedBy": user_name,
+        "timestamp": datetime.now(),
+        "file_id": str(file_id),
+        "file_name": file.filename,
+        "timetable_type": timetable_type  # 🆕 Store in DB notice as well
+
+    }
+    await notices_collection.insert_one(notice)        
+    # Save uploaded file
+    saved_path = await save_file_locally(execution_id, file)
+
+    # Start background processing
+    background_tasks.add_task(
+        process_fileL5, execution_id, saved_path, user_id, user_name,email, parsed_stepping_back, timetable_type
+    )
+
+    return {"message": "File received. Processing started.", "execution_id": execution_id}
+
+
 @app.get("/notices")
 async def get_notices():
     notices = await notices_collection.find().sort("timestamp", -1).to_list(50)
