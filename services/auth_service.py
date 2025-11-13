@@ -19,10 +19,28 @@ def create_access_token(email: str) -> str:
 async def register_user(user_data, users_collection):
     # Restrict to @dmrc.org emails
     if not user_data.email.endswith("@dmrc.org"):
-        return None  # Or raise an exception / return an error message
+        return None  # invalid domain
+    
+    # Check if the user already exists
     existing_user = await users_collection.find_one({"email": user_data.email})
     if existing_user:
         return None  # User already exists
+
+    # Hash the password
+    hashed_password = hash_password(user_data.password)
+
+    # Prepare user document
+    new_user = {
+        "email": user_data.email,
+        "password": hashed_password,
+        "created_at": datetime.utcnow()
+    }
+
+    # Insert user into the database
+    await users_collection.insert_one(new_user)
+
+    return True  # Indicate success
+
 
 async def authenticate_user(email: str, password: str, users_collection):
     user = await users_collection.find_one({"email": email})  # Await the coroutine properly
