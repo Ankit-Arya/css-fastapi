@@ -137,7 +137,7 @@ async def simulate(
         filename=file.filename,
         source=file.file,
         metadata={
-            "uploaded_by": user_name,
+            "uploaded_by": user_name or email or user_id or "Unknown",
             "execution_id": execution_id,
             "content_type": file.content_type,
             "timetable_type": timetable_type,  # 🆕 Save it as metadata too
@@ -146,17 +146,20 @@ async def simulate(
     )
     # ✅ Reset file pointer before reusing
     file.file.seek(0)
+    # Determine initiatedBy using whichever field is available
+    initiated_by = user_name or email or user_id or "Unknown"
+
     # Save notice entry in MongoDB
     notice = {
         "executionId": execution_id,
-        "initiatedBy": user_name,
+        "initiatedBy": initiated_by,
         "timestamp": datetime.now(),
         "file_id": str(file_id),
         "file_name": file.filename,
-        "timetable_type": timetable_type  # 🆕 Store in DB notice as well
-
+        "timetable_type": timetable_type
     }
-    await notices_collection.insert_one(notice)        
+    await notices_collection.insert_one(notice)
+       
     # Save uploaded file
     saved_path = await save_file_locally(execution_id, file)
 
@@ -198,7 +201,7 @@ async def simulateL34(
         filename=file.filename,
         source=file.file,
         metadata={
-            "uploaded_by": user_name,
+            "uploaded_by": user_name or email or user_id or "Unknown",
             "execution_id": execution_id,
             "content_type": file.content_type,
             "timetable_type": timetable_type,  # 🆕 Save it as metadata too
@@ -207,15 +210,17 @@ async def simulateL34(
     )
     # ✅ Reset file pointer before reusing
     file.file.seek(0)
+    # Determine initiatedBy using whichever field is available
+    initiated_by = user_name or email or user_id or "Unknown"
+
     # Save notice entry in MongoDB
     notice = {
         "executionId": execution_id,
-        "initiatedBy": user_name,
+        "initiatedBy": initiated_by,
         "timestamp": datetime.now(),
         "file_id": str(file_id),
         "file_name": file.filename,
-        "timetable_type": timetable_type  # 🆕 Store in DB notice as well
-
+        "timetable_type": timetable_type
     }
     await notices_collection.insert_one(notice)        
     # Save uploaded file
@@ -260,7 +265,7 @@ async def simulateL5(
         filename=file.filename,
         source=file.file,
         metadata={
-            "uploaded_by": user_name,
+            "uploaded_by": user_name or email or user_id or "Unknown",
             "execution_id": execution_id,
             "content_type": file.content_type,
             "timetable_type": timetable_type,  # 🆕 Save it as metadata too
@@ -269,15 +274,17 @@ async def simulateL5(
     )
     # ✅ Reset file pointer before reusing
     file.file.seek(0)
+    # Determine initiatedBy using whichever field is available
+    initiated_by = user_name or email or user_id or "Unknown"
+
     # Save notice entry in MongoDB
     notice = {
         "executionId": execution_id,
-        "initiatedBy": user_name,
+        "initiatedBy": initiated_by,
         "timestamp": datetime.now(),
         "file_id": str(file_id),
         "file_name": file.filename,
-        "timetable_type": timetable_type  # 🆕 Store in DB notice as well
-
+        "timetable_type": timetable_type
     }
     await notices_collection.insert_one(notice)        
     # Save uploaded file
