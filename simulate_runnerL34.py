@@ -1,6 +1,9 @@
 
 
 import subprocess
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 
 def main():
@@ -100,7 +103,7 @@ def main():
         end_hour = globals()[f"{station}endHour"]
         end_minute = globals()[f"{station}endMinute"]
 
-        print(f"{station}: {start_hour:02}:{start_minute:02} → {end_hour:02}:{end_minute:02}")
+        print(f"{station}: {start_hour:02}:{start_minute:02} -> {end_hour:02}:{end_minute:02}")
         print(f"  ├─ {station}startHour ({type(start_hour).__name__}) = {start_hour}")
         print(f"  ├─ {station}startMinute ({type(start_minute).__name__}) = {start_minute}")
         print(f"  ├─ {station}endHour ({type(end_hour).__name__}) = {end_hour}")

@@ -813,5 +813,79 @@
       "status": "error",
       "message": "Command '['python', 'multiprocessing_duty_generator.py', '3da63146-4b65-45f3-8760-685d6dac277a']' returned non-zero exit status 1."
     }
+  ],
+  "4166220a-ff0f-45be-81ad-25f1f183d85b": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "1c854af8-f31c-46e1-83bb-a88ab08ed2f1": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "bd604f92-abe7-4a1f-846c-aee89a6f2e07": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "05c8ea2e-0d64-4057-9616-4ace930782c3": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "3100d8cf-2dfa-4c05-8fc2-b4559e79cf8d": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 3100d8cf-2dfa-4c05-8fc2-b4559e79cf8d",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "c2bd692f-3f21-4dbe-a0b3-9203919d5722": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - c2bd692f-3f21-4dbe-a0b3-9203919d5722",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "642c6288-a14a-4d11-a106-319983af01df": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    }
   ]
 }

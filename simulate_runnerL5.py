@@ -1,3 +1,6 @@
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 
 def main():
@@ -12,6 +15,12 @@ def main():
     file_path = sys.argv[2]
     stepping_back_raw = sys.argv[3]  # Passed as JSON string
     timetable_type = sys.argv[4]
+    duty_hours = sys.argv[5]
+    running_hours = sys.argv[6]
+    single_run_max = sys.argv[7]
+    break_small = sys.argv[8]
+    break_large = sys.argv[9]
+    print('TIME TABLE TYPE',timetable_type)
 
     # Try loading the JSON safely
     default_stepping_back = [
@@ -96,7 +105,7 @@ def main():
         end_hour = globals()[f"{station}endHour"]
         end_minute = globals()[f"{station}endMinute"]
 
-        print(f"{station}: {start_hour:02}:{start_minute:02} → {end_hour:02}:{end_minute:02}")
+        print(f"{station}: {start_hour:02}:{start_minute:02} -> {end_hour:02}:{end_minute:02}")
         print(f"  ├─ {station}startHour ({type(start_hour).__name__}) = {start_hour}")
         print(f"  ├─ {station}startMinute ({type(start_minute).__name__}) = {start_minute}")
         print(f"  ├─ {station}endHour ({type(end_hour).__name__}) = {end_hour}")
@@ -638,12 +647,21 @@ def main():
         from collections import defaultdict
         import os
 
+        def hhmm_to_minutes(hhmm: str) -> int:
+            h, m = map(int, hhmm.split(":"))
+            return h * 60 + m
+
         # Parameters
-        Duty_hours = 460
-        Driving_duration = 375
-        Continuous_Driving_time = 180
-        long_break = 50
-        short_break = 30
+        # Duty_hours = 460
+        Duty_hours = hhmm_to_minutes(duty_hours)
+        # Driving_duration = 375
+        Driving_duration = hhmm_to_minutes(running_hours)
+        # Continuous_Driving_time = 180
+        Continuous_Driving_time = hhmm_to_minutes(single_run_max)
+        # long_break = 50
+        long_break = int(break_large)
+        # short_break = 30
+        short_break = int(break_small)
 
         crewControl = ['CCDN', 'CCUP']
         final_op = []
@@ -1298,6 +1316,7 @@ def main():
         duty2['ACTUAL_DUTYHOURS'] = pd.to_timedelta(duty2['ACTUAL_DUTYHOURS'], errors='coerce')
 
         duty2['ACTUAL_DUTYHOURS'] = (duty2['ACTUAL_DUTYHOURS'] % pd.Timedelta(days=1))
+
 
         duty2.to_excel(f"temp_files/trip_chart_{execution_id}.xlsx")
 

@@ -113,14 +113,14 @@ async def simulate(
     file: UploadFile = File(...),
     user_id: str = Form(""),
     user_name: str = Form(""),
-    email: str = Form(""),
+    user_email: str = Form(""),
     stepping_back: Optional[str] = Form(None),
     timetable_type: str = Form("large")  # 🆕 new field from frontend
 
 ):
     # Just for testing, print the incoming data
     print(f"execution_id={execution_id}")
-    print(f"user_id={user_id}, user_name={user_name}, email={email}")
+    print(f"user_id={user_id}, user_name={user_name}, user_email={user_email}")
     print(f"file name={file.filename}")
     print(f"stepping_back={stepping_back}")
     print(f"timetable_type={timetable_type}")  # 🆕 log the new field
@@ -137,7 +137,7 @@ async def simulate(
         filename=file.filename,
         source=file.file,
         metadata={
-            "uploaded_by": user_name or email or user_id or "Unknown",
+            "uploaded_by": user_name or user_email or user_id or "Unknown",
             "execution_id": execution_id,
             "content_type": file.content_type,
             "timetable_type": timetable_type,  # 🆕 Save it as metadata too
@@ -147,7 +147,7 @@ async def simulate(
     # ✅ Reset file pointer before reusing
     file.file.seek(0)
     # Determine initiatedBy using whichever field is available
-    initiated_by = user_name or email or user_id or "Unknown"
+    initiated_by = user_name or user_email or user_id or "Unknown"
 
     # Save notice entry in MongoDB
     notice = {
@@ -165,7 +165,7 @@ async def simulate(
 
     # Start background processing
     background_tasks.add_task(
-        process_file, execution_id, saved_path, user_id, user_name,email, parsed_stepping_back, timetable_type
+        process_file, execution_id, saved_path, user_id, user_name,user_email, parsed_stepping_back, timetable_type
     )
 
     return {"message": "File received. Processing started.", "execution_id": execution_id}
@@ -177,14 +177,14 @@ async def simulateL34(
     file: UploadFile = File(...),
     user_id: str = Form(""),
     user_name: str = Form(""),
-    email: str = Form(""),
+    user_email: str = Form(""),
     stepping_back: Optional[str] = Form(None),
     timetable_type: str = Form("large")  # 🆕 new field from frontend
 
 ):
     # Just for testing, print the incoming data
     print(f"execution_id={execution_id}")
-    print(f"user_id={user_id}, user_name={user_name}, email={email}")
+    print(f"user_id={user_id}, user_name={user_name}, user_email={user_email}")
     print(f"file name={file.filename}")
     print(f"stepping_back={stepping_back}")
     print(f"timetable_type={timetable_type}")  # 🆕 log the new field
@@ -201,7 +201,7 @@ async def simulateL34(
         filename=file.filename,
         source=file.file,
         metadata={
-            "uploaded_by": user_name or email or user_id or "Unknown",
+            "uploaded_by": user_name or user_email or user_id or "Unknown",
             "execution_id": execution_id,
             "content_type": file.content_type,
             "timetable_type": timetable_type,  # 🆕 Save it as metadata too
@@ -211,7 +211,7 @@ async def simulateL34(
     # ✅ Reset file pointer before reusing
     file.file.seek(0)
     # Determine initiatedBy using whichever field is available
-    initiated_by = user_name or email or user_id or "Unknown"
+    initiated_by = user_name or user_email or user_id or "Unknown"
 
     # Save notice entry in MongoDB
     notice = {
@@ -228,74 +228,186 @@ async def simulateL34(
 
     # Start background processing
     background_tasks.add_task(
-        process_fileL34, execution_id, saved_path, user_id, user_name,email, parsed_stepping_back,timetable_type  
+        process_fileL34, execution_id, saved_path, user_id, user_name,user_email, parsed_stepping_back,timetable_type  
     )
 
     return {"message": "File received. Processing started.", "execution_id": execution_id}
 
+
+# @app.post("/simulateL5")
+# async def simulateL5(
+#     background_tasks: BackgroundTasks,
+#     execution_id: str = Form(...),
+#     file: UploadFile = File(...),
+#     user_id: str = Form(""),
+#     user_name: str = Form(""),
+#     user_email: str = Form(""),
+#     stepping_back: Optional[str] = Form(None),
+#     timetable_type: str = Form("large")  # 🆕 new field from frontend
+
+# ):
+#     # Just for testing, print the incoming data
+#     print(f"execution_id={execution_id}")
+#     print(f"user_id={user_id}, user_name={user_name}, user_email={user_email}")
+#     print(f"file name={file.filename}")
+#     print(f"stepping_back={stepping_back}")
+#     print(f"timetable_type={timetable_type}")  # 🆕 log the new field
+
+#     # ✅ Parse stepping_back JSON if provided
+#     parsed_stepping_back = []
+#     if stepping_back:
+#         try:
+#             parsed_stepping_back = json.loads(stepping_back)
+#         except Exception as e:
+#             print("Failed to parse stepping_back JSON:", e)
+#     # Save uploaded file into MongoDB GridFS
+#     file_id = await fs.upload_from_stream(
+#         filename=file.filename,
+#         source=file.file,
+#         metadata={
+#             "uploaded_by": user_name or user_email or user_id or "Unknown",
+#             "execution_id": execution_id,
+#             "content_type": file.content_type,
+#             "timetable_type": timetable_type,  # 🆕 Save it as metadata too
+
+#         }
+#     )
+#     # ✅ Reset file pointer before reusing
+#     file.file.seek(0)
+#     # Determine initiatedBy using whichever field is available
+#     initiated_by = user_name or user_email or user_id or "Unknown"
+
+#     # Save notice entry in MongoDB
+#     notice = {
+#         "executionId": execution_id,
+#         "initiatedBy": initiated_by,
+#         "timestamp": datetime.now(),
+#         "file_id": str(file_id),
+#         "file_name": file.filename,
+#         "timetable_type": timetable_type
+#     }
+#     await notices_collection.insert_one(notice)        
+#     # Save uploaded file
+#     saved_path = await save_file_locally(execution_id, file)
+
+#     # Start background processing
+#     background_tasks.add_task(
+#         process_fileL5, execution_id, saved_path, user_id, user_name,user_email, parsed_stepping_back, timetable_type
+#     )
+
+#     return {"message": "File received. Processing started.", "execution_id": execution_id}
 
 @app.post("/simulateL5")
 async def simulateL5(
     background_tasks: BackgroundTasks,
     execution_id: str = Form(...),
     file: UploadFile = File(...),
+
     user_id: str = Form(""),
     user_name: str = Form(""),
-    email: str = Form(""),
-    stepping_back: Optional[str] = Form(None),
-    timetable_type: str = Form("large")  # 🆕 new field from frontend
+    user_email: str = Form(""),
 
+    stepping_back: Optional[str] = Form(None),
+    timetable_type: str = Form("large"),
+
+    # 🆕 NEW FIELDS
+    duty_hours: str = Form(""),       # HH:MM
+    running_hours: str = Form(""),    # HH:MM
+    single_run_max: str = Form(""),   # HH:MM
+
+    break_small: int = Form(0),       # minutes
+    break_large: int = Form(0),       # minutes
 ):
-    # Just for testing, print the incoming data
+    # --- Debug Logging ---
     print(f"execution_id={execution_id}")
-    print(f"user_id={user_id}, user_name={user_name}, email={email}")
+    print(f"user_id={user_id}, user_name={user_name}, user_email={user_email}")
     print(f"file name={file.filename}")
     print(f"stepping_back={stepping_back}")
-    print(f"timetable_type={timetable_type}")  # 🆕 log the new field
+    print(f"timetable_type={timetable_type}")
 
-    # ✅ Parse stepping_back JSON if provided
+    # 🆕 Print new fields
+    print(f"duty_hours={duty_hours}")
+    print(f"running_hours={running_hours}")
+    print(f"single_run_max={single_run_max}")
+    print(f"break_small={break_small}")
+    print(f"break_large={break_large}")
+
+    # --- Parse stepping_back JSON ---
     parsed_stepping_back = []
     if stepping_back:
         try:
             parsed_stepping_back = json.loads(stepping_back)
         except Exception as e:
             print("Failed to parse stepping_back JSON:", e)
-    # Save uploaded file into MongoDB GridFS
+
+    # --- Save uploaded file to GridFS ---
     file_id = await fs.upload_from_stream(
         filename=file.filename,
         source=file.file,
         metadata={
-            "uploaded_by": user_name or email or user_id or "Unknown",
+            "uploaded_by": user_name or user_email or user_id or "Unknown",
             "execution_id": execution_id,
             "content_type": file.content_type,
-            "timetable_type": timetable_type,  # 🆕 Save it as metadata too
+            "timetable_type": timetable_type,
 
+            # 🆕 Save new metadata
+            "duty_hours": duty_hours,
+            "running_hours": running_hours,
+            "single_run_max": single_run_max,
+            "break_small": break_small,
+            "break_large": break_large,
         }
     )
-    # ✅ Reset file pointer before reusing
-    file.file.seek(0)
-    # Determine initiatedBy using whichever field is available
-    initiated_by = user_name or email or user_id or "Unknown"
 
-    # Save notice entry in MongoDB
+    # Reset file pointer
+    file.file.seek(0)
+
+    initiated_by = user_name or user_email or user_id or "Unknown"
+
+    # --- Save notice entry ---
     notice = {
         "executionId": execution_id,
         "initiatedBy": initiated_by,
         "timestamp": datetime.now(),
         "file_id": str(file_id),
         "file_name": file.filename,
-        "timetable_type": timetable_type
+        "timetable_type": timetable_type,
+
+        # 🆕 Log new fields also
+        "duty_hours": duty_hours,
+        "running_hours": running_hours,
+        "single_run_max": single_run_max,
+        "break_small": break_small,
+        "break_large": break_large,
     }
-    await notices_collection.insert_one(notice)        
-    # Save uploaded file
+    await notices_collection.insert_one(notice)
+
+    # Save file locally
     saved_path = await save_file_locally(execution_id, file)
 
-    # Start background processing
+    # --- Start background processing ---
     background_tasks.add_task(
-        process_fileL5, execution_id, saved_path, user_id, user_name,email, parsed_stepping_back, timetable_type
+        process_fileL5,
+        execution_id,
+        saved_path,
+        user_id,
+        user_name,
+        user_email,
+        parsed_stepping_back,
+        timetable_type,
+
+        # 🆕 Pass new fields to processing
+        duty_hours,
+        running_hours,
+        single_run_max,
+        break_small,
+        break_large
     )
 
-    return {"message": "File received. Processing started.", "execution_id": execution_id}
+    return {
+        "message": "File received. Processing started.",
+        "execution_id": execution_id
+    }
 
 
 @app.get("/notices")

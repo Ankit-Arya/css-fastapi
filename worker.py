@@ -148,16 +148,45 @@ def process_fileL34(execution_id: str, file_path: str, user_id: str, user_name: 
         update_status(execution_id, str(e), "error")
         job_registry[execution_id] = {"process": None, "status": "error"}
 
-def process_fileL5(execution_id: str, file_path: str, user_id: str, user_name: str, email: str, stepping_back: List, timetable_type: str):
+# def process_fileL5(execution_id: str, file_path: str, user_id: str, user_name: str, email: str, stepping_back: List, timetable_type: str):
+def process_fileL5(
+    execution_id: str,
+    file_path: str,
+    user_id: str,
+    user_name: str,
+    email: str,
+    stepping_back: List,
+    timetable_type: str,
+
+    # 🆕 Added new parameters
+    duty_hours: str,
+    running_hours: str,
+    single_run_max: str,
+    break_small: int,
+    break_large: int
+):
     try:
         update_status(execution_id, "Preparing simulation", "WIP")
         file_path = os.path.abspath(file_path)
         script_path = os.path.abspath("simulate_runnerL5.py")
         stepping_back_json = json.dumps(stepping_back)
 
-        # Start subprocess with unbuffered output; text mode for easy line reads
+        # 🆕 Updated: pass ALL new arguments to the runner script
         process = subprocess.Popen(
-            [sys.executable, "-u", script_path, execution_id, file_path, stepping_back_json, timetable_type],
+            [
+                sys.executable, "-u", script_path,
+                execution_id,
+                file_path,
+                stepping_back_json,
+                timetable_type,
+
+                # 🆕 Added args
+                duty_hours,
+                running_hours,
+                single_run_max,
+                break_small,
+                break_large
+            ],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             bufsize=1,
