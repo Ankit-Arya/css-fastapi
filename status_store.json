@@ -887,5 +887,54 @@
       "status": "WIP",
       "message": ""
     }
+  ],
+  "c752af87-fae6-41d2-ad6e-bf00c4265a5d": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "expected str, bytes or os.PathLike object, not int",
+      "status": "error",
+      "message": ""
+    }
+  ],
+  "acf382fd-43d1-4f56-b2da-c481ceedcbe8": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - acf382fd-43d1-4f56-b2da-c481ceedcbe8",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 725858 records",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    }
   ]
 }

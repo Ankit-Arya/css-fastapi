@@ -184,8 +184,8 @@ def process_fileL5(
                 duty_hours,
                 running_hours,
                 single_run_max,
-                break_small,
-                break_large
+                str(break_small),
+                str(break_large)
             ],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
