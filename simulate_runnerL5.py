@@ -8,6 +8,16 @@ def main():
     import sys
     import json
     from helpers import update_status
+    import shutil
+
+    # --- CBC check ---
+    cbc_path = shutil.which("cbc")
+    if cbc_path:
+        print(f"CBC solver detected at: {cbc_path}")
+    else:
+        print("CBC solver not found in PATH!")
+        print("Please install CBC: https://github.com/coin-or/Cbc/releases")
+        sys.exit(1)  # Stop execution immediately
     print(f"simulate_runnerL5.py started!")
     print(f"Received args: {sys.argv}")
     # CLI args: python3 simulate_runner.py <execution_id> <file_path> <stepping_back_json>
@@ -66,6 +76,7 @@ def main():
                 minute = int(parts[1])
             hour = max(0, min(23, hour))
             minute = max(0, min(59, minute))
+            print(f'Hours in {time_str} is {hour} and Minutes is {minute}')
             return hour, minute
         except Exception as e:
             print(f"⚠️ Failed to parse time '{time_str}':", e)
@@ -956,11 +967,11 @@ def main():
         # ------------------ HELPER: validate file existence ------------------
         def check_file_exists(path, description):
             if not os.path.exists(path):
-                logging.error(f"❌ Missing {description} file: {path}")
-                logging.error("   → Make sure the file exists and is not locked by another process.")
+                logging.error(f"Missing {description} file: {path}")
+                logging.error("Make sure the file exists and is not locked by another process.")
                 raise FileNotFoundError(f"{description} file not found: {path}")
             else:
-                logging.info(f"✅ Found {description} file: {path}")
+                logging.info(f"Found {description} file: {path}")
 
 
         # ------------------ LOAD INPUTS ------------------
@@ -976,8 +987,8 @@ def main():
             services = [df.iloc[i, 0] for i in range(len(df))]
             logging.info(f"Loaded {len(services)} services from input.")
         except Exception as e:
-            logging.error("❌ Failed to load input services file.", exc_info=True)
-            logging.error("   → Check file format, encoding, and content (must have at least one column).")
+            logging.error("Failed to load input services file.", exc_info=True)
+            logging.error("Check file format, encoding, and content (must have at least one column).")
             sys.exit(1)
 
 
@@ -1008,7 +1019,7 @@ def main():
                     try:
                         filtered = [int(v) for v in row[1:] if v not in ("NULL", "", None)]
                     except ValueError:
-                        logging.warning(f"⚠️ Non-numeric data found in row {index}: {row}")
+                        logging.warning(f"Non-numeric data found in row {index}: {row}")
                         continue
 
                     valid_services = [s for s in filtered if s in services]
@@ -1024,10 +1035,10 @@ def main():
             if not service_assignments:
                 raise ValueError("No valid duties found in file.")
 
-            logging.info(f"✅ Loaded {len(service_assignments)} valid duty assignments.")
+            logging.info(f"Loaded {len(service_assignments)} valid duty assignments.")
         except Exception as e:
-            logging.error("❌ Failed to load duties file.", exc_info=True)
-            logging.error("   → Ensure CSV format is valid and IDs match the services list.")
+            logging.error("Failed to load duties file.", exc_info=True)
+            logging.error("Ensure CSV format is valid and IDs match the services list.")
             sys.exit(1)
 
 
@@ -1046,9 +1057,9 @@ def main():
                 else:
                     logging.warning(f"⚠️ Service {service} not found in any duty — may cause infeasibility.")
 
-            logging.info("✅ Pyomo model successfully built.")
+            logging.info("Pyomo model successfully built.")
         except Exception as e:
-            logging.error("❌ Error while building Pyomo model.", exc_info=True)
+            logging.error("Error while building Pyomo model.", exc_info=True)
             sys.exit(1)
 
 
@@ -1095,8 +1106,8 @@ def main():
                 break
 
         if results is None or not hasattr(results, "solver"):
-            logging.critical("❌ All solver attempts failed.")
-            logging.critical("   → Ensure CBC or GLPK is installed and available in system PATH.")
+            logging.critical("All solver attempts failed.")
+            logging.critical("Ensure CBC or GLPK is installed and available in system PATH.")
             sys.exit(1)
 
         logging.info(f"Solver status: {getattr(results.solver, 'status', 'UNKNOWN')}")
@@ -1108,7 +1119,7 @@ def main():
 
         try:
             if getattr(results.solver, "termination_condition", None) == TerminationCondition.infeasible:
-                logging.warning("⚠️ Model infeasible — some services not covered by any duty.")
+                logging.warning("Model infeasible — some services not covered by any duty.")
             else:
                 total_duties = 0
                 with open(SOLUTION_FILE, "w", newline="", encoding="utf-8") as csvfile:
@@ -1118,16 +1129,16 @@ def main():
                         if abs(val - 1) <= 1e-6:
                             writer.writerow(service_assignments[path_var])
                             total_duties += 1
-                logging.info(f"✅ Solution written to: {SOLUTION_FILE}")
-                logging.info(f"✅ Total duties selected: {total_duties}")
+                logging.info(f"Solution written to: {SOLUTION_FILE}")
+                logging.info(f"Total duties selected: {total_duties}")
         except Exception as e:
-            logging.error("❌ Error writing solution file.", exc_info=True)
-            logging.error("   → Check write permissions or file locks.")
+            logging.error("Error writing solution file.", exc_info=True)
+            logging.error("Check write permissions or file locks.")
             sys.exit(1)
 
 
         # ------------------ COMPLETION ------------------
-        log_divider("✅ EXECUTION COMPLETE")
+        log_divider("EXECUTION COMPLETE")
         logging.info("Script finished successfully.")
 
         # Example status updates
@@ -1205,7 +1216,7 @@ def main():
                     print(f"Error with TripIndex {TripIndex}: {e}")
             duty_no += 1
 
-        print("\n✅ Duty assignment complete.")
+        print("\n Duty assignment complete.")
         print(duty.head())
 
 

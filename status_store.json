@@ -936,5 +936,120 @@
       "status": "WIP",
       "message": ""
     }
+  ],
+  "53a8a9eb-9899-450c-8a6f-1a549ca814fc": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 53a8a9eb-9899-450c-8a6f-1a549ca814fc",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 725858 records",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "ee53afe9-97e6-41fc-bb76-b982e5ecee8e": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "9a3d7bae-63ab-4c8e-8024-bbe930ca6616": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "1475cfb7-a0ab-4799-b334-ac06e8071769": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 1475cfb7-a0ab-4799-b334-ac06e8071769",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "34c27073-2ece-4a9b-a571-6620928e5fb5": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 34c27073-2ece-4a9b-a571-6620928e5fb5",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 600532 records",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    }
   ]
 }
