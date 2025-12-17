@@ -4,127 +4,122 @@ sys.stderr.reconfigure(encoding='utf-8')
 
 
 def main():
-
     import sys
     import json
-    from helpers import update_status
     import shutil
+    import random
+    import time
+    from helpers import update_status
 
-    # --- CBC check ---
+    # ------------------------------------------------------------------
+    # CBC check
+    # ------------------------------------------------------------------
     cbc_path = shutil.which("cbc")
-    if cbc_path:
-        print(f"CBC solver detected at: {cbc_path}")
-    else:
+    if not cbc_path:
         print("CBC solver not found in PATH!")
         print("Please install CBC: https://github.com/coin-or/Cbc/releases")
-        sys.exit(1)  # Stop execution immediately
-    print(f"simulate_runnerL5.py started!")
-    print(f"Received args: {sys.argv}")
-    # CLI args: python3 simulate_runner.py <execution_id> <file_path> <stepping_back_json>
+        sys.exit(1)
+
+    print(f"CBC solver detected at: {cbc_path}")
+    print("simulate_runnerL5.py started!")
+    print("Received args:", sys.argv)
+
+    # ------------------------------------------------------------------
+    # CLI ARGS (from process_fileL5)
+    # ------------------------------------------------------------------
     execution_id = sys.argv[1]
     file_path = sys.argv[2]
-    stepping_back_raw = sys.argv[3]  # Passed as JSON string
+    stepping_back_raw = sys.argv[3]     # JSON dict
     timetable_type = sys.argv[4]
-    duty_hours = sys.argv[5]
-    running_hours = sys.argv[6]
-    single_run_max = sys.argv[7]
-    break_small = sys.argv[8]
-    break_large = sys.argv[9]
-    print('TIME TABLE TYPE',timetable_type)
+    single_run_max = sys.argv[5]
+    break_small = int(sys.argv[6])
+    break_large = int(sys.argv[7])
 
-    # Try loading the JSON safely
-    default_stepping_back = [
-        {"station": "SBC1", "start": "08:00", "end": "10:00"},
-        {"station": "SBC2", "start": "09:00", "end": "11:00"},
-        {"station": "SBC3", "start": "17:00", "end": "19:00"},
-    ]
+    print("Timetable Type:", timetable_type)
+    print(f"single_run_max={single_run_max}, break_small={break_small}, break_large={break_large}")
 
-    # Parse user input safely
+    # ------------------------------------------------------------------
+    # DEFAULTS (IMPORTANT: always exist)
+    # ------------------------------------------------------------------
+    SBC1startHour = 0
+    SBC1startMinute = 0
+    SBC1endHour = 23
+    SBC1endMinute = 59
+
+    SBC2startHour = 0
+    SBC2startMinute = 0
+    SBC2endHour = 23
+    SBC2endMinute = 59
+
+    # ------------------------------------------------------------------
+    # Load stepping back configuration
+    # ------------------------------------------------------------------
     try:
-        user_stepping_back = json.loads(stepping_back_raw)
+        stepping_back = json.loads(stepping_back_raw)
+        if not isinstance(stepping_back, dict):
+            raise ValueError("stepping_back is not a dict")
     except Exception as e:
-        print("⚠️ Invalid stepping_back data, defaulting to empty list.")
+        print("⚠️ Invalid stepping_back data, defaulting to empty config")
         print("Error detail:", e)
-        user_stepping_back = []
+        stepping_back = {}
 
-    # Merge user input with defaults
-    stepping_back_merged = []
-    for default in default_stepping_back:
-        # Check if user provided this station
-        user_entry = next((u for u in user_stepping_back if u.get("station") == default["station"]), None)
-        if user_entry:
-            # Merge user values with defaults
-            stepping_back_merged.append({
-                "station": default["station"],
-                "start": user_entry.get("start", default["start"]),
-                "end": user_entry.get("end", default["end"]),
-            })
-        else:
-            # Use default if user didn't provide
-            stepping_back_merged.append(default)
+    # Ensure structure
+    for station in ("SBC1", "SBC2"):
+        stepping_back.setdefault(
+            station,
+            {"enabled": False, "start": "00:00", "end": "23:59"}
+        )
 
-
-    # Helper function to safely parse time
-    def safe_parse_time(time_str, fallback_hour=None, fallback_minute=None):
+    # ------------------------------------------------------------------
+    # Helper: safe time parsing
+    # ------------------------------------------------------------------
+    def safe_parse_time(time_str, default="00:00"):
         try:
-            parts = str(time_str).strip().split(":")
-            if len(parts) == 1:
-                hour = int(parts[0])
-                minute = 0
-            else:
-                hour = int(parts[0])
-                minute = int(parts[1])
-            hour = max(0, min(23, hour))
-            minute = max(0, min(59, minute))
-            print(f'Hours in {time_str} is {hour} and Minutes is {minute}')
-            return hour, minute
-        except Exception as e:
-            print(f"⚠️ Failed to parse time '{time_str}':", e)
-            hour = fallback_hour if fallback_hour is not None else random.randint(0, 23)
-            minute = fallback_minute if fallback_minute is not None else random.randint(0, 59)
-            return hour, minute
+            hh, mm = str(time_str or default).split(":")
+            return max(0, min(23, int(hh))), max(0, min(59, int(mm)))
+        except Exception:
+            hh, mm = default.split(":")
+            return int(hh), int(mm)
 
+    # ------------------------------------------------------------------
+    # Apply stepping-back configuration
+    # ------------------------------------------------------------------
+    if stepping_back["SBC1"]["enabled"]:
+        SBC1startHour, SBC1startMinute = safe_parse_time(stepping_back["SBC1"]["start"])
+        SBC1endHour, SBC1endMinute = safe_parse_time(stepping_back["SBC1"]["end"])
+        print(f"SBC1 ACTIVE: {SBC1startHour:02}:{SBC1startMinute:02} → {SBC1endHour:02}:{SBC1endMinute:02}")
+    else:
+        print("SBC1 is disabled")
 
-    # Process merged list and set globals
-    stepping_back_saved = []
+    if stepping_back["SBC2"]["enabled"]:
+        SBC2startHour, SBC2startMinute = safe_parse_time(stepping_back["SBC2"]["start"])
+        SBC2endHour, SBC2endMinute = safe_parse_time(stepping_back["SBC2"]["end"])
+        print(f"SBC2 ACTIVE: {SBC2startHour:02}:{SBC2startMinute:02} → {SBC2endHour:02}:{SBC2endMinute:02}")
+    else:
+        print("SBC2 is disabled")
 
-    for entry in stepping_back_merged:
-        station_name = entry["station"].strip()
+    # ------------------------------------------------------------------
+    # FINAL DEBUG (guaranteed safe)
+    # ------------------------------------------------------------------
+    print("\n=== FINAL STEPPING BACK VALUES ===")
+    print("SBC1:", SBC1startHour, SBC1startMinute, SBC1endHour, SBC1endMinute)
+    print("SBC2:", SBC2startHour, SBC2startMinute, SBC2endHour, SBC2endMinute)
 
-        start_hour, start_minute = safe_parse_time(entry.get("start", "00:00"))
-        end_hour, end_minute = safe_parse_time(entry.get("end", "23:59"))
-
-        stepping_back_saved.append({
-            "station": station_name,
-            "start": f"{start_hour:02}:{start_minute:02}",
-            "end": f"{end_hour:02}:{end_minute:02}",
-        })
-
-        # Set globals
-        globals()[f"{station_name}startHour"] = int(start_hour)
-        globals()[f"{station_name}startMinute"] = int(start_minute)
-        globals()[f"{station_name}endHour"] = int(end_hour)
-        globals()[f"{station_name}endMinute"] = int(end_minute)
-
-
-    # Debug output
-    print("\n=== Stepping Back Configurations ===")
-    for entry in stepping_back_saved:
-        station = entry["station"]
-        start_hour = globals()[f"{station}startHour"]
-        start_minute = globals()[f"{station}startMinute"]
-        end_hour = globals()[f"{station}endHour"]
-        end_minute = globals()[f"{station}endMinute"]
-
-        print(f"{station}: {start_hour:02}:{start_minute:02} -> {end_hour:02}:{end_minute:02}")
-        print(f"  ├─ {station}startHour ({type(start_hour).__name__}) = {start_hour}")
-        print(f"  ├─ {station}startMinute ({type(start_minute).__name__}) = {start_minute}")
-        print(f"  ├─ {station}endHour ({type(end_hour).__name__}) = {end_hour}")
-        print(f"  └─ {station}endMinute ({type(end_minute).__name__}) = {end_minute}")
-        print("------------------------------------")  
+    print("\nTRY PRINTING SBC1 VARIABLES")
+    time.sleep(1)
+    print(
+        f"SBC1startHour={SBC1startHour}, "
+        f"SBC1startMinute={SBC1startMinute}, "
+        f"SBC1endHour={SBC1endHour}, "
+        f"SBC1endMinute={SBC1endMinute}"
+    )
 
 
     try:
+        print('TRY PRINTING SBC1Hour')
+        time.sleep(2)
+        print(f'SBC1startHour {SBC1startHour} SBC1startMinute {SBC1startMinute} SBC2startHour {SBC2startHour}')
+
         # update_status(execution_id, f"Your execution ID is {execution_id}","WIP")
         import csv
         import math
@@ -147,7 +142,7 @@ def main():
         warnings.simplefilter(action='ignore',category=FutureWarning)
         update_status(execution_id, f"Save your UID for future ref - {execution_id}","WIP")
         time.sleep(2)
-        update_status(execution_id, "Pre-Processing Time Table","WIP")
+        update_status(execution_id, "STAGE 1 of 4 in progress","WIP")
         df1 = pd.read_csv(file_path, index_col=0,header=None)
         df1.columns = df1.iloc[0]
         ids = df1.loc['TRAIN NO'].unique()
@@ -184,7 +179,6 @@ def main():
                 message = f"Location: {rail[i].loc[bool_series].index[0]}, Time: {rail[i].loc[bool_series].iloc[0,0].time()}"
                 update_status(execution_id, step_name, "error", message)
                 break
-
         def departure():
                 for a in range(j+1):
                     print('DATA DETAILS--j--a--index',j,a,rail[x].index[a])
@@ -222,6 +216,7 @@ def main():
                             route.update({'ILOK-UP': rail[x].iloc[a, 0]})
                             continue
                     except:
+                        print('Reached exception')
                         pass
                     
 
@@ -564,7 +559,7 @@ def main():
                 trips1.loc[i,'ILOK-DN'] = pd.NaT
 
         comptrip.to_excel(f"temp_files/{execution_id}comptrip.xlsx")
-        update_status(execution_id, "Pre=Processing and analysis complete", "completed")
+        update_status(execution_id, "STAGE 1 complete", "completed")
         if 'level_0' in comptrip.columns:
             comptrip.drop(columns=['level_0'], inplace=True)
         comptrip.reset_index(inplace=True)
@@ -653,7 +648,7 @@ def main():
 
         df_final.to_csv(f"temp_files/{execution_id}redefinedinputparameters.csv", index=False)
 
-        update_status(execution_id, "Creating duty dataset to be optimized - This might take some time", "WIP")
+        update_status(execution_id, "STAGE 2 of 4 in progress", "WIP")
         import csv
         from collections import defaultdict
         import os
@@ -663,10 +658,10 @@ def main():
             return h * 60 + m
 
         # Parameters
-        # Duty_hours = 460
-        Duty_hours = hhmm_to_minutes(duty_hours)
-        # Driving_duration = 375
-        Driving_duration = hhmm_to_minutes(running_hours)
+        Duty_hours = 460
+        # Duty_hours = hhmm_to_minutes(duty_hours)
+        Driving_duration = 375
+        # Driving_duration = hhmm_to_minutes(running_hours)
         # Continuous_Driving_time = 180
         Continuous_Driving_time = hhmm_to_minutes(single_run_max)
         # long_break = 50
@@ -911,10 +906,10 @@ def main():
         
         # Also store in global variable for compatibility
         final_op = all_duties
-        update_status(execution_id, f"Dataset Generation successfull with {len(all_duties)} records", "completed")
+        update_status(execution_id, f"STAGE 2 complete", "completed")
         print("Done!")
 
-        update_status(execution_id, f"Starting Optimization Process - This will take time - Sit tight", "WIP")
+        update_status(execution_id, f"STAGE 3 of 4 in progress", "WIP")
 # ------------------SOLVER----------------
 
         import os
@@ -1142,8 +1137,8 @@ def main():
         logging.info("Script finished successfully.")
 
         # Example status updates
-        update_status(execution_id, "Success! Optimization Complete", "completed")
-        update_status(execution_id, "Creating Trip Chart Format", "WIP")
+        update_status(execution_id, "STAGE 3 Complete", "completed")
+        update_status(execution_id, "STAGE 4 of 4 in progress", "WIP")
 
         # ------------------------fIll tc
         import csv

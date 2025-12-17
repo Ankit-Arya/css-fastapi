@@ -71,21 +71,59 @@ app.add_middleware(
 #     if not authenticate_user(user.email, user.password, users_collection):
 #         raise HTTPException(status_code=401, detail="Incorrect email or password.")
 #     token = create_access_token(user.email)
+# #     return {"access_token": token, "token_type": "bearer"}
+# @app.post("/signup")
+# async def signup(user: UserSignUp):
+#     success = await register_user(user, users_collection)  # Make register_user async
+#     if not success:
+#         raise HTTPException(status_code=400, detail="Email already registered.")
+#     return {"message": "Sign up successful."}
+
+# @app.post("/login", response_model=TokenResponse)
+# async def login(user: UserLogin):
+#     auth_success = await authenticate_user(user.email, user.password, users_collection)  # Make async
+#     if not auth_success:
+#         raise HTTPException(status_code=401, detail="Incorrect email or password.")
+#     token = create_access_token(user.email)  # This can stay sync if it doesn't do async work
 #     return {"access_token": token, "token_type": "bearer"}
+
+# for frontend only auth
+
+# ---------------- SIGNUP ----------------
 @app.post("/signup")
 async def signup(user: UserSignUp):
-    success = await register_user(user, users_collection)  # Make register_user async
+    success = await register_user(user, users_collection)
+
     if not success:
-        raise HTTPException(status_code=400, detail="Email already registered.")
+        raise HTTPException(
+            status_code=400,
+            detail="Email already registered or invalid domain."
+        )
+
     return {"message": "Sign up successful."}
 
+
+# ---------------- LOGIN ----------------
 @app.post("/login", response_model=TokenResponse)
 async def login(user: UserLogin):
-    auth_success = await authenticate_user(user.email, user.password, users_collection)  # Make async
+    auth_success = await authenticate_user(
+        user.email,
+        user.password,
+        users_collection
+    )
+
     if not auth_success:
-        raise HTTPException(status_code=401, detail="Incorrect email or password.")
-    token = create_access_token(user.email)  # This can stay sync if it doesn't do async work
-    return {"access_token": token, "token_type": "bearer"}
+        raise HTTPException(
+            status_code=401,
+            detail="Incorrect email or password."
+        )
+
+    token = create_access_token(user.email)
+
+    return {
+        "access_token": token,
+        "token_type": "bearer"
+    }
 
 
 @app.get("/lines")
@@ -333,12 +371,25 @@ async def simulateL5(
     print(f"break_large={break_large}")
 
     # --- Parse stepping_back JSON ---
-    parsed_stepping_back = []
+    # parsed_stepping_back = []
+    # if stepping_back:
+    #     try:
+    #         parsed_stepping_back = json.loads(stepping_back)
+    #     except Exception as e:
+    #         print("Failed to parse stepping_back JSON:", e)
+    parsed_stepping_back = {}
+
     if stepping_back:
         try:
             parsed_stepping_back = json.loads(stepping_back)
+
+            # Safety: ensure expected keys exist
+            parsed_stepping_back.setdefault("SBC1", {})
+            parsed_stepping_back.setdefault("SBC2", {})
+
         except Exception as e:
             print("Failed to parse stepping_back JSON:", e)
+            parsed_stepping_back = {}
 
     # --- Save uploaded file to GridFS ---
     file_id = await fs.upload_from_stream(
@@ -351,8 +402,8 @@ async def simulateL5(
             "timetable_type": timetable_type,
 
             # 🆕 Save new metadata
-            "duty_hours": duty_hours,
-            "running_hours": running_hours,
+            # "duty_hours": duty_hours,
+            # "running_hours": running_hours,
             "single_run_max": single_run_max,
             "break_small": break_small,
             "break_large": break_large,
@@ -374,8 +425,8 @@ async def simulateL5(
         "timetable_type": timetable_type,
 
         # 🆕 Log new fields also
-        "duty_hours": duty_hours,
-        "running_hours": running_hours,
+        # "duty_hours": duty_hours,
+        # "running_hours": running_hours,
         "single_run_max": single_run_max,
         "break_small": break_small,
         "break_large": break_large,
@@ -397,8 +448,8 @@ async def simulateL5(
         timetable_type,
 
         # 🆕 Pass new fields to processing
-        duty_hours,
-        running_hours,
+        # duty_hours,
+        # running_hours,
         single_run_max,
         break_small,
         break_large
@@ -522,3 +573,5 @@ async def get_file(file_id: str):
         media_type=grid_out.metadata.get("content_type", "application/octet-stream"),
         headers={"Content-Disposition": f"attachment; filename={grid_out.filename}"}
     )
+
+
