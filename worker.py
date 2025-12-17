@@ -149,57 +149,92 @@ def process_fileL34(execution_id: str, file_path: str, user_id: str, user_name: 
         job_registry[execution_id] = {"process": None, "status": "error"}
 
 # def process_fileL5(execution_id: str, file_path: str, user_id: str, user_name: str, email: str, stepping_back: List, timetable_type: str):
+from typing import Dict, Any
+import os
+import sys
+import json
+import subprocess
+import threading
+
 def process_fileL5(
     execution_id: str,
     file_path: str,
     user_id: str,
     user_name: str,
     email: str,
-    stepping_back: List,
-    timetable_type: str,
 
-    # 🆕 Added new parameters
-    duty_hours: str,
-    running_hours: str,
+    # 🔁 CHANGED: now a dict (SBC1 / SBC2)
+    stepping_back: Dict[str, Any],
+
+    timetable_type: str,
     single_run_max: str,
     break_small: int,
     break_large: int
 ):
     try:
+        # --- Initial status ---
         update_status(execution_id, "Preparing simulation", "WIP")
+
+        # --- Normalize paths ---
         file_path = os.path.abspath(file_path)
         script_path = os.path.abspath("simulate_runnerL5.py")
+
+        # --- Normalize stepping_back (IMPORTANT) ---
+        stepping_back = stepping_back or {}
+
+        stepping_back.setdefault("SBC1", {
+            "enabled": False,
+            "start": "",
+            "end": ""
+        })
+
+        stepping_back.setdefault("SBC2", {
+            "enabled": False,
+            "start": "",
+            "end": ""
+        })
+
+        # --- Serialize stepping_back ---
         stepping_back_json = json.dumps(stepping_back)
 
-        # 🆕 Updated: pass ALL new arguments to the runner script
+        # --- Launch runner subprocess ---
         process = subprocess.Popen(
             [
-                sys.executable, "-u", script_path,
+                sys.executable,
+                "-u",
+                script_path,
                 execution_id,
                 file_path,
                 stepping_back_json,
                 timetable_type,
-
-                # 🆕 Added args
-                duty_hours,
-                running_hours,
                 single_run_max,
                 str(break_small),
-                str(break_large)
+                str(break_large),
             ],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             bufsize=1,
-            text=True
+            text=True,
         )
 
-        job_registry[execution_id] = {"process": process, "status": "running"}
+        # --- Track job ---
+        job_registry[execution_id] = {
+            "process": process,
+            "status": "running"
+        }
 
-        # Start monitor thread and return immediately (so FastAPI background task completes)
-        monitor_thread = threading.Thread(target=_monitor_process_lines, args=(execution_id, process), daemon=True)
+        # --- Monitor subprocess output ---
+        monitor_thread = threading.Thread(
+            target=_monitor_process_lines,
+            args=(execution_id, process),
+            daemon=True
+        )
         monitor_thread.start()
 
     except Exception as e:
         print("❌ Error in subprocess launch:", e)
         update_status(execution_id, str(e), "error")
-        job_registry[execution_id] = {"process": None, "status": "error"}
+        job_registry[execution_id] = {
+            "process": None,
+            "status": "error"
+        }
