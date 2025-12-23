@@ -2,7 +2,7 @@ import certifi
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
 
-uri = "mongodb+srv://greenthornarya676_db_user:NRhQ0lSyJBMjyD5I@ankit-css.fz6hv8r.mongodb.net/?retryWrites=true&w=majority&appName=ANKIT-CSS"
+uri = "mongodb+srv://greenthornarya676_db_user:NRhQ0lSyJBMjyD5I@ankit-css.7ryelew.mongodb.net/?retryWrites=true&w=majority&appName=ANKIT-CSS"
 client = MongoClient(uri, server_api=ServerApi('1'), tlsCAFile=certifi.where())
 
 try:
