@@ -1559,5 +1559,42 @@
       "status": "WIP",
       "message": ""
     }
+  ],
+  "d820c83b-39b6-4911-a5c9-c1e280b38354": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - d820c83b-39b6-4911-a5c9-c1e280b38354",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
   ]
 }

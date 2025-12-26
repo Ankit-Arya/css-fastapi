@@ -19,9 +19,10 @@ import os
 from fastapi.responses import StreamingResponse
 from bson import ObjectId
 
-uri = "mongodb+srv://greenthornarya676_db_user:NRhQ0lSyJBMjyD5I@ankit-css.fz6hv8r.mongodb.net/?retryWrites=true&w=majority&appName=ANKIT-CSS"
+# uri = "mongodb+srv://greenthornarya676_db_user:NRhQ0lSyJBMjyD5I@ankit-css.fz6hv8r.mongodb.net/?retryWrites=true&w=majority&appName=ANKIT-CSS"
 
-# client = MongoClient(uri, tlsCAFile=certifi.where())
+# # ASYNC DB
+# client = motor.motor_asyncio.AsyncIOMotorClient(uri)
 # # Send a ping to confirm a successful connection
 # try:
 #     client.admin.command('ping')
@@ -29,23 +30,28 @@ uri = "mongodb+srv://greenthornarya676_db_user:NRhQ0lSyJBMjyD5I@ankit-css.fz6hv8
 # except Exception as e:
 #     print(e)
 # db = client["user_auth_db"]
+# fs = motor.motor_asyncio.AsyncIOMotorGridFSBucket(db)
 # users_collection = db["users"]
 # notices_collection = db["notices"]
+# LOCAL MONGODB URI (Docker)
 
+uri = "mongodb://localhost:27017"
 
-# ASYNC DB
-client = motor.motor_asyncio.AsyncIOMotorClient(uri)
-# Send a ping to confirm a successful connection
-try:
-    client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
-except Exception as e:
-    print(e)
+# ASYNC DB CLIENT
+client = motor.motor_asyncio.AsyncIOMotorClient(
+    uri,
+    tls=False
+)
+
+# DATABASE
 db = client["user_auth_db"]
-fs = motor.motor_asyncio.AsyncIOMotorGridFSBucket(db)
+
+# COLLECTIONS
 users_collection = db["users"]
 notices_collection = db["notices"]
 
+# GRIDFS
+fs = motor.motor_asyncio.AsyncIOMotorGridFSBucket(db)
 app = FastAPI()
 
 # Ensure temp_files directory exists
