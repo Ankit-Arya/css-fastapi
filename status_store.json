@@ -1545,5 +1545,390 @@
       "status": "cancelled",
       "message": "User requested cancellation"
     }
+  ],
+  "f7823151-f420-4ccc-878e-6eba04ceb38b": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "e75473b9-e950-42d4-bcd1-89ec375d4853": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "d820c83b-39b6-4911-a5c9-c1e280b38354": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - d820c83b-39b6-4911-a5c9-c1e280b38354",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "251c35c4-3b77-4c58-8916-173e8a8f664d": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 251c35c4-3b77-4c58-8916-173e8a8f664d",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "284a0b95-f24b-4c3d-8240-6cca0839cbf8": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 284a0b95-f24b-4c3d-8240-6cca0839cbf8",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "36eba833-5bec-4b92-a657-f91e40dfdbfe": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "ff10b033-b9bf-4d57-9c09-5babe02859b7": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - ff10b033-b9bf-4d57-9c09-5babe02859b7",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "26528b60-8fa6-42c5-bded-afc7f466107d": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 26528b60-8fa6-42c5-bded-afc7f466107d",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "175f9df7-b67c-453e-83c5-57c2b2b17010": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "fed701c0-ab44-4ca1-81be-4b0ff52d6415": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - fed701c0-ab44-4ca1-81be-4b0ff52d6415",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "d93acc2a-49b0-4602-83d9-04486e2ebc30": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - d93acc2a-49b0-4602-83d9-04486e2ebc30",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "b2826ce6-3313-4a0f-9a2e-99cb31214db3": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "8d6a75a5-380b-4873-9a53-05f256a5c6fd": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 8d6a75a5-380b-4873-9a53-05f256a5c6fd",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "bb3da4da-ae06-4d50-a97e-bbdebe7f3829": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - bb3da4da-ae06-4d50-a97e-bbdebe7f3829",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "fff8dd40-f30d-46de-9b0f-ffb5e13000ca": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - fff8dd40-f30d-46de-9b0f-ffb5e13000ca",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
   ]
 }
