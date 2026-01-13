@@ -581,8 +581,8 @@ def main():
                 hours = 24
             elif hours == 1:
                 hours = 25
-            elif hours == 2:
-                hours = 26
+            # elif hours == 2:
+            #     hours = 26
             return f"{hours:02}:{minutes:02}"
 
         df['Start_Time'] = df['Start_Time'].apply(adjust_time)
@@ -662,12 +662,12 @@ def main():
         # Duty_hours = hhmm_to_minutes(duty_hours)
         Driving_duration = 375
         # Driving_duration = hhmm_to_minutes(running_hours)
-        # Continuous_Driving_time = 180
-        Continuous_Driving_time = hhmm_to_minutes(single_run_max)
-        # long_break = 50
-        long_break = int(break_large)
-        # short_break = 30
-        short_break = int(break_small)
+        Continuous_Driving_time = 180
+        # Continuous_Driving_time = hhmm_to_minutes(single_run_max)
+        long_break = 50
+        # long_break = int(break_large)
+        short_break = 30
+        # short_break = int(break_small)
 
         crewControl = ['CCDN', 'CCUP']
         final_op = []
