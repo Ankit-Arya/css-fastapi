@@ -1596,5 +1596,135 @@
       "status": "error",
       "message": "[WinError 5] Access is denied"
     }
+  ],
+  "4c2c19ba-1b7f-471a-a4fb-1ef1d6cf0197": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 4c2c19ba-1b7f-471a-a4fb-1ef1d6cf0197",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Issue in Train 511",
+      "status": "error",
+      "message": "Location: DEPOT, Time: 00:01:00"
+    }
+  ],
+  "fc991bf6-1d2b-4137-8ba0-f867459728f0": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - fc991bf6-1d2b-4137-8ba0-f867459728f0",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "26c72fa7-9201-4e4b-b862-0d8b46a39699": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 26c72fa7-9201-4e4b-b862-0d8b46a39699",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "895cbaeb-a8ab-41b6-84b2-537970c25be5": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 895cbaeb-a8ab-41b6-84b2-537970c25be5",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "eabead4d-dd7d-4fdd-b5eb-74ea4d37c3fc": [
+    {
+      "name": "Preparing simulation",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - eabead4d-dd7d-4fdd-b5eb-74ea4d37c3fc",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    }
   ]
 }
