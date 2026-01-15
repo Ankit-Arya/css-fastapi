@@ -1376,6 +1376,8 @@ def main():
 
         duty2.to_excel(f"temp_files/trip_chart_{execution_id}.xlsx")
 
+        update_status(execution_id, "STAGE 4 Complete", "completed")
+
         # --------------Generate DC
 
 
