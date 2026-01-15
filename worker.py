@@ -96,7 +96,7 @@ def _monitor_process_lines(execution_id, process):
 
 def process_file(execution_id: str, file_path: str, user_id: str, user_name: str, email: str, stepping_back: List, timetable_type: str):
     try:
-        update_status(execution_id, "Preparing simulation", "WIP")
+        update_status(execution_id, "Preparing Execution", "WIP")
         file_path = os.path.abspath(file_path)
         script_path = os.path.abspath("simulate_runner.py")
         stepping_back_json = json.dumps(stepping_back)
@@ -123,7 +123,7 @@ def process_file(execution_id: str, file_path: str, user_id: str, user_name: str
 
 def process_fileL34(execution_id: str, file_path: str, user_id: str, user_name: str, email: str, stepping_back: List, timetable_type: str):
     try:
-        update_status(execution_id, "Preparing simulation", "WIP")
+        update_status(execution_id, "Preparing Execution", "WIP")
         file_path = os.path.abspath(file_path)
         script_path = os.path.abspath("simulate_runnerL34.py")
         stepping_back_json = json.dumps(stepping_back)
@@ -173,7 +173,7 @@ def process_fileL5(
 ):
     try:
         # --- Initial status ---
-        update_status(execution_id, "Preparing simulation", "WIP")
+        update_status(execution_id, "Preparing Execution", "WIP")
 
         # --- Normalize paths ---
         file_path = os.path.abspath(file_path)
