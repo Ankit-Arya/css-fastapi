@@ -1,0 +1,344 @@
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_0_5.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_5_10.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_10_15.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_15_20.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_20_25.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_25_30.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_30_35.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_35_40.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_40_45.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_45_50.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_50_55.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_55_60.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_60_65.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_65_70.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_70_75.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_75_80.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_80_85.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_85_90.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_90_95.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_95_100.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_100_105.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_105_110.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_110_115.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_115_120.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_120_125.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_125_130.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_130_135.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_135_140.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_140_145.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_145_150.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_150_155.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_155_160.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_160_165.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_165_170.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_170_175.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_175_180.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_180_185.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_185_190.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_190_195.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_195_200.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_200_205.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_205_210.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_210_215.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_215_220.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_220_225.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_225_230.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_230_235.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_235_240.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_240_245.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHAR[2026-01-23 16-49-22] Starting Process Watcher
+[2026-01-23 16-49-22] Press Ctrl+C to stop all processes
+[2026-01-23 16-49-22] Process logs directory: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05
+[2026-01-23 16-49-22] Process PIDs directory: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_pids_9d088fed-4fdc-4ff6-b960-50d8027afd05
+[2026-01-23 16-49-22] Process scripts directory: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05
+[2026-01-23 16-49-23] Started process 92075 with range 0-5
+[2026-01-23 16-49-23] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_0_5.txt
+[2026-01-23 16-49-24] Started process 92077 with range 5-10
+[2026-01-23 16-49-24] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_5_10.txt
+[2026-01-23 16-49-25] Started process 92079 with range 10-15
+[2026-01-23 16-49-25] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_10_15.txt
+[2026-01-23 16-49-26] Started process 92081 with range 15-20
+[2026-01-23 16-49-26] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_15_20.txt
+[2026-01-23 16-49-27] Started process 92083 with range 20-25
+[2026-01-23 16-49-27] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_20_25.txt
+[2026-01-23 16-49-28] Started process 92085 with range 25-30
+[2026-01-23 16-49-28] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_25_30.txt
+[2026-01-23 16-49-29] Started process 92087 with range 30-35
+[2026-01-23 16-49-29] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_30_35.txt
+[2026-01-23 16-49-30] Started process 92089 with range 35-40
+[2026-01-23 16-49-30] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_35_40.txt
+[2026-01-23 16-49-31] Started process 92091 with range 40-45
+[2026-01-23 16-49-31] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_40_45.txt
+[2026-01-23 16-49-32] Started process 92093 with range 45-50
+[2026-01-23 16-49-32] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_45_50.txt
+[2026-01-23 16-49-33] Started process 92095 with range 50-55
+[2026-01-23 16-49-33] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_50_55.txt
+[2026-01-23 16-49-34] Started process 92097 with range 55-60
+[2026-01-23 16-49-34] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_55_60.txt
+[2026-01-23 16-49-35] Started process 92099 with range 60-65
+[2026-01-23 16-49-35] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_60_65.txt
+[2026-01-23 16-49-36] Started process 92101 with range 65-70
+[2026-01-23 16-49-36] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4T FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_245_250.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_250_255.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_255_260.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_260_265.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_265_270.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_270_275.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_275_280.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_280_285.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_285_290.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_290_295.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_295_300.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_300_305.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_305_310.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_310_315.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_315_320.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_320_325.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_325_330.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_330_335.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_335_340.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_340_345.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_345_350.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_350_355.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_355_360.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_360_365.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_365_370.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_370_375.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_375_380.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_380_385.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_385_390.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_390_395.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_395_400.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_400_405.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_405_410.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_410_415.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+/mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_9d088fed-4fdc-4ff6-b960-50d8027afd05/run_process_415_418.sh: line 2: cd: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_PROCESSES: No such file or directory
+
+ff6-b960-50d8027afd05/process_log_65_70.txt
+[2026-01-23 16-49-37] Started process 92103 with range 70-75
+[2026-01-23 16-49-37] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_70_75.txt
+[2026-01-23 16-49-38] Started process 92105 with range 75-80
+[2026-01-23 16-49-38] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_75_80.txt
+[2026-01-23 16-49-39] Started process 92107 with range 80-85
+[2026-01-23 16-49-39] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_80_85.txt
+[2026-01-23 16-49-40] Started process 92109 with range 85-90
+[2026-01-23 16-49-40] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_85_90.txt
+[2026-01-23 16-49-41] Started process 92111 with range 90-95
+[2026-01-23 16-49-41] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_90_95.txt
+[2026-01-23 16-49-42] Started process 92113 with range 95-100
+[2026-01-23 16-49-42] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_95_100.txt
+[2026-01-23 16-49-42] Process 92075 completed range (0, 5)
+[2026-01-23 16-49-43] Started process 92115 with range 100-105
+[2026-01-23 16-49-43] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_100_105.txt
+[2026-01-23 16-49-43] Process 92077 completed range (5, 10)
+[2026-01-23 16-49-44] Started process 92117 with range 105-110
+[2026-01-23 16-49-44] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_105_110.txt
+[2026-01-23 16-49-44] Process 92079 completed range (10, 15)
+[2026-01-23 16-49-45] Started process 92119 with range 110-115
+[2026-01-23 16-49-45] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_110_115.txt
+[2026-01-23 16-49-45] Process 92081 completed range (15, 20)
+[2026-01-23 16-49-46] Started process 92121 with range 115-120
+[2026-01-23 16-49-46] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_115_120.txt
+[2026-01-23 16-49-46] Process 92083 completed range (20, 25)
+[2026-01-23 16-49-47] Started process 92123 with range 120-125
+[2026-01-23 16-49-47] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_120_125.txt
+[2026-01-23 16-49-47] Process 92085 completed range (25, 30)
+[2026-01-23 16-49-48] Started process 92125 with range 125-130
+[2026-01-23 16-49-48] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_125_130.txt
+[2026-01-23 16-49-48] Process 92087 completed range (30, 35)
+[2026-01-23 16-49-49] Started process 92127 with range 130-135
+[2026-01-23 16-49-49] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_130_135.txt
+[2026-01-23 16-49-49] Process 92089 completed range (35, 40)
+[2026-01-23 16-49-50] Started process 92129 with range 135-140
+[2026-01-23 16-49-50] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_135_140.txt
+[2026-01-23 16-49-50] Process 92091 completed range (40, 45)
+[2026-01-23 16-49-51] Started process 92131 with range 140-145
+[2026-01-23 16-49-51] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_140_145.txt
+[2026-01-23 16-49-51] Process 92093 completed range (45, 50)
+[2026-01-23 16-49-52] Started process 92133 with range 145-150
+[2026-01-23 16-49-52] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_145_150.txt
+[2026-01-23 16-49-52] Process 92095 completed range (50, 55)
+[2026-01-23 16-49-53] Started process 92135 with range 150-155
+[2026-01-23 16-49-53] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_150_155.txt
+[2026-01-23 16-49-53] Process 92097 completed range (55, 60)
+[2026-01-23 16-49-54] Started process 92137 with range 155-160
+[2026-01-23 16-49-54] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_155_160.txt
+[2026-01-23 16-49-54] Process 92099 completed range (60, 65)
+[2026-01-23 16-49-55] Started process 92139 with range 160-165
+[2026-01-23 16-49-55] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_160_165.txt
+[2026-01-23 16-49-55] Process 92101 completed range (65, 70)
+[2026-01-23 16-49-56] Started process 92141 with range 165-170
+[2026-01-23 16-49-56] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_165_170.txt
+[2026-01-23 16-49-56] Process 92103 completed range (70, 75)
+[2026-01-23 16-49-57] Started process 92143 with range 170-175
+[2026-01-23 16-49-57] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_170_175.txt
+[2026-01-23 16-49-57] Process 92105 completed range (75, 80)
+[2026-01-23 16-49-58] Started process 92145 with range 175-180
+[2026-01-23 16-49-58] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_175_180.txt
+[2026-01-23 16-49-58] Process 92107 completed range (80, 85)
+[2026-01-23 16-49-59] Started process 92147 with range 180-185
+[2026-01-23 16-49-59] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_180_185.txt
+[2026-01-23 16-49-59] Process 92109 completed range (85, 90)
+[2026-01-23 16-50-00] Started process 92149 with range 185-190
+[2026-01-23 16-50-00] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_185_190.txt
+[2026-01-23 16-50-00] Process 92111 completed range (90, 95)
+[2026-01-23 16-50-01] Started process 92151 with range 190-195
+[2026-01-23 16-50-01] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_190_195.txt
+[2026-01-23 16-50-01] Process 92113 completed range (95, 100)
+[2026-01-23 16-50-02] Started process 92153 with range 195-200
+[2026-01-23 16-50-02] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_195_200.txt
+[2026-01-23 16-50-03] Process 92115 completed range (100, 105)
+[2026-01-23 16-50-05] Started process 92155 with range 200-205
+[2026-01-23 16-50-05] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_200_205.txt
+[2026-01-23 16-50-05] Process 92117 completed range (105, 110)
+[2026-01-23 16-50-06] Started process 92157 with range 205-210
+[2026-01-23 16-50-06] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_205_210.txt
+[2026-01-23 16-50-06] Process 92119 completed range (110, 115)
+[2026-01-23 16-50-07] Started process 92159 with range 210-215
+[2026-01-23 16-50-07] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_210_215.txt
+[2026-01-23 16-50-07] Process 92121 completed range (115, 120)
+[2026-01-23 16-50-08] Started process 92161 with range 215-220
+[2026-01-23 16-50-08] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_215_220.txt
+[2026-01-23 16-50-08] Process 92123 completed range (120, 125)
+[2026-01-23 16-50-09] Started process 92163 with range 220-225
+[2026-01-23 16-50-09] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_220_225.txt
+[2026-01-23 16-50-09] Process 92125 completed range (125, 130)
+[2026-01-23 16-50-10] Started process 92165 with range 225-230
+[2026-01-23 16-50-10] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_225_230.txt
+[2026-01-23 16-50-10] Process 92127 completed range (130, 135)
+[2026-01-23 16-50-11] Started process 92167 with range 230-235
+[2026-01-23 16-50-11] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_230_235.txt
+[2026-01-23 16-50-11] Process 92129 completed range (135, 140)
+[2026-01-23 16-50-12] Started process 92169 with range 235-240
+[2026-01-23 16-50-12] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_235_240.txt
+[2026-01-23 16-50-12] Process 92131 completed range (140, 145)
+[2026-01-23 16-50-13] Started process 92171 with range 240-245
+[2026-01-23 16-50-13] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_240_245.txt
+[2026-01-23 16-50-13] Process 92133 completed range (145, 150)
+[2026-01-23 16-50-14] Started process 92173 with range 245-250
+[2026-01-23 16-50-14] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_245_250.txt
+[2026-01-23 16-50-14] Process 92135 completed range (150, 155)
+[2026-01-23 16-50-15] Started process 92199 with range 250-255
+[2026-01-23 16-50-15] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_250_255.txt
+[2026-01-23 16-50-15] Process 92137 completed range (155, 160)
+[2026-01-23 16-50-16] Started process 92201 with range 255-260
+[2026-01-23 16-50-16] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_255_260.txt
+[2026-01-23 16-50-16] Process 92139 completed range (160, 165)
+[2026-01-23 16-50-17] Started process 92204 with range 260-265
+[2026-01-23 16-50-17] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_260_265.txt
+[2026-01-23 16-50-17] Process 92141 completed range (165, 170)
+[2026-01-23 16-50-18] Started process 92206 with range 265-270
+[2026-01-23 16-50-18] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_265_270.txt
+[2026-01-23 16-50-18] Process 92143 completed range (170, 175)
+[2026-01-23 16-50-19] Started process 92208 with range 270-275
+[2026-01-23 16-50-19] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_270_275.txt
+[2026-01-23 16-50-19] Process 92145 completed range (175, 180)
+[2026-01-23 16-50-20] Started process 92210 with range 275-280
+[2026-01-23 16-50-20] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_275_280.txt
+[2026-01-23 16-50-20] Process 92147 completed range (180, 185)
+[2026-01-23 16-50-21] Started process 92212 with range 280-285
+[2026-01-23 16-50-21] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_280_285.txt
+[2026-01-23 16-50-21] Process 92149 completed range (185, 190)
+[2026-01-23 16-50-22] Started process 92214 with range 285-290
+[2026-01-23 16-50-22] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_285_290.txt
+[2026-01-23 16-50-22] Process 92151 completed range (190, 195)
+[2026-01-23 16-50-23] Started process 92216 with range 290-295
+[2026-01-23 16-50-23] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_290_295.txt
+[2026-01-23 16-50-23] Process 92153 completed range (195, 200)
+[2026-01-23 16-50-24] Started process 92218 with range 295-300
+[2026-01-23 16-50-24] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_295_300.txt
+[2026-01-23 16-50-25] Process 92155 completed range (200, 205)
+[2026-01-23 16-50-26] Started process 92220 with range 300-305
+[2026-01-23 16-50-26] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_300_305.txt
+[2026-01-23 16-50-26] Process 92157 completed range (205, 210)
+[2026-01-23 16-50-27] Started process 92222 with range 305-310
+[2026-01-23 16-50-27] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_305_310.txt
+[2026-01-23 16-50-27] Process 92159 completed range (210, 215)
+[2026-01-23 16-50-28] Started process 92224 with range 310-315
+[2026-01-23 16-50-28] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_310_315.txt
+[2026-01-23 16-50-28] Process 92161 completed range (215, 220)
+[2026-01-23 16-50-29] Started process 92226 with range 315-320
+[2026-01-23 16-50-29] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_315_320.txt
+[2026-01-23 16-50-29] Process 92163 completed range (220, 225)
+[2026-01-23 16-50-30] Started process 92228 with range 320-325
+[2026-01-23 16-50-30] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_320_325.txt
+[2026-01-23 16-50-30] Process 92165 completed range (225, 230)
+[2026-01-23 16-50-31] Started process 92230 with range 325-330
+[2026-01-23 16-50-31] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_325_330.txt
+[2026-01-23 16-50-31] Process 92167 completed range (230, 235)
+[2026-01-23 16-50-32] Started process 92232 with range 330-335
+[2026-01-23 16-50-32] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_330_335.txt
+[2026-01-23 16-50-32] Process 92169 completed range (235, 240)
+[2026-01-23 16-50-33] Started process 92234 with range 335-340
+[2026-01-23 16-50-33] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_335_340.txt
+[2026-01-23 16-50-33] Process 92171 completed range (240, 245)
+[2026-01-23 16-50-34] Started process 92236 with range 340-345
+[2026-01-23 16-50-34] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_340_345.txt
+[2026-01-23 16-50-34] Process 92173 completed range (245, 250)
+[2026-01-23 16-50-35] Started process 92238 with range 345-350
+[2026-01-23 16-50-35] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_345_350.txt
+[2026-01-23 16-50-35] Process 92199 completed range (250, 255)
+[2026-01-23 16-50-36] Started process 92240 with range 350-355
+[2026-01-23 16-50-36] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_350_355.txt
+[2026-01-23 16-50-36] Process 92201 completed range (255, 260)
+[2026-01-23 16-50-37] Started process 92242 with range 355-360
+[2026-01-23 16-50-37] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_355_360.txt
+[2026-01-23 16-50-37] Process 92204 completed range (260, 265)
+[2026-01-23 16-50-38] Started process 92244 with range 360-365
+[2026-01-23 16-50-38] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_360_365.txt
+[2026-01-23 16-50-38] Process 92206 completed range (265, 270)
+[2026-01-23 16-50-39] Started process 92246 with range 365-370
+[2026-01-23 16-50-39] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_365_370.txt
+[2026-01-23 16-50-39] Process 92208 completed range (270, 275)
+[2026-01-23 16-50-40] Started process 92248 with range 370-375
+[2026-01-23 16-50-40] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_370_375.txt
+[2026-01-23 16-50-40] Process 92210 completed range (275, 280)
+[2026-01-23 16-50-41] Started process 92250 with range 375-380
+[2026-01-23 16-50-41] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_375_380.txt
+[2026-01-23 16-50-41] Process 92212 completed range (280, 285)
+[2026-01-23 16-50-42] Started process 92252 with range 380-385
+[2026-01-23 16-50-42] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_380_385.txt
+[2026-01-23 16-50-42] Process 92214 completed range (285, 290)
+[2026-01-23 16-50-43] Started process 92254 with range 385-390
+[2026-01-23 16-50-43] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_385_390.txt
+[2026-01-23 16-50-43] Process 92216 completed range (290, 295)
+[2026-01-23 16-50-44] Started process 92256 with range 390-395
+[2026-01-23 16-50-44] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_390_395.txt
+[2026-01-23 16-50-44] Process 92218 completed range (295, 300)
+[2026-01-23 16-50-45] Started process 92258 with range 395-400
+[2026-01-23 16-50-45] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_395_400.txt
+[2026-01-23 16-50-46] Process 92220 completed range (300, 305)
+[2026-01-23 16-50-47] Started process 92260 with range 400-405
+[2026-01-23 16-50-47] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_400_405.txt
+[2026-01-23 16-50-47] Process 92222 completed range (305, 310)
+[2026-01-23 16-50-48] Started process 92262 with range 405-410
+[2026-01-23 16-50-48] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_405_410.txt
+[2026-01-23 16-50-48] Process 92224 completed range (310, 315)
+[2026-01-23 16-50-49] Started process 92264 with range 410-415
+[2026-01-23 16-50-49] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_410_415.txt
+[2026-01-23 16-50-49] Process 92226 completed range (315, 320)
+[2026-01-23 16-50-50] Started process 92266 with range 415-418
+[2026-01-23 16-50-50] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_9d088fed-4fdc-4ff6-b960-50d8027afd05/process_log_415_418.txt
+[2026-01-23 16-50-50] Process 92228 completed range (320, 325)
+[2026-01-23 16-50-50] Process 92230 completed range (325, 330)
+[2026-01-23 16-50-50] Process 92232 completed range (330, 335)
+[2026-01-23 16-50-50] Process 92234 completed range (335, 340)
+[2026-01-23 16-50-50] Process 92236 completed range (340, 345)
+[2026-01-23 16-50-50] Process 92238 completed range (345, 350)
+[2026-01-23 16-50-50] Process 92240 completed range (350, 355)
+[2026-01-23 16-50-50] Process 92242 completed range (355, 360)
+[2026-01-23 16-50-50] Process 92244 completed range (360, 365)
+[2026-01-23 16-50-50] Process 92246 completed range (365, 370)
+[2026-01-23 16-50-50] Process 92248 completed range (370, 375)
+[2026-01-23 16-50-50] Process 92250 completed range (375, 380)
+[2026-01-23 16-50-50] Process 92252 completed range (380, 385)
+[2026-01-23 16-50-50] Process 92254 completed range (385, 390)
+[2026-01-23 16-50-50] Process 92256 completed range (390, 395)
+[2026-01-23 16-50-50] Process 92258 completed range (395, 400)
+[2026-01-23 16-50-51] Process 92260 completed range (400, 405)
+[2026-01-23 16-50-51] Process 92262 completed range (405, 410)
+[2026-01-23 16-50-51] Process 92264 completed range (410, 415)
+[2026-01-23 16-50-51] Process 92266 completed range (415, 418)
+[2026-01-23 16-50-52] All processes completed normally
+

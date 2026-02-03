@@ -1,0 +1,16 @@
+{
+    "id": 83,
+    "line": "7",
+    "duty_hours": 480,
+    "driving_hours": 360,
+    "continuous_drive": 150,
+    "long_break": 50,
+    "short_break": 30,
+    "gap_percent": 5,
+    "diff_percent": 0,
+    "runby": "PBGWCC",
+    "upbit": 0,
+    "runbit": 0,
+    "finbit": 0,
+    "updated": "2025-12-29 16:05:42"
+}

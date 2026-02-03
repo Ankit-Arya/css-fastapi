@@ -1,0 +1,211 @@
+38841
+Solving Model
+Environment: User provided options:
+  problem_file = /tmp/tmpwt7lea0c.pyomo.nl
+  ampl = 1
+  branch_dir = 1
+  threads = 4
+  brancher = maxvio
+  set_lp_method = 0
+  sppheur = 1
+  log_level = 3
+  obj_gap_percent = 5
+Environment: End of user provided options.
+
+Bnb: Minotaur version 0.4 patch 1 git revision v0.4-103-ga3bd53de
+Bnb: NLP based Branch-and-bound algorithm for convex MINLP
+AMPLInterface: reading file /tmp/tmpwt7lea0c.pyomo.nl
+AMPLInterface: problem type is MILP
+Solver: time used in reading instance = 0.05
+-----------------------------------------
+|Constraint Statistics                  |
+|---------------------------------------|
+|Aggregation constraint       |       0 |
+|Precedence constraint        |       0 |
+|Variable Bound constraint    |       0 |
+|Partitioning constraint      |       0 |
+|Set Packing constraint       |       0 |
+|Set Covering constraint      |       0 |
+|Cardinality constraint       |       0 |
+|Invariant Knapsack constraint|       0 |
+|Equation Knapsack constraint |       0 |
+|Bin Packing constraint       |       0 |
+|Knapsack constraint          |       0 |
+|Integer Knapsack constraint  |       0 |
+|Mixed Binary constraint      |       0 |
+|No specific structure        |     836 |
+-----------------------------------------
+---------------------------------------------------
+|Model Statistics                                 |
+|-------------------------------------------------|
+| # variables                               39259 |
+| # binary variables                            0 |
+| # general integer variables               38841 |
+| # continuous variables                      418 |
+| # fixed variables                             0 |
+| # constraints                               836 |
+| # linear constraints                        836 |
+| # SOS1 constraints                            0 |
+| # SOS2 constraints                            0 |
+| # quadratic constraints                       0 |
+| # nonlinear constraints                       0 |
+| # constraints with linear terms             836 |
+| # constraints with bilinear terms             0 |
+| # constraints with quadratic terms            0 |
+| # linear terms in constraints            165274 |
+| # bilinear terms in constraints               0 |
+| # square terms in constraints                 0 |
+| # quadratic terms in constraints              0 |
+| # objectives                                  1 |
+| # linear terms in objective               38841 |
+| # quadratic terms in objective                0 |
+| Type of objective:                       linear |
+---------------------------------------------------
+Bnb: objective sense: minimize
+Bnb: handlers used in presolve:
+Bnb: LinearHandler (Handling linear constraints)
+Presolver: Presolving ... 
+Presolver: Finished presolving.
+LinearHandler: Statistics for presolve by Linear Handler:
+LinearHandler: Number of iterations           = 2
+LinearHandler: Time taken in initial presolve = 0.02
+LinearHandler: Time taken in node presolves   = 0.00
+LinearHandler: Number of variables deleted    = 418
+LinearHandler: Number of constraints deleted  = 418
+LinearHandler: Number of vars set to binary   = 0
+LinearHandler: Number of vars set to integer  = 0
+LinearHandler: Times variables tightened      = 418
+LinearHandler: Times constraints tightened    = 0
+LinearHandler: Times coefficients improved    = 0
+LinearHandler: Times binary variable relaxed  = 0
+LinearHandler: Changes in nodes               = 0
+Presolver: ERROR: code to modify debug sol after presolve not available
+---------------------------------------------------
+|Model Statistics                                 |
+|-------------------------------------------------|
+| # variables                               38841 |
+| # binary variables                        38841 |
+| # general integer variables                   0 |
+| # continuous variables                        0 |
+| # fixed variables                             0 |
+| # constraints                               418 |
+| # linear constraints                        418 |
+| # SOS1 constraints                            0 |
+| # SOS2 constraints                            0 |
+| # quadratic constraints                       0 |
+| # nonlinear constraints                       0 |
+| # constraints with linear terms             418 |
+| # constraints with bilinear terms             0 |
+| # constraints with quadratic terms            0 |
+| # linear terms in constraints            164438 |
+| # bilinear terms in constraints               0 |
+| # square terms in constraints                 0 |
+| # quadratic terms in constraints              0 |
+| # objectives                                  1 |
+| # linear terms in objective               38841 |
+| # quadratic terms in objective                0 |
+| Type of objective:                       linear |
+---------------------------------------------------
+-----------------------------------------
+|Constraint Statistics                  |
+|---------------------------------------|
+|Aggregation constraint       |       0 |
+|Precedence constraint        |       0 |
+|Variable Bound constraint    |       0 |
+|Partitioning constraint      |     418 |
+|Set Packing constraint       |       0 |
+|Set Covering constraint      |       0 |
+|Cardinality constraint       |       0 |
+|Invariant Knapsack constraint|       0 |
+|Equation Knapsack constraint |       0 |
+|Bin Packing constraint       |       0 |
+|Knapsack constraint          |       0 |
+|Integer Knapsack constraint  |       0 |
+|Mixed Binary constraint      |       0 |
+|No specific structure        |       0 |
+-----------------------------------------
+Bnb: engine used = OsiLP
+Bnb: brancher used = MaxVioBrancher
+BranchAndBound: starting branch-and-bound
+ 
+----------------------------------------------------------------------------------------------
+ Cpu(s)   Wall(s)              LB           UB        Gap%     Nodes-Proc     Nodes-Rem   #Sol
+----------------------------------------------------------------------------------------------
+     0         0             -inf          inf         inf              0             0      0
+     5         5       7.7777e+01          inf         inf             35            36      0
+    10        10       7.7791e+01          inf         inf             77            76      0
+    15        15       7.7791e+01   8.4000e+01    7.39e+00            123           120      1
+    20        20       7.7792e+01   8.2000e+01    5.13e+00            168           163      2
+    26        26       7.7792e+01   8.2000e+01    5.13e+00            214           207      2
+    31        31       7.7792e+01   8.2000e+01    5.13e+00            256           247      2
+    36        36       7.7800e+01   8.2000e+01    5.12e+00            287           278      2
+    41        41       7.7800e+01   8.2000e+01    5.12e+00            322           311      2
+    46        46       7.7800e+01   8.2000e+01    5.12e+00            360           347      2
+    47        47       7.7800e+01   7.9000e+01    1.52e+00            369           354      3
+----------------------------------------------------------------------------------------------
+ 
+BranchAndBound: stopping branch-and-bound
+BranchAndBound: nodes processed = 369
+BranchAndBound: nodes created   = 723
+BranchAndBound: time taken      = 46.49
+BranchAndBound: nodes processed = 369
+BranchAndBound: nodes created   = 723
+PCBProcessor: nodes processed                       = 369
+PCBProcessor: nodes branched                        = 361
+PCBProcessor: nodes infeasible                      = 4
+PCBProcessor: nodes optimal                         = 3
+PCBProcessor: nodes hit ub                          = 1
+PCBProcessor: nodes with problems                   = 0
+PCBProcessor: nodes for which fixNodeErr was called = 0
+MaxVio brancher: times called = 361
+MaxVio brancher: time in brancher = 0.07
+SppHeur: Number of times called: 2
+SppHeur: Number of runs 20
+SppHeur: Number of solutions found: 0
+SppHeur: Time taken: 0.02
+Sampling Heuristic: number of points checked for feasibility : 103
+Sampling Heuristic: number of feasible solutions found : 0
+Sampling Heuristic: Time taken : 0.04
+SolutionPool: Number of solutions found = 3
+SolutionPool: Time first solution found = 11.95
+SolutionPool: Time best solution found  = 46.62
+OsiLP: total calls            = 369
+OsiLP: strong branching calls = 0
+OsiLP: total time in solving  = 45.80
+OsiLP: time in str branching  = 0.00
+OsiLP: total iterations       = 53960
+OsiLP: strong br iterations   = 0
+RCHandler: Number of times lower bound changed = 0
+RCHandler: Number of times upper bound changed = 13197
+RCHandler: Time used = 0.06
+LinearHandler: Statistics for presolve by Linear Handler:
+LinearHandler: Number of iterations           = 0
+LinearHandler: Time taken in initial presolve = 0.00
+LinearHandler: Time taken in node presolves   = 0.38
+LinearHandler: Number of variables deleted    = 0
+LinearHandler: Number of constraints deleted  = 0
+LinearHandler: Number of vars set to binary   = 0
+LinearHandler: Number of vars set to integer  = 0
+LinearHandler: Times variables tightened      = 0
+LinearHandler: Times constraints tightened    = 0
+LinearHandler: Times coefficients improved    = 0
+LinearHandler: Times binary variable relaxed  = 0
+LinearHandler: Changes in nodes               = 278924
+ 
+Bnb: best solution value = 79.0000
+Bnb: best bound estimate from remaining nodes = 77.7999
+Bnb: gap = 1.2001
+Bnb: gap percentage = 1.5191
+Bnb: cpu time used (s) = 46.62
+Bnb: wall time used (s) = 46.66
+Bnb: status of branch-and-bound = Reached limit on gap
+WARNING: Loading a SolverResults object with a warning status into
+model.name="unknown";
+    - termination condition: maxIterations
+    - message from solver:
+Solver status:
+warning
+Solver termination condition:
+maxIterations
+Total Duties: 
+79
