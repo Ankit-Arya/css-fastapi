@@ -149,6 +149,35 @@ def process_fileL34(execution_id: str, file_path: str, user_id: str, user_name: 
         job_registry[execution_id] = {"process": None, "status": "error"}
 
 
+def process_fileL342(execution_id: str, file_path: str, user_id: str, user_name: str, email: str, stepping_back: List, timetable_type: str):
+    try:
+        update_status(execution_id, "Preparing Execution", "WIP")
+        file_path = os.path.abspath(file_path)
+        script_path = os.path.join(os.path.dirname(__file__), "SCS_FILES", "scs_runner.py")
+        stepping_back_json = json.dumps(stepping_back)
+
+        # Start subprocess with unbuffered output; text mode for easy line reads
+        process = subprocess.Popen(
+            [sys.executable, "-u", script_path, execution_id, file_path, stepping_back_json, timetable_type, "34"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            bufsize=1,
+            text=True,
+            cwd= os.path.join(os.path.dirname(__file__), "SCS_FILES")
+        )
+
+        job_registry[execution_id] = {"process": process, "status": "running"}
+
+        # Start monitor thread and return immediately (so FastAPI background task completes)
+        monitor_thread = threading.Thread(target=_monitor_process_lines, args=(execution_id, process), daemon=True)
+        monitor_thread.start()
+
+    except Exception as e:
+        print("❌ Error in subprocess launch:", e)
+        update_status(execution_id, str(e), "error")
+        job_registry[execution_id] = {"process": None, "status": "error"}
+
+
 
 def process_fileL7(execution_id: str, file_path: str, user_id: str, user_name: str, email: str, stepping_back: List, timetable_type: str):
     try:
@@ -159,7 +188,7 @@ def process_fileL7(execution_id: str, file_path: str, user_id: str, user_name: s
 
         # Start subprocess with unbuffered output; text mode for easy line reads
         process = subprocess.Popen(
-            [sys.executable, "-u", script_path, execution_id, file_path, stepping_back_json, timetable_type],
+            [sys.executable, "-u", script_path, execution_id, file_path, stepping_back_json, timetable_type, "7"],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             bufsize=1,

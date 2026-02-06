@@ -1,0 +1,538 @@
+[2026-02-04 12-26-36] Starting Process Watcher
+[2026-02-04 12-26-36] Press Ctrl+C to stop all processes
+[2026-02-04 12-26-36] Process logs directory: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae
+[2026-02-04 12-26-36] Process PIDs directory: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_pids_c393efb0-8b23-4926-bf7f-0906bc1db6ae
+[2026-02-04 12-26-36] Process scripts directory: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_scripts_c393efb0-8b23-4926-bf7f-0906bc1db6ae
+[2026-02-04 12-26-37] Started process 55971 with range 0-5
+[2026-02-04 12-26-37] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_0_5.txt
+[2026-02-04 12-26-38] Started process 56004 with range 5-10
+[2026-02-04 12-26-38] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_5_10.txt
+[2026-02-04 12-26-39] Started process 56037 with range 10-15
+[2026-02-04 12-26-39] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_10_15.txt
+[2026-02-04 12-26-40] Started process 56070 with range 15-20
+[2026-02-04 12-26-40] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_15_20.txt
+[2026-02-04 12-26-41] Started process 56103 with range 20-25
+[2026-02-04 12-26-41] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_20_25.txt
+[2026-02-04 12-26-42] Started process 56136 with range 25-30
+[2026-02-04 12-26-42] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_25_30.txt
+[2026-02-04 12-26-43] Started process 56169 with range 30-35
+[2026-02-04 12-26-43] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_30_35.txt
+[2026-02-04 12-26-44] Started process 56202 with range 35-40
+[2026-02-04 12-26-44] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_35_40.txt
+[2026-02-04 12-26-45] Started process 56235 with range 40-45
+[2026-02-04 12-26-45] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_40_45.txt
+[2026-02-04 12-26-46] Started process 56268 with range 45-50
+[2026-02-04 12-26-46] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_45_50.txt
+[2026-02-04 12-26-47] Started process 56301 with range 50-55
+[2026-02-04 12-26-47] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_50_55.txt
+[2026-02-04 12-26-48] Started process 56334 with range 55-60
+[2026-02-04 12-26-48] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_55_60.txt
+[2026-02-04 12-26-49] Started process 56367 with range 60-65
+[2026-02-04 12-26-49] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_60_65.txt
+[2026-02-04 12-26-50] Started process 56400 with range 65-70
+[2026-02-04 12-26-50] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_65_70.txt
+[2026-02-04 12-26-51] Started process 56433 with range 70-75
+[2026-02-04 12-26-51] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_70_75.txt
+[2026-02-04 12-26-52] Started process 56466 with range 75-80
+[2026-02-04 12-26-52] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_75_80.txt
+[2026-02-04 12-26-53] Started process 56499 with range 80-85
+[2026-02-04 12-26-53] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_80_85.txt
+[2026-02-04 12-26-54] Started process 56532 with range 85-90
+[2026-02-04 12-26-54] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_85_90.txt
+[2026-02-04 12-26-55] Started process 56565 with range 90-95
+[2026-02-04 12-26-55] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_90_95.txt
+[2026-02-04 12-26-56] Started process 56598 with range 95-100
+[2026-02-04 12-26-56] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_95_100.txt
+[2026-02-04 12-26-56] Process 55971 completed range (0, 5)
+[2026-02-04 12-26-57] Started process 56631 with range 100-105
+[2026-02-04 12-26-57] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_100_105.txt
+[2026-02-04 12-26-57] Process 56004 completed range (5, 10)
+[2026-02-04 12-26-58] Started process 56664 with range 105-110
+[2026-02-04 12-26-58] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_105_110.txt
+[2026-02-04 12-26-58] Process 56037 completed range (10, 15)
+[2026-02-04 12-27-00] Started process 56697 with range 110-115
+[2026-02-04 12-27-00] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_110_115.txt
+[2026-02-04 12-27-00] Process 56070 completed range (15, 20)
+[2026-02-04 12-27-01] Started process 56730 with range 115-120
+[2026-02-04 12-27-01] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_115_120.txt
+[2026-02-04 12-27-01] Process 56103 completed range (20, 25)
+[2026-02-04 12-27-02] Started process 56763 with range 120-125
+[2026-02-04 12-27-02] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_120_125.txt
+[2026-02-04 12-27-02] Process 56136 completed range (25, 30)
+[2026-02-04 12-27-03] Started process 56796 with range 125-130
+[2026-02-04 12-27-03] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_125_130.txt
+[2026-02-04 12-27-03] Process 56169 completed range (30, 35)
+[2026-02-04 12-27-04] Started process 56829 with range 130-135
+[2026-02-04 12-27-04] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_130_135.txt
+[2026-02-04 12-27-04] Process 56202 completed range (35, 40)
+[2026-02-04 12-27-05] Started process 56862 with range 135-140
+[2026-02-04 12-27-05] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_135_140.txt
+[2026-02-04 12-27-05] Process 56235 completed range (40, 45)
+[2026-02-04 12-27-06] Started process 56895 with range 140-145
+[2026-02-04 12-27-06] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_140_145.txt
+[2026-02-04 12-27-06] Process 56268 completed range (45, 50)
+[2026-02-04 12-27-07] Started process 56928 with range 145-150
+[2026-02-04 12-27-07] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_145_150.txt
+[2026-02-04 12-27-07] Process 56301 completed range (50, 55)
+[2026-02-04 12-27-08] Started process 56961 with range 150-155
+[2026-02-04 12-27-08] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_150_155.txt
+[2026-02-04 12-27-08] Process 56334 completed range (55, 60)
+[2026-02-04 12-27-09] Started process 56994 with range 155-160
+[2026-02-04 12-27-09] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_155_160.txt
+[2026-02-04 12-27-09] Process 56367 completed range (60, 65)
+[2026-02-04 12-27-10] Started process 57027 with range 160-165
+[2026-02-04 12-27-10] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_160_165.txt
+[2026-02-04 12-27-10] Process 56400 completed range (65, 70)
+[2026-02-04 12-27-11] Started process 57060 with range 165-170
+[2026-02-04 12-27-11] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_165_170.txt
+[2026-02-04 12-27-11] Process 56433 completed range (70, 75)
+[2026-02-04 12-27-12] Started process 57093 with range 170-175
+[2026-02-04 12-27-12] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_170_175.txt
+[2026-02-04 12-27-12] Process 56466 completed range (75, 80)
+[2026-02-04 12-27-13] Started process 57126 with range 175-180
+[2026-02-04 12-27-13] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_175_180.txt
+[2026-02-04 12-27-13] Process 56499 completed range (80, 85)
+[2026-02-04 12-27-14] Started process 57159 with range 180-185
+[2026-02-04 12-27-14] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_180_185.txt
+[2026-02-04 12-27-14] Process 56532 completed range (85, 90)
+[2026-02-04 12-27-15] Started process 57192 with range 185-190
+[2026-02-04 12-27-15] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_185_190.txt
+[2026-02-04 12-27-15] Process 56565 completed range (90, 95)
+[2026-02-04 12-27-16] Started process 57225 with range 190-195
+[2026-02-04 12-27-16] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_190_195.txt
+[2026-02-04 12-27-16] Process 56598 completed range (95, 100)
+[2026-02-04 12-27-17] Started process 57258 with range 195-200
+[2026-02-04 12-27-17] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_195_200.txt
+[2026-02-04 12-27-18] Process 56631 completed range (100, 105)
+[2026-02-04 12-27-19] Started process 57291 with range 200-205
+[2026-02-04 12-27-19] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_200_205.txt
+[2026-02-04 12-27-19] Process 56664 completed range (105, 110)
+[2026-02-04 12-27-20] Started process 57324 with range 205-210
+[2026-02-04 12-27-20] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_205_210.txt
+[2026-02-04 12-27-20] Process 56697 completed range (110, 115)
+[2026-02-04 12-27-21] Started process 57357 with range 210-215
+[2026-02-04 12-27-21] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_210_215.txt
+[2026-02-04 12-27-21] Process 56730 completed range (115, 120)
+[2026-02-04 12-27-22] Started process 57390 with range 215-220
+[2026-02-04 12-27-22] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_215_220.txt
+[2026-02-04 12-27-22] Process 56763 completed range (120, 125)
+[2026-02-04 12-27-23] Started process 57423 with range 220-225
+[2026-02-04 12-27-23] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_220_225.txt
+[2026-02-04 12-27-23] Process 56796 completed range (125, 130)
+[2026-02-04 12-27-24] Started process 57456 with range 225-230
+[2026-02-04 12-27-24] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_225_230.txt
+[2026-02-04 12-27-24] Process 56829 completed range (130, 135)
+[2026-02-04 12-27-25] Started process 57489 with range 230-235
+[2026-02-04 12-27-25] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_230_235.txt
+[2026-02-04 12-27-25] Process 56862 completed range (135, 140)
+[2026-02-04 12-27-26] Started process 57522 with range 235-240
+[2026-02-04 12-27-26] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_235_240.txt
+[2026-02-04 12-27-26] Process 56895 completed range (140, 145)
+[2026-02-04 12-27-27] Started process 57555 with range 240-245
+[2026-02-04 12-27-27] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_240_245.txt
+[2026-02-04 12-27-27] Process 56928 completed range (145, 150)
+[2026-02-04 12-27-28] Started process 57588 with range 245-250
+[2026-02-04 12-27-28] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_245_250.txt
+[2026-02-04 12-27-28] Process 56961 completed range (150, 155)
+[2026-02-04 12-27-29] Started process 57621 with range 250-255
+[2026-02-04 12-27-29] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_250_255.txt
+[2026-02-04 12-27-29] Process 56994 completed range (155, 160)
+[2026-02-04 12-27-30] Started process 57654 with range 255-260
+[2026-02-04 12-27-30] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_255_260.txt
+[2026-02-04 12-27-30] Process 57027 completed range (160, 165)
+[2026-02-04 12-27-31] Started process 57687 with range 260-265
+[2026-02-04 12-27-31] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_260_265.txt
+[2026-02-04 12-27-31] Process 57060 completed range (165, 170)
+[2026-02-04 12-27-32] Started process 57720 with range 265-270
+[2026-02-04 12-27-32] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_265_270.txt
+[2026-02-04 12-27-32] Process 57093 completed range (170, 175)
+[2026-02-04 12-27-33] Started process 57753 with range 270-275
+[2026-02-04 12-27-33] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_270_275.txt
+[2026-02-04 12-27-33] Process 57126 completed range (175, 180)
+[2026-02-04 12-27-34] Started process 57786 with range 275-280
+[2026-02-04 12-27-34] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_275_280.txt
+[2026-02-04 12-27-34] Process 57159 completed range (180, 185)
+[2026-02-04 12-27-35] Started process 57819 with range 280-285
+[2026-02-04 12-27-35] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_280_285.txt
+[2026-02-04 12-27-35] Process 57192 completed range (185, 190)
+[2026-02-04 12-27-36] Started process 57852 with range 285-290
+[2026-02-04 12-27-36] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_285_290.txt
+[2026-02-04 12-27-36] Process 57225 completed range (190, 195)
+[2026-02-04 12-27-37] Started process 57885 with range 290-295
+[2026-02-04 12-27-37] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_290_295.txt
+[2026-02-04 12-27-37] Process 57258 completed range (195, 200)
+[2026-02-04 12-27-38] Started process 57918 with range 295-300
+[2026-02-04 12-27-38] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_295_300.txt
+[2026-02-04 12-27-39] Process 57291 completed range (200, 205)
+[2026-02-04 12-27-40] Started process 57951 with range 300-305
+[2026-02-04 12-27-40] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_300_305.txt
+[2026-02-04 12-27-40] Process 57324 completed range (205, 210)
+[2026-02-04 12-27-41] Started process 57984 with range 305-310
+[2026-02-04 12-27-41] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_305_310.txt
+[2026-02-04 12-27-41] Process 57357 completed range (210, 215)
+[2026-02-04 12-27-42] Started process 58017 with range 310-315
+[2026-02-04 12-27-42] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_310_315.txt
+[2026-02-04 12-27-42] Process 57390 completed range (215, 220)
+[2026-02-04 12-27-43] Started process 58050 with range 315-320
+[2026-02-04 12-27-43] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_315_320.txt
+[2026-02-04 12-27-43] Process 57423 completed range (220, 225)
+[2026-02-04 12-27-44] Started process 58083 with range 320-325
+[2026-02-04 12-27-44] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_320_325.txt
+[2026-02-04 12-27-44] Process 57456 completed range (225, 230)
+[2026-02-04 12-27-45] Started process 58116 with range 325-330
+[2026-02-04 12-27-45] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_325_330.txt
+[2026-02-04 12-27-45] Process 57489 completed range (230, 235)
+[2026-02-04 12-27-46] Started process 58149 with range 330-335
+[2026-02-04 12-27-46] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_330_335.txt
+[2026-02-04 12-27-46] Process 57522 completed range (235, 240)
+[2026-02-04 12-27-47] Started process 58182 with range 335-340
+[2026-02-04 12-27-47] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_335_340.txt
+[2026-02-04 12-27-47] Process 57555 completed range (240, 245)
+[2026-02-04 12-27-48] Started process 58215 with range 340-345
+[2026-02-04 12-27-48] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_340_345.txt
+[2026-02-04 12-27-48] Process 57588 completed range (245, 250)
+[2026-02-04 12-27-49] Started process 58248 with range 345-350
+[2026-02-04 12-27-49] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_345_350.txt
+[2026-02-04 12-27-49] Process 57621 completed range (250, 255)
+[2026-02-04 12-27-50] Started process 58281 with range 350-355
+[2026-02-04 12-27-50] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_350_355.txt
+[2026-02-04 12-27-50] Process 57654 completed range (255, 260)
+[2026-02-04 12-27-51] Started process 58314 with range 355-360
+[2026-02-04 12-27-51] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_355_360.txt
+[2026-02-04 12-27-51] Process 57687 completed range (260, 265)
+[2026-02-04 12-27-52] Started process 58347 with range 360-365
+[2026-02-04 12-27-52] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_360_365.txt
+[2026-02-04 12-27-52] Process 57720 completed range (265, 270)
+[2026-02-04 12-27-53] Started process 58380 with range 365-370
+[2026-02-04 12-27-53] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_365_370.txt
+[2026-02-04 12-27-53] Process 57753 completed range (270, 275)
+[2026-02-04 12-27-54] Started process 58413 with range 370-375
+[2026-02-04 12-27-54] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_370_375.txt
+[2026-02-04 12-27-54] Process 57786 completed range (275, 280)
+[2026-02-04 12-27-55] Started process 58446 with range 375-380
+[2026-02-04 12-27-55] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_375_380.txt
+[2026-02-04 12-27-55] Process 57819 completed range (280, 285)
+[2026-02-04 12-27-56] Started process 58479 with range 380-385
+[2026-02-04 12-27-56] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_380_385.txt
+[2026-02-04 12-27-56] Process 57852 completed range (285, 290)
+[2026-02-04 12-27-57] Started process 58512 with range 385-390
+[2026-02-04 12-27-57] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_385_390.txt
+[2026-02-04 12-27-57] Process 57885 completed range (290, 295)
+[2026-02-04 12-27-58] Started process 58545 with range 390-395
+[2026-02-04 12-27-58] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_390_395.txt
+[2026-02-04 12-27-58] Process 57918 completed range (295, 300)
+[2026-02-04 12-27-59] Started process 58578 with range 395-400
+[2026-02-04 12-27-59] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_395_400.txt
+[2026-02-04 12-28-00] Process 57951 completed range (300, 305)
+[2026-02-04 12-28-01] Started process 58611 with range 400-405
+[2026-02-04 12-28-01] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_400_405.txt
+[2026-02-04 12-28-01] Process 57984 completed range (305, 310)
+[2026-02-04 12-28-02] Started process 58644 with range 405-410
+[2026-02-04 12-28-02] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_405_410.txt
+[2026-02-04 12-28-02] Process 58017 completed range (310, 315)
+[2026-02-04 12-28-03] Started process 58677 with range 410-415
+[2026-02-04 12-28-03] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_410_415.txt
+[2026-02-04 12-28-03] Process 58050 completed range (315, 320)
+[2026-02-04 12-28-04] Started process 58710 with range 415-420
+[2026-02-04 12-28-04] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_415_420.txt
+[2026-02-04 12-28-04] Process 58083 completed range (320, 325)
+[2026-02-04 12-28-05] Started process 58743 with range 420-425
+[2026-02-04 12-28-05] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_420_425.txt
+[2026-02-04 12-28-05] Process 58116 completed range (325, 330)
+[2026-02-04 12-28-06] Started process 58776 with range 425-430
+[2026-02-04 12-28-06] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_425_430.txt
+[2026-02-04 12-28-06] Process 58149 completed range (330, 335)
+[2026-02-04 12-28-07] Started process 58809 with range 430-435
+[2026-02-04 12-28-07] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_430_435.txt
+[2026-02-04 12-28-07] Process 58182 completed range (335, 340)
+[2026-02-04 12-28-08] Started process 58842 with range 435-440
+[2026-02-04 12-28-08] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_435_440.txt
+[2026-02-04 12-28-08] Process 58215 completed range (340, 345)
+[2026-02-04 12-28-09] Started process 58875 with range 440-445
+[2026-02-04 12-28-09] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_440_445.txt
+[2026-02-04 12-28-09] Process 58248 completed range (345, 350)
+[2026-02-04 12-28-10] Started process 58908 with range 445-450
+[2026-02-04 12-28-10] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_445_450.txt
+[2026-02-04 12-28-10] Process 58281 completed range (350, 355)
+[2026-02-04 12-28-11] Started process 58941 with range 450-455
+[2026-02-04 12-28-11] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_450_455.txt
+[2026-02-04 12-28-11] Process 58314 completed range (355, 360)
+[2026-02-04 12-28-12] Started process 58974 with range 455-460
+[2026-02-04 12-28-12] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_455_460.txt
+[2026-02-04 12-28-12] Process 58347 completed range (360, 365)
+[2026-02-04 12-28-13] Started process 59007 with range 460-465
+[2026-02-04 12-28-13] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_460_465.txt
+[2026-02-04 12-28-13] Process 58380 completed range (365, 370)
+[2026-02-04 12-28-14] Started process 59040 with range 465-470
+[2026-02-04 12-28-14] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_465_470.txt
+[2026-02-04 12-28-14] Process 58413 completed range (370, 375)
+[2026-02-04 12-28-15] Started process 59073 with range 470-475
+[2026-02-04 12-28-15] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_470_475.txt
+[2026-02-04 12-28-15] Process 58446 completed range (375, 380)
+[2026-02-04 12-28-16] Started process 59106 with range 475-480
+[2026-02-04 12-28-16] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_475_480.txt
+[2026-02-04 12-28-16] Process 58479 completed range (380, 385)
+[2026-02-04 12-28-17] Started process 59139 with range 480-485
+[2026-02-04 12-28-17] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_480_485.txt
+[2026-02-04 12-28-17] Process 58512 completed range (385, 390)
+[2026-02-04 12-28-18] Started process 59172 with range 485-490
+[2026-02-04 12-28-18] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_485_490.txt
+[2026-02-04 12-28-18] Process 58545 completed range (390, 395)
+[2026-02-04 12-28-19] Started process 59205 with range 490-495
+[2026-02-04 12-28-19] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_490_495.txt
+[2026-02-04 12-28-19] Process 58578 completed range (395, 400)
+[2026-02-04 12-28-20] Started process 59238 with range 495-500
+[2026-02-04 12-28-20] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_495_500.txt
+[2026-02-04 12-28-21] Process 58611 completed range (400, 405)
+[2026-02-04 12-28-22] Started process 59271 with range 500-505
+[2026-02-04 12-28-22] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_500_505.txt
+[2026-02-04 12-28-22] Process 58644 completed range (405, 410)
+[2026-02-04 12-28-23] Started process 59304 with range 505-510
+[2026-02-04 12-28-23] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_505_510.txt
+[2026-02-04 12-28-23] Process 58677 completed range (410, 415)
+[2026-02-04 12-28-24] Started process 59337 with range 510-515
+[2026-02-04 12-28-24] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_510_515.txt
+[2026-02-04 12-28-24] Process 58710 completed range (415, 420)
+[2026-02-04 12-28-25] Started process 59370 with range 515-520
+[2026-02-04 12-28-25] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_515_520.txt
+[2026-02-04 12-28-25] Process 58743 completed range (420, 425)
+[2026-02-04 12-28-26] Started process 59403 with range 520-525
+[2026-02-04 12-28-26] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_520_525.txt
+[2026-02-04 12-28-26] Process 58776 completed range (425, 430)
+[2026-02-04 12-28-27] Started process 59436 with range 525-530
+[2026-02-04 12-28-27] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_525_530.txt
+[2026-02-04 12-28-27] Process 58809 completed range (430, 435)
+[2026-02-04 12-28-28] Started process 59469 with range 530-535
+[2026-02-04 12-28-28] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_530_535.txt
+[2026-02-04 12-28-28] Process 58842 completed range (435, 440)
+[2026-02-04 12-28-29] Started process 59502 with range 535-540
+[2026-02-04 12-28-29] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_535_540.txt
+[2026-02-04 12-28-29] Process 58875 completed range (440, 445)
+[2026-02-04 12-28-30] Started process 59535 with range 540-545
+[2026-02-04 12-28-30] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_540_545.txt
+[2026-02-04 12-28-30] Process 58908 completed range (445, 450)
+[2026-02-04 12-28-31] Started process 59568 with range 545-550
+[2026-02-04 12-28-31] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_545_550.txt
+[2026-02-04 12-28-31] Process 58941 completed range (450, 455)
+[2026-02-04 12-28-32] Started process 59601 with range 550-555
+[2026-02-04 12-28-32] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_550_555.txt
+[2026-02-04 12-28-32] Process 58974 completed range (455, 460)
+[2026-02-04 12-28-33] Started process 59634 with range 555-560
+[2026-02-04 12-28-33] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_555_560.txt
+[2026-02-04 12-28-33] Process 59007 completed range (460, 465)
+[2026-02-04 12-28-34] Started process 59667 with range 560-565
+[2026-02-04 12-28-34] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_560_565.txt
+[2026-02-04 12-28-34] Process 59040 completed range (465, 470)
+[2026-02-04 12-28-35] Started process 59700 with range 565-570
+[2026-02-04 12-28-35] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_565_570.txt
+[2026-02-04 12-28-35] Process 59073 completed range (470, 475)
+[2026-02-04 12-28-36] Started process 59733 with range 570-575
+[2026-02-04 12-28-36] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_570_575.txt
+[2026-02-04 12-28-36] Process 59106 completed range (475, 480)
+[2026-02-04 12-28-37] Started process 59766 with range 575-580
+[2026-02-04 12-28-37] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_575_580.txt
+[2026-02-04 12-28-37] Process 59139 completed range (480, 485)
+[2026-02-04 12-28-38] Started process 59799 with range 580-585
+[2026-02-04 12-28-38] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_580_585.txt
+[2026-02-04 12-28-38] Process 59172 completed range (485, 490)
+[2026-02-04 12-28-39] Started process 59832 with range 585-590
+[2026-02-04 12-28-39] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_585_590.txt
+[2026-02-04 12-28-39] Process 59205 completed range (490, 495)
+[2026-02-04 12-28-40] Started process 59865 with range 590-595
+[2026-02-04 12-28-40] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_590_595.txt
+[2026-02-04 12-28-40] Process 59238 completed range (495, 500)
+[2026-02-04 12-28-41] Started process 59898 with range 595-600
+[2026-02-04 12-28-41] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_595_600.txt
+[2026-02-04 12-28-42] Process 59271 completed range (500, 505)
+[2026-02-04 12-28-43] Started process 59931 with range 600-605
+[2026-02-04 12-28-43] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_600_605.txt
+[2026-02-04 12-28-43] Process 59304 completed range (505, 510)
+[2026-02-04 12-28-44] Started process 59964 with range 605-610
+[2026-02-04 12-28-44] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_605_610.txt
+[2026-02-04 12-28-44] Process 59337 completed range (510, 515)
+[2026-02-04 12-28-45] Started process 59997 with range 610-615
+[2026-02-04 12-28-45] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_610_615.txt
+[2026-02-04 12-28-46] Process 59403 completed range (520, 525)
+[2026-02-04 12-28-47] Started process 60030 with range 615-620
+[2026-02-04 12-28-47] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_615_620.txt
+[2026-02-04 12-28-47] Process 59502 completed range (535, 540)
+[2026-02-04 12-28-48] Started process 60063 with range 620-625
+[2026-02-04 12-28-48] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_620_625.txt
+[2026-02-04 12-28-48] Process 59832 completed range (585, 590)
+[2026-02-04 12-28-49] Started process 60096 with range 625-630
+[2026-02-04 12-28-49] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_625_630.txt
+[2026-02-04 12-28-49] Process 59898 completed range (595, 600)
+[2026-02-04 12-28-50] Started process 60129 with range 630-635
+[2026-02-04 12-28-50] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_630_635.txt
+[2026-02-04 12-28-50] Process 59931 completed range (600, 605)
+[2026-02-04 12-28-51] Started process 60162 with range 635-640
+[2026-02-04 12-28-51] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_635_640.txt
+[2026-02-04 12-28-51] Process 59964 completed range (605, 610)
+[2026-02-04 12-28-52] Started process 60195 with range 640-645
+[2026-02-04 12-28-52] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_640_645.txt
+[2026-02-04 12-28-52] Process 59997 completed range (610, 615)
+[2026-02-04 12-28-53] Started process 60228 with range 645-650
+[2026-02-04 12-28-53] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_645_650.txt
+[2026-02-04 12-28-54] Process 59370 completed range (515, 520)
+[2026-02-04 12-28-55] Started process 60261 with range 650-655
+[2026-02-04 12-28-55] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_650_655.txt
+[2026-02-04 12-28-55] Process 59436 completed range (525, 530)
+[2026-02-04 12-28-56] Started process 60294 with range 655-660
+[2026-02-04 12-28-56] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_655_660.txt
+[2026-02-04 12-28-56] Process 59469 completed range (530, 535)
+[2026-02-04 12-28-57] Started process 60327 with range 660-665
+[2026-02-04 12-28-57] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_660_665.txt
+[2026-02-04 12-28-57] Process 59535 completed range (540, 545)
+[2026-02-04 12-28-58] Started process 60360 with range 665-670
+[2026-02-04 12-28-58] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_665_670.txt
+[2026-02-04 12-28-58] Process 59568 completed range (545, 550)
+[2026-02-04 12-28-59] Started process 60393 with range 670-675
+[2026-02-04 12-28-59] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_670_675.txt
+[2026-02-04 12-28-59] Process 59601 completed range (550, 555)
+[2026-02-04 12-29-00] Started process 60426 with range 675-680
+[2026-02-04 12-29-00] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_675_680.txt
+[2026-02-04 12-29-00] Process 59634 completed range (555, 560)
+[2026-02-04 12-29-01] Started process 60459 with range 680-685
+[2026-02-04 12-29-01] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_680_685.txt
+[2026-02-04 12-29-01] Process 59667 completed range (560, 565)
+[2026-02-04 12-29-02] Started process 60492 with range 685-690
+[2026-02-04 12-29-02] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_685_690.txt
+[2026-02-04 12-29-02] Process 59700 completed range (565, 570)
+[2026-02-04 12-29-04] Started process 60525 with range 690-695
+[2026-02-04 12-29-04] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_690_695.txt
+[2026-02-04 12-29-04] Process 59733 completed range (570, 575)
+[2026-02-04 12-29-05] Started process 60558 with range 695-700
+[2026-02-04 12-29-05] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_695_700.txt
+[2026-02-04 12-29-05] Process 59766 completed range (575, 580)
+[2026-02-04 12-29-06] Started process 60591 with range 700-705
+[2026-02-04 12-29-06] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_700_705.txt
+[2026-02-04 12-29-06] Process 59799 completed range (580, 585)
+[2026-02-04 12-29-07] Started process 60624 with range 705-710
+[2026-02-04 12-29-07] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_705_710.txt
+[2026-02-04 12-29-07] Process 59865 completed range (590, 595)
+[2026-02-04 12-29-08] Started process 60657 with range 710-715
+[2026-02-04 12-29-08] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_710_715.txt
+[2026-02-04 12-29-08] Process 60030 completed range (615, 620)
+[2026-02-04 12-29-09] Started process 60690 with range 715-720
+[2026-02-04 12-29-09] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_715_720.txt
+[2026-02-04 12-29-09] Process 60063 completed range (620, 625)
+[2026-02-04 12-29-10] Started process 60723 with range 720-725
+[2026-02-04 12-29-10] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_720_725.txt
+[2026-02-04 12-29-10] Process 60096 completed range (625, 630)
+[2026-02-04 12-29-11] Started process 60757 with range 725-730
+[2026-02-04 12-29-11] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_725_730.txt
+[2026-02-04 12-29-11] Process 60129 completed range (630, 635)
+[2026-02-04 12-29-12] Started process 60790 with range 730-735
+[2026-02-04 12-29-12] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_730_735.txt
+[2026-02-04 12-29-12] Process 60162 completed range (635, 640)
+[2026-02-04 12-29-13] Started process 60823 with range 735-740
+[2026-02-04 12-29-13] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_735_740.txt
+[2026-02-04 12-29-13] Process 60195 completed range (640, 645)
+[2026-02-04 12-29-14] Started process 60856 with range 740-745
+[2026-02-04 12-29-14] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_740_745.txt
+[2026-02-04 12-29-14] Process 60228 completed range (645, 650)
+[2026-02-04 12-29-15] Started process 60889 with range 745-750
+[2026-02-04 12-29-15] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_745_750.txt
+[2026-02-04 12-29-16] Process 60261 completed range (650, 655)
+[2026-02-04 12-29-17] Started process 60922 with range 750-755
+[2026-02-04 12-29-17] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_750_755.txt
+[2026-02-04 12-29-17] Process 60294 completed range (655, 660)
+[2026-02-04 12-29-18] Started process 60955 with range 755-760
+[2026-02-04 12-29-18] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_755_760.txt
+[2026-02-04 12-29-18] Process 60327 completed range (660, 665)
+[2026-02-04 12-29-19] Started process 60988 with range 760-765
+[2026-02-04 12-29-19] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_760_765.txt
+[2026-02-04 12-29-19] Process 60360 completed range (665, 670)
+[2026-02-04 12-29-20] Started process 61021 with range 765-770
+[2026-02-04 12-29-20] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_765_770.txt
+[2026-02-04 12-29-20] Process 60393 completed range (670, 675)
+[2026-02-04 12-29-21] Started process 61054 with range 770-775
+[2026-02-04 12-29-21] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_770_775.txt
+[2026-02-04 12-29-21] Process 60426 completed range (675, 680)
+[2026-02-04 12-29-22] Started process 61087 with range 775-780
+[2026-02-04 12-29-22] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_775_780.txt
+[2026-02-04 12-29-22] Process 60459 completed range (680, 685)
+[2026-02-04 12-29-23] Started process 61120 with range 780-785
+[2026-02-04 12-29-23] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_780_785.txt
+[2026-02-04 12-29-23] Process 60492 completed range (685, 690)
+[2026-02-04 12-29-24] Started process 61153 with range 785-790
+[2026-02-04 12-29-24] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_785_790.txt
+[2026-02-04 12-29-24] Process 60525 completed range (690, 695)
+[2026-02-04 12-29-25] Started process 61186 with range 790-795
+[2026-02-04 12-29-25] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_790_795.txt
+[2026-02-04 12-29-25] Process 60558 completed range (695, 700)
+[2026-02-04 12-29-26] Started process 61219 with range 795-800
+[2026-02-04 12-29-26] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_795_800.txt
+[2026-02-04 12-29-26] Process 60591 completed range (700, 705)
+[2026-02-04 12-29-27] Started process 61252 with range 800-805
+[2026-02-04 12-29-27] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_800_805.txt
+[2026-02-04 12-29-27] Process 60624 completed range (705, 710)
+[2026-02-04 12-29-28] Started process 61285 with range 805-810
+[2026-02-04 12-29-28] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_805_810.txt
+[2026-02-04 12-29-28] Process 60657 completed range (710, 715)
+[2026-02-04 12-29-29] Started process 61318 with range 810-815
+[2026-02-04 12-29-29] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_810_815.txt
+[2026-02-04 12-29-29] Process 60690 completed range (715, 720)
+[2026-02-04 12-29-30] Started process 61351 with range 815-820
+[2026-02-04 12-29-30] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_815_820.txt
+[2026-02-04 12-29-30] Process 60723 completed range (720, 725)
+[2026-02-04 12-29-31] Started process 61384 with range 820-825
+[2026-02-04 12-29-31] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_820_825.txt
+[2026-02-04 12-29-31] Process 60757 completed range (725, 730)
+[2026-02-04 12-29-32] Started process 61417 with range 825-830
+[2026-02-04 12-29-32] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_825_830.txt
+[2026-02-04 12-29-32] Process 60790 completed range (730, 735)
+[2026-02-04 12-29-33] Started process 61450 with range 830-835
+[2026-02-04 12-29-33] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_830_835.txt
+[2026-02-04 12-29-33] Process 60823 completed range (735, 740)
+[2026-02-04 12-29-34] Started process 61483 with range 835-840
+[2026-02-04 12-29-34] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_835_840.txt
+[2026-02-04 12-29-34] Process 60856 completed range (740, 745)
+[2026-02-04 12-29-35] Started process 61516 with range 840-845
+[2026-02-04 12-29-35] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_840_845.txt
+[2026-02-04 12-29-35] Process 60889 completed range (745, 750)
+[2026-02-04 12-29-36] Started process 61549 with range 845-850
+[2026-02-04 12-29-36] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_845_850.txt
+[2026-02-04 12-29-37] Process 60922 completed range (750, 755)
+[2026-02-04 12-29-38] Started process 61582 with range 850-855
+[2026-02-04 12-29-38] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_850_855.txt
+[2026-02-04 12-29-38] Process 60955 completed range (755, 760)
+[2026-02-04 12-29-39] Started process 61615 with range 855-860
+[2026-02-04 12-29-39] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_855_860.txt
+[2026-02-04 12-29-39] Process 60988 completed range (760, 765)
+[2026-02-04 12-29-40] Started process 61648 with range 860-865
+[2026-02-04 12-29-40] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_860_865.txt
+[2026-02-04 12-29-40] Process 61021 completed range (765, 770)
+[2026-02-04 12-29-41] Started process 61681 with range 865-870
+[2026-02-04 12-29-41] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_865_870.txt
+[2026-02-04 12-29-41] Process 61054 completed range (770, 775)
+[2026-02-04 12-29-42] Started process 61714 with range 870-875
+[2026-02-04 12-29-42] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_870_875.txt
+[2026-02-04 12-29-42] Process 61087 completed range (775, 780)
+[2026-02-04 12-29-43] Started process 61747 with range 875-880
+[2026-02-04 12-29-43] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_875_880.txt
+[2026-02-04 12-29-43] Process 61120 completed range (780, 785)
+[2026-02-04 12-29-44] Started process 61780 with range 880-883
+[2026-02-04 12-29-44] Process output being logged to: /mnt/e/YOGESH/TRIP CHART FINAL/css-fastapi/SCS_FILES/WATCHER_LOGS/process_logs_c393efb0-8b23-4926-bf7f-0906bc1db6ae/process_log_880_883.txt
+[2026-02-04 12-29-44] Process 61153 completed range (785, 790)
+[2026-02-04 12-29-44] Process 61186 completed range (790, 795)
+[2026-02-04 12-29-44] Process 61219 completed range (795, 800)
+[2026-02-04 12-29-44] Process 61252 completed range (800, 805)
+[2026-02-04 12-29-44] Process 61285 completed range (805, 810)
+[2026-02-04 12-29-44] Process 61318 completed range (810, 815)
+[2026-02-04 12-29-44] Process 61351 completed range (815, 820)
+[2026-02-04 12-29-44] Process 61384 completed range (820, 825)
+[2026-02-04 12-29-44] Process 61417 completed range (825, 830)
+[2026-02-04 12-29-44] Process 61450 completed range (830, 835)
+[2026-02-04 12-29-44] Process 61483 completed range (835, 840)
+[2026-02-04 12-29-44] Process 61516 completed range (840, 845)
+[2026-02-04 12-29-44] Process 61549 completed range (845, 850)
+[2026-02-04 12-29-45] Process 61582 completed range (850, 855)
+[2026-02-04 12-29-45] Process 61615 completed range (855, 860)
+[2026-02-04 12-29-45] Process 61648 completed range (860, 865)
+[2026-02-04 12-29-45] Process 61681 completed range (865, 870)
+[2026-02-04 12-29-45] Process 61714 completed range (870, 875)
+[2026-02-04 12-29-45] Process 61747 completed range (875, 880)
+[2026-02-04 12-29-45] Process 61780 completed range (880, 883)
+[2026-02-04 12-29-46] All processes completed normally
+
