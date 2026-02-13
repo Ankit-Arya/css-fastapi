@@ -4649,5 +4649,584 @@
       "status": "completed",
       "message": ""
     }
+  ],
+  "679ab689-86d9-4884-8e8e-618d6afd2056": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 679ab689-86d9-4884-8e8e-618d6afd2056",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "055d5743-2173-43e2-a24a-4da01248fcf5": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 055d5743-2173-43e2-a24a-4da01248fcf5",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "20534fbf-6e45-4c02-80ef-33108c03e5b9": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 20534fbf-6e45-4c02-80ef-33108c03e5b9",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "52c9de94-f7cf-4277-adfb-488abec943bc": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 52c9de94-f7cf-4277-adfb-488abec943bc",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services check completed and found ok",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty loops with reversal parameters",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "086549e5-51f6-4c15-9766-f0466feb730e": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 086549e5-51f6-4c15-9766-f0466feb730e",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services check completed and found ok",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty loops with reversal parameters",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Chart Formatting completed",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "01d4bd13-ec43-4888-850d-f4dac5094740": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 01d4bd13-ec43-4888-850d-f4dac5094740",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services check completed and found ok",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty loops with reversal parameters",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "126a49c6-62f8-412c-98ff-7be2ab5aa547": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 126a49c6-62f8-412c-98ff-7be2ab5aa547",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "91f04b0c-eb42-46cd-878f-df61b42e2b72": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 91f04b0c-eb42-46cd-878f-df61b42e2b72",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "error",
+      "message": "Error in Initial Time Table reading process."
+    }
+  ],
+  "865d004a-1675-4995-ae0d-3bd3f61e92ad": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 865d004a-1675-4995-ae0d-3bd3f61e92ad",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "10bfe9fe-635b-40d9-92ad-6c513187aeff": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 10bfe9fe-635b-40d9-92ad-6c513187aeff",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "eab60a93-bf3a-49ac-847b-92cf98cf7a8f": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - eab60a93-bf3a-49ac-847b-92cf98cf7a8f",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "00a79445-1fcf-4934-87c1-2bcafa011b11": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 00a79445-1fcf-4934-87c1-2bcafa011b11",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services check completed and found ok",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty loops with reversal parameters",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Chart Formatting completed",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
   ]
 }
