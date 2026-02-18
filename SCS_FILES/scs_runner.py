@@ -85,7 +85,7 @@ def main():
         elif line_no == '7' or line_no == '7N':
             crew_control = ['PBGW', 'KKDA']
             depots = ['MKPD', 'VND']
-            svvrRakes = ['704', '705']
+            svvrRakes = ['1111', '2222']
         elif line_no == '9':
             crew_control = ['DW']
             depots = ['DEPOT']

@@ -5228,5 +5228,1074 @@
       "status": "completed",
       "message": ""
     }
+  ],
+  "8e0332ab-455e-4a04-8a1d-fd80d597d477": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 8e0332ab-455e-4a04-8a1d-fd80d597d477",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 4.0, Time Conflicts: 0, Station Conflicts: 0.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "7c88cf52-a9f1-4000-853a-31531de03292": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 7c88cf52-a9f1-4000-853a-31531de03292",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services check completed and found ok",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty loops with reversal parameters",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Chart Formatting completed",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "2a7b0c24-6a07-4d6d-98ba-ee5403f29bf4": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 2a7b0c24-6a07-4d6d-98ba-ee5403f29bf4",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services check completed and found ok",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty loops with reversal parameters",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Chart Formatting completed",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "dd4b36ad-a03c-47af-958b-4018935180b7": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - dd4b36ad-a03c-47af-958b-4018935180b7",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services check completed and found ok",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty loops with reversal parameters",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Chart Formatting completed",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "a3b9a791-2d50-4132-a56b-7067171b1cc1": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - a3b9a791-2d50-4132-a56b-7067171b1cc1",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services check completed and found ok",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty loops with reversal parameters",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Chart Formatting completed",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "a320ec78-50ec-427b-abc4-afb246b3f1f9": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - a320ec78-50ec-427b-abc4-afb246b3f1f9",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 4.0, Time Conflicts: 0, Station Conflicts: 1.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "a5045e1f-98e9-4487-81f6-31a373affb78": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - a5045e1f-98e9-4487-81f6-31a373affb78",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "error",
+      "message": "Error in Initial Time Table reading process."
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "c79d5bdc-147c-4ff2-87be-4fd7b0e7bc17": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - c79d5bdc-147c-4ff2-87be-4fd7b0e7bc17",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "error",
+      "message": "Error in Initial Time Table reading process."
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "69d702a7-cff0-47a6-8a64-9548ee6685bc": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 69d702a7-cff0-47a6-8a64-9548ee6685bc",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 4.0, Time Conflicts: 0, Station Conflicts: 1.0, Ind STB Conflicts: 1.0"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "0a26894f-e8f7-494c-ae6f-d5fbb91eed7e": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 0a26894f-e8f7-494c-ae6f-d5fbb91eed7e",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "error",
+      "message": "Error in Initial Time Table reading process."
+    }
+  ],
+  "8ec57f66-fb4e-4dbd-af90-2be592053b5b": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 8ec57f66-fb4e-4dbd-af90-2be592053b5b",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "error",
+      "message": "Error in Initial Time Table reading process."
+    }
+  ],
+  "17ea67d3-5525-4333-b0c3-9d726efacb0e": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 17ea67d3-5525-4333-b0c3-9d726efacb0e",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 4.0, Time Conflicts: 0, Station Conflicts: 1.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "05d16cb6-25b7-44f1-8832-2df49e2cb192": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 05d16cb6-25b7-44f1-8832-2df49e2cb192",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "error",
+      "message": "Error in Initial Time Table reading process."
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "c5ea530b-823a-464b-b3c2-f0c92fa754c2": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - c5ea530b-823a-464b-b3c2-f0c92fa754c2",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: -1, CC2 Mismatches: 1, Same Train Time Conflicts: 4.0, Time Conflicts: 0, Station Conflicts: 1.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "6c50145d-6f7a-425b-b038-43ecd35a5ed0": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 6c50145d-6f7a-425b-b038-43ecd35a5ed0",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "error",
+      "message": "Error in Initial Time Table reading process."
+    }
+  ],
+  "b78a4a14-fb29-4ed3-b34b-81f21481da49": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - b78a4a14-fb29-4ed3-b34b-81f21481da49",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "error",
+      "message": "Error in Initial Time Table reading process."
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "0dbe90b6-63b2-4f4e-82a1-0f18d9a4dd52": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 0dbe90b6-63b2-4f4e-82a1-0f18d9a4dd52",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: -1, CC2 Mismatches: 1, Same Train Time Conflicts: 4.0, Time Conflicts: 0, Station Conflicts: 1.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "c328ed78-fde8-4233-bfbc-85910a43dd40": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - c328ed78-fde8-4233-bfbc-85910a43dd40",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 2.0, Time Conflicts: 1, Station Conflicts: 0.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "dba2c4ed-ec21-4cf7-91fc-84ac253a2643": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - dba2c4ed-ec21-4cf7-91fc-84ac253a2643",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: -1, CC2 Mismatches: 1, Same Train Time Conflicts: 4.0, Time Conflicts: 0, Station Conflicts: 1.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "6cefc400-ffd5-4fa5-a08e-46fea6868cda": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 6cefc400-ffd5-4fa5-a08e-46fea6868cda",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "error",
+      "message": "Error in Initial Time Table reading process."
+    }
+  ],
+  "bc7cd9d1-a8d3-4034-8155-f0bb392e2db6": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - bc7cd9d1-a8d3-4034-8155-f0bb392e2db6",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 4.0, Time Conflicts: 0, Station Conflicts: 1.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "46739651-43b4-408f-aa81-de96b462b9ec": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 46739651-43b4-408f-aa81-de96b462b9ec",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "error",
+      "message": "Error in Initial Time Table reading process."
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "544108fb-134f-40f5-9e1f-98fc13d2eaef": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 544108fb-134f-40f5-9e1f-98fc13d2eaef",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "error",
+      "message": "Error in Initial Time Table reading process."
+    }
+  ],
+  "7b6a8521-e14d-4dd5-ab8a-197625fd0438": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 7b6a8521-e14d-4dd5-ab8a-197625fd0438",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: -1, CC2 Mismatches: 1, Same Train Time Conflicts: 4.0, Time Conflicts: 0, Station Conflicts: 1.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "c9664bb0-6da4-4529-93ab-1c6ebee0c45f": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - c9664bb0-6da4-4529-93ab-1c6ebee0c45f",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 2.0, Time Conflicts: 1, Station Conflicts: 0.0, Ind STB Conflicts: 0.0"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "0060163b-1acf-4eb4-b2fd-e121da4b9afb": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 0060163b-1acf-4eb4-b2fd-e121da4b9afb",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "error",
+      "message": "Error in Initial Time Table reading process."
+    }
+  ],
+  "5ad54ab0-e7b7-41ea-b1cf-f47a25ce60ac": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 5ad54ab0-e7b7-41ea-b1cf-f47a25ce60ac",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 2.0, Time Conflicts: 1, Station Conflicts: 0.0, Ind STB Conflicts: 0.0"
+    }
   ]
 }
