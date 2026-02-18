@@ -4245,5 +4245,302 @@
       "status": "completed",
       "message": ""
     }
+  ],
+  "aba6a1c7-a290-47e8-8562-4f31a7faf7bb": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "eb679b5e-c353-4446-9c73-3b9932de24a6": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - eb679b5e-c353-4446-9c73-3b9932de24a6",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "2907cae0-52ab-4d26-8a50-227e378be3f6": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 2907cae0-52ab-4d26-8a50-227e378be3f6",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Issue in Train 505",
+      "status": "error",
+      "message": "Location: SBC2, Time: 06:20:00"
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "019386a0-86f1-4908-b54f-5a3e8567b5ab": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "957b0a48-97fd-4b91-ad60-467f346d02f8": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 957b0a48-97fd-4b91-ad60-467f346d02f8",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Issue in Train 505",
+      "status": "error",
+      "message": "Location: SBC2, Time: 06:20:00"
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "Invalid time sequence at SBC2"
+    }
+  ],
+  "5e4d8df2-b2fa-44f8-8295-dcde1d878ddf": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 5e4d8df2-b2fa-44f8-8295-dcde1d878ddf",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "[Errno 22] Invalid argument"
+    }
+  ],
+  "46df2e07-4606-4e9d-96cc-3811d2ba4ad9": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "dac98334-44e8-465d-91fb-780a363768b2": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "4ed236cd-ba20-40e6-bcfd-bf1d79b2bfd6": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 4ed236cd-ba20-40e6-bcfd-bf1d79b2bfd6",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 1708587 records",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "8dfec506-f2db-42cf-bf65-dbec5b9bc4af": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 8dfec506-f2db-42cf-bf65-dbec5b9bc4af",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull with 1704581 records",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "019a0d19-d198-4780-87bd-2a78aefbdaee": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 019a0d19-d198-4780-87bd-2a78aefbdaee",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 ",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 - This will take time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 ",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
   ]
 }

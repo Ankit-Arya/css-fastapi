@@ -1,4 +1,6 @@
 import sys
+
+from SCS_FILES.helpers import update_status
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 
@@ -26,6 +28,9 @@ def main():
     # Parse user input safely
     try:
         user_stepping_back = json.loads(stepping_back_raw)
+        print(type(user_stepping_back))
+        print(user_stepping_back)
+
     except Exception as e:
         print("⚠️ Invalid stepping_back data, defaulting to empty list.")
         print("Error detail:", e)
@@ -33,18 +38,29 @@ def main():
 
     # Merge user input with defaults
     stepping_back_merged = []
+    # for default in default_stepping_back:
+    #     # Check if user provided this station
+    #     user_entry = next((u for u in user_stepping_back if u.get("station") == default["station"]), None)
+    #     if user_entry:
+    #         # Merge user values with defaults
+    #         stepping_back_merged.append({
+    #             "station": default["station"],
+    #             "start": user_entry.get("start", default["start"]),
+    #             "end": user_entry.get("end", default["end"]),
+    #         })
+    #     else:
+    #         # Use default if user didn't provide
+    #         stepping_back_merged.append(default)
     for default in default_stepping_back:
-        # Check if user provided this station
-        user_entry = next((u for u in user_stepping_back if u.get("station") == default["station"]), None)
+        user_entry = user_stepping_back.get(default["station"])
+
         if user_entry:
-            # Merge user values with defaults
             stepping_back_merged.append({
                 "station": default["station"],
                 "start": user_entry.get("start", default["start"]),
                 "end": user_entry.get("end", default["end"]),
             })
         else:
-            # Use default if user didn't provide
             stepping_back_merged.append(default)
 
 
@@ -130,7 +146,7 @@ def main():
         warnings.simplefilter(action='ignore',category=FutureWarning)
         update_status(execution_id, f"Save your UID for future ref - {execution_id}","WIP")
         time.sleep(2)
-        update_status(execution_id, "Pre-Processing Time Table","WIP")
+        update_status(execution_id, "STAGE 1 ","WIP")
         df1 = pd.read_csv(file_path, index_col=0,header=None)
         df1.columns = df1.iloc[0]
         ids = df1.loc['TRAIN NO'].unique()
@@ -544,7 +560,7 @@ def main():
         comptrip.reset_index(drop= True, inplace=True)
 
         comptrip.to_excel(f"temp_files/{execution_id}comptrip.xlsx")
-        update_status(execution_id, "Pre=Processing and analysis complete", "completed")
+        update_status(execution_id, "STAGE 1", "completed")
         if 'level_0' in comptrip.columns:
             comptrip.drop(columns=['level_0'], inplace=True)
         comptrip.reset_index(inplace=True)
@@ -633,259 +649,288 @@ def main():
 
         df_final.to_csv(f"temp_files/{execution_id}redefinedinputparameters.csv", index=False)
 
-        update_status(execution_id, "Creating duty dataset to be optimized - This might take some time", "WIP")
-        import csv
-        from collections import defaultdict
-        import os
+        update_status(execution_id, "STAGE 2", "WIP")
 
-        # Parameters
-        Duty_hours = 440
-        Driving_duration = 360
-        Continuous_Driving_time = 170
-        long_break = 50
-        short_break = 30
+        try:
+            import subprocess
+            import sys
+            import os
 
-        crewControl = ['CCDN', 'CCUP']
-        final_op = []
+            print("Starting parallel duty generation...")
 
-        class Services:
-            def __init__(self, attrs):
-                self.servNum = attrs[0]
-                self.trainNum = int(attrs[1])
-                self.startStn = attrs[2]
-                self.startTime = hhmm2mins(attrs[3])
-                self.endStn = attrs[4]
-                self.endTime = hhmm2mins(attrs[5])
-                self.dir = attrs[6]
-                self.servDur = int(attrs[7])
-                self.stepbackTrainNum = attrs[9]
-                self.servAdded = False
-                self.breakDur = 0
-                self.tripDur = 0
+            cmd = [sys.executable, os.path.abspath("parallel_duty_generator.py"), execution_id, timetable_type]
+            print("Executing:", " ".join(cmd))
 
-        def min2hhmm(mins):
-            h = mins // 60
-            mins = mins - (h * 60)
-            if len(str(h)) == 1:
-                h = "0" + str(h)
-            if len(str(mins)) == 1:
-                mins = "0" + str(mins)
-            return str(h) + ":" + str(mins)
+            process = subprocess.Popen(
+                cmd,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True
+            )
 
-        def hhmm2mins(hhmm):
-            parts = hhmm.split(":")
-            if len(parts) == 2:
-                hrs, mins = int(parts[0]), int(parts[1])
-            elif len(parts) == 3:
-                hrs, mins = int(parts[0]), int(parts[1])
-            else:
-                raise ValueError(f"Invalid time format: {hhmm}")
-            print(hhmm, hrs, mins)
-            return hrs * 60 + mins
+            stdout, stderr = process.communicate()
 
-        def fetchData(csv_file=f"temp_files/{execution_id}redefinedinputparameters.csv"):
-            servicesLst = []
-            with open(csv_file) as output:
-                reader = csv.reader(output)
-                next(reader)  # Skip header
-                for row in reader:
-                    servicesLst.append(Services(row))
-            return servicesLst
+            print("child stdout:", stdout)
+            print("child stderr:", stderr)
 
-        def canAppend2(service1, service2):
-            """Check if service2 can follow service1 based on your original logic"""
-            
-            # Case 1: Same station, same time (immediate connection)
-            startEndStnTF = service1.endStn == service2.startStn
-            startEndTimeTF = service2.startTime == service1.endTime  # No technical break
-            
-            # Case 2: Short break at crew control station
-            startEndStnTFafterBreak = service1.endStn[:2] == service2.startStn[:2]
-            startEndTimeWithin = short_break <= (service2.startTime - service1.endTime) <= (120 if timetable_type == 'large' else 150)
-            
-            # Rake matching logic
-            if service1.stepbackTrainNum == "No StepBack":
-                startEndRakeTF = int(service1.trainNum) == int(service2.trainNum)
-            else:
-                startEndRakeTF = int(service1.stepbackTrainNum) == int(service2.trainNum)
-            
-            # Case 1: Direct rake connection
-            if startEndRakeTF and startEndStnTF and startEndTimeTF:
-                return True
-            
-            # Case 2: Break at crew control station
-            elif startEndTimeWithin and service1.endStn[:4] in crewControl and startEndStnTFafterBreak:
-                return True
-            
-            return False
+            # print("Done!")
 
-        def build_graph(services):
-            """Build adjacency graph of services that can follow each other"""
-            graph = defaultdict(list)
-            
-            for i, service1 in enumerate(services):
-                for j, service2 in enumerate(services):
-                    if i != j and canAppend2(service1, service2):
-                        graph[i].append(j)
-            
-            return graph
+        except Exception as e:
+            print("Other error invoking subprocess: ",e)
+            import traceback
+            traceback.print_exc()
+        # import csv
+        # from collections import defaultdict
+        # import os
 
-        def calculate_continuous_driving_time(path, services):
-            """Calculate continuous driving time for a path, respecting rake changes"""
-            if not path:
-                return 0
+        # # Parameters
+        # Duty_hours = 440
+        # Driving_duration = 360
+        # Continuous_Driving_time = 170
+        # long_break = 50
+        # short_break = 30
+
+        # crewControl = ['CCDN', 'CCUP']
+        # final_op = []
+
+        # class Services:
+        #     def __init__(self, attrs):
+        #         self.servNum = attrs[0]
+        #         self.trainNum = int(attrs[1])
+        #         self.startStn = attrs[2]
+        #         self.startTime = hhmm2mins(attrs[3])
+        #         self.endStn = attrs[4]
+        #         self.endTime = hhmm2mins(attrs[5])
+        #         self.dir = attrs[6]
+        #         self.servDur = int(attrs[7])
+        #         self.stepbackTrainNum = attrs[9]
+        #         self.servAdded = False
+        #         self.breakDur = 0
+        #         self.tripDur = 0
+
+        # def min2hhmm(mins):
+        #     h = mins // 60
+        #     mins = mins - (h * 60)
+        #     if len(str(h)) == 1:
+        #         h = "0" + str(h)
+        #     if len(str(mins)) == 1:
+        #         mins = "0" + str(mins)
+        #     return str(h) + ":" + str(mins)
+
+        # def hhmm2mins(hhmm):
+        #     parts = hhmm.split(":")
+        #     if len(parts) == 2:
+        #         hrs, mins = int(parts[0]), int(parts[1])
+        #     elif len(parts) == 3:
+        #         hrs, mins = int(parts[0]), int(parts[1])
+        #     else:
+        #         raise ValueError(f"Invalid time format: {hhmm}")
+        #     print(hhmm, hrs, mins)
+        #     return hrs * 60 + mins
+
+        # def fetchData(csv_file=f"temp_files/{execution_id}redefinedinputparameters.csv"):
+        #     servicesLst = []
+        #     with open(csv_file) as output:
+        #         reader = csv.reader(output)
+        #         next(reader)  # Skip header
+        #         for row in reader:
+        #             servicesLst.append(Services(row))
+        #     return servicesLst
+
+        # def canAppend2(service1, service2):
+        #     """Check if service2 can follow service1 based on your original logic"""
             
-            max_continuous = 0
-            current_continuous = services[path[0]].servDur
-            current_train = services[path[0]].trainNum
+        #     # Case 1: Same station, same time (immediate connection)
+        #     startEndStnTF = service1.endStn == service2.startStn
+        #     startEndTimeTF = service2.startTime == service1.endTime  # No technical break
             
-            for i in range(1, len(path)):
-                prev_service = services[path[i-1]]
-                curr_service = services[path[i]]
+        #     # Case 2: Short break at crew control station
+        #     startEndStnTFafterBreak = service1.endStn[:2] == service2.startStn[:2]
+        #     startEndTimeWithin = short_break <= (service2.startTime - service1.endTime) <= (120 if timetable_type == 'large' else 150)
+            
+        #     # Rake matching logic
+        #     if service1.stepbackTrainNum == "No StepBack":
+        #         startEndRakeTF = int(service1.trainNum) == int(service2.trainNum)
+        #     else:
+        #         startEndRakeTF = int(service1.stepbackTrainNum) == int(service2.trainNum)
+            
+        #     # Case 1: Direct rake connection
+        #     if startEndRakeTF and startEndStnTF and startEndTimeTF:
+        #         return True
+            
+        #     # Case 2: Break at crew control station
+        #     elif startEndTimeWithin and service1.endStn[:4] in crewControl and startEndStnTFafterBreak:
+        #         return True
+            
+        #     return False
+
+        # def build_graph(services):
+        #     """Build adjacency graph of services that can follow each other"""
+        #     graph = defaultdict(list)
+            
+        #     for i, service1 in enumerate(services):
+        #         for j, service2 in enumerate(services):
+        #             if i != j and canAppend2(service1, service2):
+        #                 graph[i].append(j)
+            
+        #     return graph
+
+        # def calculate_continuous_driving_time(path, services):
+        #     """Calculate continuous driving time for a path, respecting rake changes"""
+        #     if not path:
+        #         return 0
+            
+        #     max_continuous = 0
+        #     current_continuous = services[path[0]].servDur
+        #     current_train = services[path[0]].trainNum
+            
+        #     for i in range(1, len(path)):
+        #         prev_service = services[path[i-1]]
+        #         curr_service = services[path[i]]
                 
-                # Check if same rake continues
-                if prev_service.stepbackTrainNum == "No StepBack":
-                    rake_continues = (prev_service.trainNum == curr_service.trainNum)
-                else:
-                    rake_continues = (int(prev_service.stepbackTrainNum) == curr_service.trainNum)
+        #         # Check if same rake continues
+        #         if prev_service.stepbackTrainNum == "No StepBack":
+        #             rake_continues = (prev_service.trainNum == curr_service.trainNum)
+        #         else:
+        #             rake_continues = (int(prev_service.stepbackTrainNum) == curr_service.trainNum)
                 
-                gap = curr_service.startTime - prev_service.endTime
+        #         gap = curr_service.startTime - prev_service.endTime
                 
-                if rake_continues and gap == 0:  # Continuous driving
-                    current_continuous += curr_service.servDur
-                else:  # Break in continuity
-                    max_continuous = max(max_continuous, current_continuous)
-                    current_continuous = curr_service.servDur
+        #         if rake_continues and gap == 0:  # Continuous driving
+        #             current_continuous += curr_service.servDur
+        #         else:  # Break in continuity
+        #             max_continuous = max(max_continuous, current_continuous)
+        #             current_continuous = curr_service.servDur
             
-            max_continuous = max(max_continuous, current_continuous)
-            return max_continuous
+        #     max_continuous = max(max_continuous, current_continuous)
+        #     return max_continuous
 
-        def is_valid_duty(path, services):
-            """Check if a path forms a valid duty based on your original constraints"""
-            if len(path) < 1:
-                return False
+        # def is_valid_duty(path, services):
+        #     """Check if a path forms a valid duty based on your original constraints"""
+        #     if len(path) < 1:
+        #         return False
             
-            # Calculate duty duration and breaks
-            duty_start = services[path[0]].startTime
-            duty_end = services[path[-1]].endTime
-            duty_dur = duty_end - duty_start
+        #     # Calculate duty duration and breaks
+        #     duty_start = services[path[0]].startTime
+        #     duty_end = services[path[-1]].endTime
+        #     duty_dur = duty_end - duty_start
             
-            # Calculate break durations
-            break_durs = []
-            for i in range(len(path) - 1):
-                break_dur = services[path[i+1]].startTime - services[path[i]].endTime
-                break_durs.append(break_dur)
+        #     # Calculate break durations
+        #     break_durs = []
+        #     for i in range(len(path) - 1):
+        #         break_dur = services[path[i+1]].startTime - services[path[i]].endTime
+        #         break_durs.append(break_dur)
             
-            total_break_dur = sum(break_durs)
-            driving_dur = duty_dur - total_break_dur
+        #     total_break_dur = sum(break_durs)
+        #     driving_dur = duty_dur - total_break_dur
             
-            # Check long break requirement
-            long_break_exists = any(br >= long_break for br in break_durs)
+        #     # Check long break requirement
+        #     long_break_exists = any(br >= long_break for br in break_durs)
             
-            # Check total break duration constraint
-            total_break_dur_valid = long_break <= total_break_dur <= (120 if timetable_type == 'large' else 150) if break_durs else True
+        #     # Check total break duration constraint
+        #     total_break_dur_valid = long_break <= total_break_dur <= (120 if timetable_type == 'large' else 150) if break_durs else True
             
-            # Check continuous driving time
-            continuous_driving = calculate_continuous_driving_time(path, services)
+        #     # Check continuous driving time
+        #     continuous_driving = calculate_continuous_driving_time(path, services)
             
-            # Apply your original validation logic
-            valid = (duty_dur <= Duty_hours and 
-                    driving_dur <= Driving_duration and 
-                    long_break_exists and 
-                    total_break_dur_valid and
-                    continuous_driving <= Continuous_Driving_time)
+        #     # Apply your original validation logic
+        #     valid = (duty_dur <= Duty_hours and 
+        #             driving_dur <= Driving_duration and 
+        #             long_break_exists and 
+        #             total_break_dur_valid and
+        #             continuous_driving <= Continuous_Driving_time)
             
-            return valid
+        #     return valid
 
-        def generate_duties_from_service(start_idx, graph, services, max_depth=15):
-            """Generate all valid duties starting from a given service using DFS"""
-            valid_duties = []
+        # def generate_duties_from_service(start_idx, graph, services, max_depth=15):
+        #     """Generate all valid duties starting from a given service using DFS"""
+        #     valid_duties = []
             
-            def dfs(current_path):
-                if len(current_path) > max_depth:
-                    return
+        #     def dfs(current_path):
+        #         if len(current_path) > max_depth:
+        #             return
                 
-                # Check if current path is a valid duty
-                if len(current_path) > 1 and is_valid_duty(current_path, services):
-                    valid_duties.append(current_path[:])
+        #         # Check if current path is a valid duty
+        #         if len(current_path) > 1 and is_valid_duty(current_path, services):
+        #             valid_duties.append(current_path[:])
                 
-                # Try to extend the path
-                current_service_idx = current_path[-1]
-                for next_service_idx in graph[current_service_idx]:
-                    if next_service_idx not in current_path:  # Avoid cycles
-                        # Additional check for duty duration before adding
-                        test_path = current_path + [next_service_idx]
-                        test_duty_dur = services[test_path[-1]].endTime - services[test_path[0]].startTime
-                        if test_duty_dur <= Duty_hours:
-                            current_path.append(next_service_idx)
-                            dfs(current_path)
-                            current_path.pop()
+        #         # Try to extend the path
+        #         current_service_idx = current_path[-1]
+        #         for next_service_idx in graph[current_service_idx]:
+        #             if next_service_idx not in current_path:  # Avoid cycles
+        #                 # Additional check for duty duration before adding
+        #                 test_path = current_path + [next_service_idx]
+        #                 test_duty_dur = services[test_path[-1]].endTime - services[test_path[0]].startTime
+        #                 if test_duty_dur <= Duty_hours:
+        #                     current_path.append(next_service_idx)
+        #                     dfs(current_path)
+        #                     current_path.pop()
             
-            dfs([start_idx])
-            return valid_duties
+        #     dfs([start_idx])
+        #     return valid_duties
 
-        def generate_all_duties(services):
-            """Generate all valid duties using graph approach"""
-            print("Building connection graph...")
-            graph = build_graph(services)
+        # def generate_all_duties(services):
+        #     """Generate all valid duties using graph approach"""
+        #     print("Building connection graph...")
+        #     graph = build_graph(services)
             
-            all_duties = []
+        #     all_duties = []
             
-            print("Generating duties...")
-            for i, service in enumerate(services):
-                duties_from_service = generate_duties_from_service(i, graph, services)
-                print(f"[{i+1}/{len(services)}] Service {service.servNum}: {len(duties_from_service)} duties generated.")
+        #     print("Generating duties...")
+        #     for i, service in enumerate(services):
+        #         duties_from_service = generate_duties_from_service(i, graph, services)
+        #         print(f"[{i+1}/{len(services)}] Service {service.servNum}: {len(duties_from_service)} duties generated.")
                 
-                # Convert indices back to service numbers
-                for duty_indices in duties_from_service:
-                    duty_service_nums = [services[idx].servNum for idx in duty_indices]
-                    all_duties.append(duty_service_nums)
+        #         # Convert indices back to service numbers
+        #         for duty_indices in duties_from_service:
+        #             duty_service_nums = [services[idx].servNum for idx in duty_indices]
+        #             all_duties.append(duty_service_nums)
             
-            return all_duties
+        #     return all_duties
 
-        def save_duties_to_csv(duties, filename=f"temp_files/{execution_id}generated_duties_graph.csv"):
-            """Save duties to CSV file"""
-            if not duties:
-                print("No duties to save.")
-                return
+        # def save_duties_to_csv(duties, filename=f"temp_files/{execution_id}generated_duties_graph.csv"):
+        #     """Save duties to CSV file"""
+        #     if not duties:
+        #         print("No duties to save.")
+        #         return
             
-            max_length = max(len(duty) for duty in duties)
+        #     max_length = max(len(duty) for duty in duties)
             
-            with open(filename, 'w', newline='') as file:
-                writer = csv.writer(file)
-                # Write header
-                header = ['Duty_ID'] + [f'Service_{i+1}' for i in range(max_length)]
-                writer.writerow(header)
+        #     with open(filename, 'w', newline='') as file:
+        #         writer = csv.writer(file)
+        #         # Write header
+        #         header = ['Duty_ID'] + [f'Service_{i+1}' for i in range(max_length)]
+        #         writer.writerow(header)
                 
-                # Write duties
-                for idx, duty in enumerate(duties):
-                    row = [idx] + duty + [''] * (max_length - len(duty))
-                    writer.writerow(row)
+        #         # Write duties
+        #         for idx, duty in enumerate(duties):
+        #             row = [idx] + duty + [''] * (max_length - len(duty))
+        #             writer.writerow(row)
             
-            print(f"Duties saved to {filename}")
+        #     print(f"Duties saved to {filename}")
             
 
-        # Main execution
-        # if __name__ == "__main__":
-        print("Loading services...")
-        services = fetchData()
-        services.sort(key=lambda serv: serv.startTime)
-        print(f"Total services loaded: {len(services)}")
+        # # Main execution
+        # # if __name__ == "__main__":
+        # print("Loading services...")
+        # services = fetchData()
+        # services.sort(key=lambda serv: serv.startTime)
+        # print(f"Total services loaded: {len(services)}")
         
-        print("Generating duties using graph approach...")
-        all_duties = generate_all_duties(services)
+        # print("Generating duties using graph approach...")
+        # all_duties = generate_all_duties(services)
         
-        print(f"Total valid duties generated: {len(all_duties)}")
+        # print(f"Total valid duties generated: {len(all_duties)}")
         
-        # Save to CSV
-        save_duties_to_csv(all_duties)
+        # # Save to CSV
+        # save_duties_to_csv(all_duties)
         
-        # Also store in global variable for compatibility
-        final_op = all_duties
-        update_status(execution_id, f"Dataset Generation successfull with {len(all_duties)} records", "completed")
+        # # Also store in global variable for compatibility
+        # final_op = all_duties
+        update_status(execution_id, f"STAGE 2", "completed")
         print("Done!")
 
-        update_status(execution_id, f"Starting Optimization Process - This will take time - Sit tight", "WIP")
+        update_status(execution_id, f"STAGE 3 - This will take time", "WIP")
 # ------------------SOLVER----------------
 
         import os
@@ -1113,8 +1158,8 @@ def main():
         logging.info("Script finished successfully.")
 
         # Example status updates
-        update_status(execution_id, "Success! Optimization Complete", "completed")
-        update_status(execution_id, "Creating Trip Chart Format", "WIP")
+        update_status(execution_id, "STAGE 3 ", "completed")
+        update_status(execution_id, "STAGE 4", "WIP")
 
         # ------------------------fIll tc
         import csv
@@ -1300,6 +1345,74 @@ def main():
         duty2['ACTUAL_DUTYHOURS'] = (duty2['ACTUAL_DUTYHOURS'] % pd.Timedelta(days=1))
 
         duty2.to_excel(f"temp_files/trip_chart_{execution_id}.xlsx")
+
+        duty2["Sign_On"] = pd.to_datetime(duty2["Sign_On"], errors="coerce")
+        duty2["Sign_Off"] = pd.to_datetime(duty2["Sign_Off"], errors="coerce")
+        duty2["Trip_Start"] = pd.to_datetime(duty2["Trip_Start"], errors="coerce")
+
+        # ----------------------------
+        # 2. Helper: fraction of day → HH:MM
+        # ----------------------------
+        def frac_to_hhmm(x):
+            if pd.isna(x) or x <= 0:
+                return None
+            mins = int(round(x * 24 * 60))
+            return f"{mins//60:02d}:{mins%60:02d}"
+
+        # ----------------------------
+        # 3. Build duty-wise rows
+        # ----------------------------
+        rows = []
+
+        for duty_no, g in duty2.groupby("Duty_No", sort=False):
+
+            g = g.sort_values("Trip_Start", na_position="last")
+
+            row = {
+                "Duty_No": duty_no,
+                "Sign_On": g["Sign_On"].dropna().iloc[0].strftime("%H:%M"),
+                "SignOn_Location": g["SignOn_Location"].dropna().iloc[0],
+                "Sign_Off": g["Sign_Off"].dropna().iloc[-1].strftime("%H:%M"),
+                "SignOff_Location": g["SignOff_Location"].dropna().iloc[-1],
+                "ACTUAL_DUTYHOURS": frac_to_hhmm(
+                    g["ACTUAL_DUTYHOURS"].dropna().iloc[0]
+                ),
+            }
+
+            run_idx = 1
+            break_idx = 1
+
+            for _, r in g.iterrows():
+
+                # -------- Run --------
+                run = frac_to_hhmm(r["Single_Run"])
+                if run:
+                    row[f"Run{run_idx}"] = run
+                    run_idx += 1
+
+                # -------- Break --------
+                br = frac_to_hhmm(r["breaks"])
+                if br:
+                    row[f"Break{break_idx}"] = br
+                    break_idx += 1
+
+            # -------- Total Run (once at end) --------
+            total_run = frac_to_hhmm(g["Total_Run"].dropna().iloc[0])
+            if total_run:
+                row["Total_Run"] = total_run
+
+            rows.append(row)
+
+        # ----------------------------
+        # 4. Final dataframe
+        # ----------------------------
+        summary = pd.DataFrame(rows)
+
+        print(summary)
+        # summary.to_csv("duty_summary.csv", index=False)
+        duty2.to_excel(f"temp_files/trip_chart_summary_{execution_id}.xlsx")
+        update_status(execution_id, "STAGE 4 Complete", "completed")
+
 
         # --------------Generate DC
 
