@@ -5,8 +5,8 @@ import concurrent.futures
 import sys
 
 # Parameters
-Duty_hours = 460
-Driving_duration = 375
+Duty_hours = 440
+Driving_duration = 360
 Continuous_Driving_time = 180
 long_break = 50
 short_break = 30

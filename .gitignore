@@ -1,6 +1,7 @@
 # Ignore virtual environment
 env/
 temp_files/
+SCS_FILES/ALL_USER_TT/
 
 # Ignore Python cache
 __pycache__/

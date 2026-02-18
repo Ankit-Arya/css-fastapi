@@ -7,6 +7,7 @@ import time
 import sys
 import json
 from helpers import update_status
+import shutil
 
 
 def main():
@@ -21,7 +22,7 @@ def main():
         print('FILE PATH==',excel_file)
         stepping_back_raw = sys.argv[3]  # Passed as JSON string
         timetable_type = sys.argv[4]
-        line_no = '7'
+        line_no = sys.argv[5]
         max_processes = '20'
         gap_percent = '5'
         json_file = os.path.abspath("parameters.json")
@@ -39,14 +40,22 @@ def main():
         #send_progress_json(line_no, progress)
         update_status(member_id, f"Save your UID for future ref - {member_id}","WIP")
         time.sleep(2)
+        update_status(member_id, "STAGE 1 of 4 in progress","WIP")
         update_status(member_id, "Pre-Processing Time Table","WIP")
         try:
             if line_no == '7':
-                subprocess.run(["python", f"initial_timetable_read_1_circular_line{line_no}.py", member_id, excel_file], check=True)
-                subprocess.run(["python", f"initial_timetable_read_2_circular_line{line_no}.py", member_id, excel_file], check=True)
-                subprocess.run(["python", f"initial_timetable_read_3_circular_line{line_no}.py", member_id], check=True)
-            elif line_no == '7N':
-                subprocess.run(["python", f"initial_timetable_read_line{line_no}.py", member_id, excel_file], check=True)
+                try:
+                    subprocess.run(["python", f"initial_timetable_read_1_circular_line{line_no}.py", member_id, excel_file], check=True)
+                    subprocess.run(["python", f"initial_timetable_read_2_circular_line{line_no}.py", member_id, excel_file], check=True)
+                    subprocess.run(["python", f"initial_timetable_read_3_circular_line{line_no}.py", member_id], check=True)
+                    print("Processing the Time Table with Circular Line7")
+                except subprocess.CalledProcessError as e:
+                    shutil.rmtree(f"{new_location}")
+                    line_no = '7N'
+                    new_location = f"ALL_USER_TT/LINE{line_no}_{member_id}"
+                    os.makedirs(f"{new_location}/USEFUL OUTPUT_{member_id}/logfiles", exist_ok=True)
+                    print("Processing the Time Table with Normal Line7")
+                    subprocess.run(["python", f"initial_timetable_read_line{line_no}.py", member_id, excel_file], check=True)
             else:
                 subprocess.run(["python", f"initial_timetable_read_line{line_no}.py", member_id, excel_file], check=True)
         except subprocess.CalledProcessError as e:
@@ -156,6 +165,7 @@ def main():
         print(f"Jurisdiction Conflicts: {juris_conflict}")
 
         update_status(member_id, f"Initial Services check completed and found ok", "completed")
+        update_status(member_id, f"STAGE 1 complete", "completed")
 
         #3--------------------------------------------------------------------------------------------------------------
         update_status(member_id, "Creating duty loops with reversal parameters", "WIP")
@@ -178,7 +188,7 @@ def main():
             update_status(member_id, step_name, "error", message)
             sys.exit(1)
 
-        update_status(member_id, "Duty loops created successfully", "completed")
+        update_status(member_id, f"STAGE 2 complete", "completed")
 
         #4--------------------------------------------------------------------------------------------------------------
 
@@ -186,9 +196,9 @@ def main():
         log_path = f"{cwd}/{new_location}/USEFUL OUTPUT_{member_id}/logfiles/logWatcher_{member_id}.txt"
         log_path_bnb = f"{cwd}/{new_location}/USEFUL OUTPUT_{member_id}/logfiles/logBNB_{member_id}.txt"
         bnb_error_path = f"{cwd}/{new_location}/USEFUL OUTPUT_{member_id}/logfiles/missingServices.csv"
-        update_status(member_id, "Creating duty dataset to be optimized - This might take some time", "WIP")
+        os.makedirs(os.path.dirname(log_path), exist_ok=True)
         if juris_conflict == 0:
-            os.makedirs(os.path.dirname(log_path), exist_ok=True)
+            update_status(member_id, "Creating duty dataset to be optimized - This might take some time", "WIP")
             try:
                 
                 cmd = [
@@ -207,11 +217,12 @@ def main():
                         log_file.flush()           # flush immediately
 
                 proc.wait()
-            except:
+            except Exception as e:
                 print("There is some error in Duty Pool Generation. Please contact SCS Administrator.")
                 step_name = "Duty Pool Generation"
                 message = "Error in Duty Pool Generation process."
                 update_status(member_id, step_name, "error", message)
+                print(str(e))
                 sys.exit(1)
             try:
                 subprocess.run(["python", "MergeTempOutputFiles.py", member_id, line_no], check=True)
@@ -246,7 +257,7 @@ def main():
                 message = "Error in Mathematical Model process."
                 update_status(member_id, step_name, "error", message)
                 sys.exit(1)
-            if not os.path.exists(solution_path) and (line_no == '7' or line_no == '34') and not os.path.exists(bnb_error_path):
+            if not os.path.exists(solution_path) and (line_no == '7' or line_no == '7N' or line_no == '34') and not os.path.exists(bnb_error_path):
                 for juris_con in range(1,6):
                     print(f"Solution not found with normal duties.")
                     print("Trying with different jurisdiction sign on/off...")
@@ -325,7 +336,7 @@ def main():
                     f"/home/yogesh_189/miniconda3/bin/conda run -n pyomo_env python3 -u duty_pool_watcher.py "
                     f"{member_id} {line_no} {max_processes} "
                     f"{json_params['short_break']} {json_params['long_break']} {json_params['duty_hours']} "
-                    f"{json_params['continuous_drive']} {json_params['driving_hours']} {juris_con}"
+                    f"{json_params['continuous_drive']} {json_params['driving_hours']} {juris_conflict}"
                 ]
 
                 with subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True) as proc, \
@@ -336,11 +347,12 @@ def main():
                         log_file.flush()           # flush immediately
 
                 proc.wait()
-            except:
+            except Exception as e:
                 print("There is some error in Duty Pool Generation. Please contact SCS Administrator.")
                 step_name = "Duty Pool Generation"
                 message = "Error in Duty Pool Generation process."
                 update_status(member_id, step_name, "error", message)
+                print(str(e))
                 sys.exit(1)
             try:
                 subprocess.run(["python", "MergeTempOutputFiles.py", member_id,line_no], check=True)
@@ -416,6 +428,7 @@ def main():
             update_status(member_id, step_name, "error", message)
             sys.exit(1)
         update_status(member_id, f"Trip Chart Formatting completed", "completed")
+        update_status(member_id, "STAGE 4 Complete", "completed")
 
     except Exception as e:
         update_status(member_id, "Pipeline Broke--", "error", str(e))
