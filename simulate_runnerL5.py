@@ -167,20 +167,55 @@ def main():
             rail[i]['TIME'] = pd.to_datetime(rail[i]['TIME'],infer_datetime_format=True,errors = 'coerce')
             rail[i]['TIME'] += pd.to_timedelta((rail[i]['TIME'].diff() < pd.Timedelta(0)).cumsum(), unit='d')
 
-        for i in rail:
-            rail[i].dropna(inplace=True)
+        # for i in rail:
+        #     rail[i].dropna(inplace=True)
             
-            for j in range(rail[i].shape[0]):
-                if rail[i].iloc[j,0] < rail[i].iloc[0,0]: #time less than induction time 
-                    rail[i].iloc[j,0] = rail[i].iloc[j,0] + pd.to_timedelta('1 day')
+        #     for j in range(rail[i].shape[0]):
+        #         if rail[i].iloc[j,0] < rail[i].iloc[0,0]: #time less than induction time 
+        #             rail[i].iloc[j,0] = rail[i].iloc[j,0] + pd.to_timedelta('1 day')
 
-            if (rail[i]['TIME'].diff() < pd.Timedelta(0)).any():
-                bool_series = rail[i]['TIME'].diff() < pd.Timedelta(0)
-                print(f"Check Train ID: {ids[i]}, Location: {rail[i].loc[bool_series].index[0]}, Time: {rail[i].loc[bool_series].iloc[0,0].time()}\n") 
-                step_name = f"Issue in Train {ids[i]}"
-                message = f"Location: {rail[i].loc[bool_series].index[0]}, Time: {rail[i].loc[bool_series].iloc[0,0].time()}"
-                update_status(execution_id, step_name, "error", message)
-                break
+        #     if (rail[i]['TIME'].diff() < pd.Timedelta(0)).any():
+        #         bool_series = rail[i]['TIME'].diff() < pd.Timedelta(0)
+        #         print(f"Check Train ID: {ids[i]}, Location: {rail[i].loc[bool_series].index[0]}, Time: {rail[i].loc[bool_series].iloc[0,0].time()}\n") 
+        #         step_name = f"Issue in Train {ids[i]}"
+        #         message = f"Location: {rail[i].loc[bool_series].index[0]}, Time: {rail[i].loc[bool_series].iloc[0,0].time()}"
+        #         update_status(execution_id, step_name, "error", message)
+        #         break
+        for i in rail:
+
+            rail[i].dropna(inplace=True)
+            rail[i]['TIME'] = pd.to_datetime(rail[i]['TIME'], errors='coerce')
+            rail[i].dropna(inplace=True)
+
+            times = rail[i]['TIME'].reset_index(drop=True)
+            checkpoints = rail[i].index.tolist()
+
+            day_offset = 0
+            prev_clock = times.iloc[0].time()
+
+            for j in range(1, len(times)):
+
+                curr_clock = times.iloc[j].time()
+
+                # Compare ONLY clock time
+                if curr_clock < prev_clock:
+
+                    # Allow logical midnight crossing only
+                    if prev_clock >= datetime.time(20, 0) and curr_clock <= datetime.time(4, 0):
+                        day_offset += 1
+                    else:
+                        print(f"Issue in Train {ids[i]}")
+                        print(f"Location: {checkpoints[j]}")
+                        print(f"Previous Time: {prev_clock}")
+                        print(f"Current Time: {curr_clock}")
+                        step_name = f"Issue in Train {ids[i]}"
+                        message = f"Location: {checkpoints[j]}, Time: {curr_clock}"
+                        update_status(execution_id, step_name, "error", message)
+                        time.sleep(0.2)
+                        raise Exception(f"Invalid time sequence at {checkpoints[j]}")
+
+
+                prev_clock = curr_clock  # update only clock reference    
         def departure():
                 for a in range(j+1):
                     print('DATA DETAILS--j--a--index',j,a,rail[x].index[a])

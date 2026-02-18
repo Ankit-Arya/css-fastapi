@@ -243,7 +243,7 @@ def process_range(args):
 def parallel_generate_duties_and_return(chunk_spans=None):
     total = len(services)
     if chunk_spans is None:
-        chunk_spans = [50, 50, 100, 200, 300, 300]
+        chunk_spans = [10,10,10,20,20,30,30,50, 50, 100, 200, 300, 300]
     chunks = chunk_indices(total, chunk_spans)
     args = [(start, end) for (start, end) in chunks]
 
