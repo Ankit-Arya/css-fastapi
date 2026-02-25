@@ -189,6 +189,9 @@ def find_specific_services(inputFileLocation, outstation_path):
     temp_dsto_services = []
     temp_necc_services = []
     temp_vasi_services = []
+    invalid_dsto_initial_services = []
+    invalid_necc_initial_services = []
+    invalid_vasi_initial_services = []
     try:
         dsto_df = df_mainloops[df_mainloops[2] == 'DSTO']
         temp_dsto_services = dsto_df[0].tolist()
@@ -250,6 +253,9 @@ def find_specific_services(inputFileLocation, outstation_path):
 
     invalid_signoff_services = []
 
+    invalid_dsto_signoff_services = []
+    invalid_necc_signoff_services = []
+    invalid_vasi_signoff_services = []
     dsto_df = df_mainloops[df_mainloops[4] == 'DSTO']
     dsto_df = dsto_df.iloc[::-1]  # Reverse the DataFrame to process in reverse order
     temp_dsto_services = dsto_df[0].tolist()
@@ -368,15 +374,15 @@ def canAppend2(lst, service2, services):
         if not (startEndStnTF or startEndStnTFafterBreak):
             return False
         
-        startEndTimeTF = 0 <= (service2.startTime - lst[-1].endTime) <= 20
+        startEndTimeTF = 0 <= (service2.startTime - lst[-1].endTime) <= 40
         # startEndTimeWithin = short_break <= (service2.startTime - lst[-1].endTime) <= 120
         
         if (lst[-1].endStn == 'YB UP' and lst[-1].trainNum == 398) or (lst[-1].endStn == 'YB UP' and lst[-1].trainNum == 399):
-                startEndTimeWithin = 65 <= (service2.startTime - lst[-1].endTime) <= 120
+                startEndTimeWithin = 65 <= (service2.startTime - lst[-1].endTime) <= 150
         elif(lst[-1].endStn == 'DW DN' and lst[-1].trainNum == 398) or (lst[-1].endStn == 'DW DN' and lst[-1].trainNum == 399):
-            startEndTimeWithin = 80 <= (service2.startTime - lst[-1].endTime) <= 120
+            startEndTimeWithin = 80 <= (service2.startTime - lst[-1].endTime) <= 150
         else:
-            startEndTimeWithin = short_break <= (service2.startTime - lst[-1].endTime) <= 120
+            startEndTimeWithin = short_break <= (service2.startTime - lst[-1].endTime) <= 150
         
         if not (startEndTimeTF or startEndTimeWithin):
             return False
@@ -527,8 +533,8 @@ def allotService(services, start , result):
 
 
             if drivingDur <= 180:
-                totalBreakDur = long_break <= sum(BreakDur) <= 120
-            else: totalBreakDur = (long_break + short_break) <= sum(BreakDur) <= 120
+                totalBreakDur = long_break <= sum(BreakDur) <= 150
+            else: totalBreakDur = (long_break + short_break) <= sum(BreakDur) <= 150
             if not totalBreakDur:
                 return
             #dutyDurTF = result[-1].endTime - result[0].startTime

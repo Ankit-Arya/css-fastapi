@@ -58,6 +58,7 @@ mergedRakeNum2 = []
 
 
 #Merging services which have stepback at DSTO, train id 398 and 399 are not considered for stepback due to OCC instructions
+'''
 for i in range(df.shape[0]):
   if df.iloc[i,0] not in added_services and int(df.iloc[i,1]) != 398 and int(df.iloc[i,1]) != 399 and hhmm2mins("14:45") <= hhmm2mins(df.iloc[i,5]) <= hhmm2mins("21:53"):# STEP BACK FOR TIME 07 AM TO 09:49 PM
     if df.iloc[i,4] == "DSTO" and df.iloc[i,6] =='UP' :
@@ -134,7 +135,7 @@ for i in range(df.shape[0]):
 
       
 
-
+'''
 
 
 

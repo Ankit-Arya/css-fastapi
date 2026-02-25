@@ -5,7 +5,7 @@
     "driving_hours": 360,
     "continuous_drive": 170,
     "long_break": 50,
-    "short_break": 30,
+    "short_break": 40,
     "gap_percent": 5,
     "diff_percent": 0,
     "runby": "PBGWCC",

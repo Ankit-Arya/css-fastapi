@@ -138,7 +138,7 @@ for i in range(1,df.shape[1]):
           if state == 'VASI UP' or state == 'VASI DN':
               indx = checkstn.find('/')
               endStn.append(df.iloc[j,0][indx+1:])
-          elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+          elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
               indx = checkstn.find('/')
               if df.iloc[j,0][:indx] == "NSET":
                 continue
@@ -168,7 +168,7 @@ for i in range(1,df.shape[1]):
             if state == 'VASI UP' or state == 'VASI DN':
                 indx = checkstn.find('/')
                 endStn.append(df.iloc[j,0][indx+1:])
-            elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+            elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                 indx = checkstn.find('/')
                 if df.iloc[j,0][:indx] == "NSET":
                   continue
@@ -205,7 +205,7 @@ for i in range(1,df.shape[1]):
                 indx = checkstn.find('/')
                 RakeNum.append(df.iloc[3,i])
                 startStn.append(df.iloc[j,0][indx+1:])
-              elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+              elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                 indx = checkstn.find('/')
                 if df.iloc[j,0][:indx] == "NSET":
                   continue
@@ -226,7 +226,7 @@ for i in range(1,df.shape[1]):
             checkstn = df.iloc[list1[k+1],0]
             nsetFlag = False
             if checkstn.find('/') > 0:
-              if state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+              if state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                     indx = checkstn.find('/')
                     if df.iloc[list1[k+1],0][:indx] == "NSET":
                       nsetFlag = True
@@ -237,7 +237,7 @@ for i in range(1,df.shape[1]):
                 if state == 'VASI UP' or state == 'VASI DN':
                     indx = checkstn.find('/')
                     endStn.append(df.iloc[list1[k+1],0][indx+1:])
-                elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                     indx = checkstn.find('/')
                     if df.iloc[list1[k+1],0][:indx] == "NSET":
                       continue
@@ -268,7 +268,7 @@ for i in range(1,df.shape[1]):
                       if state == 'VASI UP' or state == 'VASI DN':
                           indx = checkstn.find('/')
                           endStn.append(df.iloc[list1[x],0][indx+1:])
-                      elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                      elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                           indx = checkstn.find('/')
                           if df.iloc[list1[x],0][:indx] == "NSET":
                             continue
@@ -299,7 +299,7 @@ for i in range(1,df.shape[1]):
                     if state == 'VASI UP' or state == 'VASI DN':
                         indx = checkstn.find('/')
                         endStn.append(df.iloc[j,0][indx+1:])
-                    elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                    elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                         indx = checkstn.find('/')
                         if df.iloc[j,0][:indx] == "NSET":
                           continue
@@ -333,7 +333,7 @@ for i in range(1,df.shape[1]):
                 indx = checkstn.find('/')
                 RakeNum.append(df.iloc[3,i])
                 startStn.append(df.iloc[j,0][indx+1:])
-              elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+              elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                 indx = checkstn.find('/')
                 if df.iloc[j,0][:indx] == "NSET":
                   continue
@@ -362,7 +362,7 @@ for i in range(1,df.shape[1]):
                       indx = checkstn.find('/')
                       RakeNum.append(df.iloc[3,i])
                       startStn.append(df.iloc[p,0][indx+1:])
-                  elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                  elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                       indx = checkstn.find('/')
                       if df.iloc[p,0][:indx] == "NSET":
                         continue
@@ -386,7 +386,7 @@ for i in range(1,df.shape[1]):
             checkstn = df.iloc[reqIndexofStn1[k+1],0]
             nsetFlag = False
             if checkstn.find('/') > 0:
-              if state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+              if state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                     indx = checkstn.find('/')
                     if df.iloc[reqIndexofStn1[k+1],0][:indx] == "NSET":
                       nsetFlag = True
@@ -397,7 +397,7 @@ for i in range(1,df.shape[1]):
                 if state == 'VASI UP' or state == 'VASI DN':
                     indx = checkstn.find('/')
                     endStn.append(df.iloc[reqIndexofStn1[k+1],0][indx+1:])
-                elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                     indx = checkstn.find('/')
                     if df.iloc[reqIndexofStn1[k+1],0][:indx] == "NSET":
                       continue
@@ -428,7 +428,7 @@ for i in range(1,df.shape[1]):
                       if state == 'VASI UP' or state == 'VASI DN':
                           indx = checkstn.find('/')
                           endStn.append(df.iloc[reqIndexofStn1[x],0][indx+1:])
-                      elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                      elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                           indx = checkstn.find('/')
                           if df.iloc[reqIndexofStn1[x],0][:indx] == "NSET":
                             continue
@@ -459,7 +459,7 @@ for i in range(1,df.shape[1]):
                     if state == 'VASI UP' or state == 'VASI DN':
                         indx = checkstn.find('/')
                         endStn.append(df.iloc[j,0][indx+1:])
-                    elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                    elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                         indx = checkstn.find('/')
                         if df.iloc[j,0][:indx] == "NSET":
                           continue
@@ -494,7 +494,7 @@ for i in range(1,df.shape[1]):
               indx = checkstn.find('/')
               RakeNum.append(df.iloc[3,i])
               startStn.append(df.iloc[j,0][indx+1:])
-          elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+          elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
               indx = checkstn.find('/')
               if df.iloc[j,0][:indx] == "NSET":
                 continue
@@ -524,7 +524,7 @@ for i in range(1,df.shape[1]):
               if state == 'VASI UP' or state == 'VASI DN':
                   indx = checkstn.find('/')
                   endStn.append(df.iloc[k,0][indx+1:])
-              elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+              elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                   indx = checkstn.find('/')
                   if df.iloc[k,0][:indx] == "NSET":
                     continue
@@ -560,7 +560,7 @@ for i in range(1,df.shape[1]):
                 indx = checkstn.find('/')
                 RakeNum.append(df.iloc[3,i])
                 startStn.append(df.iloc[j,0][indx+1:])
-              elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+              elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                 indx = checkstn.find('/')
                 if df.iloc[j,0][:indx] == "NSET":
                   continue
@@ -581,7 +581,7 @@ for i in range(1,df.shape[1]):
             checkstn = df.iloc[list1[k+1],0]
             nsetFlag = False
             if checkstn.find('/') > 0:
-              if state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+              if state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                     indx = checkstn.find('/')
                     if df.iloc[list1[k+1],0][:indx] == "NSET":
                       nsetFlag = True
@@ -593,7 +593,7 @@ for i in range(1,df.shape[1]):
                 if state == 'VASI UP' or state == 'VASI DN':
                     indx = checkstn.find('/')
                     endStn.append(df.iloc[list1[k+1],0][indx+1:])
-                elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                     indx = checkstn.find('/')
                     if df.iloc[list1[k+1],0][:indx] == "NSET":
                       continue
@@ -626,7 +626,7 @@ for i in range(1,df.shape[1]):
                       if state == 'VASI UP' or state == 'VASI DN':
                           indx = checkstn.find('/')
                           endStn.append(df.iloc[list1[x],0][indx+1:])
-                      elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                      elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                           indx = checkstn.find('/')
                           if df.iloc[list1[x],0][:indx] == "NSET":
                             continue
@@ -660,7 +660,7 @@ for i in range(1,df.shape[1]):
                     if state == 'VASI UP' or state == 'VASI DN':
                         indx = checkstn.find('/')
                         endStn.append(df.iloc[j,0][indx+1:])
-                    elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                    elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                         indx = checkstn.find('/')
                         if df.iloc[j,0][:indx] == "NSET":
                           continue
@@ -694,7 +694,7 @@ for i in range(1,df.shape[1]):
                 indx = checkstn.find('/')
                 RakeNum.append(df.iloc[3,i])
                 startStn.append(df.iloc[j,0][indx+1:])
-              elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+              elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                 indx = checkstn.find('/')
                 if df.iloc[j,0][:indx] == "NSET":
                   continue
@@ -715,7 +715,7 @@ for i in range(1,df.shape[1]):
             checkstn = df.iloc[reqIndexofStn1[k+1],0]
             nsetFlag = False
             if checkstn.find('/') > 0:
-              if state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+              if state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                     indx = checkstn.find('/')
                     if df.iloc[reqIndexofStn1[k+1],0][:indx] == "NSET":
                       nsetFlag = True
@@ -727,7 +727,7 @@ for i in range(1,df.shape[1]):
                 if state == 'VASI UP' or state == 'VASI DN':
                     indx = checkstn.find('/')
                     endStn.append(df.iloc[reqIndexofStn1[k+1],0][indx+1:])
-                elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                     indx = checkstn.find('/')
                     if df.iloc[reqIndexofStn1[k+1],0][:indx] == "NSET":
                       continue
@@ -758,7 +758,7 @@ for i in range(1,df.shape[1]):
                       if state == 'VASI UP' or state == 'VASI DN':
                           indx = checkstn.find('/')
                           endStn.append(df.iloc[reqIndexofStn1[x],0][indx+1:])
-                      elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                      elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                           indx = checkstn.find('/')
                           if df.iloc[reqIndexofStn1[x],0][:indx] == "NSET":
                             continue
@@ -789,7 +789,7 @@ for i in range(1,df.shape[1]):
                     if state == 'VASI UP' or state == 'VASI DN':
                         indx = checkstn.find('/')
                         endStn.append(df.iloc[j,0][indx+1:])
-                    elif state == "NEC UP" or state == "NEC DN" or state == "NCC UP" or state == "NCC DN":
+                    elif state == "NECC UP" or state == "NECC DN" or state == "NEC DN" or state == "NEC UP" or state == "NCC UP" or state == "NCC DN":
                         indx = checkstn.find('/')
                         if df.iloc[j,0][:indx] == "NSET":
                           continue
