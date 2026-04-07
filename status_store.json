@@ -7253,5 +7253,460 @@
       "status": "completed",
       "message": ""
     }
+  ],
+  "272074fd-8a44-45f7-9804-acb43e051ce6": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 272074fd-8a44-45f7-9804-acb43e051ce6",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services check completed and found ok",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty loops with reversal parameters",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Chart Formatting completed",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "3db148d9-76bf-4b5f-bc78-1c60281a9bee": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 3db148d9-76bf-4b5f-bc78-1c60281a9bee",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 1.0, Time Conflicts: 2, Station Conflicts: 0.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "259b7006-a9fa-4364-84a4-af1833b6365b": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 259b7006-a9fa-4364-84a4-af1833b6365b",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 1.0, Time Conflicts: 2, Station Conflicts: 0.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "2b45b6b5-2559-4993-9a96-028be5374647": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 2b45b6b5-2559-4993-9a96-028be5374647",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 1.0, Time Conflicts: 4, Station Conflicts: 0.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "a6c5e168-681a-4462-9321-5b73d9088e54": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - a6c5e168-681a-4462-9321-5b73d9088e54",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 2.0, Time Conflicts: 4, Station Conflicts: 1.0, Ind STB Conflicts: 0.0"
+    }
+  ],
+  "27d0bd58-822e-47c5-a58a-a168675eb82f": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 27d0bd58-822e-47c5-a58a-a168675eb82f",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services check completed and found ok",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty loops with reversal parameters",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Chart Formatting completed",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "76a317e8-f38d-47d3-9b6b-aeb68b73a3e2": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 76a317e8-f38d-47d3-9b6b-aeb68b73a3e2",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "5a9bd10c-434c-406e-b08a-a61c5b76bd65": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 5a9bd10c-434c-406e-b08a-a61c5b76bd65",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "689f512f-4755-406e-a279-8da1c6e6d15b": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "[Errno 2] No such file or directory: 'E:\\\\YOGESH\\\\TRIP CHART FINAL\\\\css-fastapi\\\\SCS_FILES\\\\parameters_34.json'"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "762e35ec-d30c-4712-8c36-94bcce749fb2": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "[Errno 2] No such file or directory: 'E:\\\\YOGESH\\\\TRIP CHART FINAL\\\\css-fastapi\\\\SCS_FILES\\\\parameters_34.json'"
+    }
   ]
 }

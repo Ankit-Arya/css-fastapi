@@ -25,7 +25,7 @@ def main():
         line_no = sys.argv[5]
         max_processes = '20'
         gap_percent = '5'
-        json_file = os.path.abspath("parameters.json")
+        json_file = os.path.abspath(f"parameters_{line_no}.json")
         with open(json_file, "r") as f:
             json_params = json.load(f)
         # Run each script with its arguments
