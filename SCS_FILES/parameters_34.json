@@ -1,0 +1,16 @@
+{
+    "id": 83,
+    "line": "34",
+    "duty_hours": 480,
+    "driving_hours": 360,
+    "continuous_drive": 160,
+    "long_break": 50,
+    "short_break": 40,
+    "gap_percent": 5,
+    "diff_percent": 0,
+    "runby": "YBCC",
+    "upbit": 0,
+    "runbit": 0,
+    "finbit": 0,
+    "updated": "2025-12-29 16:05:42"
+}

@@ -170,6 +170,7 @@ def main():
         #3--------------------------------------------------------------------------------------------------------------
         update_status(member_id, "Creating duty loops with reversal parameters", "WIP")
         try:
+            print(f"Running loops formation script for line {line_no} with member_id {member_id}")
             if line_no == '7':
                 data1 = { "svvrRakes" : svvrRakes}
                 subprocess.run(["python", f"loops_formation_circular_line{line_no}.py", member_id, json.dumps(data1)], check=True)
@@ -200,7 +201,7 @@ def main():
         if juris_conflict == 0:
             update_status(member_id, "Creating duty dataset to be optimized - This might take some time", "WIP")
             try:
-                
+                print(f"Making duty pool for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_conflict}")
                 cmd = [
                     "wsl", "bash", "-c",
                     f"/home/yogesh_189/miniconda3/bin/conda run -n pyomo_env python3 -u duty_pool_watcher.py "
@@ -238,6 +239,7 @@ def main():
                 sys.exit(1)
             
             try:
+                print(f"Starting optimization for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_conflict}")
                 update_status(member_id, f"Starting Optimization Process - This will take time - Sit tight", "WIP")
                 subprocess.run(
                     [
@@ -264,6 +266,7 @@ def main():
                     print(f"Retrying with jurisdiction conflict {juris_con}...")
                     if juris_con == 1:
                         try:
+                            print(f"Making duty pool for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_con} with cross jurisdiction duties")
                             cmd = [
                                 "wsl", "bash", "-c",
                                 f"/home/yogesh_189/miniconda3/bin/conda run -n pyomo_env python3 -u duty_pool_watcher.py "
@@ -299,6 +302,7 @@ def main():
                             sys.exit(1)
 
                     try:
+                        print(f"Starting optimization for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_con}")
                         subprocess.run(
                             [
                                 "wsl", "bash", "-c",
@@ -331,6 +335,7 @@ def main():
         else:
             update_status(member_id, "Creating duty dataset to be optimized - This might take some time", "WIP")
             try:
+                print(f"Making duty pool for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_conflict} with cross jurisdiction duties")
                 cmd = [
                     "wsl", "bash", "-c",
                     f"/home/yogesh_189/miniconda3/bin/conda run -n pyomo_env python3 -u duty_pool_watcher.py "
@@ -375,6 +380,7 @@ def main():
                         juris_con = juris_conflict
                     elif juris_con == juris_conflict:
                         continue
+                    print(f"Starting optimization for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_con}")
                     subprocess.run(
                         [
                             "wsl", "bash", "-c",
