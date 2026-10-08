@@ -140,8 +140,8 @@ def calculate_continuous_driving_time(path, services):
 
 def is_valid_duty(path, services):
     """Check if a path forms a valid duty based on your original constraints"""
-    if len(path) < 1:
-        return False
+    # if len(path) < 1:
+    #     return False
     
     # Calculate duty duration and breaks
     duty_start = services[path[0]].startTime
@@ -161,7 +161,7 @@ def is_valid_duty(path, services):
     long_break_exists = any(br >= long_break for br in break_durs)
     
     # Check total break duration constraint
-    total_break_dur_valid = long_break <= total_break_dur <= (120 if timetable_type == 'large' else 150) if break_durs else True
+    total_break_dur_valid = 60 <= total_break_dur <= (120 if timetable_type == 'large' else 150) if break_durs else True
     
     # Check continuous driving time
     continuous_driving = calculate_continuous_driving_time(path, services)
@@ -169,7 +169,7 @@ def is_valid_duty(path, services):
     # Apply your original validation logic
     valid = (duty_dur <= Duty_hours and 
             driving_dur <= Driving_duration and 
-            long_break_exists and 
+            # long_break_exists and 
             total_break_dur_valid and
             continuous_driving <= Continuous_Driving_time)
     

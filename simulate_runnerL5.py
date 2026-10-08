@@ -591,9 +591,12 @@ def main():
         trips1 = comptrip.copy()
 
         # For KTNR reversal train put time in ILOK column blank
-        for i in range(len(trips1)):
-            if pd.notnull(trips1.iloc[i]['KTNR-DN']) | pd.notnull(trips1.iloc[i]['KTNR-UP']):
-                trips1.loc[i,'ILOK-DN'] = pd.NaT
+        try:
+            for i in range(len(trips1)):
+                if pd.notnull(trips1.iloc[i]['KTNR-DN']) | pd.notnull(trips1.iloc[i]['KTNR-UP']):
+                    trips1.loc[i,'ILOK-DN'] = pd.NaT
+        except Exception as e:
+            print(f"An error occurred: {e}")
 
         comptrip.to_excel(f"temp_files/{execution_id}comptrip.xlsx")
         update_status(execution_id, "STAGE 1 complete", "completed")

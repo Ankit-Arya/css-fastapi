@@ -7803,6 +7803,26 @@
       "name": "Starting Optimization Process - This will take time - Sit tight",
       "status": "WIP",
       "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Chart Formatting completed",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
     }
   ],
   "74332eb8-369e-4956-a095-e3f977a2840a": [
@@ -7890,6 +7910,1153 @@
       "name": "STAGE 4 Complete",
       "status": "completed",
       "message": ""
+    }
+  ],
+  "49b5f885-b5ca-4a71-a1a8-c622216e7ee2": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "79585de2-676b-4a69-8d55-d3989cf62be9": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "4fc911d0-6f6e-40aa-9afe-baa5b1cd6305": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "3deefe43-6d4f-48a8-b25a-96bc5abd92cf": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 3deefe43-6d4f-48a8-b25a-96bc5abd92cf",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "91ab4781-2fa6-4c4d-9068-1ac3d678ec6f": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "f5af4e0c-a193-4ccb-ad58-f860111c45bc": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - f5af4e0c-a193-4ccb-ad58-f860111c45bc",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "[Errno 22] Invalid argument"
+    }
+  ],
+  "25eb8ca9-fc78-4160-9239-5cc1bc3fd819": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 25eb8ca9-fc78-4160-9239-5cc1bc3fd819",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "[Errno 22] Invalid argument"
+    }
+  ],
+  "88df5772-093d-434e-8980-fd8aca742576": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "1c0582c9-af0b-423e-8322-9e3d51b30bbb": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 1c0582c9-af0b-423e-8322-9e3d51b30bbb",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "'KTNR-DN'"
+    }
+  ],
+  "fc7776f5-5961-4365-bfcd-adac6ea6b093": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "fb74a0b7-adb2-4a31-b3d9-00c9e5f1191e": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - fb74a0b7-adb2-4a31-b3d9-00c9e5f1191e",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "'KTNR-DN'"
+    }
+  ],
+  "6c223175-5009-4326-852e-14bbad715cec": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 6c223175-5009-4326-852e-14bbad715cec",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "'KTNR-DN'"
+    }
+  ],
+  "56781961-79c5-40cc-a7d2-4dbc70e1d5f6": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 56781961-79c5-40cc-a7d2-4dbc70e1d5f6",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "32622ae9-88a3-45f7-a4ed-350384b4d84c": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 32622ae9-88a3-45f7-a4ed-350384b4d84c",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "ed3f3901-0db5-4c3b-8daa-470dd5f00523": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "b9676b87-bca4-405b-96fe-fba38efd07d8": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - b9676b87-bca4-405b-96fe-fba38efd07d8",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "90b6c9e1-b57f-4a37-91d6-1a6369bbc5f4": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 90b6c9e1-b57f-4a37-91d6-1a6369bbc5f4",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "29756a92-ea63-4798-aa76-d5e12583df37": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 29756a92-ea63-4798-aa76-d5e12583df37",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services check completed and found ok",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty loops with reversal parameters",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Chart Formatting completed",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "7d92840e-0f1c-4661-b99a-3aba9e27198e": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 7d92840e-0f1c-4661-b99a-3aba9e27198e",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services check completed and found ok",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty loops with reversal parameters",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating duty dataset to be optimized - This might take some time",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Dataset Generation successfull",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Starting Optimization Process - This will take time - Sit tight",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Success ! Optimization Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Creating Trip Chart Format",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Trip Chart Formatting completed",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "741fd610-a9db-443a-9761-2fc68eea1a3f": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 741fd610-a9db-443a-9761-2fc68eea1a3f",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "f8f4aa93-6d01-485f-9c0c-861fa1394a09": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - f8f4aa93-6d01-485f-9c0c-861fa1394a09",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 1, CC2 Mismatches: -1, Same Train Time Conflicts: 119.0, Time Conflicts: 0, Station Conflicts: 0.0, Ind STB Conflicts: 1.0"
+    }
+  ],
+  "aa15040f-88db-472f-8141-9c8277bbfa68": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - aa15040f-88db-472f-8141-9c8277bbfa68",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 1, CC2 Mismatches: -1, Same Train Time Conflicts: 119.0, Time Conflicts: 0, Station Conflicts: 0.0, Ind STB Conflicts: 1.0"
+    }
+  ],
+  "0dfd7ff8-85c7-4730-8950-1ce5fcc38bc4": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 0dfd7ff8-85c7-4730-8950-1ce5fcc38bc4",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 1, CC2 Mismatches: -1, Same Train Time Conflicts: 119.0, Time Conflicts: 0, Station Conflicts: 0.0, Ind STB Conflicts: 1.0"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "c22051ec-13d0-41f3-a136-251e8e5142d6": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - c22051ec-13d0-41f3-a136-251e8e5142d6",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 6, CC2 Mismatches: -6, Same Train Time Conflicts: 111.0, Time Conflicts: 0, Station Conflicts: 0.0, Ind STB Conflicts: 1.0"
+    },
+    {
+      "name": "Cancel Failed",
+      "status": "error",
+      "message": "[WinError 5] Access is denied"
+    }
+  ],
+  "bb4d1088-9b82-40e1-9633-b6220a2e93a0": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - bb4d1088-9b82-40e1-9633-b6220a2e93a0",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre-Processing Time Table",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pre=Processing and analysis complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "Initial Services are being checked",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Initial Services Check",
+      "status": "error",
+      "message": "CC1 Mismatches: 0, CC2 Mismatches: 0, Same Train Time Conflicts: 89.0, Time Conflicts: 0, Station Conflicts: 0.0, Ind STB Conflicts: 1.0"
+    }
+  ],
+  "2458eb74-e6b7-4ddc-bb42-457ca073864b": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 2458eb74-e6b7-4ddc-bb42-457ca073864b",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Process Cancelled",
+      "status": "cancelled",
+      "message": "User requested cancellation"
+    }
+  ],
+  "8c6e5f66-fb72-4199-8e70-4f0e01edd7b1": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 8c6e5f66-fb72-4199-8e70-4f0e01edd7b1",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    }
+  ],
+  "ca6a574d-9861-4564-a605-75ab6039ab6f": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - ca6a574d-9861-4564-a605-75ab6039ab6f",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "6ca074b4-50ac-4a99-b9a6-ee0559fa0c14": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 6ca074b4-50ac-4a99-b9a6-ee0559fa0c14",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "7a938e40-3278-4e71-b584-758a13b5d1d1": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 7a938e40-3278-4e71-b584-758a13b5d1d1",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 2 complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 3 Complete",
+      "status": "completed",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 4 Complete",
+      "status": "completed",
+      "message": ""
+    }
+  ],
+  "77489a23-e036-4ebd-bc1a-efd7acfe4f8c": [
+    {
+      "name": "Preparing Execution",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Save your UID for future ref - 77489a23-e036-4ebd-bc1a-efd7acfe4f8c",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "STAGE 1 of 4 in progress",
+      "status": "WIP",
+      "message": ""
+    },
+    {
+      "name": "Pipeline Broke--",
+      "status": "error",
+      "message": "'utf-8' codec can't decode bytes in position 14-15: invalid continuation byte"
     }
   ]
 }
