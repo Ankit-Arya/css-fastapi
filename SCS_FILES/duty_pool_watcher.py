@@ -84,7 +84,7 @@ class ProcessWatcher:
     def get_worker_script(self):
         """Return the worker script for the selected line."""
         if line_no == "1":
-            filename = "duty_pool_generator_line1.py"
+            filename = "duty_pool_generator_line1_ver2.py"
         elif line_no == "34":
             filename = "duty_pool_generator_line34.py"
         else:
