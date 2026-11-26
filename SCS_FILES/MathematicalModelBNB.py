@@ -35,7 +35,7 @@ member_id = args.member_id
 obj_gap = float(args.gap_percent)
 line_no = args.line_no
 
-new_location = f"ALL_USER_TT/LINE{line_no}_{member_id} "
+new_location = f"ALL_USER_TT/LINE{line_no}_{member_id}"
 solver_file = os.path.join(os.getcwd(), "mbnb.exe")
 inputFileLocation = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
