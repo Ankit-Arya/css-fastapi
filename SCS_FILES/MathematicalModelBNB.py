@@ -37,22 +37,9 @@ line_no = args.line_no
 
 new_location = f"ALL_USER_TT/LINE{line_no}_{member_id}"
 solver_file = os.path.join(os.getcwd(), "mbnb.exe")
-inputFileLocation = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)),
-    new_location,
-    f"USEFUL OUTPUT_{member_id}",
-    "Mainloops.csv"
-)
-base_dir = os.path.dirname(os.path.abspath(__file__))
-
-tempLocation = os.path.join(
-    base_dir,
-    new_location,
-    f"USEFUL OUTPUT_{member_id}"
-)
-
-outputLocation = os.path.join(tempLocation, "SOLUTION 1")
-
+inputFileLocation = os.path.dirname(os.path.abspath(__file__)) + f"/{new_location}/USEFUL OUTPUT_{member_id}/Mainloops.csv"
+tempLocation = os.path.dirname(os.path.abspath(__file__)) + f"/{new_location}/USEFUL OUTPUT_{member_id}/"
+outputLocation = tempLocation + "SOLUTION 1/"
 os.makedirs(outputLocation, exist_ok=True)
 
 def log(*args):
