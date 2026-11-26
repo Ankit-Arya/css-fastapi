@@ -2,7 +2,7 @@ from datetime import datetime
 import json
 import signal
 from typing import Optional
-from fastapi import FastAPI, File, Form, HTTPException, Depends, UploadFile
+from fastapi import FastAPI, File, Form, HTTPException, Depends, UploadFile, APIRouter
 from models.request_models import UserSignUp, UserLogin, TokenResponse
 from services.auth_service import register_user, authenticate_user, create_access_token
 from pymongo.mongo_client import MongoClient
@@ -18,22 +18,14 @@ from worker import process_file, job_registry,process_fileL1, process_fileL34, p
 import os
 from fastapi.responses import StreamingResponse
 from bson import ObjectId
+from fastapi.security import OAuth2PasswordBearer
+from jose import jwt, JWTError
+from dotenv import load_dotenv
 
-# uri = "mongodb+srv://greenthornarya676_db_user:NRhQ0lSyJBMjyD5I@ankit-css.fz6hv8r.mongodb.net/?retryWrites=true&w=majority&appName=ANKIT-CSS"
+load_dotenv()  # Load environment variables from .env file
+SECRET_KEY = os.getenv("SECRET_KEY", "your_long_secret_key")
+ALGORITHM = os.getenv("ALGORITHM", "HS256")
 
-# # ASYNC DB
-# client = motor.motor_asyncio.AsyncIOMotorClient(uri)
-# # Send a ping to confirm a successful connection
-# try:
-#     client.admin.command('ping')
-#     print("Pinged your deployment. You successfully connected to MongoDB!")
-# except Exception as e:
-#     print(e)
-# db = client["user_auth_db"]
-# fs = motor.motor_asyncio.AsyncIOMotorGridFSBucket(db)
-# users_collection = db["users"]
-# notices_collection = db["notices"]
-# LOCAL MONGODB URI (Docker)
 
 uri = "mongodb://localhost:27017"
 
@@ -82,35 +74,53 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# @app.post("/signup")
-# def signup(user: UserSignUp):
-#     success = register_user(user, users_collection)
-#     if not success:
-#         raise HTTPException(status_code=400, detail="Email already registered.")
-#     return {"message": "Sign up successful."}
 
-# @app.post("/login", response_model=TokenResponse)
-# def login(user: UserLogin):
-#     if not authenticate_user(user.email, user.password, users_collection):
-#         raise HTTPException(status_code=401, detail="Incorrect email or password.")
-#     token = create_access_token(user.email)
-# #     return {"access_token": token, "token_type": "bearer"}
-# @app.post("/signup")
-# async def signup(user: UserSignUp):
-#     success = await register_user(user, users_collection)  # Make register_user async
-#     if not success:
-#         raise HTTPException(status_code=400, detail="Email already registered.")
-#     return {"message": "Sign up successful."}
 
-# @app.post("/login", response_model=TokenResponse)
-# async def login(user: UserLogin):
-#     auth_success = await authenticate_user(user.email, user.password, users_collection)  # Make async
-#     if not auth_success:
-#         raise HTTPException(status_code=401, detail="Incorrect email or password.")
-#     token = create_access_token(user.email)  # This can stay sync if it doesn't do async work
-#     return {"access_token": token, "token_type": "bearer"}
 
-# for frontend only auth
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/login")  # Disable auto error to handle it manually
+async def get_current_user(
+    token: str = Depends(oauth2_scheme)
+):
+    try:
+        payload = jwt.decode(
+            token,
+            SECRET_KEY,
+            algorithms=[ALGORITHM]
+        )
+
+        email = payload.get("sub")
+
+        if not email:
+            raise HTTPException(
+                status_code=401,
+                detail="Invalid token"
+            )
+
+    except JWTError:
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid or expired token"
+        )
+
+    user = await users_collection.find_one({
+        "email": email
+    })
+
+    if not user:
+        raise HTTPException(
+            status_code=401,
+            detail="User not found"
+        )
+
+    if not user.get("is_active", True):
+        raise HTTPException(
+            status_code=403,
+            detail="User account is disabled"
+        )
+
+    return user
+
+
 
 # ---------------- SIGNUP ----------------
 @app.post("/signup")
@@ -149,7 +159,12 @@ async def login(user: UserLogin):
     }
 
 
-@app.get("/lines")
+protected_router = APIRouter(
+    dependencies=[Depends(get_current_user)]
+)
+
+
+@protected_router.get("/lines")
 def get_dmrc_lines():
     return {
         "lines": [
@@ -167,7 +182,7 @@ def get_dmrc_lines():
     }
 
 
-@app.post("/simulate")
+@protected_router.post("/simulate")
 async def simulate(
     background_tasks: BackgroundTasks,
     execution_id: str = Form(...),
@@ -231,7 +246,7 @@ async def simulate(
 
     return {"message": "File received. Processing started.", "execution_id": execution_id}
 
-@app.post("/simulateL34")
+@protected_router.post("/simulateL34")
 async def simulateL34(
     background_tasks: BackgroundTasks,
     execution_id: str = Form(...),
@@ -295,7 +310,7 @@ async def simulateL34(
     return {"message": "File received. Processing started.", "execution_id": execution_id}
 
 
-@app.post("/simulateL342")
+@protected_router.post("/simulateL342")
 async def simulateL342(
     background_tasks: BackgroundTasks,
     execution_id: str = Form(...),
@@ -359,7 +374,7 @@ async def simulateL342(
     return {"message": "File received. Processing started.", "execution_id": execution_id}
 
 
-@app.post("/simulateL7")
+@protected_router.post("/simulateL7")
 async def simulateL7(
     background_tasks: BackgroundTasks,
     execution_id: str = Form(...),
@@ -423,7 +438,7 @@ async def simulateL7(
     return {"message": "File received. Processing started.", "execution_id": execution_id}
 
 
-# @app.post("/simulateL5")
+# @protected_router.post("/simulateL5")
 # async def simulateL5(
 #     background_tasks: BackgroundTasks,
 #     execution_id: str = Form(...),
@@ -486,7 +501,7 @@ async def simulateL7(
 
 #     return {"message": "File received. Processing started.", "execution_id": execution_id}
 
-@app.post("/simulateL5")
+@protected_router.post("/simulateL5")
 async def simulateL5(
     background_tasks: BackgroundTasks,
     execution_id: str = Form(...),
@@ -612,7 +627,7 @@ async def simulateL5(
     }
 
 
-# @app.post("/simulateL34")
+# @protected_router.post("/simulateL34")
 # async def simulateL34(
 #     background_tasks: BackgroundTasks,
 #     execution_id: str = Form(...),
@@ -675,7 +690,7 @@ async def simulateL5(
 
 #     return {"message": "File received. Processing started.", "execution_id": execution_id}
 
-@app.get("/notices")
+@protected_router.get("/notices")
 async def get_notices():
     notices = await notices_collection.find().sort("timestamp", -1).to_list(50)
     for n in notices:
@@ -684,11 +699,11 @@ async def get_notices():
 
 
 
-@app.get("/status/{execution_id}")
+@protected_router.get("/status/{execution_id}")
 def check_status(execution_id: str):
     return get_status(execution_id)
 
-# @app.api_route("/download/{execution_id}", methods=["GET", "HEAD"])
+# @protected_router.api_route("/download/{execution_id}", methods=["GET", "HEAD"])
 # def download_file(execution_id: str):
 #     # Always resolve to absolute path from this script's location
 #     base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -704,7 +719,7 @@ def check_status(execution_id: str):
 #         )
     
 #     raise HTTPException(status_code=404, detail="File not ready or corrupted")
-@app.api_route("/download/{execution_id}", methods=["GET", "HEAD"])
+@protected_router.api_route("/download/{execution_id}", methods=["GET", "HEAD"])
 def download_file(execution_id: str):
     """
     Serve the Excel file corresponding to the execution_id.
@@ -737,7 +752,7 @@ def download_file(execution_id: str):
     raise HTTPException(status_code=404, detail="File not ready or corrupted")
 
 
-@app.delete("/cancel/{execution_id}")
+@protected_router.delete("/cancel/{execution_id}")
 def cancel_simulation(execution_id: str):
     job = job_registry.get(execution_id)
     if not job:
@@ -776,7 +791,7 @@ def cancel_simulation(execution_id: str):
         )
         raise HTTPException(status_code=500, detail=f"Failed to cancel process: {e}")
     
-@app.get("/files/{file_id}")
+@protected_router.get("/files/{file_id}")
 async def get_file(file_id: str):
     try:
         grid_out = await fs.open_download_stream(ObjectId(file_id))
@@ -789,3 +804,4 @@ async def get_file(file_id: str):
     )
 
 
+app.include_router(protected_router)
