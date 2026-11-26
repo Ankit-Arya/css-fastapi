@@ -38,7 +38,7 @@ if line_no == '34':
     keywords = ["DSTO", "DW", "JPW", "KNR", "NFD"]
     cc1_list = [item for item in merged_list if any(k in item for k in keywords)]
     cc2_list = [item for item in merged_list if item not in cc1_list]
-elif line_no == '7':
+elif line_no == '7' or line_no == '7ALT' or line_no == '7ALT2':
     keywords = ["PBGW", "MKPR", "SAKP", "DDSC"]
     cc1_list = [item for item in merged_list if any(k in item for k in keywords)]
     cc2_list = [item for item in merged_list if item not in cc1_list]
@@ -46,7 +46,10 @@ elif line_no == '7N':
     keywords = ["PBGW", "MKPR", "SAKP", "DDSC"]
     cc1_list = [item for item in merged_list if any(k in item for k in keywords)]
     cc2_list = [item for item in merged_list if item not in cc1_list]
-
+elif line_no == '2':
+    keywords = ["KGM", "SPBI", "KPD", "VW", "BLD", "KG"]
+    cc1_list = [item for item in merged_list if any(k in item for k in keywords)]
+    cc2_list = [item for item in merged_list if item not in cc1_list]
 
 
 
@@ -70,7 +73,7 @@ print(crew_control_list)
 with open(Jurisdiction_csv_file, 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f)
     # for item in merged_list:
-    if line_no == '34' or line_no =='7' or line_no == '7N':
+    if line_no == '34' or line_no == '2' or line_no =='7' or line_no == '7ALT' or line_no == '7ALT2' or line_no == '7N':
         writer.writerow(cc1_list)
         writer.writerow(cc2_list)
         writer.writerow(crew_control_list)

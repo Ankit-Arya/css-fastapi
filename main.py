@@ -14,7 +14,7 @@ from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorGridFSBucket
 from fastapi import FastAPI, UploadFile, Form, BackgroundTasks
 from fastapi.responses import FileResponse
 from helpers import save_file_locally, update_status, get_status
-from worker import process_file, job_registry, process_fileL34, process_fileL5, process_fileL7, process_fileL342
+from worker import process_file, job_registry,process_fileL1, process_fileL34, process_fileL5, process_fileL7, process_fileL342
 import os
 from fastapi.responses import StreamingResponse
 from bson import ObjectId
@@ -226,7 +226,7 @@ async def simulate(
 
     # Start background processing
     background_tasks.add_task(
-        process_file, execution_id, saved_path, user_id, user_name,user_email, parsed_stepping_back, timetable_type
+        process_fileL1, execution_id, saved_path, user_id, user_name,user_email, parsed_stepping_back, timetable_type
     )
 
     return {"message": "File received. Processing started.", "execution_id": execution_id}

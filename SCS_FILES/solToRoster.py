@@ -11,12 +11,12 @@ import shutil
 member_id = sys.argv[1]
 line_no = sys.argv[2]
 json_str = sys.argv[3]
+short_break = int(sys.argv[4])
 data = json.loads(json_str)
 crew_control = data["crew_control"]
 depots = data["depots"]
 
 new_location = f"ALL_USER_TT/LINE{line_no}_{member_id}"
-
 
 inputFileLocation = os.path.dirname(os.path.abspath(__file__)) + f"/{new_location}/USEFUL OUTPUT_{member_id}/"
 tempLocation = f"{inputFileLocation}SOLUTION 1/"
@@ -76,7 +76,12 @@ with open(csv_file, mode='r') as file:
     juris_rows = sum(1 for item in reader)
 
 # Extracting the lists
-if juris_rows == 2:
+if juris_rows == 2 and line_no == "7LOOP":
+    cc1 = []
+    cc2 = [str(line) for line in retrieved_lists[0]]
+    # Crew Controls
+    crewControl = [str(line) for line in retrieved_lists[1]]
+elif juris_rows == 2:
     cc1 = [str(line) for line in retrieved_lists[0]]
     cc2 = [str(line) for line in retrieved_lists[0]]
     # Crew Controls
@@ -87,10 +92,35 @@ elif juris_rows == 3:
     # Crew Controls
     crewControl = [str(line) for line in retrieved_lists[2]]
 
+
+df_mainloops_copy = pd.read_csv(f"{inputFileLocation}MainLoops.csv", header=None)  # Read the CSV file without headers
+df_mainloops_copy = df_mainloops_copy[1:].copy()  # Adjust the slice as needed
+df_mainloops_copy[1] = pd.to_numeric(df_mainloops_copy[1], errors="coerce")
+df_mainloops_copy["_start"] = df_mainloops_copy[3].apply(hhmm2mins)
+df_mainloops_copy["_end"] = df_mainloops_copy[5].apply(hhmm2mins)
+
+previous_end_by_train = {}
+for train_num, group in df_mainloops_copy.groupby(1):
+    rows = sorted(
+        zip(group["_start"], group["_end"]),
+        key=lambda x: x[0]
+    )
+    previous_end_by_train[train_num] = rows
+
+
+
+
+
+
+
+
 def printSummary(dutiesDict, outputFile):
     # global verbose, worstDT
     sameCC = 0
-    CC1_no, CC2_no, CCdiff_no = 201,401,901
+    if line_no == "7LOOP":
+        CC1_no, CC2_no, CCdiff_no = 201,11,901
+    else:
+        CC1_no, CC2_no, CCdiff_no = 201,401,901
     
     with open(outputFile, mode='w', newline='') as file:
         writer = csv.writer(file)
@@ -124,13 +154,21 @@ def printSummary(dutiesDict, outputFile):
                 if servSet1[0][1] not in outstation_locations:
                     signOnTime = min2hhmm(hhmm2mins(servSet1[0][2]) - 15)
                 else:
-                    signOnTime = min2hhmm(hhmm2mins(servSet1[0][2]) - 25)
+                    if line_no == '1CMRL':
+                        signOnTime = min2hhmm(hhmm2mins(servSet1[0][2]) - 15)
+                    else:    
+                        signOnTime = min2hhmm(hhmm2mins(servSet1[0][2]) - 25)
                 # signOnDur = servSet.signOn()[1]
                 signOnLoc = servSet1[0][1]
                 if servSet1[-1][3] not in outstation_locations:
                     signOffTime = min2hhmm(hhmm2mins(servSet1[-1][4]) + 10)
                 else:
-                    signOffTime = min2hhmm(hhmm2mins(servSet1[-1][4]) + 20)
+                    if line_no == '8ALT':
+                        signOffTime = min2hhmm(hhmm2mins(servSet1[-1][4]) + 10)
+                    elif line_no == '1CMRL':
+                        signOffTime = min2hhmm(hhmm2mins(servSet1[-1][4]) + 10)
+                    else:
+                        signOffTime = min2hhmm(hhmm2mins(servSet1[-1][4]) + 20)
                 
                 dutyDur = min2hhmm(hhmm2mins(signOffTime) - hhmm2mins(signOnTime))
                 driveDur = hhmm2mins(servSet1[-1][4])-hhmm2mins(servSet1[0][2])
@@ -147,7 +185,7 @@ def printSummary(dutiesDict, outputFile):
 # Iterate over the sublists
                 for i in range(len(servSet1) - 1):  # Iterate until the second to last sublist
                     diff = hhmm2mins(servSet1[i + 1][2]) - hhmm2mins(servSet1[i][4])  # Calculate the difference
-                    if diff >= 30:
+                    if diff >= short_break and (servSet1[i][3] in crewControl or servSet1[i+1][1] in crewControl):
                         tripDur.append(hhmm2mins(servSet1[i][4]) - hhmm2mins(servSet1[0][2]) - sum(tripDur) - sum(breaks))
                         breaks.append(diff)
                         if (servSet1[i][3] in cc1):
@@ -175,7 +213,10 @@ def printSummary(dutiesDict, outputFile):
 def printRoster(dutiesDict, outputFile):
     # global verbose, worstDT
     sameCC = 0
-    CC1_no, CC2_no, CCdiff_no = 201,401,901
+    if line_no == "7LOOP":
+        CC1_no, CC2_no, CCdiff_no = 201,11,901
+    else:
+        CC1_no, CC2_no, CCdiff_no = 201,401,901
     
     with open(outputFile, mode='w', newline='') as file:
         writer = csv.writer(file)
@@ -209,13 +250,21 @@ def printRoster(dutiesDict, outputFile):
                 if servSet1[0][1] not in outstation_locations:
                     signOnTime = min2hhmm(hhmm2mins(servSet1[0][2]) - 15)
                 else:
-                    signOnTime = min2hhmm(hhmm2mins(servSet1[0][2]) - 25)
+                    if line_no == '1CMRL':
+                        signOnTime = min2hhmm(hhmm2mins(servSet1[0][2]) - 15)
+                    else:
+                        signOnTime = min2hhmm(hhmm2mins(servSet1[0][2]) - 25)
                 # signOnDur = servSet.signOn()[1]
                 signOnLoc = servSet1[0][1]
                 if servSet1[-1][3] not in outstation_locations:
                     signOffTime = min2hhmm(hhmm2mins(servSet1[-1][4]) + 10)
                 else:
-                    signOffTime = min2hhmm(hhmm2mins(servSet1[-1][4]) + 20)
+                    if line_no == '8ALT':
+                        signOffTime = min2hhmm(hhmm2mins(servSet1[-1][4]) + 10)
+                    elif line_no == '1CMRL':
+                        signOffTime = min2hhmm(hhmm2mins(servSet1[-1][4]) + 10)
+                    else:
+                        signOffTime = min2hhmm(hhmm2mins(servSet1[-1][4]) + 20)
                 
                 dutyDur = min2hhmm(hhmm2mins(signOffTime) - hhmm2mins(signOnTime))
                 driveDur = hhmm2mins(servSet1[-1][4])-hhmm2mins(servSet1[0][2])
@@ -228,20 +277,35 @@ def printRoster(dutiesDict, outputFile):
                 breaks = []
 
 # Iterate over the sublists
-                for i in range(len(servSet1) - 1):  # Iterate until the second to last sublist
+                for i in range(len(servSet1) - 1):  # Iterate until the second to last sublist                      
                     diff = hhmm2mins(servSet1[i + 1][2]) - hhmm2mins(servSet1[i][4])  # Calculate the difference
-                    breaks.append(diff)
-                    if diff>=30:
+                    if diff < short_break and (servSet1[i][3] in crewControl or servSet1[i+1][1] in crewControl):
+                        breaks.append(0)
+                    else:
+                        breaks.append(diff)
+                    if diff>=short_break:
                         driveDur -= diff
                 driveDur = min2hhmm(driveDur)
 # Rishuv
                 First_Serv = True
                 brake = 0
                 for service in servSet1:
+                    service_2_previous_end_time = None
+                    if (brake == 0 and service[1] == 'TKBS UP') or (breaks[brake-1] >= short_break and service[1] == 'TKBS UP'):
+                        rows = previous_end_by_train.get(service[0], [])
+                        for start, end in reversed(rows):
+                            if start < hhmm2mins(service[2]):
+                                service_2_previous_end_time = end
+                                break
                     if brake == len(servSet1) - 1:
                         new_header = [service[0] , service[1] ,service[2] ,service[3], service[4] , service[6] , 0, service[7]]
                     else:
-                        new_header = [service[0] , service[1] ,service[2] ,service[3], service[4] , service[6] , breaks[brake], service[7]]
+                        if service_2_previous_end_time is not None:
+                            service[2] = min2hhmm(service_2_previous_end_time)
+                            service[6] = min2hhmm(hhmm2mins(service[4]) - service_2_previous_end_time)
+                            new_header = [service[0] , service[1] ,service[2] ,service[3], service[4] , service[6] , breaks[brake], service[7]]    
+                        else:
+                            new_header = [service[0] , service[1] ,service[2] ,service[3], service[4] , service[6] , breaks[brake], service[7]]
                         brake += 1
                     if First_Serv:
                         writer.writerow([dutyNo, signOnTime,signOnLoc, signOffLoc, signOffTime, driveDur, dutyDur, sameJuris] + new_header)    
@@ -255,7 +319,10 @@ def printRoster(dutiesDict, outputFile):
 
 def verification(dutiesDict, op):
     trainDuty = {}
-    CC1_no, CC2_no, CCdiff_no = 201,401,901
+    if line_no == "7LOOP":
+        CC1_no, CC2_no, CCdiff_no = 201,11,901
+    else:
+        CC1_no, CC2_no, CCdiff_no = 201,401,901
     dutyNo = 0
 
     for dutyNum, servSet in dutiesDict.items():
@@ -335,15 +402,6 @@ printRoster(dutiesDict, f"{outputLocation}RosterDMRC_{member_id}.csv")
 print("Generating Train Loop verification file...")
 verification(dutiesDict, f"{outputLocation}TrainLoopVerification_{member_id}.csv")
 
-parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-OUTPUT_FILE_ROSTER = os.path.join(parent_dir, f'temp_files/trip_chart_{member_id}.xlsx')
-OUTPUT_FILE_SUMMARY = os.path.join(parent_dir, f'temp_files/ROSTER_SUMMARY_{member_id}.xlsx')
-OUTPUT_FILE_VERIFY = os.path.join(parent_dir, f'temp_files/TRAIN_LOOP_{member_id}.xlsx')
-roster_csv = pd.read_csv(f"{outputLocation}RosterDMRC_{member_id}.csv")
-roster_csv.to_excel(OUTPUT_FILE_ROSTER, index=False)
-summary_csv = pd.read_csv(f"{outputLocation}RosterSummary_{member_id}.csv")
-summary_csv.to_excel(OUTPUT_FILE_SUMMARY, index=False)
-verify_csv = pd.read_csv(f"{outputLocation}TrainLoopVerification_{member_id}.csv")
-verify_csv.to_excel(OUTPUT_FILE_VERIFY, index=False)
+
 
 os.remove(f"{outputLocation}solution_{member_id}.csv")

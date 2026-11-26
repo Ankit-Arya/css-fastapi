@@ -30,7 +30,7 @@ line_no = args.line_no
 juris_conflict = args.juris_conflict
 
 new_location = f"ALL_USER_TT/LINE{line_no}_{member_id}"
-
+solver_file = os.path.join(os.getcwd(), "mbnb.exe")
 inputFileLocation = os.path.dirname(os.path.abspath(__file__)) + f"/{new_location}/USEFUL OUTPUT_{member_id}/Mainloops.csv"
 tempLocation = os.path.dirname(os.path.abspath(__file__)) + f"/{new_location}/USEFUL OUTPUT_{member_id}/"
 outputLocation = tempLocation + "SOLUTION 1/"
@@ -133,7 +133,7 @@ for xyz in range(1):
                 log(checkser, '\n')
                 missingService.append(checkser)
                 found  = True
-        with open(f"{tempLocation}logfiles/missingServices.csv", 'w', newline='') as csvfile:
+        with open(f"{tempLocation}SOLUTION 1/logfiles/missingServices.csv", 'w', newline='') as csvfile:
             writer = csv.writer(csvfile)
             for ser in missingService:
                 writer.writerow([ser])
@@ -197,7 +197,7 @@ for xyz in range(1):
     log("Solving Model")
     # opt=SolverFactory("gurobi_direct")
     # result=opt.solve(scsMathModel)
-    optSolver = SolverFactory('bnb', executable="bnb")
+    optSolver = SolverFactory('bnb', executable = solver_file)
     #optSolver.options['--time_limit'] = 15000
     optSolver.options['--branch_dir'] = 1
     # optSolver.options['--threads'] = 4
@@ -209,7 +209,7 @@ for xyz in range(1):
     optSolver.options['--log_level'] = 3
     optSolver.options['--obj_gap_percent'] = obj_gap
     
-    result = optSolver.solve(scsMathModel, tee=True)
+    result = optSolver.solve(scsMathModel, tee=True, logfile=f"{tempLocation}SOLUTION 1/logfiles/BNB_solver_{member_id}.log")
 
     log(f'Solver status: {result.solver.status}')
     log(f'Solver termination condition: {result.solver.termination_condition}')

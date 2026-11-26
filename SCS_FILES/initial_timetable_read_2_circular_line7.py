@@ -50,7 +50,7 @@ os.makedirs(outputFileLocation, exist_ok= True)
 
 
 df = pd.read_excel(f"{inputFile}",sheet_name=f"Sheet1",header = None)
-df = df.map(lambda x: x.strip() if isinstance(x, str) else x)
+df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 
 df[df.columns[1:]] = df[df.columns[1:]].astype("object")
 # your Excel ranges (convert to 0-based indices)
@@ -67,7 +67,7 @@ for start, end in ranges:
     df.iloc[start:end, 1:] = df.iloc[start:end, 1:].astype("object")
 # Step 2: now safely apply your time conversion function
 for start, end in ranges:
-    df.iloc[start:end, 1:] = df.iloc[start:end, 1:].map(convert_excel_time)
+    df.iloc[start:end, 1:] = df.iloc[start:end, 1:].applymap(convert_excel_time)
 
 
 

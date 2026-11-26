@@ -23,7 +23,18 @@ def main():
         stepping_back_raw = sys.argv[3]  # Passed as JSON string
         timetable_type = sys.argv[4]
         line_no = sys.argv[5]
-        max_processes = '20'
+
+        try:
+            user_stepping_back = json.loads(stepping_back_raw)
+            print("type of user_stepping_back:", type(user_stepping_back))
+            print("user_stepping_back:", user_stepping_back)
+    
+        except Exception as e:
+            print("⚠️ Invalid stepping_back data, defaulting to empty list.")
+            print("Error detail:", e)
+            user_stepping_back = []
+
+        max_processes = '6'
         gap_percent = '5'
         json_file = os.path.abspath(f"parameters_{line_no}.json")
         with open(json_file, "r") as f:
@@ -45,9 +56,9 @@ def main():
         try:
             if line_no == '7':
                 try:
-                    subprocess.run(["python", f"initial_timetable_read_1_circular_line{line_no}.py", member_id, excel_file], check=True)
-                    subprocess.run(["python", f"initial_timetable_read_2_circular_line{line_no}.py", member_id, excel_file], check=True)
-                    subprocess.run(["python", f"initial_timetable_read_3_circular_line{line_no}.py", member_id], check=True)
+                    subprocess.run([sys.executable, f"initial_timetable_read_1_circular_line{line_no}.py", member_id, excel_file], check=True)
+                    subprocess.run([sys.executable, f"initial_timetable_read_2_circular_line{line_no}.py", member_id, excel_file], check=True)
+                    subprocess.run([sys.executable, f"initial_timetable_read_3_circular_line{line_no}.py", member_id], check=True)
                     print("Processing the Time Table with Circular Line7")
                 except subprocess.CalledProcessError as e:
                     shutil.rmtree(f"{new_location}")
@@ -55,9 +66,9 @@ def main():
                     new_location = f"ALL_USER_TT/LINE{line_no}_{member_id}"
                     os.makedirs(f"{new_location}/USEFUL OUTPUT_{member_id}/logfiles", exist_ok=True)
                     print("Processing the Time Table with Normal Line7")
-                    subprocess.run(["python", f"initial_timetable_read_line{line_no}.py", member_id, excel_file], check=True)
+                    subprocess.run([sys.executable, f"initial_timetable_read_line{line_no}.py", member_id, excel_file], check=True)
             else:
-                subprocess.run(["python", f"initial_timetable_read_line{line_no}.py", member_id, excel_file], check=True)
+                subprocess.run([sys.executable, f"initial_timetable_read_line{line_no}.py", member_id, excel_file], check=True)
         except subprocess.CalledProcessError as e:
             print("STDOUT:", e.stdout)
             print("STDERR:", e.stderr)
@@ -99,7 +110,7 @@ def main():
 
         data = { "crew_control" : crew_control, "depots" : depots}
         try:
-            result = subprocess.run(["python", "jurisdiction_extraction.py", member_id, line_no , json.dumps(data)], check=True, capture_output=True, text=True)
+            result = subprocess.run([sys.executable, "jurisdiction_extraction.py", member_id, line_no , json.dumps(data)], check=True, capture_output=True, text=True)
             # print("Output:", result.stdout)
         except subprocess.CalledProcessError as e:
             print("STDOUT:", e.stdout)
@@ -137,7 +148,7 @@ def main():
         update_status(member_id, "Initial Services are being checked","WIP")
 
         try:
-            result = subprocess.run(["python", f"CheckInitialServices.py", member_id, line_no], check= True, capture_output=True, text=True)
+            result = subprocess.run([sys.executable, f"CheckInitialServices.py", member_id, line_no], check= True, capture_output=True, text=True)
             output_lines = result.stdout.strip().split('\n')
             if len(output_lines) >= 6:
                 cc1_mismatch = eval(output_lines[0])
@@ -173,12 +184,12 @@ def main():
             print(f"Running loops formation script for line {line_no} with member_id {member_id}")
             if line_no == '7':
                 data1 = { "svvrRakes" : svvrRakes}
-                subprocess.run(["python", f"loops_formation_circular_line{line_no}.py", member_id, json.dumps(data1)], check=True)
+                subprocess.run([sys.executable, f"loops_formation_circular_line{line_no}.py", member_id, json.dumps(data1)], check=True)
             elif line_no == '7N':
                 data1 = { "svvrRakes" : svvrRakes}
-                subprocess.run(["python", f"loops_formation_line{line_no}.py", member_id, json.dumps(data1)], check=True)
+                subprocess.run([sys.executable, f"loops_formation_line{line_no}.py", member_id, json.dumps(data1)], check=True)
             else:
-                subprocess.run(["python", f"loops_formation_line{line_no}.py", member_id], check=True)
+                subprocess.run([sys.executable, f"loops_formation_line{line_no}.py", member_id, stepping_back_raw], check=True)
         except subprocess.CalledProcessError as e:
             print("STDOUT:", e.stdout)
             print("STDERR:", e.stderr)
@@ -203,20 +214,24 @@ def main():
             try:
                 print(f"Making duty pool for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_conflict}")
                 cmd = [
-                    "wsl", "bash", "-c",
-                    f"/home/yogesh_189/miniconda3/bin/conda run -n pyomo_env python3 -u duty_pool_watcher.py "
-                    f"{member_id} {line_no} {max_processes} "
-                    f"{json_params['short_break']} {json_params['long_break']} {json_params['duty_hours']} "
-                    f"{json_params['continuous_drive']} {json_params['driving_hours']} {juris_conflict}"
-                ]
+                                sys.executable,
+                                "duty_pool_watcher.py",
+                                str(member_id),
+                                str(line_no),
+                                str(max_processes),
+                                str(json_params[f"short_break"]),
+                                str(json_params[f"long_break"]),
+                                str(json_params[f"duty_hours"]),
+                                str(json_params[f"continuous_drive"]),
+                                str(json_params[f"driving_hours"]),
+                                str(juris_conflict),
+                        ]
 
                 with subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True) as proc, \
                         open(log_path, "w") as log_file:
                     for line in proc.stdout:
-                        # print(line, end="")        # real-time console output
                         log_file.write(line)       # real-time file write
                         log_file.flush()           # flush immediately
-
                 proc.wait()
             except Exception as e:
                 print("There is some error in Duty Pool Generation. Please contact SCS Administrator.")
@@ -226,7 +241,7 @@ def main():
                 print(str(e))
                 sys.exit(1)
             try:
-                subprocess.run(["python", "MergeTempOutputFiles.py", member_id, line_no], check=True)
+                subprocess.run([sys.executable, "MergeTempOutputFiles.py", member_id, line_no], check=True)
                 update_status(member_id, f"Dataset Generation successfull", "completed")
             except subprocess.CalledProcessError as e:
                 print("STDOUT:", e.stdout)
@@ -241,15 +256,22 @@ def main():
             try:
                 print(f"Starting optimization for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_conflict}")
                 update_status(member_id, f"Starting Optimization Process - This will take time - Sit tight", "WIP")
-                subprocess.run(
-                    [
-                        "wsl", "bash", "-c",
-                        f"/home/yogesh_189/miniconda3/bin/conda run -n pyomo_env "
-                        f"python3 -u modelrunner.py {member_id} {gap_percent} {line_no} "
-                        f"> '{wsl_cwd}/{new_location}/USEFUL OUTPUT_{member_id}/logfiles/logRunnerBNB_{member_id}.txt' 2>&1"
-                    ],
-                    check=True
-                )
+                cmd = [
+                    sys.executable,
+                    "-u",
+                    "modelrunner.py",
+                    str(member_id),
+                    str(gap_percent),
+                    str(line_no)
+                ]
+
+                with open(log_file, "w", encoding="utf-8") as f:
+                    subprocess.run(
+                        cmd,
+                        stdout=f,
+                        stderr=subprocess.STDOUT,
+                        check=True
+                    )
             except subprocess.CalledProcessError as e:
                 print("STDOUT:", e.stdout)
                 print("STDERR:", e.stderr)
@@ -268,20 +290,24 @@ def main():
                         try:
                             print(f"Making duty pool for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_con} with cross jurisdiction duties")
                             cmd = [
-                                "wsl", "bash", "-c",
-                                f"/home/yogesh_189/miniconda3/bin/conda run -n pyomo_env python3 -u duty_pool_watcher.py "
-                                f"{member_id} {line_no} {max_processes} "
-                                f"{json_params['short_break']} {json_params['long_break']} {json_params['duty_hours']} "
-                                f"{json_params['continuous_drive']} {json_params['driving_hours']} {juris_con}"
-                            ]
-
+                                            sys.executable,
+                                            "duty_pool_watcher.py",
+                                            str(member_id),
+                                            str(line_no),
+                                            str(max_processes),
+                                            str(json_params[f"short_break"]),
+                                            str(json_params[f"long_break"]),
+                                            str(json_params[f"duty_hours"]),
+                                            str(json_params[f"continuous_drive"]),
+                                            str(json_params[f"driving_hours"]),
+                                            str(juris_conflict),
+                                    ]
+            
                             with subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True) as proc, \
                                     open(log_path, "w") as log_file:
                                 for line in proc.stdout:
-                                    # print(line, end="")        # real-time console output
                                     log_file.write(line)       # real-time file write
                                     log_file.flush()           # flush immediately
-
                             proc.wait()
                         except:
                             print("There is some error in Duty Pool Generation. Please contact SCS Administrator.")
@@ -290,7 +316,7 @@ def main():
                             update_status(member_id, step_name, "error", message)
                             sys.exit(1)
                         try:
-                            subprocess.run(["python", "MergeTempOutputFiles.py", member_id, line_no], check=True)
+                            subprocess.run([sys.executable, "MergeTempOutputFiles.py", member_id, line_no], check=True)
                         except subprocess.CalledProcessError as e:
                             print("STDOUT:", e.stdout)
                             print("STDERR:", e.stderr)
@@ -303,15 +329,22 @@ def main():
 
                     try:
                         print(f"Starting optimization for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_con}")
-                        subprocess.run(
-                            [
-                                "wsl", "bash", "-c",
-                                f"/home/yogesh_189/miniconda3/bin/conda run -n pyomo_env "
-                                f"python3 -u modelrunner_01.py {member_id} {gap_percent} {line_no} {juris_con} "
-                                f"> '{wsl_cwd}/{new_location}/USEFUL OUTPUT_{member_id}/logfiles/logRunnerBNB_01_{member_id}.txt' 2>&1"
-                            ],
-                            check=True
-                        )
+                        cmd = [
+                            sys.executable,
+                            "-u",
+                            "modelrunner.py",
+                            str(member_id),
+                            str(gap_percent),
+                            str(line_no)
+                        ]
+        
+                        with open(log_file, "w", encoding="utf-8") as f:
+                            subprocess.run(
+                                cmd,
+                                stdout=f,
+                                stderr=subprocess.STDOUT,
+                                check=True
+                            )
                 
                     except subprocess.CalledProcessError as e:
                         print("STDOUT:", e.stdout)
@@ -337,20 +370,24 @@ def main():
             try:
                 print(f"Making duty pool for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_conflict} with cross jurisdiction duties")
                 cmd = [
-                    "wsl", "bash", "-c",
-                    f"/home/yogesh_189/miniconda3/bin/conda run -n pyomo_env python3 -u duty_pool_watcher.py "
-                    f"{member_id} {line_no} {max_processes} "
-                    f"{json_params['short_break']} {json_params['long_break']} {json_params['duty_hours']} "
-                    f"{json_params['continuous_drive']} {json_params['driving_hours']} {juris_conflict}"
-                ]
+                                sys.executable,
+                                "duty_pool_watcher.py",
+                                str(member_id),
+                                str(line_no),
+                                str(max_processes),
+                                str(json_params[f"short_break"]),
+                                str(json_params[f"long_break"]),
+                                str(json_params[f"duty_hours"]),
+                                str(json_params[f"continuous_drive"]),
+                                str(json_params[f"driving_hours"]),
+                                str(juris_conflict),
+                        ]
 
                 with subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True) as proc, \
                         open(log_path, "w") as log_file:
                     for line in proc.stdout:
-                        # print(line, end="")        # real-time console output
                         log_file.write(line)       # real-time file write
                         log_file.flush()           # flush immediately
-
                 proc.wait()
             except Exception as e:
                 print("There is some error in Duty Pool Generation. Please contact SCS Administrator.")
@@ -360,7 +397,7 @@ def main():
                 print(str(e))
                 sys.exit(1)
             try:
-                subprocess.run(["python", "MergeTempOutputFiles.py", member_id,line_no], check=True)
+                subprocess.run([sys.executable, "MergeTempOutputFiles.py", member_id,line_no], check=True)
                 update_status(member_id, f"Dataset Generation successfull", "completed")
             except subprocess.CalledProcessError as e:
                 print("STDOUT:", e.stdout)
@@ -381,15 +418,23 @@ def main():
                     elif juris_con == juris_conflict:
                         continue
                     print(f"Starting optimization for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_con}")
-                    subprocess.run(
-                        [
-                            "wsl", "bash", "-c",
-                            f"/home/yogesh_189/miniconda3/bin/conda run -n pyomo_env "
-                            f"python3 -u modelrunner_01.py {member_id} {gap_percent} {line_no} {juris_con} "
-                            f"> '{wsl_cwd}/{new_location}/USEFUL OUTPUT_{member_id}/logfiles/logRunnerBNB_01_{member_id}.txt' 2>&1"
-                        ],
-                        check=True
-                    )
+                    cmd = [
+                        sys.executable,
+                        "-u",
+                        "modelrunner.py",
+                        str(member_id),
+                        str(gap_percent),
+                        str(line_no),
+                        str(juris_con)
+                    ]
+    
+                    with open(log_file, "w", encoding="utf-8") as f:
+                        subprocess.run(
+                            cmd,
+                            stdout=f,
+                            stderr=subprocess.STDOUT,
+                            check=True
+                        )
                 except subprocess.CalledProcessError as e:
                     print("STDOUT:", e.stdout)
                     print("STDERR:", e.stderr)
@@ -420,7 +465,7 @@ def main():
         time.sleep(2)
         update_status(member_id, f"Creating Trip Chart Format", "WIP")
         try:
-            subprocess.run(["python", "solToRoster.py", member_id, line_no, json.dumps(data)], check=True)
+            subprocess.run([sys.executable, "solToRoster.py", member_id, line_no, json.dumps(data)], check=True)
             #update_progress(10)
             #send_progress_json(line_no, progress)
             print("All scripts executed successfully!")
