@@ -1,6 +1,7 @@
 import subprocess
 import argparse
 import os
+import sys
 
 
 parser = argparse.ArgumentParser()
@@ -18,7 +19,13 @@ cwd = os.getcwd()
 new_location = f"ALL_USER_TT/LINE{line_no}_{member_id}"
 
 cmd = [
-        "python3", "-u", "MathematicalModelBNB_01.py", member_id, str(obj_gap), line_no, str(juris_conflict)
+        sys.executable,
+        "-u",
+        "MathematicalModelBNB_01.py",
+        str(member_id),
+        str(obj_gap),
+        str(line_no),
+        str(juris_conflict)
     ]
 log_file = f"{cwd}/{new_location}/USEFUL OUTPUT_{member_id}/logfiles/logBNB_{member_id}.txt"
 

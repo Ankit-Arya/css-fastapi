@@ -256,6 +256,7 @@ def main():
             try:
                 print(f"Starting optimization for line {line_no} with member_id {member_id} and jurisdiction conflict {juris_conflict}")
                 update_status(member_id, f"Starting Optimization Process - This will take time - Sit tight", "WIP")
+                
                 cmd = [
                     sys.executable,
                     "-u",
@@ -265,7 +266,7 @@ def main():
                     str(line_no)
                 ]
 
-                with open(log_file, "w", encoding="utf-8") as f:
+                with open(log_path_bnb, "w", encoding="utf-8") as f:
                     subprocess.run(
                         cmd,
                         stdout=f,
@@ -338,7 +339,7 @@ def main():
                             str(line_no)
                         ]
         
-                        with open(log_file, "w", encoding="utf-8") as f:
+                        with open(log_path_bnb, "w", encoding="utf-8") as f:
                             subprocess.run(
                                 cmd,
                                 stdout=f,
@@ -428,7 +429,7 @@ def main():
                         str(juris_con)
                     ]
     
-                    with open(log_file, "w", encoding="utf-8") as f:
+                    with open(log_path_bnb, "w", encoding="utf-8") as f:
                         subprocess.run(
                             cmd,
                             stdout=f,
