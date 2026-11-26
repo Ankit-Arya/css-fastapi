@@ -233,7 +233,7 @@ for xyz in range(1):
     log("="*100)
     log("Solver Started")
     log("="*100)
-    result = optSolver.solve(scsMathModel, tee=True, logfile=f"{tempLocation}SOLUTION 1/logfiles/BNB_solver_{member_id}.log")
+    result = optSolver.solve(scsMathModel, tee=True, logfile=f"{tempLocation}logfiles/BNB_solver_{member_id}.log")
 
     log('Solver status:', result.solver.status)
     log('Solver termination condition:',result.solver.termination_condition)

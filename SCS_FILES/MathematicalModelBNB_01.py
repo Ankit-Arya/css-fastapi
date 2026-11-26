@@ -209,7 +209,7 @@ for xyz in range(1):
     optSolver.options['--log_level'] = 3
     optSolver.options['--obj_gap_percent'] = obj_gap
     
-    result = optSolver.solve(scsMathModel, tee=True, logfile=f"{tempLocation}SOLUTION 1/logfiles/BNB_solver_{member_id}.log")
+    result = optSolver.solve(scsMathModel, tee=True, logfile=f"{tempLocation}logfiles/BNB_solver_{member_id}.log")
 
     log(f'Solver status: {result.solver.status}')
     log(f'Solver termination condition: {result.solver.termination_condition}')
