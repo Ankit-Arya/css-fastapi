@@ -9,11 +9,14 @@ import json
 from helpers import update_status
 import shutil
 
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def main():
     try:
         # --------------------------------------------- PARSE Command Line Input -----------------------------------------------
-        
+
         print(f"scs_runner.py started!")
         print(f"Received args: {sys.argv}")
         # CLI args: python3 simulate_runner.py <execution_id> <file_path> <stepping_back_json>
@@ -24,6 +27,7 @@ def main():
         timetable_type = sys.argv[4]
         line_no = sys.argv[5]
 
+        SOP_PARAMETERS = json.loads(os.getenv(f"PARAMETERS_LINE{line_no}"))
         try:
             user_stepping_back = json.loads(stepping_back_raw)
             print("type of user_stepping_back:", type(user_stepping_back))
@@ -36,9 +40,6 @@ def main():
 
         max_processes = '6'
         gap_percent = '5'
-        json_file = os.path.abspath(f"parameters_{line_no}.json")
-        with open(json_file, "r") as f:
-            json_params = json.load(f)
         # Run each script with its arguments
         # current_time = datetime.now().strftime('%d%m%y%H%M%S')
         # Get current working directory and convert for WSL
@@ -219,11 +220,11 @@ def main():
                                 str(member_id),
                                 str(line_no),
                                 str(max_processes),
-                                str(json_params[f"short_break"]),
-                                str(json_params[f"long_break"]),
-                                str(json_params[f"duty_hours"]),
-                                str(json_params[f"continuous_drive"]),
-                                str(json_params[f"driving_hours"]),
+                                str(SOP_PARAMETERS[f"short_break"]),
+                                str(SOP_PARAMETERS[f"long_break"]),
+                                str(SOP_PARAMETERS[f"duty_hours"]),
+                                str(SOP_PARAMETERS[f"continuous_drive"]),
+                                str(SOP_PARAMETERS[f"driving_hours"]),
                                 str(juris_conflict),
                         ]
 
@@ -296,11 +297,11 @@ def main():
                                             str(member_id),
                                             str(line_no),
                                             str(max_processes),
-                                            str(json_params[f"short_break"]),
-                                            str(json_params[f"long_break"]),
-                                            str(json_params[f"duty_hours"]),
-                                            str(json_params[f"continuous_drive"]),
-                                            str(json_params[f"driving_hours"]),
+                                            str(SOP_PARAMETERS[f"short_break"]),
+                                            str(SOP_PARAMETERS[f"long_break"]),
+                                            str(SOP_PARAMETERS[f"duty_hours"]),
+                                            str(SOP_PARAMETERS[f"continuous_drive"]),
+                                            str(SOP_PARAMETERS[f"driving_hours"]),
                                             str(juris_conflict),
                                     ]
             
@@ -376,11 +377,11 @@ def main():
                                 str(member_id),
                                 str(line_no),
                                 str(max_processes),
-                                str(json_params[f"short_break"]),
-                                str(json_params[f"long_break"]),
-                                str(json_params[f"duty_hours"]),
-                                str(json_params[f"continuous_drive"]),
-                                str(json_params[f"driving_hours"]),
+                                str(SOP_PARAMETERS[f"short_break"]),
+                                str(SOP_PARAMETERS[f"long_break"]),
+                                str(SOP_PARAMETERS[f"duty_hours"]),
+                                str(SOP_PARAMETERS[f"continuous_drive"]),
+                                str(SOP_PARAMETERS[f"driving_hours"]),
                                 str(juris_conflict),
                         ]
 

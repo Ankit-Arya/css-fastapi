@@ -2,6 +2,9 @@
 env/
 temp_files/
 SCS_FILES/ALL_USER_TT/
+SCS_FILES/WATCHER_LOGS/
+status_store.json
+.env
 
 # Ignore Python cache
 __pycache__/
