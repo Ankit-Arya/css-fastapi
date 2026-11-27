@@ -191,9 +191,21 @@ async def simulate(
     user_name: str = Form(""),
     user_email: str = Form(""),
     stepping_back: Optional[str] = Form(None),
-    timetable_type: str = Form("large")  # 🆕 new field from frontend
+    timetable_type: str = Form("large"),  # 🆕 new field from frontend,
+    duty_hours: Optional[str] = Form(""),
+    driving_hours: Optional[str] = Form(""),
+    continuous_drive: Optional[str] = Form(""),
+    short_break: Optional[str] = Form(""),
+    long_break: Optional[str] = Form(""),
+    gap_percent: Optional[str] = Form("")
 
 ):
+    if not file.filename or not file.filename.lower().endswith(".xlsx"):
+        return {
+            "message": "Please upload only valid .xlsx Time Table file.",
+            "execution_id": None
+        }
+    
     # Just for testing, print the incoming data
     print(f"execution_id={execution_id}")
     print(f"user_id={user_id}, user_name={user_name}, user_email={user_email}")
@@ -224,6 +236,7 @@ async def simulate(
     file.file.seek(0)
     # Determine initiatedBy using whichever field is available
     initiated_by = user_name or user_email or user_id or "Unknown"
+    SOP_PARAMETERS = json.loads(os.getenv(f"PARAMETERS_LINE1"))
 
     # Save notice entry in MongoDB
     notice = {
@@ -232,7 +245,17 @@ async def simulate(
         "timestamp": datetime.now(),
         "file_id": str(file_id),
         "file_name": file.filename,
-        "timetable_type": timetable_type
+        "timetable_type": timetable_type,
+        "duty_hours": duty_hours or SOP_PARAMETERS["duty_hours"],
+        "driving_hours": driving_hours or SOP_PARAMETERS["driving_hours"],
+        "continuous_drive": continuous_drive or SOP_PARAMETERS["continuous_drive"],
+        "long_break": long_break or SOP_PARAMETERS["long_break"],
+        "short_break": short_break or SOP_PARAMETERS["short_break"],
+        "gap_percent": gap_percent or SOP_PARAMETERS["gap_percent"],
+        "sbc_1_start": parsed_stepping_back["SBC1"]["start"],
+        "sbc_1_end": parsed_stepping_back["SBC1"]["end"],
+        "sbc_2_start": parsed_stepping_back["SBC2"]["start"],
+        "sbc_2_end": parsed_stepping_back["SBC2"]["end"]
     }
     await notices_collection.insert_one(notice)
        

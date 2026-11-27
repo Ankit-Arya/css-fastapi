@@ -38,7 +38,7 @@ def main():
             print("Error detail:", e)
             user_stepping_back = []
 
-        max_processes = '6'
+        max_processes = '8'
         gap_percent = '5'
         # Run each script with its arguments
         # current_time = datetime.now().strftime('%d%m%y%H%M%S')
@@ -461,13 +461,14 @@ def main():
 
         if not os.path.exists(solution_path):
             print("No solution found. Exiting...")
+            update_status(member_id, f"Solution not found. Try with different parameters.", "Exit")
             sys.exit(1)
         update_status(member_id, f"Success ! Optimization Complete", "completed")
         #7--------------------------------------------------------------------------------------------------------------
         time.sleep(2)
         update_status(member_id, f"Creating Trip Chart Format", "WIP")
         try:
-            subprocess.run([sys.executable, "solToRoster.py", member_id, line_no, json.dumps(data)], check=True)
+            subprocess.run([sys.executable, "solToRoster.py", member_id, line_no, json.dumps(data), SOP_PARAMETERS["short_break"]], check=True)
             #update_progress(10)
             #send_progress_json(line_no, progress)
             print("All scripts executed successfully!")
